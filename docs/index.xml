@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>RamblingWare on RamblingWare </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://amdelamar.com/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sat, 12 Jan 2019 19:43:21 PST</updated>
+    
+    <item>
+      <title>Third</title>
+      <link>https://amdelamar.com/post/third/</link>
+      <pubDate>Sat, 12 Jan 2019 19:43:21 PST</pubDate>
+      
+      <guid>https://amdelamar.com/post/third/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst libero neque, eu magna tellus sodales laoreet erat habitant orci ad, vel tempus vehicula egestas malesuada vestibulum ac pretium mollis. Quis dui tortor id tempus nullam, ridiculus cum nec netus est purus, nulla nascetur ad felis. Vestibulum taciti natoque feugiat ullamcorper blandit potenti integer facilisis, morbi non donec venenatis posuere ad consequat odio, a facilisi conubia nisl rutrum porttitor tristique. Gravida nec diam lacinia proin facilisis tristique torquent conubia, laoreet volutpat phasellus ligula ad quam egestas aenean, fames praesent class vulputate scelerisque mattis id.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://amdelamar.com/about/</link>
+      <pubDate>Sat, 12 Jan 2019 19:43:16 PST</pubDate>
+      
+      <guid>https://amdelamar.com/about/</guid>
+      <description>https://amdelamar.com/#about</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://amdelamar.com/contact/</link>
+      <pubDate>Sat, 12 Jan 2019 19:43:16 PST</pubDate>
+      
+      <guid>https://amdelamar.com/contact/</guid>
+      <description>https://amdelamar.com/#contact</description>
+    </item>
+    
+    <item>
+      <title>Second</title>
+      <link>https://amdelamar.com/post/second/</link>
+      <pubDate>Sat, 12 Jan 2019 19:43:16 PST</pubDate>
+      
+      <guid>https://amdelamar.com/post/second/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst libero neque, eu magna tellus sodales laoreet erat habitant orci ad, vel tempus vehicula egestas malesuada vestibulum ac pretium mollis. Quis dui tortor id tempus nullam, ridiculus cum nec netus est purus, nulla nascetur ad felis. Vestibulum taciti natoque feugiat ullamcorper blandit potenti integer facilisis, morbi non donec venenatis posuere ad consequat odio, a facilisi conubia nisl rutrum porttitor tristique. Gravida nec diam lacinia proin facilisis tristique torquent conubia, laoreet volutpat phasellus ligula ad quam egestas aenean, fames praesent class vulputate scelerisque mattis id.</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://amdelamar.com/post/first/</link>
+      <pubDate>Sat, 12 Jan 2019 19:24:28 PST</pubDate>
+      
+      <guid>https://amdelamar.com/post/first/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst libero neque, eu magna tellus sodales laoreet erat habitant orci ad, vel tempus vehicula egestas malesuada vestibulum ac pretium mollis. Quis dui tortor id tempus nullam, ridiculus cum nec netus est purus, nulla nascetur ad felis. Vestibulum taciti natoque feugiat ullamcorper blandit potenti integer facilisis, morbi non donec venenatis posuere ad consequat odio, a facilisi conubia nisl rutrum porttitor tristique. Gravida nec diam lacinia proin facilisis tristique torquent conubia, laoreet volutpat phasellus ligula ad quam egestas aenean, fames praesent class vulputate scelerisque mattis id.</description>
+    </item>
+    
+  </channel>
+</rss>
+

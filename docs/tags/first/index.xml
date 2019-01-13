@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>First on RamblingWare</title>
+    <link>https://amdelamar.com/tags/first/</link>
+    <description>Recent content in First on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Jan 2019 19:24:28 -0800</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First</title>
+      <link>https://amdelamar.com/post/first/</link>
+      <pubDate>Sat, 12 Jan 2019 19:24:28 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/post/first/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst libero neque, eu magna tellus sodales laoreet erat habitant orci ad, vel tempus vehicula egestas malesuada vestibulum ac pretium mollis. Quis dui tortor id tempus nullam, ridiculus cum nec netus est purus, nulla nascetur ad felis. Vestibulum taciti natoque feugiat ullamcorper blandit potenti integer facilisis, morbi non donec venenatis posuere ad consequat odio, a facilisi conubia nisl rutrum porttitor tristique. Gravida nec diam lacinia proin facilisis tristique torquent conubia, laoreet volutpat phasellus ligula ad quam egestas aenean, fames praesent class vulputate scelerisque mattis id.</description>
+    </item>
+    
+  </channel>
+</rss>
