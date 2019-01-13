@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on RamblingWare</title>
-    <link>https://amdelamar.com/categories/</link>
+    <link>https://amdelamar.com/blog/categories/</link>
     <description>Recent content in Categories on RamblingWare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://amdelamar.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amdelamar.com/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

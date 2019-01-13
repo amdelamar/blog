@@ -1,6 +1,6 @@
 archetypeDir           = "archetypes"
 author                 = "amdelamar"
-baseUrl                = "https://amdelamar.com"
+baseUrl                = "https://amdelamar.com/blog"
 buildDrafts            = false
 relativeURLs           = true
 canonifyUrls           = true
