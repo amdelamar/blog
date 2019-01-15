@@ -1,0 +1,18 @@
+name = "Osseous"
+license = "MIT"
+licenselink = "https://github.com/amdelamar/blog/blob/master/LICENSE"
+description = "A bony CSS theme"
+homepage = "http://amdelamar.com/osseous/"
+tags = ["bony","css","skeleton","minimal","osseous"]
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Austin Delamar"
+  homepage = "https://amdelamar.com"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

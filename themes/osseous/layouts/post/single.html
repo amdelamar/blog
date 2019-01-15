@@ -1,0 +1,24 @@
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article>
+
+  <div id="description" class="row section">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+      <p>
+        <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}</span><br>
+        {{ $baseurl := .Site.BaseURL }}
+      </p>
+      <p class="post-meta">{{ i18n "tags" }}:&nbsp;
+        {{ range $i, $e := .Params.tags }}
+            {{if $i}},&nbsp;{{end}}
+            <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
+        {{ end }}
+      </p>
+
+    </div>
+  </div>
+
+</article>
+{{ partial "footer.html" . }}

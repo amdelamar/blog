@@ -1,0 +1,16 @@
+<div>
+  <p class="">
+    <span class="float-right">{{ .Date.Format "Jan 2, 2006" }}</span>
+    <a href="{{ .Permalink }}">
+      <h3>{{ .Title }} {{ if .Draft }}(draft){{end}}</h3>
+    </a>
+  </p>
+  <p>
+    {{ .Summary }}
+  </p>
+  {{ $baseurl := .Site.BaseURL }}
+  <p>{{ i18n "tags" }}:&nbsp;
+  {{ range $i, $e := .Params.tags }}
+    {{if $i}}, {{end}}<a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
+  {{ end }}</p>
+</div>

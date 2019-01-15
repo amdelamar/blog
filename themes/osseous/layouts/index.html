@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article>
+
+  <div id="description" class="row section margin-top-large">
+    <div class="container">
+
+      {{ range first 10 .Data.Pages.ByDate.Reverse }}
+          {{ if eq .Type "post" }}
+              {{ .Render "summary"}}
+          {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+
+</article>
+{{ partial "footer.html" . }}

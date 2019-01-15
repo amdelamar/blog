@@ -1,0 +1,33 @@
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="#"><span class="text-medium text-uppercase text-wide">{{ .Site.Title }}</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="#download">Download</a>
+    		<div class="nav-item dropdown">
+    		  <a href="#examples">Examples &#9662;</a>
+    		  <div class="dropdown-body border background-lightgrey text-left">
+      			<a href="#root">Root Variables</a>
+      			<a href="#typography">Typography</a>
+      			<a href="#columns">Columns</a>
+      			<a href="#tables">Tables</a>
+      			<a href="#buttons">Buttons</a>
+            <a href="#tabs">Tabs</a>
+            <a href="#dropdowns">Dropdowns</a>
+      			<a href="#forms">Forms</a>
+            <a href="#navbar">Navbar</a>
+            <a href="#sidebar">Sidebar</a>
+            <a href="#utility">Utility Classes</a>
+    		  </div>
+    		</div>
+        <a class="nav-item" href="{{ .Site.BaseURL }}/about/">About</a>
+    </div>
+    </div>
+</nav>
