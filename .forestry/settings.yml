@@ -22,4 +22,12 @@ file_template: ":filename:"
 build:
   preview_command: hugo
   publish_command: hugo
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.53
+  publish_env:
+  - HUGO_ENV=production
+  - HUGO_VERSION=0.53
+  preview_output_directory: public
+  output_directory: public
 version: '0.53'
