@@ -1,33 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RamblingWare</title>
-    <link>https://amdelamar.com/blog/</link>
-    <description>Recent content on RamblingWare</description>
+    <title>Office on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/office/</link>
+    <description>Recent content in Office on RamblingWare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Jan 2019 19:43:16 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jul 2018 15:26:43 +0000</lastBuildDate>
     
-	<atom:link href="https://amdelamar.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amdelamar.com/blog/tags/office/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://amdelamar.com/blog/about/</link>
-      <pubDate>Sat, 12 Jan 2019 19:43:16 -0800</pubDate>
-      
-      <guid>https://amdelamar.com/blog/about/</guid>
-      <description>https://amdelamar.com/#about</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://amdelamar.com/blog/contact/</link>
-      <pubDate>Sat, 12 Jan 2019 19:43:16 -0800</pubDate>
-      
-      <guid>https://amdelamar.com/blog/contact/</guid>
-      <description>https://amdelamar.com/#contact</description>
-    </item>
     
     <item>
       <title>Continuous Learning at Work</title>
