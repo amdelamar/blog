@@ -1,10 +1,10 @@
 ---
 title: "Continuous Learning at Work"
-tags: ["office", "interview", "workplace"]
-category: "workplace"
-draft: false
-featured: false
 author: "amdelamar"
+category: "workplace"
+tags: ["office", "interview", "workplace"]
+featured: false
+draft: false
 date: 2018-07-30T15:26:43.554Z
 createDate: 2018-07-30T12:56:03.733Z
 modifyDate: 2018-07-30T15:26:44.474Z
