@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    {{ if isset .Site.Params "author" }}<meta name="author" content="{{ .Site.Params.author }}">{{ end }}
+    {{ if isset .Site.Params "keywords" }}<meta name="keywords" content="{{ .Site.Params.keywords }}">{{ end }}
+    {{ if isset .Site.Params "description" }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+    <meta name="robots" content="all">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Open Graph data -->
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="{{ .Title }}">
+    {{ if isset .Params "thumbnail" }}<meta property="og:image" content="{{ .Params.Thumbnail }}">{{ end }}
+    {{ if isset .Params "description" }}<meta property="og:description" content="{{ .Params.description }}">{{ end }}
+    {{ if isset .Params "author" }}<meta property="article:author" content="{{ .Params.Author }}"/>{{ end }}
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ .Permalink }}">
+    {{ if isset .Params "author" }}<meta name="twitter:creator" content="@{{ .Params.twitter_username }}">{{ end }}
+    <meta name="twitter:title" content="{{ .Title }}">
+    {{ if isset .Params "description" }}<meta name="twitter:description" content="{{ .Params.description }}">{{ end }}
+    {{ if isset .Params "thumbnail" }}<meta name="twitter:image" content="{{ .Params.Thumbnail }}">{{ end }}
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{ .Title }}">
+    {{ if isset .Params "description" }}<meta itemprop="description" content="{{ .Params.description }}">{{ end }}
+    {{ if isset .Params "thumbnail" }}<meta itemprop="image" content="{{ .Params.Thumbnail }}">{{ end }}
+
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+</head>
+<body>

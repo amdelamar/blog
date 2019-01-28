@@ -5,12 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    {{ if isset .Site.Params "author" }}
-    <meta name="author" content="{{ .Site.Params.author }}">{{ end }}
-    {{ if isset .Site.Params "keywords" }}
-    <meta name="keywords" content="{{ .Site.Params.keywords }}">{{ end }}
-    {{ if isset .Site.Params "description" }}
-    <meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+    {{ if isset .Site.Params "author" }}<meta name="author" content="{{ .Site.Params.author }}">{{ end }}
+    {{ if isset .Site.Params "keywords" }}<meta name="keywords" content="{{ .Site.Params.keywords }}">{{ end }}
+    {{ if isset .Site.Params "description" }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
     <meta name="robots" content="all">
     <link rel="canonical" href="{{ .Permalink }}">
 
@@ -18,24 +15,25 @@
     <meta property="og:url" content="{{ .Site.BaseURL }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:title" content="Osseous">
-    <meta property="og:image" content="{{ .Site.BaseURL }}/img/skull-200x200.png">
-    <meta property="og:description" content="A bony CSS framework without guts.">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    {{ if isset .Site.Params "thumbnail" }}<meta property="og:image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
+    {{ if isset .Site.Params "description" }}<meta property="og:description" content="{{ .Site.Params.description }}">{{ end }}
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{{ .Site.BaseURL }}">
-    <meta name="twitter:creator" content="@amdelamar">
-    <meta name="twitter:title" content="Osseous">
-    <meta name="twitter:description" content="A bony CSS framework without guts.">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}/img/skull-200x200.png">
+    {{ if isset .Site.Params "author" }}<meta name="twitter:creator" content="@{{ .Site.Params.twitter_username }}">{{ end }}
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    {{ if isset .Site.Params "description" }}<meta name="twitter:description" content="{{ .Site.Params.description }}">{{ end }}
+    {{ if isset .Site.Params "thumbnail" }}<meta name="twitter:image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="Osseous">
-    <meta itemprop="description" content="A bony CSS framework without guts.">
-    <meta itemprop="image" content="{{ .Site.BaseURL }}/img/skull-200x200.png">
+    <meta itemprop="name" content="{{ .Site.Title }}">
+    {{ if isset .Site.Params "description" }}<meta itemprop="description" content="{{ .Site.Params.description }}">{{ end }}
+    {{ if isset .Site.Params "thumbnail" }}<meta itemprop="image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
 
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/osseous.min.css">
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
     <title>{{ .Site.Title }}</title>
 </head>
