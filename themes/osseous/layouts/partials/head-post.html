@@ -23,7 +23,7 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="{{ .Permalink }}">
-    {{ if isset .Params "author" }}<meta name="twitter:creator" content="@{{ .Params.twitter_username }}">{{ end }}
+    {{ if isset .Params "author" }}<meta name="twitter:creator" content="@{{ .Params.twitterUsername }}">{{ end }}
     <meta name="twitter:title" content="{{ .Title }}">
     {{ if isset .Params "description" }}<meta name="twitter:description" content="{{ .Params.description }}">{{ end }}
     {{ if isset .Params "thumbnail" }}<meta name="twitter:image" content="{{ .Params.Thumbnail }}">{{ end }}

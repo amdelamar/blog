@@ -15,12 +15,8 @@ languageCode: "en-us"
 defaultContentLanguage: "en"
 
 blackfriday:
-  angledQuotes: true
+  angledQuotes: false
   hrefTargetBlank: true
-
-#indexes:
-#  category: "categories"
-#  tag: "tags"
 
 preserveTaxonomyNames: true
 taxonomies:
@@ -32,5 +28,5 @@ params:
   keywords: "blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source"
   thumbnail: "https://amdelamar.com/img/social/social-media-thumbnail.png"
   author: "amdelamar"
-  twitter_username: "amdelamar"
+  twitterUsername: "amdelamar"
   paginate: 6

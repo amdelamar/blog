@@ -28,11 +28,11 @@ Source: https://letsencrypt.org/stats/This is huge. Our internet communications 
       
       <guid>https://amdelamar.com/blog/post/2-years-without-gmail/</guid>
       <description>What happened?
-I signed up for ProtonMail in 2015 and ditched Gmail. I&amp;#39;ve been using it ever since.
+I signed up for ProtonMail in 2015 and ditched Gmail. I&amp;rsquo;ve been using it ever since.
 Why did you do that?
 Mainly because of better privacy, but it has the added benefit of being highly secure.
-Gmail is not secure in transit. Which means, when the emails are being transported from server-to-server. ProtonMail offers end-to-end encryption using OpenPGP and symmetric encryption to non-PM users.
-Gmail is not secure at rest.</description>
+1) Gmail is not secure in transit. Which means, when the emails are being transported from server-to-server. ProtonMail offers end-to-end encryption using OpenPGP and symmetric encryption to non-PM users.
+2) Gmail is not secure at rest.</description>
     </item>
     
   </channel>
