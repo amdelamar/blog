@@ -1,9 +1,16 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-tags: ["first"]
-draft: true
 author: "amdelamar"
+category: ""
+tags: []
+featured: false
+draft: true
+date: {{ .Date }}
+createDate: {{ .Date }}
+modifyDate: {{ .Date }}
+publishDate: {{ .Date }}
+thumbnail: ""
+banner: ""
+bannerCaption: ""
+description: ""
 ---
-
-Lorem ipsum

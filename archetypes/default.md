@@ -1,8 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-draft: true
 author: "amdelamar"
+draft: true
+date: {{ .Date }}
 ---
-
-Lorem ipsum
