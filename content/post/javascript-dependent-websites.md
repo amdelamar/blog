@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Dependent Websites"
-authorId: "amdelamar"
+author: "amdelamar"
 category: "observations"
 tags: ["javascript", "webdev"]
 featured: false

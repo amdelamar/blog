@@ -3,8 +3,8 @@ title: "Back Online After Migrating DBs"
 author: "amdelamar"
 category: "meta"
 tags: ["info", "couchdb", "db"]
-featured: false,
-draft: false,
+featured: false
+draft: false
 date: 2018-03-04T22:12:18.950Z
 createDate: 2018-03-04T21:08:27.651Z
 modifyDate: 2018-03-04T22:12:19.960Z
