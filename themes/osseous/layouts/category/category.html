@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article id="category">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>Category: {{ .Title | lower }}</h2>
+      <ul>
+        {{ range .Data.Pages.ByDate.Reverse }}
+          <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+        {{ end }}
+      </ul>
+      <a class="button button-primary" href="{{ .Site.BaseURL }}category/">All Categories</a>
+    </div>
+  </div>
+</article>
+{{ partial "footer.html" . }}

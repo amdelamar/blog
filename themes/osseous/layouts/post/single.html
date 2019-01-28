@@ -1,26 +1,21 @@
 {{ partial "head.html" . }}
 {{ partial "sidebar.html" . }}
 {{ partial "navbar.html" . }}
-<article>
-
-  <div id="description" class="row section margin-top-large">
+<article id="post">
+  <div class="row section margin-top-large">
     <div class="container">
       <h2>{{ .Title }}</h2>
       <p>
-        <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }} by {{ .Params.author }}</span><br>
-        {{ $baseurl := .Site.BaseURL }}
-      </p>
-      <p>
         {{ .Content }}
       </p>
-      <p class="post-meta">{{ i18n "tags" }}:&nbsp;
-        {{ range $i, $e := .Params.tags }}
-            {{if $i}},&nbsp;{{end}}
-            <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
-        {{ end }}
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">{{ .Date.Format "Jan 2, 2006" }}</span> by <span id="author">{{ .Params.author }}</span><br/>
+        <span id="category">Category: <a href="{{ $.Site.BaseURL }}category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span><br/>
+        <span id="tags">Tags:
+        {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
       </p>
     </div>
   </div>
-
 </article>
 {{ partial "footer.html" . }}

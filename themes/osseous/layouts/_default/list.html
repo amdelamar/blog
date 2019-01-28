@@ -1,0 +1,27 @@
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article id="list">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+      <ul class="text-medium">
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+        <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+          <ul>
+            {{ range $key, $value := $taxonomy }}
+            <li> {{ $key }} </li>
+                  <ul>
+                  {{ range $value.Pages }}
+                      <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                  {{ end }}
+                  </ul>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+</article>
+{{ partial "footer.html" . }}

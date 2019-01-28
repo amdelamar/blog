@@ -1,0 +1,32 @@
+archetypeDir: "archetypes"
+author: "amdelamar"
+baseUrl: "https://amdelamar.com/blog"
+buildDrafts: false
+relativeURLs: true
+canonifyUrls: true
+contentDir: "content"
+layoutDir: "layouts"
+publishDir: "docs"
+theme: "osseous"
+themesDir: "themes"
+title: "RamblingWare"
+enableEmoji: true
+languageCode: "en-us"
+defaultContentLanguage: "en"
+
+blackfriday:
+  angledQuotes: true
+  hrefTargetBlank: true
+
+#indexes:
+#  category: "categories"
+#  tag: "tags"
+
+preserveTaxonomyNames: true
+taxonomies:
+  category: category
+  tag: tags
+
+params:
+  twitter_username: "amdelamar"
+  paginate: 6

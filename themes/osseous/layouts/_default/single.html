@@ -1,0 +1,14 @@
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article id="list">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+      <p>
+        {{ .Content }}
+      </p>
+    </div>
+  </div>
+</article>
+{{ partial "footer.html" . }}

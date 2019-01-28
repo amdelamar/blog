@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ partial "head.html" . }}
+{{ partial "sidebar.html" . }}
+{{ partial "navbar.html" . }}
+<article id="list">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>{{ .Title }}</h2>
+      {{- block "main" . }}{{- end }}
+    </div>
+  </div>
+</article>
+{{ partial "footer.html" . }}
