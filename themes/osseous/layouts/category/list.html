@@ -8,7 +8,7 @@
       <ul class="text-medium">
         {{ $taxonomy := .Site.Taxonomies.category }}
         {{ range $key, $value := $taxonomy }}
-        <li><a class="text-secondary" href="{{ $.Site.BaseURL }}category/{{ $key | urlize }}">{{ $key }}</a></li>
+        <li><a class="text-secondary" href="{{ $.Site.BaseURL }}/category/{{ $key | urlize }}">{{ $key }}</a></li>
           <ul>
           {{ range $value.Pages }}
             <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>

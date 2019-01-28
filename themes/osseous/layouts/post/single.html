@@ -11,9 +11,9 @@
       <br/>
       <p id="post-metadata" class="text-secondary">
         <span id="date">{{ .Date.Format "Jan 2, 2006" }}</span> by <span id="author">{{ .Params.author }}</span><br/>
-        <span id="category">Category: <a href="{{ $.Site.BaseURL }}category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span><br/>
+        <span id="category">Category: <a href="{{ $.Site.BaseURL }}/category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span><br/>
         <span id="tags">Tags:
-        {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
+        {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
       </p>
     </div>
   </div>

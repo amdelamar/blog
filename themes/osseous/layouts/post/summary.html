@@ -8,8 +8,8 @@
     {{ .Description }}
   </p>
   <p id="post-metadata" class="text-secondary margin-none">
-    <span id="category">Category: <a href="{{ $.Site.BaseURL }}category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span>&nbsp;|&nbsp;
+    <span id="category">Category: <a href="{{ $.Site.BaseURL }}/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span>&nbsp;|&nbsp;
     <span id="tags">Tags:
-    {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
+    {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
   </p>
 </div>
