@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN">
+    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg">
+    <meta property="og:description" content="I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don&#39;t make the same mistake I did!">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN">
+    <meta name="twitter:description" content="I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don&#39;t make the same mistake I did!">
+    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg">
+
+    
+    <meta itemprop="name" content="Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN">
+    <meta itemprop="description" content="I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don&#39;t make the same mistake I did!">
+    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg">
+
+    <link rel="shortcut icon" href="../../favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blogcss/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN - RamblingWare</title>
+</head>
+<body>
+
+
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+    <div class="nav-item-close">
+        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="https://amdelamar.com/blogcategory/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blogtags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+</nav>
+
+
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blogcategory/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blogtags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</h2>
+      <p>
+        <p>I used Imgur to host all my images for this website, my portfolio, and a few github projects. Imgur is a (functionally speaking) small, free, image hosting site. It started as a way to share pictures on Reddit.</p><p>This blog has about 70 images hosted by Imgur. Including the different sizes for thumbnails and banners. Which is not too bad for a small site. I thought it was great. I could reduce the size of my database by only storing short URLs instead of on my own file system or full images in BLOB format. (<strong>Edit</strong>: Some people seem confused by the mention of <a href=\"https://en.wikipedia.org/wiki/Binary_large_object\">BLOBs</a>. I&#39;m not recommending you use them but <em>a BLOBs intended purpose _is_ to store files.</em> Storing URLs or relative links is preferred for most use cases. But its possible with a BLOB field in a database as well. Not saying I recommend it though.)</p><p>And things were going great...</p><p>...Until I found out that using Imgur as a host or CDN (content delivery network) for your own websites effectively <strong>violates</strong> their <a href=\"https://imgur.com/tos\">Terms of Service</a>. If they wanted to, they could delete all your images without warning. Here&#39;s a snippet from their tos:</p><blockquote><p>[...] don&#39;t use Imgur to host image libraries you link to from elsewhere, content for your website, advertising, avatars, or anything else that turns us into your content delivery network. If you do &ndash; and we will be the judge &ndash; or if you do anything illegal, in addition to any other legal rights we may have, we will ban you along with the site you&#39;re hotlinking from, delete all your images, report you to the authorities if necessary, and prevent you from viewing any images hosted on Imgur.com.</p></blockquote><p>I owe <a href=\"https://www.reddit.com/r/webdev/comments/2qhf7z/is_there_any_reason_not_to_use_imgur_as_a_host/\">this guy on Reddit</a> for pointing this out. <em>Thank you sir. </em>I haven&#39;t made it a habit to read the ToS myself yet.</p><p>If <strong>your images are deleted</strong>... well... good luck recovering them. Especially organizing what images are what, since the file names are random and not labelled in any meanigful way. You can&#39;t trust Imgur to keep them forever either. They can and do remove images anytime they want.</p><p>So for some small GitHub projects I replaced some Imgur links with actual uploaded images to GitHub. (e.g. <a href=\"https://amdelamar.com/jhash/\">Jhash</a>, <a href=\"https://amdelamar.com/jotp/\">Jotp</a>). But for the main offender... this blog... I had to do a lot more work. First, I had to get local copies of my images. Imgur doesn&#39;t offer a bulk download option that I know of. So manual &quot;File - Save As&quot; was the way to go. Then I also needed to name the files something meanigful, as Imgur assigns a random letter-number name (e.g. cvT1kr8m.jpg or X38Jr4ol.jpg).</p><p>Once I had all my files saved, I started to search for a <strong>replacement</strong>. However, if I replaced Imgur a similar image hosting site... I may still be in trouble if that site decides to update their Terms of Service too. <strong>No free and easy website will just host your crap forever.</strong> My files aren&#39;t safe in anyone&#39;s hands. What I needed was a proper CDN to host my own images.</p><p>&nbsp;</p><h2>Migrating to a CDN</h2><p>A content delivery network would be perfect. But this is just my blog... <strong>I can&#39;t afford to pay $50 USD a month for a proper CDN</strong>. I&#39;m not running any ad campaigns or profiting at all. I need an inexpensive solution.</p><p>After digging around over the weekend I found one that peaked my interests. I signed up for <a href=\"https://secure.backblaze.com/b2_buckets.htm\">BackBlaze</a> and <a href=\"https://www.cloudflare.com/\">CloudFlare</a> for their free service tier. It turns out that its a great combo for caching images to create a <strong>practically free CDN</strong>.</p><p>This <a href=\"https://silversuit.net/blog/2016/04/how-to-set-up-a-practically-free-cdn/\">blog post by Silvernet</a> that explains how you can do this. I won&#39;t steal his thunder here, but basically the idea is this:</p><ol><li><p>Setup a public B2 bucket and upload your images/files.</p></li><li><p>Setup CloudFlare for your domain name. Carefully configure your existing DNS settings.<em> (I&#39;m not responsible if you misconfigure them and bring down your website accidentally.)</em></p></li><li><p>Add a CNAME record like &quot;cdn&quot; so that it reads &quot;cdn.ramblingware.com&quot; for example and point it to the B2 bucket. You can findout the B2 bucket domain you&#39;re using by viewing the details of a file you uploaded. Note the friendly URL name. So in my case it was &quot;f001.backblazeb2.com&quot;.</p></li><li><p>Then wait about 2 to 24 hours depending on the TTL set so the domain forwarding can propagate across other DNS systems.</p></li><li><p>Finally, you should set a cache rule in CloudFlare so that it will store a copy of the images and serve them for you, to reduce transaction calls in BackBlaze and cut down on the service costs.</p></li></ol><p>And that&#39;s it! Now you have a custom CDN that caches files and serves them all over the globe. It would&#39;ve been easier if I was willing to throw down some real cash per month. And it does take some work to setup, but it was the cheapest solution for me.</p><p>If you&#39;re short on cash like myself, then this is a nice solution that only takes a bit of elbow-grease. Unless you upload <strong>more than 10GB</strong> of files or your network bandwidth is greater than <strong>the daily free limit</strong>, you will be charged a small fee. In my case I only amounted to a few MBs of files, and the traffic combined with CloudFlare caching was below the 2500 transactions limit, so I&#39;m not paying anything at the moment.</p><p>This setup does have an added benefit of scaling as my site grows. I&#39;d only pay for what I use. However if you can afford a real CDN then maybe take a look at <a href=\"https://www.maxcdn.com/\">MaxCDN</a>, <a href=\"https://www.keycdn.com/\">KeyCDN</a>, or something like <a href=\"http://cloudinary.com/\">Cloudinary</a>. I even read that some folks were using Google Drive, but I&#39;m not sure if its acceptable under their terms of service. My point is that you should take some time to research your options and how much time or money you&#39;re willing to spend.</p><p>&nbsp;</p><h2>No Going Back Now</h2><p>The final action I took to never host images outside of my CDN was to enable the <a href=\"https://content-security-policy.com/\">HTTP Content Security Policy</a> header in all the page requests. This prevents images from showing that are not part of the policy.</p><p>Currently its set like this:</p><pre><code class=\"language-http\">content-security-policy: \"default-src 'self' cdn.ramblingware.com 'unsafe-inline' 'unsafe-eval'\"</code></pre><p>This means any content or files that do not match (www.ramblingware.com or cdn.ramblingware.com) will be blocked. Your web browser should refuse to load them. <strong>Now I really can&#39;t use Imgur</strong> to host images on my blog anymore.</p><p>This was helpful in finding any remaining logos or icons that I had forgotten. For example, the 404 page has a sad robot image that I missed when uploading to the B2 bucket. The CSP header effectively limits what content can be shown on a web page. (<em>Which is also very useful for blocking XSS attacks. So I&#39;ve added some additional security on the side.</em>)</p><p>&nbsp;</p><h2>Avoid Imgur-like Hosts</h2><p>I used Imgur to begin with because it was conveneint, free, and the compression and resizing were awesome. It was so easy. Only after I uploaded several dozen images did I learn that I was abusing Imgur accidentally. I&#39;m glad I was able to correct this early on too, rather than dealing with 100&#39;s of thumbnails and (potentially) high-volume traffic from viewers. (<em>Who am I kidding. My blog won&#39;t become viral!</em>)</p><p><strong>So, don&#39;t make the same mistake as I did. </strong>Weigh your options! If you have a website, portfolio, blog, or any small web projects, be sure to store your content and images in a proper CDN or web host.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">Jun 12, 2017</span> by <span id="author">amdelamar</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blogcategory/web" class="text-secondary">web</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blogtags/webdev" class="text-secondary">webdev</a>, <a href="https://amdelamar.com/blogtags/cdn" class="text-secondary">cdn</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
+  
+  <script type="text/javascript" src="https://amdelamar.com/blogjs/osseous.min.js"></script>
+  
+  <script src="https://amdelamar.com/bloghighlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+

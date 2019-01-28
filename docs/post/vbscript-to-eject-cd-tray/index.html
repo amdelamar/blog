@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/post/vbscript-to-eject-cd-tray/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/post/vbscript-to-eject-cd-tray/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="VBScript to Eject CD Tray">
+    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+    <meta property="og:description" content="Annoy your coworkers with a randomly ejecting CD tray!">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/post/vbscript-to-eject-cd-tray/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="VBScript to Eject CD Tray">
+    <meta name="twitter:description" content="Annoy your coworkers with a randomly ejecting CD tray!">
+    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+
+    
+    <meta itemprop="name" content="VBScript to Eject CD Tray">
+    <meta itemprop="description" content="Annoy your coworkers with a randomly ejecting CD tray!">
+    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+
+    <link rel="shortcut icon" href="../../favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blogcss/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>VBScript to Eject CD Tray - RamblingWare</title>
+</head>
+<body>
+
+
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+    <div class="nav-item-close">
+        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="https://amdelamar.com/blogcategory/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blogtags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+</nav>
+
+
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blogcategory/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blogtags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>VBScript to Eject CD Tray</h2>
+      <p>
+        <p>I think this is an old IT Department prank, but still a fun trick to play on your coworkers at the office, once in a long while. While our office policy is to lock your computer physically, and by using Windows lock (Or sleep mode) when you step away from your desk, not all of our coworkers remember to do so, everytime.<br /><br />Let this be their friendly--and annoying--reminder to always secure your workstation!<br /><br />I&#39;ve adapted this prank from another source, and added my own message for extra trolling fun. Its by no means, a secret, to eject a CD/DVD tray programmatically, but a rather infamous one, that gets forgotten, time to time.<br />&nbsp;</p><p style=\"text-align:center\"><img alt=\"a windows dialog saying \" height=\"173\" src=\"https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg\" width=\"440\" /></p><p><br /><br />Randomly, every few minutes, this message will appear and ask the user to insert a CD into the disc drive. Below is the code you can copy and paste, into Notepad, and save as a &quot;.VBS&quot; file, instead of a text file. That way, Windows recognizes it as a runnable script. Once its saved, you can double-click it to run, and stand back and let the fun begin!<br />&nbsp;</p><p style=\"text-align:center\"><img alt=\"a picture of the script source code\" height=\"207\" src=\"https://cdn.ramblingware.com/file/ramblingware/2015/eject/script.png\" width=\"614\" /></p><p>&nbsp;</p><pre><code class=\"language-vbscript\">do<br/>MsgBox \"There is no disc in the drive. Please insert a disc to continue.\", 65, \"CD/DVD Not Found\"<br/><br/>For Each d in CreateObject(\"Scripting.FileSystemObject\").Drives<br/>    WScript.sleep 60<br/>    If d.DriveType = 4 Then CreateObject(\"Shell.Application\").Namespace(17).ParseName(d.DriveLetter &amp;amp; \:\").InvokeVerb(\"Eject\")<br/><br/>    End If<br/>Next<br/>WScript.sleep int(30000*Rnd)<br/>loop   </code></pre><pre>Once your coworker or you have had enough of the annoying script, you can end its process in Task Manager by ending &quot;wscript.exe&quot;, as shown.</pre><p>&nbsp;</p><p style=\"text-align:center\"><img alt=\"a picture of Windows Task Manager highlighting the wscript.exe process\" height=\"437\" src=\"https://cdn.ramblingware.com/file/ramblingware/2015/eject/task-manager.png\" width=\"614\" /></p><p><br /><br />As always, any pranks you pull at your office or workplace should be light-hearted and harmless. This is a great example, just as long as you don&#39;t abuse it! Once your coworker has been thoroughly confused and/or annoyed, give them a hand and show them how to identify the script, and to pass it along to others!<br /><br />Have fun!</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">Jun 15, 2015</span> by <span id="author">amdelamar</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blogcategory/pranks" class="text-secondary">pranks</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blogtags/vbscript" class="text-secondary">vbscript</a>, <a href="https://amdelamar.com/blogtags/funny" class="text-secondary">funny</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
+  
+  <script type="text/javascript" src="https://amdelamar.com/blogjs/osseous.min.js"></script>
+  
+  <script src="https://amdelamar.com/bloghighlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+

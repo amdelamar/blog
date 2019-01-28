@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>meta on RamblingWare</title>
+    <link>https://amdelamar.com/blog/category/meta/</link>
+    <description>Recent content in meta on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Mar 2018 22:12:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/category/meta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Back Online After Migrating DBs</title>
+      <link>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</guid>
+      <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
+
+I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.0.0 version of the dashboard working, I&#39;m finally able to give an update today. 
+Sorry its taken so long, but I don&#39;t work on my open source projects every day.</description>
+    </item>
+    
+    <item>
+      <title>Problems with building your own blogsite</title>
+      <link>https://amdelamar.com/blog/post/problems-with-building-your-own-blogsite/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/problems-with-building-your-own-blogsite/</guid>
+      <description>Back in 2014 I decided to start blogging. (Cue sad trumpet horn.) Well... I tried to.
+Turns out, blogging is like a second job. Always second-shift work, after my day job. Long hours with no OT or health benefits. But hey! I get to gloat that I have my own blog right? Back then, I simply ran into other life events that held up my blog for a period of time.</description>
+    </item>
+    
+    <item>
+      <title>2nd Update</title>
+      <link>https://amdelamar.com/blog/post/second/</link>
+      <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/second/</guid>
+      <description>Its been quite a while, since I started my website, and now I&amp;#39;m getting back into things. I&amp;#39;ve got lots to share, and will be posting more to my other pages.
+I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix. These pages describe the overall work and results of the project. Their code won&amp;#39;t be available for download in the Code page, but I will be adding other items for others to download later.</description>
+    </item>
+    
+    <item>
+      <title>First!</title>
+      <link>https://amdelamar.com/blog/post/first/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/first/</guid>
+      <description>This post marks when I started building my first blog on Wix, a website-generating factory.
+Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;#39;t doing it right... I wasn&amp;#39;t programming... I was cheating. It felt wrong. I vowed that I would return to program my own website.
+&amp;quot;What kind of programmer doesn&amp;#39;t create their own website?&amp;quot;, I thought.
+if(\&#34;Programmer\&#34;.equals(user.getRole()) ){ return user.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile-apps on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/mobile-apps/</link>
+    <description>Recent content in mobile-apps on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/mobile-apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>More of My Favorite iOS Apps</title>
+      <link>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</guid>
+      <description>Continuing from my previous list, I think I&amp;#39;ll make this a series, and post new apps I&amp;#39;m using every few months.
+Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
+These apps are becoming daily drivers or at least seeing me use them every week. I&amp;#39;m not a hardcore iOS user, but maybe you&amp;#39;ll find something new to try out from my ever-rotating favorites list.</description>
+    </item>
+    
+    <item>
+      <title>Some of My Favorite iOS Apps</title>
+      <link>https://amdelamar.com/blog/post/some-of-my-favorite-ios-apps/</link>
+      <pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/some-of-my-favorite-ios-apps/</guid>
+      <description>No default apps.
+No photo filters.
+No games.
+Mostly productivity and security. Which I know is boring, but these are just some of my daily apps that I use right now. And believe me, when I say that I am not a target user for mobile devices. I hardly use my smartphone let alone, make phone calls. So what I think is cool right now, might be way off base for regular smartphone users.</description>
+    </item>
+    
+  </channel>
+</rss>

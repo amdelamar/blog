@@ -6,13 +6,220 @@
     <description>Recent content in Tags on RamblingWare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jul 2018 15:26:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Interview</title>
+      <title>2FA</title>
+      <link>https://amdelamar.com/blog/tags/2fa/</link>
+      <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/2fa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ad-block</title>
+      <link>https://amdelamar.com/blog/tags/ad-block/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/ad-block/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>advertising</title>
+      <link>https://amdelamar.com/blog/tags/advertising/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/advertising/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apps</title>
+      <link>https://amdelamar.com/blog/tags/apps/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cdn</title>
+      <link>https://amdelamar.com/blog/tags/cdn/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/cdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>https://amdelamar.com/blog/tags/cloud/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>college</title>
+      <link>https://amdelamar.com/blog/tags/college/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computer-science</title>
+      <link>https://amdelamar.com/blog/tags/computer-science/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/computer-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>couchdb</title>
+      <link>https://amdelamar.com/blog/tags/couchdb/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/couchdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://amdelamar.com/blog/tags/css/</link>
+      <pubDate>Sun, 18 Mar 2018 21:02:05 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>db</title>
+      <link>https://amdelamar.com/blog/tags/db/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://amdelamar.com/blog/tags/devops/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://amdelamar.com/blog/tags/docker/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>email</title>
+      <link>https://amdelamar.com/blog/tags/email/</link>
+      <pubDate>Sun, 18 Mar 2018 21:02:05 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encryption</title>
+      <link>https://amdelamar.com/blog/tags/encryption/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/encryption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>https://amdelamar.com/blog/tags/firefox/</link>
+      <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>full-stack</title>
+      <link>https://amdelamar.com/blog/tags/full-stack/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/full-stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>funny</title>
+      <link>https://amdelamar.com/blog/tags/funny/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/funny/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://amdelamar.com/blog/tags/google/</link>
+      <pubDate>Fri, 22 Jun 2018 19:33:05 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://amdelamar.com/blog/tags/hardware/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>https://amdelamar.com/blog/tags/https/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://amdelamar.com/blog/tags/ios/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>info</title>
+      <link>https://amdelamar.com/blog/tags/info/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/info/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
       <link>https://amdelamar.com/blog/tags/interview/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 +0000</pubDate>
       
@@ -21,7 +228,61 @@
     </item>
     
     <item>
-      <title>Office</title>
+      <title>java</title>
+      <link>https://amdelamar.com/blog/tags/java/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java-ee</title>
+      <link>https://amdelamar.com/blog/tags/java-ee/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/java-ee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://amdelamar.com/blog/tags/javascript/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://amdelamar.com/blog/tags/kubernetes/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>marketing</title>
+      <link>https://amdelamar.com/blog/tags/marketing/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/marketing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mobile-apps</title>
+      <link>https://amdelamar.com/blog/tags/mobile-apps/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/mobile-apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>office</title>
       <link>https://amdelamar.com/blog/tags/office/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 +0000</pubDate>
       
@@ -30,7 +291,79 @@
     </item>
     
     <item>
-      <title>Workplace</title>
+      <title>passwords</title>
+      <link>https://amdelamar.com/blog/tags/passwords/</link>
+      <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/passwords/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://amdelamar.com/blog/tags/privacy/</link>
+      <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://amdelamar.com/blog/tags/security/</link>
+      <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sffpc</title>
+      <link>https://amdelamar.com/blog/tags/sffpc/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/sffpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vbscript</title>
+      <link>https://amdelamar.com/blog/tags/vbscript/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/vbscript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video-games</title>
+      <link>https://amdelamar.com/blog/tags/video-games/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/video-games/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webdev</title>
+      <link>https://amdelamar.com/blog/tags/webdev/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/webdev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://amdelamar.com/blog/tags/windows/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workplace</title>
       <link>https://amdelamar.com/blog/tags/workplace/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 +0000</pubDate>
       

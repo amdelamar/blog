@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Category on RamblingWare</title>
+    <link>https://amdelamar.com/blog/category/</link>
+    <description>Recent content in Category on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://amdelamar.com/blog/category/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>advice</title>
+      <link>https://amdelamar.com/blog/category/advice/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/advice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://amdelamar.com/blog/category/code/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>favorites</title>
+      <link>https://amdelamar.com/blog/category/favorites/</link>
+      <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/favorites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gaming</title>
+      <link>https://amdelamar.com/blog/category/gaming/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/gaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life-lessons</title>
+      <link>https://amdelamar.com/blog/category/life-lessons/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/life-lessons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meta</title>
+      <link>https://amdelamar.com/blog/category/meta/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/meta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>observations</title>
+      <link>https://amdelamar.com/blog/category/observations/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/observations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pranks</title>
+      <link>https://amdelamar.com/blog/category/pranks/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/pranks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>predictions</title>
+      <link>https://amdelamar.com/blog/category/predictions/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/predictions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privacy</title>
+      <link>https://amdelamar.com/blog/category/privacy/</link>
+      <pubDate>Fri, 22 Jun 2018 19:33:05 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/privacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://amdelamar.com/blog/category/software/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://amdelamar.com/blog/category/web/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workplace</title>
+      <link>https://amdelamar.com/blog/category/workplace/</link>
+      <pubDate>Mon, 30 Jul 2018 15:26:43 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/category/workplace/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

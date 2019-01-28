@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java-ee on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/java-ee/</link>
+    <description>Recent content in java-ee on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/java-ee/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java Web Frameworks 2017</title>
+      <link>https://amdelamar.com/blog/post/java-web-frameworks-2017/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/java-web-frameworks-2017/</guid>
+      <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
+In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.
+The tech/features are taken right off the websites for the framework and some from their documentation, if it was easy to read through.</description>
+    </item>
+    
+    <item>
+      <title>Top 5 Java EE Tips and Tricks</title>
+      <link>https://amdelamar.com/blog/post/top-5-java-ee-tips-and-tricks/</link>
+      <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/top-5-java-ee-tips-and-tricks/</guid>
+      <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.
+Here we go:
+1. Handle exceptions in JSPsMake an Exception JSP page, and set error handling inside your other JSP pages.</description>
+    </item>
+    
+    <item>
+      <title>Java Frameworks and the Effort they might save or create</title>
+      <link>https://amdelamar.com/blog/post/java-frameworks-and-the-effort-they-might-save/</link>
+      <pubDate>Wed, 06 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/java-frameworks-and-the-effort-they-might-save/</guid>
+      <description>Java is a nice programming language. But Java/J2EE websites can grow to be very complex in a short amount of time. One of the biggest areas of discussion about J2EE development today is about the many kinds of frameworks that can be implemented with your project, and what valuable features they provide, or amount of work they chop down.
+The below graph is how I feel about the amount of effort required to learn, build, and test, with 2 popular J2EE frameworks.</description>
+    </item>
+    
+  </channel>
+</rss>

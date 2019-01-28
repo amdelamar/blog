@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ad-block on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/ad-block/</link>
+    <description>Recent content in ad-block on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/ad-block/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why I use Ad-Block</title>
+      <link>https://amdelamar.com/blog/post/why-i-use-ad-block/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/why-i-use-ad-block/</guid>
+      <description>People hate online advertisements... Let me repeat that.
+People really HATE online ads.
+There are lots of online ads. And there are some that are... acceptable. Then there are the worst of offenders. The kind that sends people into fits, immediately closing the page, and leaving the website forever.
+Pop-upsAuto-playing video or soundsBlinking, Floating, Shaking, or MovingDeceptive or innapropriate content. (You know what this is. *ahem* Enhancement! *ahem*)Of all the forms of advertisements, I think online advertising is the worst.</description>
+    </item>
+    
+  </channel>
+</rss>

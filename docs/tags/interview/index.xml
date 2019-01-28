@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Interview on RamblingWare</title>
+    <title>interview on RamblingWare</title>
     <link>https://amdelamar.com/blog/tags/interview/</link>
-    <description>Recent content in Interview on RamblingWare</description>
+    <description>Recent content in interview on RamblingWare</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Jul 2018 15:26:43 +0000</lastBuildDate>
@@ -21,6 +21,19 @@
 \&#34;What would you do if you were a technical manager? What would you do to improve your team and/or company?\&#34;
 I&#39;d have my folks continuously learn new skills every year.
 Before I dive into my reasoning I want to preface that IBM has an internal program specifically for this. Its called Think40.</description>
+    </item>
+    
+    <item>
+      <title>Shortest FizzBuzz Solution in Java?</title>
+      <link>https://amdelamar.com/blog/post/shortest-fizzbuzz-solution-in-java/</link>
+      <pubDate>Fri, 03 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/shortest-fizzbuzz-solution-in-java/</guid>
+      <description>Count from 1 to 100, and follow these rules:
+- Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
+- Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
+- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5
+FizzBuzz: A fun interview question to ask any programmer, in just about any language It would seem like there are only a few solutions, but in reality, there are all kinds of approaches to solve this coding question.</description>
     </item>
     
   </channel>

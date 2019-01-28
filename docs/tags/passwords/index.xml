@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>passwords on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/passwords/</link>
+    <description>Recent content in passwords on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/passwords/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>You should use Two-Factor Authentication now</title>
+      <link>https://amdelamar.com/blog/post/you-should-use-two-factor-authentication-now/</link>
+      <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/you-should-use-two-factor-authentication-now/</guid>
+      <description>There were some big data leaks in 2016 that revealed millions of passwords and credentials online. LinkedIn for example had over 160 million credentials stolen from its database. If you had an account on LinkedIn before 2012, there is a near 100% probability that your email + password have been decoded, or &amp;quot;cracked&amp;quot;, already.
+This is just one of the many examples over the last year. You can see a growing list here.</description>
+    </item>
+    
+  </channel>
+</rss>

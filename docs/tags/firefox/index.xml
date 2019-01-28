@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>firefox on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/firefox/</link>
+    <description>Recent content in firefox on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 May 2018 14:18:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Favorite 4 Firefox Add-ons</title>
+      <link>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</link>
+      <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</guid>
+      <description>The \&#34;mosaic killer\&#34; browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&#39;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.&amp;nbsp;
+Everyone has their own favorite list, and don&#39;t think your favorite extensions aren&#39;t worthy if they aren&#39;t mentioned. But for me, personally I tend to focus on privacy and security more than your average user.</description>
+    </item>
+    
+  </channel>
+</rss>

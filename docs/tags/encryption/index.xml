@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>encryption on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/encryption/</link>
+    <description>Recent content in encryption on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/encryption/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTPS Required</title>
+      <link>https://amdelamar.com/blog/post/https-required/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/https-required/</guid>
+      <description>Its 2017, and we&amp;#39;re halfway to encrypting the entire internet.
+Source: https://letsencrypt.org/stats/This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;#39;s Encrypt, is partly responsible because of their free service. But there is an undeniable shift in how we use the internet for our everyday lives. We depend on it more and more.</description>
+    </item>
+    
+    <item>
+      <title>2 Years Without Gmail</title>
+      <link>https://amdelamar.com/blog/post/2-years-without-gmail/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/2-years-without-gmail/</guid>
+      <description>What happened?
+I signed up for ProtonMail in 2015 and ditched Gmail. I&amp;#39;ve been using it ever since.
+Why did you do that?
+Mainly because of better privacy, but it has the added benefit of being highly secure.
+Gmail is not secure in transit. Which means, when the emails are being transported from server-to-server. ProtonMail offers end-to-end encryption using OpenPGP and symmetric encryption to non-PM users.
+Gmail is not secure at rest.</description>
+    </item>
+    
+  </channel>
+</rss>

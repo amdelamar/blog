@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sffpc on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/sffpc/</link>
+    <description>Recent content in sffpc on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/sffpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mini PCs Will Replace Desktops</title>
+      <link>https://amdelamar.com/blog/post/mini-pcs-will-replace-desktops/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/mini-pcs-will-replace-desktops/</guid>
+      <description>A safe prediction, no?
+Its not very hard to believe that all traditional Full/Mid Tower sized PCs or &amp;quot;desktops&amp;quot; will be replaced by SFF (small form factor) or Mini Tower PCs sooner or later. These SFF computers are the size of a loaf of bread or a shoebox; instead of the cabient sized monsters that people have today. I&amp;#39;d like to call those PCs... &amp;quot;deskbottoms&amp;quot; if they sit under your desk because they&amp;#39;re too large.</description>
+    </item>
+    
+  </channel>
+</rss>

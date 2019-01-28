@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on RamblingWare</title>
+    <link>https://amdelamar.com/blog/tags/javascript/</link>
+    <description>Recent content in javascript on RamblingWare</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript Dependent Websites</title>
+      <link>https://amdelamar.com/blog/post/javascript-dependent-websites/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://amdelamar.com/blog/post/javascript-dependent-websites/</guid>
+      <description>I want to start a new series where I highlight some popular websites that require JavaScript. This will be my first entry on this topic, so the formatting may change a bit in future posts. For now, I want to show off a few sites, in no particular order, that depend on JavaScript (JS) to perform their basic function: Display. I&amp;#39;m also going to include a few that do not require JS.</description>
+    </item>
+    
+  </channel>
+</rss>
