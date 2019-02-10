@@ -13,10 +13,10 @@
     
     <item>
       <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</title>
-      <link>https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/</link>
+      <link>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/</guid>
+      <guid>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</guid>
       <description>I used Imgur to host all my images for this website, my portfolio, and a few github projects. Imgur is a (functionally speaking) small, free, image hosting site. It started as a way to share pictures on Reddit.
 This blog has about 70 images hosted by Imgur. Including the different sizes for thumbnails and banners. Which is not too bad for a small site. I thought it was great. I could reduce the size of my database by only storing short URLs instead of on my own file system or full images in BLOB format.</description>
     </item>

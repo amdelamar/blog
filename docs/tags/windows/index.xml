@@ -13,10 +13,10 @@
     
     <item>
       <title>Tips for building Java applications on Windows</title>
-      <link>https://amdelamar.com/blog/post/tips-for-building-java-applications-on-windows/</link>
+      <link>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/tips-for-building-java-applications-on-windows/</guid>
+      <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
       <description>Are you developing a Java AWT/Swing application?
 Is your target audience--or entire company--using Windows?
 Well, you&amp;#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.

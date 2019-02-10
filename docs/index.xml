@@ -29,10 +29,10 @@
     
     <item>
       <title>Continuous Learning at Work</title>
-      <link>https://amdelamar.com/blog/post/continuous-learning-at-work/</link>
+      <link>https://amdelamar.com/blog/continuous-learning-at-work/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/continuous-learning-at-work/</guid>
+      <guid>https://amdelamar.com/blog/continuous-learning-at-work/</guid>
       <description>I&amp;rsquo;ve been doing job interviews as of late and one question that keeps cropping up is about managing staff.
  What would you do if you were a technical manager? What would you do to improve your team and/or company?
  I&amp;rsquo;d have my folks continuously learn new skills every year.
@@ -41,20 +41,20 @@ Before I dive into my reasoning I want to preface that IBM has an internal progr
     
     <item>
       <title>Alternatives to Google Products</title>
-      <link>https://amdelamar.com/blog/post/alternatives-to-google-products/</link>
+      <link>https://amdelamar.com/blog/alternatives-to-google-products/</link>
       <pubDate>Fri, 22 Jun 2018 19:33:05 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/alternatives-to-google-products/</guid>
+      <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
       <description>The anti-Google crowd is growing.
 The Two Reasons I Don’t Trust Google With My Data – Medium\nGoogle Cannot Be Stopped - The AtlanticIs It Time to Break Up Google? - The New York TimesBig data, big business, Big Brother? - CNN.comHow I Fully Quit Google (and you can too) - MediumA blog post from restoreprivacy.com recently covered a few Google Products that could be replaced with some alternative products. The idea is that, these alternatives will respect your privacy and data, or don&#39;t track your online activity.</description>
     </item>
     
     <item>
       <title>Learn to Code Cloud-Native Apps for Free</title>
-      <link>https://amdelamar.com/blog/post/learn-to-code-cloud-native-apps-for-free/</link>
+      <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
       <pubDate>Thu, 24 May 2018 14:32:57 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/learn-to-code-cloud-native-apps-for-free/</guid>
+      <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
       <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.
 I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs. He was impressed but quickly asked:
 
@@ -63,20 +63,20 @@ I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Privat
     
     <item>
       <title>My Favorite 4 Firefox Add-ons</title>
-      <link>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</link>
+      <link>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</link>
       <pubDate>Tue, 15 May 2018 14:18:53 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</guid>
+      <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
       <description>The \&#34;mosaic killer\&#34; browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&#39;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.&amp;nbsp;
 Everyone has their own favorite list, and don&#39;t think your favorite extensions aren&#39;t worthy if they aren&#39;t mentioned. But for me, personally I tend to focus on privacy and security more than your average user.</description>
     </item>
     
     <item>
       <title>Custom Themes for ProtonMail</title>
-      <link>https://amdelamar.com/blog/post/custom-themes-for-protonmail/</link>
+      <link>https://amdelamar.com/blog/custom-themes-for-protonmail/</link>
       <pubDate>Sun, 18 Mar 2018 21:02:05 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/custom-themes-for-protonmail/</guid>
+      <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
       <description>I&#39;ve been a user of ProtonMail since 2015. Tomorrow marks my \&#34;3 year anniversary\&#34; so to speak, of when I ditched Gmail and switched to ProtonMail.
 I wrote about this last year, and my reasons for dumping Gmail haven&#39;t changed.
 If you&#39;re interested in taking back your email privacy, I encourage you to give ProtonMail (PM) a try. Its free to try and has more to offer now than before when I signed up.</description>
@@ -84,10 +84,10 @@ If you&#39;re interested in taking back your email privacy, I encourage you to g
     
     <item>
       <title>Back Online After Migrating DBs</title>
-      <link>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</link>
+      <link>https://amdelamar.com/blog/back-online-after-migrating-dbs/</link>
       <pubDate>Sun, 04 Mar 2018 22:12:18 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</guid>
+      <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
       <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
 
 I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.0.0 version of the dashboard working, I&#39;m finally able to give an update today. 
@@ -96,10 +96,10 @@ Sorry its taken so long, but I don&#39;t work on my open source projects every d
     
     <item>
       <title>Java Web Frameworks 2017</title>
-      <link>https://amdelamar.com/blog/post/java-web-frameworks-2017/</link>
+      <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
       <pubDate>Tue, 05 Dec 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/java-web-frameworks-2017/</guid>
+      <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
       <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
 In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.
 The tech/features are taken right off the websites for the framework and some from their documentation, if it was easy to read through.</description>
@@ -107,19 +107,19 @@ The tech/features are taken right off the websites for the framework and some fr
     
     <item>
       <title>What are Cloud-Native Applications?</title>
-      <link>https://amdelamar.com/blog/post/what-are-cloud-native-applications/</link>
+      <link>https://amdelamar.com/blog/what-are-cloud-native-applications/</link>
       <pubDate>Mon, 13 Nov 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/what-are-cloud-native-applications/</guid>
+      <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
       <description>The term &amp;quot;Cloud Native&amp;quot; sounds simple enough, but I&amp;#39;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;quot;cloud native&amp;quot; in the first place? And how this is different than a non-cloud application, or just an application thrown onto a cloud platform like IBM Cloud, AWS, or Google Cloud Platform?</description>
     </item>
     
     <item>
       <title>More of My Favorite iOS Apps</title>
-      <link>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</link>
+      <link>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</guid>
+      <guid>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</guid>
       <description>Continuing from my previous list, I think I&amp;#39;ll make this a series, and post new apps I&amp;#39;m using every few months.
 Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
 These apps are becoming daily drivers or at least seeing me use them every week. I&amp;#39;m not a hardcore iOS user, but maybe you&amp;#39;ll find something new to try out from my ever-rotating favorites list.</description>
@@ -127,30 +127,30 @@ These apps are becoming daily drivers or at least seeing me use them every week.
     
     <item>
       <title>Some Advice on Docker as a Beginner</title>
-      <link>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</link>
+      <link>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</guid>
+      <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
       <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.
 But containers themselves have been around for a long time. It wasn&amp;#39;t until Docker came along in 2013 and made a set of easy to use APIs that it really exploded.</description>
     </item>
     
     <item>
       <title>Exciting Trends in Web Technology</title>
-      <link>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</link>
+      <link>https://amdelamar.com/blog/exciting-trends-in-web-technology/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</guid>
+      <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
       <description>Web tech is so fricken exciting right now.
 Offline-First Web DevelopmentSingle Page AppsResponsive Web DesignProgressive Web AppsFull Stack JavaScriptDocker ContainerizationMicroservicesServerless FaaS AppsBlockchainNone of these technologies are new in a sense. But it seems to me there&amp;#39;s lots of activity around these topics this year. You can&amp;#39;t seem to avoid a blog post or article without touching on any of these topics. And I think there is a very good reason for that.</description>
     </item>
     
     <item>
       <title>At the Office, Don&#39;t Assume Everything</title>
-      <link>https://amdelamar.com/blog/post/dont-assume-everything/</link>
+      <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/dont-assume-everything/</guid>
+      <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
       <description>At the office. Its important to communicate, and assumptions are the opposite of communcation.
 Assumptions lead to missed deadlines, errors, and wasted time. Someone can think that a task is being worked on since no one replied the email in the last week but is that actually true?
 Here&amp;#39;s a few areas to keep in mind when working, and some reasons why it benefits you to not assume everything.
@@ -159,10 +159,10 @@ Here&amp;#39;s a few areas to keep in mind when working, and some reasons why it
     
     <item>
       <title>HTTPS Required</title>
-      <link>https://amdelamar.com/blog/post/https-required/</link>
+      <link>https://amdelamar.com/blog/https-required/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 UTC</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/https-required/</guid>
+      <guid>https://amdelamar.com/blog/https-required/</guid>
       <description>Its 2017, and we&amp;#39;re halfway to encrypting the entire internet.
 Source: https://letsencrypt.org/stats/This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;#39;s Encrypt, is partly responsible because of their free service. But there is an undeniable shift in how we use the internet for our everyday lives. We depend on it more and more.</description>
     </item>

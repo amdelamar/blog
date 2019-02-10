@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/problems-with-building-your-own-blogsite/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/problems-with-building-your-own-blogsite/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Problems with building your own blogsite">
+    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg">
+    <meta property="og:description" content="To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/problems-with-building-your-own-blogsite/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Problems with building your own blogsite">
+    <meta name="twitter:description" content="To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always.">
+    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg">
+
+    
+    <meta itemprop="name" content="Problems with building your own blogsite">
+    <meta itemprop="description" content="To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always.">
+    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>Problems with building your own blogsite - RamblingWare</title>
+</head>
+<body>
+
+
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+    <div class="nav-item-close">
+        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+</nav>
+
+
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>Problems with building your own blogsite</h2>
+      <p>
+        <p>Back in 2014 I decided to start blogging. (Cue sad trumpet horn.) Well... I tried to.<br /><br />Turns out, blogging is like a second job. Always second-shift work, after my day job. Long hours with no OT or health benefits. But hey! I get to gloat that I have my own blog right? Back then, I simply ran into other life events that held up my blog for a period of time. Graduating college, first job, getting engaged... A lot happened in a few short years.<br /><br />I started on Freewebs.com, and hosted a static website with some simple HTML/CSS pages. I was just starting to learn the full-stack development of enterprise applications, and roughly applied some skills I obtained to make the blog pages. But sometime around Freewebs renaming to Webs.com, they dropped support for static HTML website hosting, and forced users to choose one of their in-house website templates, to continue using their free service. And so, it became time for me to move on. And I decieded to jump to Wix.com.<br /><br />I quickly learned to hate Wix. Yes they have a free, but limited, account you can use. But its really only meant to force users to purchase their premium plans. All the website templates are Flash-based. Which is slowly disappearing from browser-support and favor. (i.e. Chrome) So the writing was on the wall... and I stopped posting to my Wix built blog, and started to ponder what to do next.<br /><br />I decided to build my own blog website. From scratch.<br /><br />There are lots of things to consider here when building something from scratch. Materials? Tools? Libraries? Plugins? Data storage? Hosting? Domains? Security? And much more. But let me get right down to the Pros &amp; Cons of building... well... ANY site from scratch yourself.<br /><br />Here they are:</p><p>&nbsp;</p><h2><strong>Pros</strong></h2><ul><li>You play all roles. You&#39;re the SysAdmin, Webdev, Designer, Author, Editor, and Owner.</li><li>You choose all the software. You choose database, plugins, platform, and even things you won&#39;t consider, like the coding methodology.</li><li>You control the content. Including advertisement, if you want it or not.</li><li>You&#39;re not locked in. No walled-garden syndrome.</li></ul><h2><strong>Cons</strong></h2><ul><li>You do everything yourself. 100% of the content is on you. Style is on you. Domain choice, network performance, reliability, any bugs or issues with the site... its all on you!</li><li>Its seriously complicated, very frustrating at times, and has a steep learning curve. Its not for the faint of heart.</li><li>Tedious and time-consuming for small things, like SSL and Domain CNAME forwarding. Instead of spending 95% of your time writing blog posts and commenting on articles. You&#39;ll be spending more time on tedious work and issues.</li><li>Its not immediately profitable. Its very slow to start, and can take months before your site should go live for the world to see.</li></ul><p>&nbsp;</p><p>I&#39;m not trying to deter anyone from starting to build their own website. Nor am I saying that free-services like Wix and Webs should be tossed aside. I&#39;m saying weigh your options. Are you prepared to take on a second job during late nights? Do you have the time?<br /><br />My new blog site is self-built and <strong>I&#39;m proud of it</strong>. Its definitely not perfect. There are bugs in here and inconsitencies. But I plan to improve the site. Like the home page design, and also adding TLS/SSL for higher SEO. All in good time.</p><p>After all, a smooth sea never made a skillful sailor!</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">Aug 11, 2016</span> by <span id="author">amdelamar</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/meta" class="text-secondary">meta</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/webdev" class="text-secondary">webdev</a>, <a href="https://amdelamar.com/blog/tags/funny" class="text-secondary">funny</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
+  
+  <script type="text/javascript" src="https://amdelamar.com/blog/js/osseous.min.js"></script>
+  
+  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+

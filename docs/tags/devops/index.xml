@@ -13,20 +13,20 @@
     
     <item>
       <title>Some Advice on Docker as a Beginner</title>
-      <link>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</link>
+      <link>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</guid>
+      <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
       <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.
 But containers themselves have been around for a long time. It wasn&amp;#39;t until Docker came along in 2013 and made a set of easy to use APIs that it really exploded.</description>
     </item>
     
     <item>
       <title>Exciting Trends in Web Technology</title>
-      <link>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</link>
+      <link>https://amdelamar.com/blog/exciting-trends-in-web-technology/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</guid>
+      <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
       <description>Web tech is so fricken exciting right now.
 Offline-First Web DevelopmentSingle Page AppsResponsive Web DesignProgressive Web AppsFull Stack JavaScriptDocker ContainerizationMicroservicesServerless FaaS AppsBlockchainNone of these technologies are new in a sense. But it seems to me there&amp;#39;s lots of activity around these topics this year. You can&amp;#39;t seem to avoid a blog post or article without touching on any of these topics. And I think there is a very good reason for that.</description>
     </item>

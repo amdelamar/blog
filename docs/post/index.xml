@@ -13,10 +13,10 @@
     
     <item>
       <title>Continuous Learning at Work</title>
-      <link>https://amdelamar.com/blog/post/continuous-learning-at-work/</link>
+      <link>https://amdelamar.com/blog/continuous-learning-at-work/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/continuous-learning-at-work/</guid>
+      <guid>https://amdelamar.com/blog/continuous-learning-at-work/</guid>
       <description>I&amp;rsquo;ve been doing job interviews as of late and one question that keeps cropping up is about managing staff.
  What would you do if you were a technical manager? What would you do to improve your team and/or company?
  I&amp;rsquo;d have my folks continuously learn new skills every year.
@@ -25,20 +25,20 @@ Before I dive into my reasoning I want to preface that IBM has an internal progr
     
     <item>
       <title>Alternatives to Google Products</title>
-      <link>https://amdelamar.com/blog/post/alternatives-to-google-products/</link>
+      <link>https://amdelamar.com/blog/alternatives-to-google-products/</link>
       <pubDate>Fri, 22 Jun 2018 19:33:05 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/alternatives-to-google-products/</guid>
+      <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
       <description>The anti-Google crowd is growing.
 The Two Reasons I Don’t Trust Google With My Data – Medium\nGoogle Cannot Be Stopped - The AtlanticIs It Time to Break Up Google? - The New York TimesBig data, big business, Big Brother? - CNN.comHow I Fully Quit Google (and you can too) - MediumA blog post from restoreprivacy.com recently covered a few Google Products that could be replaced with some alternative products. The idea is that, these alternatives will respect your privacy and data, or don&#39;t track your online activity.</description>
     </item>
     
     <item>
       <title>Learn to Code Cloud-Native Apps for Free</title>
-      <link>https://amdelamar.com/blog/post/learn-to-code-cloud-native-apps-for-free/</link>
+      <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
       <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/learn-to-code-cloud-native-apps-for-free/</guid>
+      <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
       <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.
 I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs. He was impressed but quickly asked:
 
@@ -47,20 +47,20 @@ I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Privat
     
     <item>
       <title>My Favorite 4 Firefox Add-ons</title>
-      <link>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</link>
+      <link>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</link>
       <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/my-favorite-4-firefox-addons/</guid>
+      <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
       <description>The \&#34;mosaic killer\&#34; browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&#39;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.&amp;nbsp;
 Everyone has their own favorite list, and don&#39;t think your favorite extensions aren&#39;t worthy if they aren&#39;t mentioned. But for me, personally I tend to focus on privacy and security more than your average user.</description>
     </item>
     
     <item>
       <title>Custom Themes for ProtonMail</title>
-      <link>https://amdelamar.com/blog/post/custom-themes-for-protonmail/</link>
+      <link>https://amdelamar.com/blog/custom-themes-for-protonmail/</link>
       <pubDate>Sun, 18 Mar 2018 21:02:05 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/custom-themes-for-protonmail/</guid>
+      <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
       <description>I&#39;ve been a user of ProtonMail since 2015. Tomorrow marks my \&#34;3 year anniversary\&#34; so to speak, of when I ditched Gmail and switched to ProtonMail.
 I wrote about this last year, and my reasons for dumping Gmail haven&#39;t changed.
 If you&#39;re interested in taking back your email privacy, I encourage you to give ProtonMail (PM) a try. Its free to try and has more to offer now than before when I signed up.</description>
@@ -68,10 +68,10 @@ If you&#39;re interested in taking back your email privacy, I encourage you to g
     
     <item>
       <title>Back Online After Migrating DBs</title>
-      <link>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</link>
+      <link>https://amdelamar.com/blog/back-online-after-migrating-dbs/</link>
       <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/back-online-after-migrating-dbs/</guid>
+      <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
       <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
 
 I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.0.0 version of the dashboard working, I&#39;m finally able to give an update today. 
@@ -80,10 +80,10 @@ Sorry its taken so long, but I don&#39;t work on my open source projects every d
     
     <item>
       <title>Java Web Frameworks 2017</title>
-      <link>https://amdelamar.com/blog/post/java-web-frameworks-2017/</link>
+      <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
       <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/java-web-frameworks-2017/</guid>
+      <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
       <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
 In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.
 The tech/features are taken right off the websites for the framework and some from their documentation, if it was easy to read through.</description>
@@ -91,19 +91,19 @@ The tech/features are taken right off the websites for the framework and some fr
     
     <item>
       <title>What are Cloud-Native Applications?</title>
-      <link>https://amdelamar.com/blog/post/what-are-cloud-native-applications/</link>
+      <link>https://amdelamar.com/blog/what-are-cloud-native-applications/</link>
       <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/what-are-cloud-native-applications/</guid>
+      <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
       <description>The term &amp;quot;Cloud Native&amp;quot; sounds simple enough, but I&amp;#39;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;quot;cloud native&amp;quot; in the first place? And how this is different than a non-cloud application, or just an application thrown onto a cloud platform like IBM Cloud, AWS, or Google Cloud Platform?</description>
     </item>
     
     <item>
       <title>More of My Favorite iOS Apps</title>
-      <link>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</link>
+      <link>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/more-of-my-favorite-ios-apps/</guid>
+      <guid>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</guid>
       <description>Continuing from my previous list, I think I&amp;#39;ll make this a series, and post new apps I&amp;#39;m using every few months.
 Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
 These apps are becoming daily drivers or at least seeing me use them every week. I&amp;#39;m not a hardcore iOS user, but maybe you&amp;#39;ll find something new to try out from my ever-rotating favorites list.</description>
@@ -111,30 +111,30 @@ These apps are becoming daily drivers or at least seeing me use them every week.
     
     <item>
       <title>Some Advice on Docker as a Beginner</title>
-      <link>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</link>
+      <link>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</link>
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/some-advice-on-docker-as-a-beginner/</guid>
+      <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
       <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.
 But containers themselves have been around for a long time. It wasn&amp;#39;t until Docker came along in 2013 and made a set of easy to use APIs that it really exploded.</description>
     </item>
     
     <item>
       <title>Exciting Trends in Web Technology</title>
-      <link>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</link>
+      <link>https://amdelamar.com/blog/exciting-trends-in-web-technology/</link>
       <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/exciting-trends-in-web-technology/</guid>
+      <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
       <description>Web tech is so fricken exciting right now.
 Offline-First Web DevelopmentSingle Page AppsResponsive Web DesignProgressive Web AppsFull Stack JavaScriptDocker ContainerizationMicroservicesServerless FaaS AppsBlockchainNone of these technologies are new in a sense. But it seems to me there&amp;#39;s lots of activity around these topics this year. You can&amp;#39;t seem to avoid a blog post or article without touching on any of these topics. And I think there is a very good reason for that.</description>
     </item>
     
     <item>
       <title>At the Office, Don&#39;t Assume Everything</title>
-      <link>https://amdelamar.com/blog/post/dont-assume-everything/</link>
+      <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/dont-assume-everything/</guid>
+      <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
       <description>At the office. Its important to communicate, and assumptions are the opposite of communcation.
 Assumptions lead to missed deadlines, errors, and wasted time. Someone can think that a task is being worked on since no one replied the email in the last week but is that actually true?
 Here&amp;#39;s a few areas to keep in mind when working, and some reasons why it benefits you to not assume everything.
@@ -143,40 +143,40 @@ Here&amp;#39;s a few areas to keep in mind when working, and some reasons why it
     
     <item>
       <title>HTTPS Required</title>
-      <link>https://amdelamar.com/blog/post/https-required/</link>
+      <link>https://amdelamar.com/blog/https-required/</link>
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/https-required/</guid>
+      <guid>https://amdelamar.com/blog/https-required/</guid>
       <description>Its 2017, and we&amp;#39;re halfway to encrypting the entire internet.
 Source: https://letsencrypt.org/stats/This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;#39;s Encrypt, is partly responsible because of their free service. But there is an undeniable shift in how we use the internet for our everyday lives. We depend on it more and more.</description>
     </item>
     
     <item>
       <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</title>
-      <link>https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/</link>
+      <link>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</link>
       <pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/dont-violate-imgurs-terms-of-service-as-a-cdn/</guid>
+      <guid>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</guid>
       <description>I used Imgur to host all my images for this website, my portfolio, and a few github projects. Imgur is a (functionally speaking) small, free, image hosting site. It started as a way to share pictures on Reddit.
 This blog has about 70 images hosted by Imgur. Including the different sizes for thumbnails and banners. Which is not too bad for a small site. I thought it was great. I could reduce the size of my database by only storing short URLs instead of on my own file system or full images in BLOB format.</description>
     </item>
     
     <item>
       <title>Mini PCs Will Replace Desktops</title>
-      <link>https://amdelamar.com/blog/post/mini-pcs-will-replace-desktops/</link>
+      <link>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/mini-pcs-will-replace-desktops/</guid>
+      <guid>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</guid>
       <description>A safe prediction, no?
 Its not very hard to believe that all traditional Full/Mid Tower sized PCs or &amp;quot;desktops&amp;quot; will be replaced by SFF (small form factor) or Mini Tower PCs sooner or later. These SFF computers are the size of a loaf of bread or a shoebox; instead of the cabient sized monsters that people have today. I&amp;#39;d like to call those PCs... &amp;quot;deskbottoms&amp;quot; if they sit under your desk because they&amp;#39;re too large.</description>
     </item>
     
     <item>
       <title>Some of My Favorite iOS Apps</title>
-      <link>https://amdelamar.com/blog/post/some-of-my-favorite-ios-apps/</link>
+      <link>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</link>
       <pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/some-of-my-favorite-ios-apps/</guid>
+      <guid>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</guid>
       <description>No default apps.
 No photo filters.
 No games.
@@ -185,19 +185,19 @@ Mostly productivity and security. Which I know is boring, but these are just som
     
     <item>
       <title>JavaScript Dependent Websites</title>
-      <link>https://amdelamar.com/blog/post/javascript-dependent-websites/</link>
+      <link>https://amdelamar.com/blog/javascript-dependent-websites/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/javascript-dependent-websites/</guid>
+      <guid>https://amdelamar.com/blog/javascript-dependent-websites/</guid>
       <description>I want to start a new series where I highlight some popular websites that require JavaScript. This will be my first entry on this topic, so the formatting may change a bit in future posts. For now, I want to show off a few sites, in no particular order, that depend on JavaScript (JS) to perform their basic function: Display. I&amp;#39;m also going to include a few that do not require JS.</description>
     </item>
     
     <item>
       <title>2 Years Without Gmail</title>
-      <link>https://amdelamar.com/blog/post/2-years-without-gmail/</link>
+      <link>https://amdelamar.com/blog/2-years-without-gmail/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/2-years-without-gmail/</guid>
+      <guid>https://amdelamar.com/blog/2-years-without-gmail/</guid>
       <description>What happened?
 I signed up for ProtonMail in 2015 and ditched Gmail. I&amp;rsquo;ve been using it ever since.
 Why did you do that?
@@ -208,10 +208,10 @@ Mainly because of better privacy, but it has the added benefit of being highly s
     
     <item>
       <title>Video Game Trends that are Toxic</title>
-      <link>https://amdelamar.com/blog/post/video-game-trends-that-are-toxic/</link>
+      <link>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</link>
       <pubDate>Tue, 28 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/video-game-trends-that-are-toxic/</guid>
+      <guid>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</guid>
       <description>Some video games are good. And some suck.
 Maybe they could&amp;#39;ve been great and a lot of fun to play. Or maybe they already are fun to play, but are just poisoned with bad decisions from developers or publishers. There&amp;#39;s a lot going on and its hard to pinpoint a single area that plagues the gaming industry by itself.
 Here&amp;#39;s just a few trends:
@@ -221,10 +221,10 @@ Always Online - DRM - Digital Rights Management</description>
     
     <item>
       <title>Every Company needs a Web Developer</title>
-      <link>https://amdelamar.com/blog/post/every-company-needs-a-web-developer/</link>
+      <link>https://amdelamar.com/blog/every-company-needs-a-web-developer/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/every-company-needs-a-web-developer/</guid>
+      <guid>https://amdelamar.com/blog/every-company-needs-a-web-developer/</guid>
       <description>Even if you got a website for free, and maintain it yourself, you have to admit...
 You could use a web developer.
 Someone to handle all the technical aspects of building, hosting, securing, designing, and maintaining your website for you or your company. A blend of SysAdmin, WebDev, WebDesigner, and Technical Support all rolled into one. If you&amp;#39;re a small company or start-up, that is. Large companies will obviously need more folks for each department, as their needs will be much greater.</description>
@@ -232,10 +232,10 @@ Someone to handle all the technical aspects of building, hosting, securing, desi
     
     <item>
       <title>Why I use Ad-Block</title>
-      <link>https://amdelamar.com/blog/post/why-i-use-ad-block/</link>
+      <link>https://amdelamar.com/blog/why-i-use-ad-block/</link>
       <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/why-i-use-ad-block/</guid>
+      <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
       <description>People hate online advertisements... Let me repeat that.
 People really HATE online ads.
 There are lots of online ads. And there are some that are... acceptable. Then there are the worst of offenders. The kind that sends people into fits, immediately closing the page, and leaving the website forever.
@@ -244,20 +244,20 @@ Pop-upsAuto-playing video or soundsBlinking, Floating, Shaking, or MovingDecepti
     
     <item>
       <title>You should use Two-Factor Authentication now</title>
-      <link>https://amdelamar.com/blog/post/you-should-use-two-factor-authentication-now/</link>
+      <link>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</link>
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/you-should-use-two-factor-authentication-now/</guid>
+      <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
       <description>There were some big data leaks in 2016 that revealed millions of passwords and credentials online. LinkedIn for example had over 160 million credentials stolen from its database. If you had an account on LinkedIn before 2012, there is a near 100% probability that your email + password have been decoded, or &amp;quot;cracked&amp;quot;, already.
 This is just one of the many examples over the last year. You can see a growing list here.</description>
     </item>
     
     <item>
       <title>What I learned 4 years after College</title>
-      <link>https://amdelamar.com/blog/post/what-i-learned-4-years-after-college/</link>
+      <link>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</link>
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/what-i-learned-4-years-after-college/</guid>
+      <guid>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</guid>
       <description>Its been just about four full years after graduating with a Bachelor&amp;#39;s degree in Computer Science. I graduated in Dec 2012 and started working at a Fortune 500 technology company the following month.
 I&amp;#39;ve learned much in four years of college classes, but I&amp;#39;ve also learnt even more in four years of working afterwards. Its arguably a different kind of learning in nature and serves a different purpose.
 &amp;nbsp;
@@ -266,10 +266,10 @@ Four Years of ClassesIn college, you focus on the grades, exams, and homework.</
     
     <item>
       <title>Tips for building Java applications on Windows</title>
-      <link>https://amdelamar.com/blog/post/tips-for-building-java-applications-on-windows/</link>
+      <link>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/tips-for-building-java-applications-on-windows/</guid>
+      <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
       <description>Are you developing a Java AWT/Swing application?
 Is your target audience--or entire company--using Windows?
 Well, you&amp;#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.
@@ -279,20 +279,20 @@ So what&amp;#39;s the problem then?There isn&amp;#39;t a problem, per se.</descr
     
     <item>
       <title>Problems with building your own blogsite</title>
-      <link>https://amdelamar.com/blog/post/problems-with-building-your-own-blogsite/</link>
+      <link>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/problems-with-building-your-own-blogsite/</guid>
+      <guid>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</guid>
       <description>Back in 2014 I decided to start blogging. (Cue sad trumpet horn.) Well... I tried to.
 Turns out, blogging is like a second job. Always second-shift work, after my day job. Long hours with no OT or health benefits. But hey! I get to gloat that I have my own blog right? Back then, I simply ran into other life events that held up my blog for a period of time.</description>
     </item>
     
     <item>
       <title>Top 5 Java EE Tips and Tricks</title>
-      <link>https://amdelamar.com/blog/post/top-5-java-ee-tips-and-tricks/</link>
+      <link>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</link>
       <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/top-5-java-ee-tips-and-tricks/</guid>
+      <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
       <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.
 Here we go:
 1. Handle exceptions in JSPsMake an Exception JSP page, and set error handling inside your other JSP pages.</description>
@@ -300,10 +300,10 @@ Here we go:
     
     <item>
       <title>Internet Security Tips</title>
-      <link>https://amdelamar.com/blog/post/internet-security-tips/</link>
+      <link>https://amdelamar.com/blog/internet-security-tips/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/internet-security-tips/</guid>
+      <guid>https://amdelamar.com/blog/internet-security-tips/</guid>
       <description>Alright, you know why you&amp;#39;re here. (I hope.)
 You&amp;#39;ve read online about the bad things that can happen to your accounts and data. I hope you&amp;#39;ve seen some news about hackers and people losing their data, identity, money, or more. Getting &amp;quot;hacked&amp;quot; is becoming more and more common.
 Credit Cards have been stolen. Accounts on Twitter, Amazon, Apple, Steam, eBay, Skype, and many, many more, have been hijacked. Millions of credentials have been leaked online for other predators to use.</description>
@@ -311,10 +311,10 @@ Credit Cards have been stolen. Accounts on Twitter, Amazon, Apple, Steam, eBay, 
     
     <item>
       <title>Shortest FizzBuzz Solution in Java?</title>
-      <link>https://amdelamar.com/blog/post/shortest-fizzbuzz-solution-in-java/</link>
+      <link>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</link>
       <pubDate>Fri, 03 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/shortest-fizzbuzz-solution-in-java/</guid>
+      <guid>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</guid>
       <description>Count from 1 to 100, and follow these rules:
 - Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
 - Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
@@ -324,40 +324,40 @@ FizzBuzz: A fun interview question to ask any programmer, in just about any lang
     
     <item>
       <title>VBScript to Eject CD Tray</title>
-      <link>https://amdelamar.com/blog/post/vbscript-to-eject-cd-tray/</link>
+      <link>https://amdelamar.com/blog/vbscript-to-eject-cd-tray/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/vbscript-to-eject-cd-tray/</guid>
+      <guid>https://amdelamar.com/blog/vbscript-to-eject-cd-tray/</guid>
       <description>I think this is an old IT Department prank, but still a fun trick to play on your coworkers at the office, once in a long while. While our office policy is to lock your computer physically, and by using Windows lock (Or sleep mode) when you step away from your desk, not all of our coworkers remember to do so, everytime.
 Let this be their friendly--and annoying--reminder to always secure your workstation!</description>
     </item>
     
     <item>
       <title>Java Frameworks and the Effort they might save or create</title>
-      <link>https://amdelamar.com/blog/post/java-frameworks-and-the-effort-they-might-save/</link>
+      <link>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</link>
       <pubDate>Wed, 06 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/java-frameworks-and-the-effort-they-might-save/</guid>
+      <guid>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</guid>
       <description>Java is a nice programming language. But Java/J2EE websites can grow to be very complex in a short amount of time. One of the biggest areas of discussion about J2EE development today is about the many kinds of frameworks that can be implemented with your project, and what valuable features they provide, or amount of work they chop down.
 The below graph is how I feel about the amount of effort required to learn, build, and test, with 2 popular J2EE frameworks.</description>
     </item>
     
     <item>
       <title>2nd Update</title>
-      <link>https://amdelamar.com/blog/post/second/</link>
+      <link>https://amdelamar.com/blog/2nd-update/</link>
       <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/second/</guid>
+      <guid>https://amdelamar.com/blog/2nd-update/</guid>
       <description>Its been quite a while, since I started my website, and now I&amp;#39;m getting back into things. I&amp;#39;ve got lots to share, and will be posting more to my other pages.
 I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix. These pages describe the overall work and results of the project. Their code won&amp;#39;t be available for download in the Code page, but I will be adding other items for others to download later.</description>
     </item>
     
     <item>
       <title>First!</title>
-      <link>https://amdelamar.com/blog/post/first/</link>
+      <link>https://amdelamar.com/blog/first/</link>
       <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://amdelamar.com/blog/post/first/</guid>
+      <guid>https://amdelamar.com/blog/first/</guid>
       <description>This post marks when I started building my first blog on Wix, a website-generating factory.
 Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;#39;t doing it right... I wasn&amp;#39;t programming... I was cheating. It felt wrong. I vowed that I would return to program my own website.
 &amp;quot;What kind of programmer doesn&amp;#39;t create their own website?&amp;quot;, I thought.

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Learn to Code Cloud-Native Apps for Free">
+    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg">
+    <meta property="og:description" content="Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Learn to Code Cloud-Native Apps for Free">
+    <meta name="twitter:description" content="Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.">
+    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg">
+
+    
+    <meta itemprop="name" content="Learn to Code Cloud-Native Apps for Free">
+    <meta itemprop="description" content="Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.">
+    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>Learn to Code Cloud-Native Apps for Free - RamblingWare</title>
+</head>
+<body>
+
+
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+    <div class="nav-item-close">
+        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+</nav>
+
+
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>Learn to Code Cloud-Native Apps for Free</h2>
+      <p>
+        <div>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.</div><div><br></div><div>I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs. He was impressed but quickly asked:<br></div><div><br></div><div>\"How did you get into that? How do _I_ get into that?\"<br></div><div><br></div><div>It was simple. I replied.</div><div><br></div><div>You can sign-up to <a href=\"https://www.ibm.com/cloud/pricing\">IBM Cloud</a> and run an any Cloud Foundry app for free (256MB) or create a Kubernetes cluster (2GB) and run several Docker containers on that, given they fit within that memory limit. You can even provision <a href=\"https://console.bluemix.net/catalog/?search=lite\">trial-sized services</a> like MySQL, Cloudant, Db2, Redis, Spark, Object Storage, and much more. They each have some limitations, e.g. Redis will let you have <a href=\"https://console.bluemix.net/catalog/services/redis-cloud\">30MB storage with 30 connections</a> at a time, but you gotta remember, you're getting this service for free.</div><div><br></div><div>I told him, using the free Cloud account I would code and build <a href=\"https://www.ramblingware.com/blog/what-are-cloud-native-applications\">Cloud-Native</a> apps for free. I would play around with it, learning as I go. I started with learning the \"<a href=\"https://docs.cloudfoundry.org/cf-cli/\">cf</a>\" command-line utility to deploy apps to their Cloud Foundry runtime. Later I began using <a href=\"https://www.docker.com/\">Docker</a> and <a href=\"https://kubernetes.io/\">Kubernetes</a> tools to deploy my apps in containers.<br></div><div><br></div><div>Using the skills I gained I would apply them to my projects and put that on my resume. Slowly, I began receiving more and more Cloud based project requests. And those projects helped to further develop my skills.<br></div><div><br></div><div>\"Its that simple, huh?\"</div><div><br></div><div>Yep, I said. Although, I'm glossing over the fact that there was a lot of self-driven\n effort on my part. All that time spent too. Almost 3 years learning these tools and concepts.<br></div><div><br></div><div>He was still curious and admitted <b>he had no idea</b>. He didn't know these services were free to everyone, and not just IBM employees. I then offered to email him some links to get started in the right direction, and he quickly thanked me.</div><div><br></div><div><br></div><div><h2>Many Cloud Providers Offer Free-tiers<br></h2><div>I work for IBM, so naturally I'm started to learn their <a href=\"https://console.bluemix.net/\">platform</a> first. But you don't have to follow what I did. There are several other Cloud providers that have free trials or free-levels of services. Some of these are platform based, virtual server based, services based, or a mix. Be sure to compare them and see what interests you the most to start learning!<br></div></div><div><br></div><div>Here are a few to take a look at:<br></div><div><br></div><div><ul><li>Red Hat OpenShift - 1GB mem and 1GB storage for 1 project - <a href=\"https://manage.openshift.com/register/plan\">https://manage.openshift.com/register/plan</a></li><li>Pivotal Web Services - $87 worth of free-trial credits - <a href=\"https://run.pivotal.io/pricing/\">https://run.pivotal.io/pricing/</a></li><li>AWS - 12mo free trial with some always-free services - <a href=\"https://aws.amazon.com/free/\">https://aws.amazon.com/free/</a></li><li>GCE - 12mo free trial with some always-free services - <a href=\"https://cloud.google.com/free/\">https://cloud.google.com/free/</a></li><li>Heroku - 512MB app with 1 worker - <a href=\"https://www.heroku.com/pricing\">https://www.heroku.com/pricing</a></li><li>IBM Cloud - 256MB app and up to 10 services and a 2GB Kubernetes cluster - <a href=\"https://www.ibm.com/cloud/pricing\">https://www.ibm.com/cloud/pricing</a></li></ul><div>I've also tried some virtual private server (VPS) providers like DigitalOcean and Vultr. But last time I checked they don't offer any free trials or service, yet.<br></div><div><br></div><div>Also, You can <a href=\"https://cognitiveclass.ai/ibm-cloud-promotion-2017/\">get $1200 worth of IBM Cloud services</a> right now, when you sign up for a Cognitive AI course. The courses are free and self-paced, with some topics on Big Data which I find particularly cool. If you've ever taken a edX or e-learning course its very similar to that. They offer this deal so you can take advantage of big services like Apache Spark, Kafka, and more, while you are taking the course to learn those technologies. Pretty sweet if you ask me!</div><div><br></div><div><i>Disclosure: I work for IBM as a Cloud App Developer.</i></div></div>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">May 24, 2018</span> by <span id="author">amdelamar</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/web" class="text-secondary">web</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/cloud" class="text-secondary">cloud</a>, <a href="https://amdelamar.com/blog/tags/apps" class="text-secondary">apps</a>, <a href="https://amdelamar.com/blog/tags/docker" class="text-secondary">docker</a>, <a href="https://amdelamar.com/blog/tags/kubernetes" class="text-secondary">kubernetes</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
+  
+  <script type="text/javascript" src="https://amdelamar.com/blog/js/osseous.min.js"></script>
+  
+  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+

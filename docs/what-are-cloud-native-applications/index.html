@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/what-are-cloud-native-applications/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/what-are-cloud-native-applications/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="What are Cloud-Native Applications?">
+    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg">
+    <meta property="og:description" content="Unlike traditional applications, Cloud Native apps are build for... the cloud. What a surprise! So what else defines them besides that?">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/what-are-cloud-native-applications/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="What are Cloud-Native Applications?">
+    <meta name="twitter:description" content="Unlike traditional applications, Cloud Native apps are build for... the cloud. What a surprise! So what else defines them besides that?">
+    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg">
+
+    
+    <meta itemprop="name" content="What are Cloud-Native Applications?">
+    <meta itemprop="description" content="Unlike traditional applications, Cloud Native apps are build for... the cloud. What a surprise! So what else defines them besides that?">
+    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg">
+
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>What are Cloud-Native Applications? - RamblingWare</title>
+</head>
+<body>
+
+
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+    <div class="nav-item-close">
+        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+</nav>
+
+
+<nav class="navbar">
+    <div class="navbar-body container">
+    <div class="nav-item-logo">
+        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+    </div>
+    <div class="nav-small-menu">
+        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
+        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+        <a class="nav-item" href="https://amdelamar.com">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>What are Cloud-Native Applications?</h2>
+      <p>
+        <p>The term &quot;Cloud Native&quot; sounds simple enough, but I&#39;ve been reading <a href=\"https://dzone.com/articles/what-is-cloud-native-anyway\">more</a> and <a href=\"https://dzone.com/articles/reaching-the-cloud?fromrel=true\">more</a> <a href=\"https://dzone.com/articles/cloud-native-series-what-is-cloud-native\">posts</a> trying to define what it actually means. Some are confused by it, or think its just marketing jargon for <a href=\"https://www.cloudfoundry.org/\">Cloud Foundry</a>. What does it mean for an application to be &quot;cloud native&quot; in the first place? And how this is different than a non-cloud application, or just an application thrown onto a cloud platform like <a href=\"https://www.ibm.com/cloud/\">IBM Cloud</a>, AWS, or Google Cloud Platform?</p><p>Plainly put, a Cloud Native app is built around a Cloud platform and the specific features or services that are available from it. But I think there is a little more to the design of such an app, than at first glance. Here are my definitions of Cloud Native and Traditional apps, and what ideas are incorrectly associated to them.</p><p>&nbsp;</p><h2><strong>What are Cloud Native Applications?</strong></h2><p><strong>Built to scale horizontally</strong>. Meaning that you are spinning up more instances of your app at the same time. (They can also <a href=\"https://en.wikipedia.org/wiki/Scalability#Horizontal_and_vertical_scaling\">scale vertically</a>, meaning more resources like memory/storage but that&#39;s not mentioned as much.)</p><p>They are <strong>meant to be distributed</strong>. Apps could be running on multiple servers, buildings, possibly in multiple data centers across the country. Which leads to editing the configuration of these apps, dynamically. Instead of being provided once at startup, and never changed unless the app is brought down and back up again. Cloud Native apps benefit from dynamic configuration while running.</p><p>Cloud Native apps<strong> are</strong> <strong>born to die</strong>. Quick startup, and quick exit. Really an extention from horizontal scaling, Cloud Native apps should startup quickly or risk being killed off by the cloud platform for taking too long to respond to health checks. They are created solely for one purpose, and once the app stops or crashes, then the cloud platform destroys their instance and starts up a new instance.</p><p>Lastly, they should be <strong>decoupled.</strong> They can&#39;t rely on features from the OS, let alone assume its running on a <em>specific </em>OS (or version) in the first place. Your app could be running on any number of Linux distros, Windows servers, or something else entirely. Which means you also can&#39;t rely on the file system, since its wiped clean every time your instance starts/stops. Cloud Native apps have a layer of abstraction between them and the host machine, and any dependencies need to be included with your app instance beforehand, while any persistant storage needs to be offloaded to a database or other Cloud service.</p><p>&nbsp;</p><h2><strong>How might Traditional Applications be different?</strong></h2><p>We might think of large <strong>monolithic </strong>apps, possibly clustered with nodes, but requires manual setup and installation to get going. Configuration is static and provided at startup. And it may not be possible to change that configuration without stopping and starting the app.</p><p>Traditional or &quot;legacy&quot; apps are born to <strong>live forever</strong>. The application is not prepared to stop/start suddenly, or scale without pre-configuration by a human operator. They might have startup or shutdown procedures that involve saving session data temporarily, so the next run can continue where it left off.</p><p>Lastly, these apps are <strong>dependent </strong>on OS features, like persistent file storage, or assuming a local batch job is running on the same server as the app. They&#39;re coupled tightly with other systems and assume physical access to things like specific ports and mail servers, that are provided already during installation.</p><p>&nbsp;</p><h2><strong>What do some Cloud Native definitions get wrong?</strong></h2><p><strong>Automation </strong>for development, testing, and deployment. Traditional apps can be automated too. Its just probably not as common, that&#39;s all. Using Travis-CI, Jenkins, Vagrant, Docker, Git, does not make an app Cloud Native. Rather, they are simply tools that <em>help you</em> <em>build </em>towards a software design pattern. Much like, simply using a hammer and nail doesn&#39;t make you a carpenter.</p><p><strong>Agile </strong>software development. Where new releases/iterations are rolled out every day or week. Utilizing CI/CD and pipelines. Again, this doesn&#39;t actually make an app Cloud Native. Traditional apps can be built with agile too. You may see the Waterfall method still being used, where new releases seem like every 12+ months with large review and testing plans. But that same slow process could be done on a Cloud platform too.</p><p><strong>Microservices</strong><strong> </strong>architecture. It sure is growing in popularity. But it still doesn&#39;t make one a Cloud Native app. You can build a <strong>monolithic</strong> app on the cloud and it can still be called Cloud Native. Just as much as you can build a traditional app with microservices on a server in your basement.</p><p>&nbsp;</p><p>That&#39;s all for now. Let me know if anyone else has a different opinion of Cloud Native or Cloud apps. I&#39;d love to see what else people come up with.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <span id="date">Nov 13, 2017</span> by <span id="author">amdelamar</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/software" class="text-secondary">software</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/cloud" class="text-secondary">cloud</a>, <a href="https://amdelamar.com/blog/tags/apps" class="text-secondary">apps</a>, <a href="https://amdelamar.com/blog/tags/docker" class="text-secondary">docker</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
+  
+  <script type="text/javascript" src="https://amdelamar.com/blog/js/osseous.min.js"></script>
+  
+  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+
