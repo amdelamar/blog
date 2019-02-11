@@ -19,9 +19,7 @@
       <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
       <description>Are you developing a Java AWT/Swing application?
 Is your target audience--or entire company--using Windows?
-Well, you&amp;#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.
-&amp;nbsp;
-So what&amp;#39;s the problem then?There isn&amp;#39;t a problem, per se.</description>
+Well, you&amp;#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.</description>
     </item>
     
     <item>
@@ -30,9 +28,7 @@ So what&amp;#39;s the problem then?There isn&amp;#39;t a problem, per se.</descr
       <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
-      <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.
-Here we go:
-1. Handle exceptions in JSPsMake an Exception JSP page, and set error handling inside your other JSP pages.</description>
+      <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.</description>
     </item>
     
   </channel>

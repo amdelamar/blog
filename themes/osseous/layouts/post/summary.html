@@ -1,14 +1,18 @@
 <div id="{{ .File.BaseFileName }}" class="padding">
-  <span class="float-right text-secondary">{{ .Date.Format "Jan 2, 2006" }}</span>
+  <span class="float-right text-secondary" title="{{ dateFormat "02 Jan 06 15:04 MST" .Date.Local }}">{{ .Date.Format "Jan 2, 2006" }}</span>
   <h4 class="margin-none">
     <a href="{{ .Permalink }}">
     {{ .Title }} {{ if .Draft }}(draft){{end}}</a>
   </h4>
   <p class="margin-none">
-    {{ .Description }}
+    {{ with .Page.Params.Description }}
+      {{ . }}
+    {{ else }}
+      {{ .Summary }}
+    {{ end }}
   </p>
   <p id="post-metadata" class="text-secondary margin-none">
-    <span id="category">Category: <a href="{{ $.Site.BaseURL }}/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span>&nbsp;|&nbsp;
+    <span id="category">Category: <a href="{{ $.Site.BaseURL }}/category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span>&nbsp;|&nbsp;
     <span id="tags">Tags:
     {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
   </p>

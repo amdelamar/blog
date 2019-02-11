@@ -5,15 +5,15 @@
   <div class="row section margin-top-large">
     <div class="container">
       <h2>{{ .Title }}</h2>
-      <ul class="text-medium">
+      <ul>
       {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-        <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}" class="text-medium">{{ $taxonomyname }}</a>
           <ul>
             {{ range $key, $value := $taxonomy }}
             <li> {{ $key }} </li>
                   <ul>
                   {{ range $value.Pages }}
-                      <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                      <li><a href="{{ .Permalink}}" class="text-medium"> {{ .LinkTitle }} </a> </li>
                   {{ end }}
                   </ul>
             {{ end }}

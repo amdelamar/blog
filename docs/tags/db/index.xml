@@ -19,8 +19,7 @@
       <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
       <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
 
-I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.0.0 version of the dashboard working, I&#39;m finally able to give an update today. 
-Sorry its taken so long, but I don&#39;t work on my open source projects every day.</description>
+I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.</description>
     </item>
     
   </channel>

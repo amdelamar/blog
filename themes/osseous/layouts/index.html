@@ -4,11 +4,11 @@
 <article id="home">
   <div class="row section margin-top-large">
     <div class="container">
-      {{ range first 10 .Data.Pages.ByDate.Reverse }}
-          {{ if eq .Type "post" }}
-              {{ .Render "summary"}}
-          {{ end }}
-      {{ end }}
+      {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+        {{ range $paginator.Pages }}
+          {{ .Render "summary"}}
+        {{ end }}
+      {{ partial "pagination.html" . }}
     </div>
   </div>
 </article>

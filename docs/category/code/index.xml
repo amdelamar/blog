@@ -18,8 +18,7 @@
       
       <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
       <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
-In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.
-The tech/features are taken right off the websites for the framework and some from their documentation, if it was easy to read through.</description>
+In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.</description>
     </item>
     
     <item>
@@ -28,8 +27,7 @@ The tech/features are taken right off the websites for the framework and some fr
       <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
-      <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.
-But containers themselves have been around for a long time. It wasn&amp;#39;t until Docker came along in 2013 and made a set of easy to use APIs that it really exploded.</description>
+      <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.</description>
     </item>
     
     <item>
@@ -41,8 +39,7 @@ But containers themselves have been around for a long time. It wasn&amp;#39;t un
       <description>Count from 1 to 100, and follow these rules:
 - Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
 - Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
-- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5
-FizzBuzz: A fun interview question to ask any programmer, in just about any language It would seem like there are only a few solutions, but in reality, there are all kinds of approaches to solve this coding question.</description>
+- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5</description>
     </item>
     
     <item>
@@ -51,8 +48,7 @@ FizzBuzz: A fun interview question to ask any programmer, in just about any lang
       <pubDate>Wed, 06 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</guid>
-      <description>Java is a nice programming language. But Java/J2EE websites can grow to be very complex in a short amount of time. One of the biggest areas of discussion about J2EE development today is about the many kinds of frameworks that can be implemented with your project, and what valuable features they provide, or amount of work they chop down.
-The below graph is how I feel about the amount of effort required to learn, build, and test, with 2 popular J2EE frameworks.</description>
+      <description>Java is a nice programming language. But Java/J2EE websites can grow to be very complex in a short amount of time. One of the biggest areas of discussion about J2EE development today is about the many kinds of frameworks that can be implemented with your project, and what valuable features they provide, or amount of work they chop down.</description>
     </item>
     
   </channel>

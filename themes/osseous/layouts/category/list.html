@@ -5,13 +5,13 @@
   <div class="row section margin-top-large">
     <div class="container">
       <h2>{{ .Title }}</h2>
-      <ul class="text-medium">
+      <ul>
         {{ $taxonomy := .Site.Taxonomies.category }}
         {{ range $key, $value := $taxonomy }}
-        <li><a class="text-secondary" href="{{ $.Site.BaseURL }}/category/{{ $key | urlize }}">{{ $key }}</a></li>
+        <li><a class="text-secondary text-medium" href="{{ $.Site.BaseURL }}/category/{{ $key | urlize }}">{{ $key }}</a></li>
           <ul>
           {{ range $value.Pages }}
-            <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+            <li><a href="{{ .Permalink}}" class="text-medium"> {{ .LinkTitle }} </a> </li>
           {{ end }}
           </ul>
         {{ end }}

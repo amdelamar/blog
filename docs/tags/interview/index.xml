@@ -18,9 +18,7 @@
       
       <guid>https://amdelamar.com/blog/continuous-learning-at-work/</guid>
       <description>I&amp;rsquo;ve been doing job interviews as of late and one question that keeps cropping up is about managing staff.
- What would you do if you were a technical manager? What would you do to improve your team and/or company?
- I&amp;rsquo;d have my folks continuously learn new skills every year.
-Before I dive into my reasoning I want to preface that IBM has an internal program specifically for this.</description>
+ What would you do if you were a technical manager? What would you do to improve your team and/or company?</description>
     </item>
     
     <item>
@@ -32,8 +30,7 @@ Before I dive into my reasoning I want to preface that IBM has an internal progr
       <description>Count from 1 to 100, and follow these rules:
 - Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
 - Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
-- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5
-FizzBuzz: A fun interview question to ask any programmer, in just about any language It would seem like there are only a few solutions, but in reality, there are all kinds of approaches to solve this coding question.</description>
+- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5</description>
     </item>
     
   </channel>

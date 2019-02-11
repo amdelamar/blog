@@ -7,7 +7,7 @@
       <h2>Category: {{ .Title | lower }}</h2>
       <ul>
         {{ range .Data.Pages.ByDate.Reverse }}
-          <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+          <li><a href="{{ .Permalink}}" class="text-medium"> {{ .LinkTitle }} </a></li>
         {{ end }}
       </ul>
       <a class="button button-primary" href="{{ .Site.BaseURL }}/category/">All Categories</a>
