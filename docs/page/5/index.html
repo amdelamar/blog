@@ -39,8 +39,7 @@
 </head>
 <body>
 
-
-<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+<nav id="sidebarMenu" class="sidebar border-right shadow-right" aria-label="page navigation">
     <div class="nav-item-close">
         <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
@@ -53,8 +52,7 @@
     </div>
 </nav>
 
-
-<nav class="navbar">
+<nav id="navbar" class="navbar" aria-label="page navigation">
     <div class="navbar-body container">
     <div class="nav-item-logo">
         <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
@@ -191,20 +189,21 @@
 </div>
 
         
-      <div id="pagination" class="margin">
+      <nav id="pagination" class="margin-large" aria-label="page navigation">
   <div class="float-left">
   
-  
-  <a class="button button-primary" href="../../page/4/">Newer</a>
-  
+    
+      <a class="button" href="../../page/4/">« Newer</a>
+    
   
   </div>
+
   <div class="float-right">
   
-  <a class="button button-primary" href="../../page/6/">Older</a>
+    <a class="button" href="../../page/6/">Older »</a>
   
   </div>
-</div>
+</nav>
 
     </div>
   </div>
