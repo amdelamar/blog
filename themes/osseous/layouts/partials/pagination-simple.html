@@ -1,0 +1,21 @@
+<nav id="pagination" class="margin-large" aria-label="page navigation">
+  <div class="float-left">
+  {{ if .Paginator.HasPrev }}
+    {{ if eq .Paginator.PageNumber 2 }}
+      <a class="button" href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">« Newer</a>
+    {{ else }}
+      <a class="button" href="{{ .Paginator.Prev.URL }}">« Newer</a>
+    {{ end }}
+  {{ else }}
+    <button class="button" disabled>« Newer</button>
+  {{ end }}
+  </div>
+
+  <div class="float-right">
+  {{ if .Paginator.HasNext }}
+    <a class="button" href="{{ .Paginator.Next.URL }}">Older »</a>
+  {{ else }}
+    <button class="button" disabled>Older »</button>
+  {{ end }}
+  </div>
+</nav>

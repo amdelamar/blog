@@ -8,7 +8,7 @@
         {{ range $paginator.Pages }}
           {{ .Render "summary"}}
         {{ end }}
-      {{ partial "pagination.html" . }}
+      {{ partial "pagination-simple.html" . }}
     </div>
   </div>
 </article>
