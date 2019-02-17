@@ -179,6 +179,12 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/</loc>
+    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/category/</loc>
     <priority>0</priority>
   </url>
@@ -186,12 +192,6 @@
   <url>
     <loc>https://amdelamar.com/blog/post/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>couchdb on RamblingWare</title>
+    <title>couchdb on Austin Delamar</title>
     <link>https://amdelamar.com/blog/tags/couchdb/</link>
-    <description>Recent content in couchdb on RamblingWare</description>
+    <description>Recent content in couchdb on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Mar 2018 22:12:18 +0000</lastBuildDate>

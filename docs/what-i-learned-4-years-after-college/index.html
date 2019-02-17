@@ -35,7 +35,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
-    <title>What I learned 4 years after College - RamblingWare</title>
+    <title>What I learned 4 years after College - Austin Delamar</title>
 </head>
 <body>
 
@@ -55,7 +55,10 @@
 <nav id="navbar" class="navbar" aria-label="page navigation">
     <div class="navbar-body container">
     <div class="nav-item-logo">
-        <a href="https://amdelamar.com/blog"><span class="text-medium text-uppercase text-wide">RamblingWare</span></a>
+        <a href="https://amdelamar.com/blog">
+          <img class="round shade margin-right" src="https://amdelamar.com/img/me.jpg" height="45" alt="Austin Delamar Logo" />
+          <span class="text-medium">Austin Delamar</span>
+        </a>
     </div>
     <div class="nav-small-menu">
         <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
@@ -63,9 +66,15 @@
         </a>
     </div>
     <div class="nav-group nav-large-menu text-bold">
-        <a class="nav-item" href="https://amdelamar.com/blog/category/">Category</a>
-        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
-        <a class="nav-item" href="https://amdelamar.com">About</a>
+        <div class="nav-item dropdown">
+          <a href="#examples">Blog ▾</a>
+          <div class="dropdown-body border background-lightgrey text-left">
+            <a href="https://amdelamar.com/blog">All Posts</a>
+            <a href="https://amdelamar.com/blog/category/">Categories</a>
+            <a href="https://amdelamar.com/blog/tags/">Tags</a>
+          </div>
+        </div>
+        <a class="nav-item" href="https://amdelamar.com#about">About</a>
     </div>
     </div>
 </nav>
@@ -73,14 +82,21 @@
 <article id="post">
   <div class="row section margin-top-large">
     <div class="container">
-      <h2>What I learned 4 years after College</h2>
+      <h2>
+        What I learned 4 years after College
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="time to read">8 min read</span>&nbsp;)&nbsp;
+      </p>
       <p>
         <p>Its been just about four full years after graduating with a Bachelor&#39;s degree in Computer Science. I graduated in Dec 2012 and started working at a Fortune 500 technology company the following month.</p><p>I&#39;ve learned much in four years of college classes, but I&#39;ve also learnt even more in four years of working afterwards. Its arguably a different kind of learning in nature and serves a different purpose.</p><p>&nbsp;</p><h2>Four Years of Classes</h2><p>In college, you focus on the grades, exams, and homework. The topics and broad range of subjects open your mind and tickle your interests that you didn&#39;t know you had. Which could explain why many people change majors--like me! I started out in Engineering and switched to Computer Science after I discovered C programming. I fell in love with code! I had no idea that someone could do such a thing, for a living. And I might have never found that, if my (liberal-arts based) university had not required the course work to graduate. (Its also how I found philosophy to be so darn fascinating).</p><p>The classes you take help build the foundation for learning. They do not give you the particular skills to jump into debugging production issues or develop new business logic for an application. Its not relevant at these early stages. Those Computer Science classes give you the base-layer of the &quot;Pyramid of Knowledge&quot;. Not the complete package.</p><p><strong>In college, you learn things like:</strong></p><ul><li>Computer logic, Data structures, and Binary</li><li>Object-Oriented Programming ( Java / C / C++ )</li><li>SQL Databases / Relational data tables</li><li>Operating Systems basics</li></ul><p style=\"text-align:center\"><img alt=\"Pyramid of Knowledge\" height=\"312\" src=\"https://cdn.ramblingware.com/file/ramblingware/2016/charts/pyramid-1.jpg\" width=\"640\" /></p><p>If you&#39;re a student now... this will help put things into perspective. You won&#39;t graduate college and magically be a fit Web Developer, C++ Programmer, or System Administrator. You still, and very much are, learning to be one. You&#39;ll have that base-layer of knowledge with the scaffolds and pulleys ready to build the next layer of solid skills to become that developer or engineer you want to be.</p><p>&nbsp;</p><h2>Four Years of Projects</h2><p>Out in the real world, working a &quot;9 to 5&quot; job, your focus is on the deliverables, deadlines, and your personal marketability. As a programmer, you&#39;re forced to adapt to technologies as your company demands. Its always part of the job. Instead of learning the rules of Object-Oriented Programming and utilizing inheritence or polymorphism, I was taught the rules of Dev/Test/Prod environments and user-acceptance testing. I learned the practical skills and knowledge to build, test, and deploy applications in the enterprise world. The four years of &quot;college knowledge&quot; played a small part in these tasks. I knew that programs ran on computers and utilized RAM, storage, and iterative loops to complete their functions. But I didn&#39;t know the bigger picture of what the heck was going on, or even why it was done this way. The layers of intricacy and expansive array of pieces being utilized....well... it just blew my mind.</p><p><strong>In the workplace, you learn things like:</strong></p><ul><li>Packaging, roll-outs, hot-fixes, and deployments</li><li>Sprints, iterations, sandbox, UAT, and environments</li><li>Frameworks, libraries, and licenses</li><li>Configs, batch jobs, scripts, and procedures</li><li>Business logic&nbsp; <em>(Worthy of its own bullet point, for sure!)</em></li><li>Networking, firewalls, DMZs, DNS, shared servers, and server administration</li><li>Authentication, AD, ACL, SSO, and managing groups/user access</li><li>... and much more!</li></ul><p>Work projects help cement your knowledge in the mid-layer of the &quot;Pyramid of Knowledge&quot;. They build on top of your foundational knowledge, with practical skills and experience, forming a taller (more refined) pyramid shape.</p><p style=\"text-align:center\"><img alt=\"Pyramid of Knowledge\" height=\"325\" src=\"https://cdn.ramblingware.com/file/ramblingware/2016/charts/pyramid-2.jpg\" width=\"640\" /></p><p>I definitely struggled at first. One of my first projects I had to develop a Java EE web application capable of searching through 2 million PDF documents on a document storage server. It had to play nice with a currently existing vendor product using Microsoft SQL Server, as well as the DB2 indexed storage of users documents and favorites. I had to learn Struts2 framework as well as our company&#39;s internal design framework for HTML/CSS. The application also had to follow the same rules as other internal applications and use the LDAP AD for authentication of the users. It was very, very daunting. I had a strong <a href=\"https://en.wikipedia.org/wiki/Impostor_syndrome\">imposter syndrome</a> during the 3 months of developing the application, but I forced myself to adapt to the requirements I was given with that project. I researched and followed guides online for Struts2, DB2, and LDAP. I surprised a lot of people, and our clients loved the end product. Looking back at how crazy and complex as it was, I wouldn&#39;t change a thing.</p><p>&nbsp;</p><h2>Completing the Pyramid</h2><p>As you grow and learn more, your pyramid will begin to take shape. It won&#39;t look like much in the beginning but you will have what it takes to build on top of your efforts, very soon. I think the peak of the pyramid is impossible to achieve; to master your knoweldge in an area. In the IT world where disruptive technologies are born every 6-months to a year, its near-impossible or flat-out impossible to master anything. But you can be darn close to a master of say, Java programming, if you try. But you might have to specialize it in say, Java version 1.7 core edition. Then its not so impossible anymore.</p><p style=\"text-align:center\"><img alt=\"Pyramid of Knowledge\" height=\"311\" src=\"https://cdn.ramblingware.com/file/ramblingware/2016/charts/pyramid-3.jpg\" width=\"641\" /></p><p>This &quot;Pyramid of Knowledge&quot; is just an oversimplification of the idea, that there is always more to learn. You never really reach the peak, and complete your learning. There is always more! Especially in technology and computers. Some folks will try to become a &quot;Jack of All Trades&quot; and learn many broader areas and master none of them. Their pyramid would look more like a short, but long wall. Where they have lots of fundamental knowledge, but little experience or expertise. But don&#39;t get me wrong, there is nothing wrong with that. Its all about you. <strong>What </strong>do you want to learn? (i.e. Coding, Operating Systems, Networks, Websites, Servers, Security...) <strong>How </strong>are you willing to learn? (College courses, online training, self-taught, during work hours, after work, open-source, or hobbies...) And <strong>how much </strong>are you willing to learn? Are you going to specialize in this area? Or just learn enough to get the job done? It all depends on you.</p><p>Just remember this; You never <em>really</em> stop learning after college. Do you?</p><p>Four years after graduating, and I&#39;m still being surprised on a regular basis. It. is. amazing.</p>
 
       </p>
       <br/>
       <p id="post-metadata" class="text-secondary">
-        <span id="date" title="20 Nov 16 16:00 PST">Published: Nov 21, 2016</span> by <span id="author">amdelamar</span><br/>
+        <br/>
+        <span id="date" title="20 Nov 16 16:00 PST">Published: Nov 21, 2016</span><br/>
         <span id="category">Category: <a href="https://amdelamar.com/blog/category/life-lessons" class="text-secondary">life-lessons</a></span><br/>
         <span id="tags">Tags:
         <a href="https://amdelamar.com/blog/tags/computer-science" class="text-secondary">computer-science</a>, <a href="https://amdelamar.com/blog/tags/college" class="text-secondary">college</a></span>
@@ -88,13 +104,10 @@
     </div>
   </div>
 </article>
-
 <footer class="row section text-center">
   <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
-  <a class="button button-primary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
-  
+  <a class="button button-secondary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
   <script type="text/javascript" src="https://amdelamar.com/blog/js/osseous.min.js"></script>
-  
   <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </footer>
