@@ -25,7 +25,7 @@ permalinks:
 params:
   description: "This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too."
   keywords: "blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source"
-  thumbnail: "https://amdelamar.com/img/social/social-media-thumbnail.png"
+  thumbnail: "https://amdelamar.com/img/social/social-media-thumbnail.jpeg"
   copyright: "&#169; <a href=\"https://amdelamar.com\">AustinDelamar</a> - 2014-2019"
   author: "amdelamar"
   twitterUsername: "amdelamar"
