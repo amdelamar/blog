@@ -8,8 +8,20 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/</loc>
+    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/contact/</loc>
     <lastmod>2019-01-12T19:43:16-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -18,8 +30,56 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/post/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/interview/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/office/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/workplace/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
+    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/alternatives-to-google-products/</loc>
     <lastmod>2018-06-22T19:33:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/google/</loc>
+    <lastmod>2018-06-22T19:33:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/privacy/</loc>
+    <lastmod>2018-06-22T19:33:05+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -28,8 +88,62 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/apps/</loc>
+    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/cloud/</loc>
+    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/docker/</loc>
+    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/kubernetes/</loc>
+    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/web/</loc>
+    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</loc>
     <lastmod>2018-05-15T14:18:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/favorites/</loc>
+    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/firefox/</loc>
+    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/privacy/</loc>
+    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/security/</loc>
+    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -38,8 +152,44 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/css/</loc>
+    <lastmod>2018-03-18T21:02:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/email/</loc>
+    <lastmod>2018-03-18T21:02:05+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/back-online-after-migrating-dbs/</loc>
     <lastmod>2018-03-04T22:12:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/couchdb/</loc>
+    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/db/</loc>
+    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/info/</loc>
+    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/meta/</loc>
+    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -48,8 +198,32 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/category/code/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/java/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/java-ee/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/what-are-cloud-native-applications/</loc>
     <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/software/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -58,13 +232,49 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/ios/</loc>
+    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/mobile-apps/</loc>
+    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</loc>
     <lastmod>2017-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/devops/</loc>
+    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/exciting-trends-in-web-technology/</loc>
     <lastmod>2017-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/full-stack/</loc>
+    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/observations/</loc>
+    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/webdev/</loc>
+    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -78,13 +288,55 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/encryption/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/https/</loc>
+    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</loc>
     <lastmod>2017-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/cdn/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</loc>
     <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/hardware/</loc>
+    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/marketing/</loc>
+    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/predictions/</loc>
+    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/sffpc/</loc>
+    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -98,6 +350,12 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/javascript/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/2-years-without-gmail/</loc>
     <lastmod>2017-04-03T00:00:00+00:00</lastmod>
   </url>
@@ -105,6 +363,18 @@
   <url>
     <loc>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</loc>
     <lastmod>2017-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/gaming/</loc>
+    <lastmod>2017-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/video-games/</loc>
+    <lastmod>2017-03-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -118,8 +388,32 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/ad-block/</loc>
+    <lastmod>2017-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/advertising/</loc>
+    <lastmod>2017-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/2fa/</loc>
+    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</loc>
     <lastmod>2017-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/passwords/</loc>
+    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -128,13 +422,49 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/tags/college/</loc>
+    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/computer-science/</loc>
+    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/life-lessons/</loc>
+    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</loc>
     <lastmod>2016-09-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/category/advice/</loc>
+    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/windows/</loc>
+    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</loc>
     <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/funny/</loc>
+    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -158,6 +488,18 @@
   </url>
   
   <url>
+    <loc>https://amdelamar.com/blog/category/pranks/</loc>
+    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/vbscript/</loc>
+    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</loc>
     <lastmod>2015-05-06T00:00:00+00:00</lastmod>
   </url>
@@ -170,347 +512,6 @@
   <url>
     <loc>https://amdelamar.com/blog/first/</loc>
     <lastmod>2014-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/2fa/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/post/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/ad-block/</loc>
-    <lastmod>2017-02-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/advertising/</loc>
-    <lastmod>2017-02-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/advice/</loc>
-    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/apps/</loc>
-    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/cdn/</loc>
-    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/cloud/</loc>
-    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/code/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/college/</loc>
-    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/computer-science/</loc>
-    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/couchdb/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/css/</loc>
-    <lastmod>2018-03-18T21:02:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/db/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/devops/</loc>
-    <lastmod>2017-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/docker/</loc>
-    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/email/</loc>
-    <lastmod>2018-03-18T21:02:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/encryption/</loc>
-    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/favorites/</loc>
-    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/firefox/</loc>
-    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/full-stack/</loc>
-    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/funny/</loc>
-    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/gaming/</loc>
-    <lastmod>2017-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/google/</loc>
-    <lastmod>2018-06-22T19:33:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/hardware/</loc>
-    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/https/</loc>
-    <lastmod>2017-06-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/ios/</loc>
-    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/info/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/interview/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/java/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/java-ee/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/javascript/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/kubernetes/</loc>
-    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/life-lessons/</loc>
-    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/marketing/</loc>
-    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/meta/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/mobile-apps/</loc>
-    <lastmod>2017-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/observations/</loc>
-    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/office/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/passwords/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/pranks/</loc>
-    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/predictions/</loc>
-    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/privacy/</loc>
-    <lastmod>2018-06-22T19:33:05+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/privacy/</loc>
-    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/security/</loc>
-    <lastmod>2018-05-15T14:18:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/sffpc/</loc>
-    <lastmod>2017-05-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/software/</loc>
-    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/vbscript/</loc>
-    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/video-games/</loc>
-    <lastmod>2017-03-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/web/</loc>
-    <lastmod>2018-05-24T14:32:57+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/webdev/</loc>
-    <lastmod>2017-08-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/windows/</loc>
-    <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/workplace/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

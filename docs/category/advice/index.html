@@ -38,49 +38,60 @@
 </head>
 <body>
 
-<nav id="sidebarMenu" class="sidebar border-right shadow-right" aria-label="page navigation">
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
     <div class="nav-item-close">
-        <a class="float-right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
-        </a>
+        </span>
+      </label>
     </div>
-    <div class="nav-list text-center" onclick="closeSidebar()">
+    <div class="nav-list text-center">
         <a class="nav-item" href="https://amdelamar.com">
           <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
           Austin Delamar</a>
-        <hr class="full-width margin-none"/>
-        <a class="nav-item" href="https://amdelamar.com/blog">All Posts</a>
-        <a class="nav-item" href="https://amdelamar.com/blog/category/">Categories</a>
-        <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
-        <hr class="full-width margin-none"/>
+        <details class="nav-item">
+    		  <summary>Blog</summary>
+    		  <div class="nav-list padding margin-top border-top border-bottom">
+            <a class="nav-item" href="https://amdelamar.com/blog">All Posts</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/category/">Categories</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+    		  </div>
+    		</details>
         <a class="nav-item" href="https://amdelamar.com/#about">About</a>
         <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
     </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
 </nav>
 
-<nav id="navbar" class="navbar" aria-label="page navigation">
-    <div class="navbar-body container">
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
     <div class="nav-item-logo">
-        <a href="https://amdelamar.com/blog">
-          <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
-          <span class="text-medium">Austin Delamar</span>
-        </a>
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
     </div>
     <div class="nav-small-menu">
-        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
-        </a>
+        </span>
+      </label>
     </div>
     <div class="nav-group nav-large-menu text-bold">
-        <div class="nav-item dropdown">
-          <a href="#examples">Blog ▾</a>
-          <div class="dropdown-body border background-lightgrey text-left">
+    		<div class="nav-item dropdown">
+    		  <a href="#docs">Blog &#9662;</a>
+    		  <div class="dropdown-body border background-lightgrey text-left">
             <a href="https://amdelamar.com/blog">All Posts</a>
             <a href="https://amdelamar.com/blog/category/">Categories</a>
             <a href="https://amdelamar.com/blog/tags/">Tags</a>
-          </div>
-        </div>
-        <a class="nav-item" href="https://amdelamar.com#about">About</a>
+    		  </div>
+    		</div>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
     </div>
     </div>
 </nav>
@@ -102,8 +113,7 @@
 </article>
 <footer class="row section text-center">
   <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
-  <a class="button button-secondary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
-  <script type="text/javascript" src="https://amdelamar.com/blog/js/osseous.min.js"></script>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
   <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </footer>
