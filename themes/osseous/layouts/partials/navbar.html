@@ -1,26 +1,28 @@
-<nav id="navbar" class="navbar" aria-label="page navigation">
-    <div class="navbar-body container">
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
     <div class="nav-item-logo">
-        <a href="{{ .Site.BaseURL }}">
-          <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="{{ .Site.Title }} Logo" />
-          <span class="text-medium">{{ .Site.Title }}</span>
-        </a>
+      <a href="{{ .Site.BaseURL }}">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="{{ .Site.Title }} Logo" />
+        <span class="text-medium">{{ .Site.Title }}</span>
+      </a>
     </div>
     <div class="nav-small-menu">
-        <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
-        </a>
+        </span>
+      </label>
     </div>
     <div class="nav-group nav-large-menu text-bold">
-        <div class="nav-item dropdown">
-          <a href="#examples">Blog ▾</a>
-          <div class="dropdown-body border background-lightgrey text-left">
+    		<div class="nav-item dropdown">
+    		  <a href="#docs">Blog &#9662;</a>
+    		  <div class="dropdown-body border background-lightgrey text-left">
             <a href="{{ $.Site.BaseURL }}">All Posts</a>
             <a href="{{ $.Site.BaseURL }}/category/">Categories</a>
             <a href="{{ $.Site.BaseURL }}/tags/">Tags</a>
-          </div>
-        </div>
-        <a class="nav-item" href="https://amdelamar.com#about">About</a>
+    		  </div>
+    		</div>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
     </div>
     </div>
 </nav>

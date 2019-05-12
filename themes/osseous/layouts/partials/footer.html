@@ -1,7 +1,6 @@
 <footer class="row section text-center">
   {{ if isset .Site.Params "copyright" }}<p><small><em>{{ .Site.Params.Copyright | safeHTML }}</em></small></p>{{ end }}
-  <a class="button button-secondary float-right margin-right-large" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
-  <script type="text/javascript" src="{{ .Site.BaseURL }}/js/osseous.min.js"></script>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
   <script src="{{ .Site.BaseURL }}/highlightjs/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </footer>
