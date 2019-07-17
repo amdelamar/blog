@@ -6,10 +6,20 @@
     <description>Recent content in info on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Mar 2018 22:12:18 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2019 19:37:37 -0700</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switching Gears</title>
+      <link>https://amdelamar.com/blog/switching-gears/</link>
+      <pubDate>Tue, 16 Jul 2019 19:37:37 -0700</pubDate>
+      
+      <guid>https://amdelamar.com/blog/switching-gears/</guid>
+      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post.
+Here&amp;rsquo;s just a quick recap of what I&amp;rsquo;ve been up to, and what to expect from me going forward. Writing a blog has been a learning process for me and I&amp;rsquo;m adapting as I go.</description>
+    </item>
     
     <item>
       <title>Back Online After Migrating DBs</title>

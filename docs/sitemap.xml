@@ -3,14 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://amdelamar.com/blog/about/</loc>
-    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
+    <loc>https://amdelamar.com/blog/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
+    <loc>https://amdelamar.com/blog/category/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/post/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/switching-gears/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/info/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/meta/</loc>
+    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/about/</loc>
+    <lastmod>2019-01-12T19:43:16-08:00</lastmod>
   </url>
   
   <url>
@@ -19,26 +54,8 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/category/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/continuous-learning-at-work/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/post/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/</loc>
-    <lastmod>2018-07-30T15:26:43+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -176,18 +193,6 @@
   
   <url>
     <loc>https://amdelamar.com/blog/tags/db/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/info/</loc>
-    <lastmod>2018-03-04T22:12:18+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/meta/</loc>
     <lastmod>2018-03-04T22:12:18+00:00</lastmod>
     <priority>0</priority>
   </url>
