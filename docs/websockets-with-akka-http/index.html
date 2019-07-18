@@ -35,6 +35,9 @@
 
     <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
     <title>Websockets With Akka Http - Austin Delamar</title>
 </head>
 <body>
@@ -120,39 +123,33 @@ And well, I was a bit overwhelmed.</p>
 
 <p>Source? Flow? Stream? Sink? What now? I started thinking I should stop here and just try to learn these new concepts before trying to build an app with them.
 But I&rsquo;m kinda stubborn and want to get coding right away, so I push forward with a simple http endpoint to accept a websocket connection:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">// build.sbt
+</span><span style="color:#177500"></span><span style="color:#000">libraryDependencies</span> <span style="color:#000">++=</span> <span style="color:#3f6e75">Seq</span><span style="color:#000">(</span>
+  <span style="color:#c41a16">&#34;com.typesafe.akka&#34;</span> <span style="color:#000">%%</span> <span style="color:#c41a16">&#34;akka-http&#34;</span> <span style="color:#000">%</span> <span style="color:#c41a16">&#34;10.1.8&#34;</span><span style="color:#000">,</span>
+  <span style="color:#c41a16">&#34;com.typesafe.akka&#34;</span> <span style="color:#000">%%</span> <span style="color:#c41a16">&#34;akka-stream&#34;</span> <span style="color:#000">%</span> <span style="color:#c41a16">&#34;2.5.19&#34;</span>
+<span style="color:#000">)</span></code></pre></div><div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">// ChatServer.scala
+</span><span style="color:#177500"></span><span style="color:#a90d91">object</span> <span style="color:#3f6e75">ChatServer</span> <span style="color:#000">{</span>
 
-<pre><code class="language-scala"># build.sbt
-libraryDependencies ++= Seq(
-  &quot;com.typesafe.akka&quot; %% &quot;akka-http&quot; % &quot;10.1.8&quot;,
-  &quot;com.typesafe.akka&quot; %% &quot;akka-stream&quot; % &quot;2.5.19&quot;
-)
-</code></pre>
+  <span style="color:#a90d91">implicit</span> <span style="color:#a90d91">val</span> <span style="color:#000">system</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">ActorSystem</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;app&#34;</span><span style="color:#000">)</span>
+  <span style="color:#a90d91">implicit</span> <span style="color:#a90d91">val</span> <span style="color:#000">materializer</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">ActorMaterializer</span><span style="color:#000">()</span>
+  <span style="color:#a90d91">implicit</span> <span style="color:#a90d91">val</span> <span style="color:#000">executionContext</span> <span style="color:#a90d91">=</span> <span style="color:#000">system</span><span style="color:#000">.</span><span style="color:#000">dispatcher</span>
 
-<pre><code class="language-scala"># ChatServer.scala
-object ChatServer {
+  <span style="color:#a90d91">def</span> <span style="color:#000">main</span><span style="color:#000">(</span><span style="color:#000">args</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Array</span><span style="color:#000">[</span><span style="color:#a90d91">String</span><span style="color:#000">])</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
 
-  implicit val system = ActorSystem(&quot;app&quot;)
-  implicit val materializer = ActorMaterializer()
-  implicit val executionContext = system.dispatcher
+    <span style="color:#a90d91">val</span> <span style="color:#000">apiRoute</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Route</span> <span style="color:#000">=</span>
+      <span style="color:#000">path</span><span style="color:#000">(</span> <span style="color:#c41a16">&#34;api&#34;</span> <span style="color:#000">/</span> <span style="color:#c41a16">&#34;chat&#34;</span><span style="color:#000">)</span> <span style="color:#000">{</span>
+        <span style="color:#000">get</span> <span style="color:#000">{</span>
+          <span style="color:#000">handleWebSocketMessages</span><span style="color:#000">(</span><span style="color:#177500">/* do something with Flow[Message]*/</span><span style="color:#000">)</span>
+        <span style="color:#000">}</span>
+      <span style="color:#000">}</span>
 
-  def main(args: Array[String]): Unit = {
+    <span style="color:#3f6e75">Http</span><span style="color:#000">().</span><span style="color:#000">bindAndHandle</span><span style="color:#000">(</span><span style="color:#000">apiRoute</span><span style="color:#000">,</span> <span style="color:#c41a16">&#34;localhost&#34;</span><span style="color:#000">,</span> <span style="color:#1c01ce">8080</span><span style="color:#000">)</span>
+      <span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span> <span style="color:#a90d91">_</span> <span style="color:#a90d91">=&gt;</span>
+        <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Server is running at http://localhost:8080/&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
 
-    val apiRoute: Route =
-      path( &quot;api&quot; / &quot;chat&quot;) {
-        get {
-          handleWebSocketMessages(/* do something with Flow[Message]*/)
-        }
-      }
-
-    Http().bindAndHandle(apiRoute, &quot;localhost&quot;, 8080)
-      .map { _ =&gt;
-        println(s&quot;Server is running at http://localhost:8080/&quot;)
-      }
-  }
-
-}
-</code></pre>
-
+<span style="color:#000">}</span></code></pre></div>
 <p>Now I need to handle the Flow part of the websocket method. If a user calls <code>GET wss://localhost:8080/api/chat</code> with the right WebSocket header values, then
 their connection is upgraded and connected to the server. Which can be done in JavaScript with this handy method, <code>new WebSocket(&quot;wss://localhost:8080/api/chat&quot;)</code>.</p>
 
@@ -161,38 +158,32 @@ Source is kinda like a producer/publisher of messages, while Sink is a consumer/
 here so please checkout the offical <a href="https://akka.io/docs" target="_blank">akka docs</a> for a better understanding of Akka streams.</p>
 
 <p>So back to the Flow method. I knew I needed something able to process and respond to messages.</p>
-
-<pre><code class="language-scala">def websocketFlow: Flow[Message, Message, Any] =
-  Flow[Message].map {
-      case TextMessage.Strict(s) =&gt; TextMessage.Strict(&quot;Ok got the message.&quot;)
-      case BinaryMessage.Strict(b) =&gt; TextMessage.Strict(&quot;What?&quot;)
-  }
-</code></pre>
-
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">def</span> <span style="color:#000">websocketFlow</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Any</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span>
+  <span style="color:#3f6e75">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span><span style="color:#000">].</span><span style="color:#000">map</span> <span style="color:#000">{</span>
+      <span style="color:#a90d91">case</span> <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">s</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span> <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;Ok got the message.&#34;</span><span style="color:#000">)</span>
+      <span style="color:#a90d91">case</span> <span style="color:#3f6e75">BinaryMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">b</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span> <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;What?&#34;</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span></code></pre></div>
 <p>The above example is pretty bare. So I setup a Source and Sink separately, then paired them together in the end to a Flow.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">def</span> <span style="color:#000">websocketFlow</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Any</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#000">(</span><span style="color:#000">actorRef</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">ActorRef</span><span style="color:#000">,</span> <span style="color:#000">publisher</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Publisher</span><span style="color:#000">[</span><span style="color:#a90d91">TextMessage.Strict</span><span style="color:#000">])</span> <span style="color:#a90d91">=</span>
+      <span style="color:#3f6e75">Source</span><span style="color:#000">.</span><span style="color:#000">actorRef</span><span style="color:#000">[</span><span style="color:#a90d91">String</span><span style="color:#000">](</span><span style="color:#1c01ce">16</span><span style="color:#000">,</span> <span style="color:#3f6e75">OverflowStrategy</span><span style="color:#000">.</span><span style="color:#000">fail</span><span style="color:#000">)</span>
+        <span style="color:#000">.</span><span style="color:#000">map</span><span style="color:#000">(</span><span style="color:#000">msg</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#177500">// outgoing message to ws
+</span><span style="color:#177500"></span>          <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">msg</span><span style="color:#000">)</span>
+        <span style="color:#000">)</span>
+        <span style="color:#000">.</span><span style="color:#000">toMat</span><span style="color:#000">(</span><span style="color:#3f6e75">Sink</span><span style="color:#000">.</span><span style="color:#000">asPublisher</span><span style="color:#000">(</span><span style="color:#a90d91">false</span><span style="color:#000">))(</span><span style="color:#3f6e75">Keep</span><span style="color:#000">.</span><span style="color:#000">both</span><span style="color:#000">).</span><span style="color:#000">run</span><span style="color:#000">()</span>
 
-<pre><code class="language-scala">def websocketFlow: Flow[Message, Message, Any] = {
-    val (actorRef: ActorRef, publisher: Publisher[TextMessage.Strict]) =
-      Source.actorRef[String](16, OverflowStrategy.fail)
-        .map(msg =&gt;
-          // outgoing message to ws
-          TextMessage.Strict(msg)
-        )
-        .toMat(Sink.asPublisher(false))(Keep.both).run()
+    <span style="color:#a90d91">val</span> <span style="color:#000">sink</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Sink</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Any</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span><span style="color:#000">]</span>
+      <span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span>
+        <span style="color:#a90d91">case</span> <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">msg</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#177500">// incoming message from ws
+</span><span style="color:#177500"></span>          <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Received: </span><span style="color:#c41a16">$msg</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+      <span style="color:#000">.</span><span style="color:#000">to</span><span style="color:#000">(</span><span style="color:#3f6e75">Sink</span><span style="color:#000">.</span><span style="color:#000">ignore</span><span style="color:#000">)</span>
 
-    val sink: Sink[Message, Any] = Flow[Message]
-      .map {
-        case TextMessage.Strict(msg) =&gt;
-          // incoming message from ws
-          println(s&quot;Received: $msg&quot;)
-      }
-      .to(Sink.ignore)
-
-    // pair sink and source
-    Flow.fromSinkAndSource(sink, Source.fromPublisher(publisher))
-  }
-</code></pre>
-
+    <span style="color:#177500">// pair sink and source
+</span><span style="color:#177500"></span>    <span style="color:#3f6e75">Flow</span><span style="color:#000">.</span><span style="color:#000">fromSinkAndSource</span><span style="color:#000">(</span><span style="color:#000">sink</span><span style="color:#000">,</span> <span style="color:#3f6e75">Source</span><span style="color:#000">.</span><span style="color:#000">fromPublisher</span><span style="color:#000">(</span><span style="color:#000">publisher</span><span style="color:#000">))</span>
+  <span style="color:#000">}</span></code></pre></div>
 <p>Now its a bit more clear <em>where</em> messages are coming in and going out on the websocket.</p>
 
 <h2 id="adding-actors">Adding Actors</h2>
@@ -206,104 +197,92 @@ Thus, I could build a ChatRoom actor (server thread) would hold references to al
 <p>I did find a <a href="https://scalac.io/websockets-server-with-akka-http/" target="_blank">blog post</a> that covers how to build a chatroom in akka streams, however
 I found the version of akka they used was quite dated, so I had trouble implementing it on the latest akka 2.5 version. But the blog post did
 cover what I wanted in regards to the actors model, so all was not lost. Now I just needed to modify it to my setup.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">ChatRoom</span><span style="color:#000">()</span> <span style="color:#000">{</span>
 
-<pre><code class="language-scala">class ChatRoom() {
+  <span style="color:#a90d91">private</span> <span style="color:#a90d91">val</span> <span style="color:#000">roomActor</span> <span style="color:#a90d91">=</span> <span style="color:#000">system</span><span style="color:#000">.</span><span style="color:#000">actorOf</span><span style="color:#000">(</span><span style="color:#3f6e75">Props</span><span style="color:#000">(</span><span style="color:#000">classOf</span><span style="color:#000">[</span><span style="color:#a90d91">ChatRoomActor</span><span style="color:#000">]))</span>
 
-  private val roomActor = system.actorOf(Props(classOf[ChatRoomActor]))
+  <span style="color:#a90d91">def</span> <span style="color:#000">websocketFlow</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Any</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#000">(</span><span style="color:#000">actorRef</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">ActorRef</span><span style="color:#000">,</span> <span style="color:#000">publisher</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Publisher</span><span style="color:#000">[</span><span style="color:#a90d91">TextMessage.Strict</span><span style="color:#000">])</span> <span style="color:#a90d91">=</span>
+      <span style="color:#3f6e75">Source</span><span style="color:#000">.</span><span style="color:#000">actorRef</span><span style="color:#000">[</span><span style="color:#a90d91">String</span><span style="color:#000">](</span><span style="color:#1c01ce">16</span><span style="color:#000">,</span> <span style="color:#3f6e75">OverflowStrategy</span><span style="color:#000">.</span><span style="color:#000">fail</span><span style="color:#000">)</span>
+        <span style="color:#000">.</span><span style="color:#000">map</span><span style="color:#000">(</span><span style="color:#000">msg</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#177500">// outgoing message to ws
+</span><span style="color:#177500"></span>          <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">msg</span><span style="color:#000">)</span>
+        <span style="color:#000">)</span>
+        <span style="color:#000">.</span><span style="color:#000">toMat</span><span style="color:#000">(</span><span style="color:#3f6e75">Sink</span><span style="color:#000">.</span><span style="color:#000">asPublisher</span><span style="color:#000">(</span><span style="color:#a90d91">false</span><span style="color:#000">))(</span><span style="color:#3f6e75">Keep</span><span style="color:#000">.</span><span style="color:#000">both</span><span style="color:#000">).</span><span style="color:#000">run</span><span style="color:#000">()</span>
 
-  def websocketFlow: Flow[Message, Message, Any] = {
-    val (actorRef: ActorRef, publisher: Publisher[TextMessage.Strict]) =
-      Source.actorRef[String](16, OverflowStrategy.fail)
-        .map(msg =&gt;
-          // outgoing message to ws
-          TextMessage.Strict(msg)
-        )
-        .toMat(Sink.asPublisher(false))(Keep.both).run()
+    <span style="color:#a90d91">val</span> <span style="color:#000">sink</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Sink</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span>, <span style="color:#a90d91">Any</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">Flow</span><span style="color:#000">[</span><span style="color:#a90d91">Message</span><span style="color:#000">]</span>
+      <span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span>
+        <span style="color:#a90d91">case</span> <span style="color:#3f6e75">TextMessage</span><span style="color:#000">.</span><span style="color:#3f6e75">Strict</span><span style="color:#000">(</span><span style="color:#000">msg</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#177500">// incoming message from ws
+</span><span style="color:#177500"></span>          <span style="color:#000">roomActor</span> <span style="color:#000">!</span> <span style="color:#3f6e75">UserSaid</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">msg</span><span style="color:#000">)</span> <span style="color:#177500">// send to room thread
+</span><span style="color:#177500"></span>      <span style="color:#000">}</span>
+      <span style="color:#000">.</span><span style="color:#000">to</span><span style="color:#000">(</span><span style="color:#3f6e75">Sink</span><span style="color:#000">.</span><span style="color:#000">ignore</span><span style="color:#000">)</span>
 
-    val sink: Sink[Message, Any] = Flow[Message]
-      .map {
-        case TextMessage.Strict(msg) =&gt;
-          // incoming message from ws
-          roomActor ! UserSaid(name, msg) // send to room thread
-      }
-      .to(Sink.ignore)
+    <span style="color:#177500">// pair sink and source
+</span><span style="color:#177500"></span>    <span style="color:#3f6e75">Flow</span><span style="color:#000">.</span><span style="color:#000">fromSinkAndSource</span><span style="color:#000">(</span><span style="color:#000">sink</span><span style="color:#000">,</span> <span style="color:#3f6e75">Source</span><span style="color:#000">.</span><span style="color:#000">fromPublisher</span><span style="color:#000">(</span><span style="color:#000">publisher</span><span style="color:#000">))</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span>
 
-    // pair sink and source
-    Flow.fromSinkAndSource(sink, Source.fromPublisher(publisher))
-  }
-}
+<span style="color:#a90d91">class</span> <span style="color:#3f6e75">ChatRoomActor</span><span style="color:#000">()</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">Actor</span> <span style="color:#000">{</span>
 
-class ChatRoomActor() extends Actor {
+  <span style="color:#a90d91">val</span> <span style="color:#000">users</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Map</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#a90d91">ActorRef</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">Map</span><span style="color:#000">.</span><span style="color:#000">empty</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#a90d91">ActorRef</span><span style="color:#000">]</span>
 
-  val users: Map[String, ActorRef] = Map.empty[String, ActorRef]
+  <span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">receive</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Receive</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#3f6e75">UserSaid</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">msg</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16">: </span><span style="color:#c41a16">$msg</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">broadcast</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16">: </span><span style="color:#c41a16">$msg</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
 
-  override def receive: Receive = {
-    case UserSaid(name, msg) =&gt;
-      println(s&quot;$name: $msg&quot;)
-      broadcast(s&quot;$name: $msg&quot;)
-  }
-
-  def broadcast(msg: String): Unit = {
-    // send message to other users
-    users.values.foreach(_ ! msg)
-  }
-}
-</code></pre>
-
+  <span style="color:#a90d91">def</span> <span style="color:#000">broadcast</span><span style="color:#000">(</span><span style="color:#000">msg</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">)</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
+    <span style="color:#177500">// send message to other users
+</span><span style="color:#177500"></span>    <span style="color:#000">users</span><span style="color:#000">.</span><span style="color:#000">values</span><span style="color:#000">.</span><span style="color:#000">foreach</span><span style="color:#000">(</span><span style="color:#a90d91">_</span> <span style="color:#000">!</span> <span style="color:#000">msg</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
 <p>So now when a messages is sent to the server, it relays it to a ChatRoom that holds actor references to all the other users. There is even
 a broadcast method to send out messages to other users too. But I needed to add/remove users as they join and drop the chatroom. So I needed
 another tweak.</p>
 
 <p>In the Flow, announce who joins, and who leaves.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">// announce the user has joined
+</span><span style="color:#177500"></span><span style="color:#000">roomActor</span> <span style="color:#000">!</span> <span style="color:#3f6e75">UserJoined</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">actorRef</span><span style="color:#000">)</span>
 
-<pre><code class="language-scala">// announce the user has joined
-roomActor ! UserJoined(name, actorRef)
-
-// ...
-
-Sink.onComplete( _ =&gt;
-  // announce the user has left
-  roomActor ! UserLeft(name)
-)
-</code></pre>
-
+<span style="color:#177500">// ...
+</span><span style="color:#177500"></span>
+<span style="color:#3f6e75">Sink</span><span style="color:#000">.</span><span style="color:#000">onComplete</span><span style="color:#000">(</span> <span style="color:#a90d91">_</span> <span style="color:#a90d91">=&gt;</span>
+  <span style="color:#177500">// announce the user has left
+</span><span style="color:#177500"></span>  <span style="color:#000">roomActor</span> <span style="color:#000">!</span> <span style="color:#3f6e75">UserLeft</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">)</span>
+<span style="color:#000">)</span></code></pre></div>
 <p>And respond to these types of messages within the actors.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">receive</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Receive</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
+  <span style="color:#a90d91">case</span> <span style="color:#3f6e75">UserJoined</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">actorRef</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+    <span style="color:#000">users</span><span style="color:#000">.</span><span style="color:#000">put</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">actorRef</span><span style="color:#000">)</span>
+    <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16"> joined the chatroom.&#34;</span><span style="color:#000">)</span>
+    <span style="color:#000">broadcast</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16"> joined the chatroom.&#34;</span><span style="color:#000">)</span>
 
-<pre><code class="language-scala">override def receive: Receive = {
-  case UserJoined(name, actorRef) =&gt;
-    users.put(name, actorRef)
-    println(s&quot;$name joined the chatroom.&quot;)
-    broadcast(s&quot;$name joined the chatroom.&quot;)
+  <span style="color:#a90d91">case</span> <span style="color:#3f6e75">UserLeft</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+    <span style="color:#000">users</span><span style="color:#000">.</span><span style="color:#000">remove</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">)</span>
+    <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16"> left the chatroom.&#34;</span><span style="color:#000">)</span>
+    <span style="color:#000">broadcast</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16"> left the chatroom.&#34;</span><span style="color:#000">)</span>
 
-  case UserLeft(name) =&gt;
-    users.remove(name)
-    println(s&quot;$name left the chatroom.&quot;)
-    broadcast(s&quot;$name left the chatroom.&quot;)
-
-  case UserSaid(name, msg) =&gt;
-    println(s&quot;$name: $msg&quot;)
-    broadcast(s&quot;$name: $msg&quot;)
-}
-</code></pre>
-
+  <span style="color:#a90d91">case</span> <span style="color:#3f6e75">UserSaid</span><span style="color:#000">(</span><span style="color:#000">name</span><span style="color:#000">,</span> <span style="color:#000">msg</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+    <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16">: </span><span style="color:#c41a16">$msg</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+    <span style="color:#000">broadcast</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;</span><span style="color:#c41a16">$name</span><span style="color:#c41a16">: </span><span style="color:#c41a16">$msg</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+<span style="color:#000">}</span></code></pre></div>
 <p>Awesome. So that does it for server-side websockets with Akka Http!</p>
 
 <p>Testing it out with Firefox devtools, you can open the console and type something like this to connect.</p>
-
-<pre><code class="language-bash">$ var ws = new WebSocket(&quot;wss://localhost:8080/api/chat?name=Austin&quot;)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ var <span style="color:#000">ws</span> <span style="color:#000">=</span> new WebSocket<span style="color:#000">(</span><span style="color:#c41a16">&#34;wss://localhost:8080/api/chat?name=Austin&#34;</span><span style="color:#000">)</span>
 // Austin joined the chatroom.
-$ ws.send(&quot;hello world!&quot;)
+$ ws.send<span style="color:#000">(</span><span style="color:#c41a16">&#34;hello world!&#34;</span><span style="color:#000">)</span>
 // Austin: hello world!
-$ ws.close()
-// Austin left the chatroom.
-</code></pre>
-
+$ ws.close<span style="color:#000">()</span>
+// Austin left the chatroom.</code></pre></div>
 <p>You can even try out multiple users, by opening multiple tabs at once and giving them different names.</p>
 
 <h2 id="icing-on-the-cake">Icing on the Cake</h2>
 
 <p>To really make this demo come together, I built a minimal UI for it too. I added some JavaScript to help with opening the chatroom on page load. So now,
-when visiting <a href="https://localhost:8080/" target="_blank">https://localhost:8080/</a> in the web browser, you see this.</p>
+when visiting localhost:8080 in the web browser, you see this.</p>
 
 <p><img src="../images/2019/chatroom-screenshot.png" alt="screenshot" /></p>
 
@@ -328,8 +307,6 @@ when visiting <a href="https://localhost:8080/" target="_blank">https://localhos
 <footer class="row section text-center">
   <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
   <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
-  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 </footer>
 </body>
 </html>

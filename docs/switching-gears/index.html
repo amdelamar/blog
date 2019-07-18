@@ -35,6 +35,9 @@
 
     <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
     <title>Switching Gears - Austin Delamar</title>
 </head>
 <body>
@@ -127,18 +130,15 @@ Then my evening would go by, and I didn&rsquo;t have anything to share.</p>
 
 <p>Eventually, I discovered Hugo. It cli is very easy to use, and combining it with git and GitHub Pages, means I can write posts in any editor
 with markdown syntax and just <code>git push</code> when I&rsquo;m done. Well its a bit more than that, but its quite simple:</p>
-
-<pre><code class="language-bash"># 1. create a new post in Markdown
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#177500"># 1. create a new post in Markdown</span>
 $ hugo new content/post/my-new-post.md
 
-# 2. save as html files to docs
+<span style="color:#177500"># 2. save as html files to docs</span>
 $ hugo -d docs
 
-# 3. publish to GitHub Pages
-$ git commit -a -m &quot;My new post&quot;
-$ git push
-</code></pre>
-
+<span style="color:#177500"># 3. publish to GitHub Pages</span>
+$ git commit -a -m <span style="color:#c41a16">&#34;My new post&#34;</span>
+$ git push</code></pre></div>
 <p>And that&rsquo;s it. The only downside right now, is having to convert all my html posts to markdown. So if you click through my older posts,
 you&rsquo;ll see broken links and some funky formatting. I ported them over to Hugo, but I haven&rsquo;t converted their formatting yet.</p>
 
@@ -174,8 +174,6 @@ projects, like Oddox (even though its crap!), and write about them as well. I&rs
 <footer class="row section text-center">
   <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
   <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
-  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
 </footer>
 </body>
 </html>
