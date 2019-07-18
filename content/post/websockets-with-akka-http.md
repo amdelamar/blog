@@ -29,7 +29,7 @@ Source? Flow? Stream? Sink? What now? I started thinking I should stop here and 
 But I'm kinda stubborn and want to get coding right away, so I push forward with a simple http endpoint to accept a websocket connection:
 
 ```scala
-# build.sbt
+// build.sbt
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http" % "10.1.8",
   "com.typesafe.akka" %% "akka-stream" % "2.5.19"
@@ -37,7 +37,7 @@ libraryDependencies ++= Seq(
 ```
 
 ```scala
-# ChatServer.scala
+// ChatServer.scala
 object ChatServer {
 
   implicit val system = ActorSystem("app")
@@ -218,7 +218,7 @@ You can even try out multiple users, by opening multiple tabs at once and giving
 ## Icing on the Cake
 
 To really make this demo come together, I built a minimal UI for it too. I added some JavaScript to help with opening the chatroom on page load. So now,
-when visiting https://localhost:8080/ in the web browser, you see this.
+when visiting localhost:8080 in the web browser, you see this.
 
 ![screenshot](../images/2019/chatroom-screenshot.png)
 
