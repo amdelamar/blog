@@ -9,7 +9,7 @@ date: 2019-07-17T20:24:18-07:00
 createDate: 2019-07-17T20:24:18-07:00
 modifyDate: 2019-07-17T20:24:18-07:00
 publishDate: 2019-07-17T20:24:18-07:00
-thumbnail: ""
+thumbnail: "https://amdelamar.com/blog/images/2019/chatroom-screenshot.png"
 banner: ""
 bannerCaption: ""
 description: "I didn't find a good example of Server Websockets with the latest version of Akka Http, so I made my own chatroom app."
