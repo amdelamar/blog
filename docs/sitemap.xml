@@ -4,31 +4,54 @@
   
   <url>
     <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amdelamar.com/blog/category/</loc>
-    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amdelamar.com/blog/post/</loc>
-    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/</loc>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/websockets-with-akka-http/</loc>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/akka/</loc>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/category/code/</loc>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/scala/</loc>
+    <lastmod>2019-07-17T20:24:18-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://amdelamar.com/blog/switching-gears/</loc>
     <lastmod>2019-07-16T19:37:37-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/</loc>
-    <lastmod>2019-07-16T19:37:37-07:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -71,13 +94,13 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/category/workplace/</loc>
+    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
+    <loc>https://amdelamar.com/blog/category/workplace/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -200,12 +223,6 @@
   <url>
     <loc>https://amdelamar.com/blog/java-web-frameworks-2017/</loc>
     <lastmod>2017-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/category/code/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

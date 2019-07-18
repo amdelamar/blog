@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/websockets-with-akka-http/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/websockets-with-akka-http/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Websockets With Akka Http">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="I didn&#39;t find a good example of Server Websockets with the latest version of Akka Http, so I made my own chatroom app.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/websockets-with-akka-http/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Websockets With Akka Http">
+    <meta name="twitter:description" content="I didn&#39;t find a good example of Server Websockets with the latest version of Akka Http, so I made my own chatroom app.">
+    <meta name="twitter:image" content="">
+
+    
+    <meta itemprop="name" content="Websockets With Akka Http">
+    <meta itemprop="description" content="I didn&#39;t find a good example of Server Websockets with the latest version of Akka Http, so I made my own chatroom app.">
+    <meta itemprop="image" content="">
+
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <title>Websockets With Akka Http - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <details class="nav-item">
+    		  <summary>Blog</summary>
+    		  <div class="nav-list padding margin-top border-top border-bottom">
+            <a class="nav-item" href="https://amdelamar.com/blog">All Posts</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/category/">Categories</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+    		  </div>
+    		</details>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+    		<div class="nav-item dropdown">
+    		  <a href="#docs">Blog &#9662;</a>
+    		  <div class="dropdown-body border background-lightgrey text-left">
+            <a href="https://amdelamar.com/blog">All Posts</a>
+            <a href="https://amdelamar.com/blog/category/">Categories</a>
+            <a href="https://amdelamar.com/blog/tags/">Tags</a>
+    		  </div>
+    		</div>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Websockets With Akka Http
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="time to read">8 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>This past weekend I wanted to play around with <a href="https://en.wikipedia.org/wiki/WebSocket" target="_blank">WebSockets</a> and learn how to setup
+a server and client using them. Then I though, why not try writing a server in <a href="https://doc.akka.io/docs/akka-http/current/introduction.html" target="_blank">Akka Http</a>?
+Its a great opportunity for me to learn more about Akka streams, as well as a common protocol for push/pull applications
+on the web, like a chatroom. In fact, that&rsquo;s what I&rsquo;ll do. I&rsquo;ll build a chatroom app.</p>
+
+<h2 id="swimming-upstream">Swimming Upstream</h2>
+
+<p>First, I tried looking at the official docs for <a href="https://doc.akka.io/docs/akka-http/current/server-side/websocket-support.html" target="_blank">Akka Http websocket</a> support.
+And well, I was a bit overwhelmed.</p>
+
+<p>Source? Flow? Stream? Sink? What now? I started thinking I should stop here and just try to learn these new concepts before trying to build an app with them.
+But I&rsquo;m kinda stubborn and want to get coding right away, so I push forward with a simple http endpoint to accept a websocket connection:</p>
+
+<pre><code class="language-scala"># build.sbt
+libraryDependencies ++= Seq(
+  &quot;com.typesafe.akka&quot; %% &quot;akka-http&quot; % &quot;10.1.8&quot;,
+  &quot;com.typesafe.akka&quot; %% &quot;akka-stream&quot; % &quot;2.5.19&quot;
+)
+</code></pre>
+
+<pre><code class="language-scala"># ChatServer.scala
+object ChatServer {
+
+  implicit val system = ActorSystem(&quot;app&quot;)
+  implicit val materializer = ActorMaterializer()
+  implicit val executionContext = system.dispatcher
+
+  def main(args: Array[String]): Unit = {
+
+    val apiRoute: Route =
+      path( &quot;api&quot; / &quot;chat&quot;) {
+        get {
+          handleWebSocketMessages(/* do something with Flow[Message]*/)
+        }
+      }
+
+    Http().bindAndHandle(apiRoute, &quot;localhost&quot;, 8080)
+      .map { _ =&gt;
+        println(s&quot;Server is running at http://localhost:8080/&quot;)
+      }
+  }
+
+}
+</code></pre>
+
+<p>Now I need to handle the Flow part of the websocket method. If a user calls <code>GET wss://localhost:8080/api/chat</code> with the right WebSocket header values, then
+their connection is upgraded and connected to the server. Which can be done in JavaScript with this handy method, <code>new WebSocket(&quot;wss://localhost:8080/api/chat&quot;)</code>.</p>
+
+<p>The Flow is basically connecting a Source stream to a Sink for processing messages this way.
+Source is kinda like a producer/publisher of messages, while Sink is a consumer/subscriber. Or something to that degree, I could be butchering the explanation
+here so please checkout the offical <a href="https://akka.io/docs" target="_blank">akka docs</a> for a better understanding of Akka streams.</p>
+
+<p>So back to the Flow method. I knew I needed something able to process and respond to messages.</p>
+
+<pre><code class="language-scala">def websocketFlow: Flow[Message, Message, Any] =
+  Flow[Message].map {
+      case TextMessage.Strict(s) =&gt; TextMessage.Strict(&quot;Ok got the message.&quot;)
+      case BinaryMessage.Strict(b) =&gt; TextMessage.Strict(&quot;What?&quot;)
+  }
+</code></pre>
+
+<p>The above example is pretty bare. So I setup a Source and Sink separately, then paired them together in the end to a Flow.</p>
+
+<pre><code class="language-scala">def websocketFlow: Flow[Message, Message, Any] = {
+    val (actorRef: ActorRef, publisher: Publisher[TextMessage.Strict]) =
+      Source.actorRef[String](16, OverflowStrategy.fail)
+        .map(msg =&gt;
+          // outgoing message to ws
+          TextMessage.Strict(msg)
+        )
+        .toMat(Sink.asPublisher(false))(Keep.both).run()
+
+    val sink: Sink[Message, Any] = Flow[Message]
+      .map {
+        case TextMessage.Strict(msg) =&gt;
+          // incoming message from ws
+          println(s&quot;Received: $msg&quot;)
+      }
+      .to(Sink.ignore)
+
+    // pair sink and source
+    Flow.fromSinkAndSource(sink, Source.fromPublisher(publisher))
+  }
+</code></pre>
+
+<p>Now its a bit more clear <em>where</em> messages are coming in and going out on the websocket.</p>
+
+<h2 id="adding-actors">Adding Actors</h2>
+
+<p>But I need the Flow processing to talk to other threads (read actors) for other users, and relay them messages too. So far, all I have is a
+server talking to a single client. I needed a ChatRoom class. It would keep track of all the other connected users, and act as one big pipe.
+I was fairly certain I could use <a href="https://doc.akka.io/docs/akka/current/index-actors.html" target="_blank">Akka actors</a> for this portion of the code. Actors
+are kinda like Runnable threads but with a cleaner API and are massively scalable, somwehere around <a href="https://alvinalexander.com/scala/akka-actors-introduction-scala-cookbook" target="_blank">2.7 million actors per GB of RAM</a>. Which sounds like overkill for a chatroom, but the clean API is what I&rsquo;m after here.
+Thus, I could build a ChatRoom actor (server thread) would hold references to all the websocket Flow actors (or simply user threads) and broadcast messages to them.</p>
+
+<p>I did find a <a href="https://scalac.io/websockets-server-with-akka-http/" target="_blank">blog post</a> that covers how to build a chatroom in akka streams, however
+I found the version of akka they used was quite dated, so I had trouble implementing it on the latest akka 2.5 version. But the blog post did
+cover what I wanted in regards to the actors model, so all was not lost. Now I just needed to modify it to my setup.</p>
+
+<pre><code class="language-scala">class ChatRoom() {
+
+  private val roomActor = system.actorOf(Props(classOf[ChatRoomActor]))
+
+  def websocketFlow: Flow[Message, Message, Any] = {
+    val (actorRef: ActorRef, publisher: Publisher[TextMessage.Strict]) =
+      Source.actorRef[String](16, OverflowStrategy.fail)
+        .map(msg =&gt;
+          // outgoing message to ws
+          TextMessage.Strict(msg)
+        )
+        .toMat(Sink.asPublisher(false))(Keep.both).run()
+
+    val sink: Sink[Message, Any] = Flow[Message]
+      .map {
+        case TextMessage.Strict(msg) =&gt;
+          // incoming message from ws
+          roomActor ! UserSaid(name, msg) // send to room thread
+      }
+      .to(Sink.ignore)
+
+    // pair sink and source
+    Flow.fromSinkAndSource(sink, Source.fromPublisher(publisher))
+  }
+}
+
+class ChatRoomActor() extends Actor {
+
+  val users: Map[String, ActorRef] = Map.empty[String, ActorRef]
+
+  override def receive: Receive = {
+    case UserSaid(name, msg) =&gt;
+      println(s&quot;$name: $msg&quot;)
+      broadcast(s&quot;$name: $msg&quot;)
+  }
+
+  def broadcast(msg: String): Unit = {
+    // send message to other users
+    users.values.foreach(_ ! msg)
+  }
+}
+</code></pre>
+
+<p>So now when a messages is sent to the server, it relays it to a ChatRoom that holds actor references to all the other users. There is even
+a broadcast method to send out messages to other users too. But I needed to add/remove users as they join and drop the chatroom. So I needed
+another tweak.</p>
+
+<p>In the Flow, announce who joins, and who leaves.</p>
+
+<pre><code class="language-scala">// announce the user has joined
+roomActor ! UserJoined(name, actorRef)
+
+// ...
+
+Sink.onComplete( _ =&gt;
+  // announce the user has left
+  roomActor ! UserLeft(name)
+)
+</code></pre>
+
+<p>And respond to these types of messages within the actors.</p>
+
+<pre><code class="language-scala">override def receive: Receive = {
+  case UserJoined(name, actorRef) =&gt;
+    users.put(name, actorRef)
+    println(s&quot;$name joined the chatroom.&quot;)
+    broadcast(s&quot;$name joined the chatroom.&quot;)
+
+  case UserLeft(name) =&gt;
+    users.remove(name)
+    println(s&quot;$name left the chatroom.&quot;)
+    broadcast(s&quot;$name left the chatroom.&quot;)
+
+  case UserSaid(name, msg) =&gt;
+    println(s&quot;$name: $msg&quot;)
+    broadcast(s&quot;$name: $msg&quot;)
+}
+</code></pre>
+
+<p>Awesome. So that does it for server-side websockets with Akka Http!</p>
+
+<p>Testing it out with Firefox devtools, you can open the console and type something like this to connect.</p>
+
+<pre><code class="language-bash">$ var ws = new WebSocket(&quot;wss://localhost:8080/api/chat?name=Austin&quot;)
+// Austin joined the chatroom.
+$ ws.send(&quot;hello world!&quot;)
+// Austin: hello world!
+$ ws.close()
+// Austin left the chatroom.
+</code></pre>
+
+<p>You can even try out multiple users, by opening multiple tabs at once and giving them different names.</p>
+
+<h2 id="icing-on-the-cake">Icing on the Cake</h2>
+
+<p>To really make this demo come together, I built a minimal UI for it too. I added some JavaScript to help with opening the chatroom on page load. So now,
+when visiting <a href="https://localhost:8080/" target="_blank">https://localhost:8080/</a> in the web browser, you see this.</p>
+
+<p><img src="../images/2019/chatroom-screenshot.png" alt="screenshot" /></p>
+
+<p>Chatroom app complete!</p>
+
+<p>I&rsquo;m happy with how it turned out. And I learned a bit more about Akka, and WebSockets, along the way. It was a fun weekend project to try several new things at once!</p>
+
+<p>If you&rsquo;d like to run this yourself or browse the code, its over here on <a href="https://github.com/amdelamar/akka-websockets-demo" target="_blank">my GitHub</a>.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="17 Jul 19 20:24 PDT">Published: Jul 17, 2019</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/akka" class="text-secondary">akka</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+  <script src="https://amdelamar.com/blog/highlightjs/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</footer>
+</body>
+</html>
+

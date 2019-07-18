@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2019 19:37:37 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 20:24:18 -0700</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>akka</title>
+      <link>https://amdelamar.com/blog/tags/akka/</link>
+      <pubDate>Wed, 17 Jul 2019 20:24:18 -0700</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/akka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scala</title>
+      <link>https://amdelamar.com/blog/tags/scala/</link>
+      <pubDate>Wed, 17 Jul 2019 20:24:18 -0700</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/scala/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>info</title>

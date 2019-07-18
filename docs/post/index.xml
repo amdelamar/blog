@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jul 2019 19:37:37 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 20:24:18 -0700</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Websockets With Akka Http</title>
+      <link>https://amdelamar.com/blog/websockets-with-akka-http/</link>
+      <pubDate>Wed, 17 Jul 2019 20:24:18 -0700</pubDate>
+      
+      <guid>https://amdelamar.com/blog/websockets-with-akka-http/</guid>
+      <description>This past weekend I wanted to play around with WebSockets and learn how to setup a server and client using them. Then I though, why not try writing a server in Akka Http? Its a great opportunity for me to learn more about Akka streams, as well as a common protocol for push/pull applications on the web, like a chatroom.</description>
+    </item>
     
     <item>
       <title>Switching Gears</title>
