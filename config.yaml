@@ -15,6 +15,10 @@ blackfriday:
   hrefTargetBlank: true
 preserveTaxonomyNames: true
 
+# Code Syntax Highlighting.
+pygmentsCodeFences: true
+pygmentsStyle: xcode # See this for more options https://xyproto.github.io/splash/docs/all.html
+
 taxonomies:
   category: category
   tag: tags
