@@ -15,4 +15,37 @@ bannerCaption: "Well, I meant Java *on* Windows, since you don't really *add* th
 description: "exe wrappers, install/uninstall, fancy icons, shortcuts with java arguments, windows registry entries, and more options for java apps."
 ---
 
-<p>Are you developing a Java AWT/Swing application?</p><p>Is your target audience--<em>or entire company</em>--using Windows?</p><p>Well, you&#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (<em>ahem</em>, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.</p><p>&nbsp;</p><h2><strong>So what&#39;s the problem then?</strong></h2><p>There isn&#39;t a problem, per se. But the default no-frills use of a Java application on a Windows operating system is <strong>boring</strong>.</p><p>You won&#39;t be impressing your audience with your Java skills very much if they have to open the command line and run &quot;<code>java -jar \\path\\to\\jar\\application.jar -Xmx 512m</code>&quot; every time they want to use your application.</p><p>It would be safe to say, most java desktop applications, typically use the AWT/Swing libraries, and are typically packaged as a Runnable-JAR file or &quot;<code>.jar</code>&quot;. This is not what many Windows users are used to: &quot;<code>.exe</code>&quot; or executable file. Then there is the process name in Task Manager, that shows up as the very unintuitive, &quot;<code>javaw.exe</code>&quot;. Not to mention there is not installation or uninstalltion that Windows users have grown to expect. They don&#39;t rely on a package manager like yum or rpm. And your application wouldn&#39;t be listed in the &quot;Program -&gt; Uninstall a program&quot; list. And of course, the default icon for your Java program is the Java coffee cup logo, which honestly gives an old 1990&#39;s vibe.</p><p>&nbsp;</p><p style=\"text-align:center\"><img alt=\"Default icon for a Java application on Windows\" height=\"210\" src=\"https://cdn.ramblingware.com/file/ramblingware/2016/jaricon.png\" width=\"388\" /></p><p>&nbsp;</p><h2><strong>How do I tweak my Java app for Windows?</strong></h2><p>We can fancy it up with these changes:</p><ul><li>Set a nice &quot;<code>.ico</code>&quot; icon for the app (<a href=\"http://www.xiconeditor.com/\">Create one</a> and then <a href=\"http://stackoverflow.com/questions/17383867/set-icon-image-in-java\">set it using this code</a>.)</li><li>Wrap the JAR in an EXE (<a href=\"http://launch4j.sourceforge.net\">Launch4J</a>)</li><li>Create an Install Wizard (<a href=\"https://www.ej-technologies.com/products/install4j/overview.html\">Install4J</a>)</li><li>Set desktop and start menu shortcuts (<a href=\"https://gist.github.com/amdelamar/0b0b8984c9c0cfdbb6fabca3e3043c69\">VBS scripts</a>)</li><li>Add the application to the Programs List via a Registry entry (<a href=\"http://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java\">You can use this code</a>.)</li><li>Rename &quot;<code>javaw.exe</code>&quot; to &quot;<code>your-application.exe</code>&quot; by bundling a JVM runtime with your app (<a href=\"http://launch4j.sourceforge.net\">Launch4J</a> or <a href=\"http://jsmooth.sourceforge.net/\">JSmooth</a>)</li></ul><p>These tweaks to your java application will make it snazzy and feel right at home for your Windows users. Feel free to implement as many as you can to your application. You&#39;ll be sure to impress your non-power users AND still deliver the same, awesome, superb code you&#39;ve been writing all this time.</p><p>&nbsp;</p><h2><strong>Don&#39;t Forget!</strong></h2><p>Keep in mind, these changes are for Windows users only and wouldn&#39;t work at all on other operating systems, like Mac or Linux. So don&#39;t forget to keep a separate package/installer for your other users. Java is ideally, <a href=\"https://en.wikipedia.org/wiki/Cross-platform\">platform independent</a>, but that doesn&#39;t mean we can&#39;t enhance our applications for each platform.</p><p>Also, I may cover each of these tweaks in further detail, in the future. For now its just important to detail what these are and point out how they can be accomplished. Let me know if I missed any or if you have suggestions to add!</p>
+Are you developing a Java AWT/Swing application?
+
+Is your target audience--_or entire company_--using Windows?
+
+Well, you're not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (_ahem_, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.
+
+## **So what's the problem then?**
+
+There isn't a problem, per se. But the default no-frills use of a Java application on a Windows operating system is **boring**.
+
+You won't be impressing your audience with your Java skills very much if they have to open the command line and run "`java -jar \\path\\to\\jar\\application.jar -Xmx 512m`" every time they want to use your application.
+
+It would be safe to say, most java desktop applications, typically use the AWT/Swing libraries, and are typically packaged as a Runnable-JAR file or "`.jar`". This is not what many Windows users are used to: "`.exe`" or executable file. Then there is the process name in Task Manager, that shows up as the very unintuitive, "`javaw.exe`". Not to mention there is not installation or uninstalltion that Windows users have grown to expect. They don't rely on a package manager like yum or rpm. And your application wouldn't be listed in the "Program -> Uninstall a program" list. And of course, the default icon for your Java program is the Java coffee cup logo, which honestly gives an old 1990's vibe.
+
+![Default](https://cdn.ramblingware.com/file/ramblingware/2016/jaricon.png)
+
+## **How do I tweak my Java app for Windows?**
+
+We can fancy it up with these changes:
+
+* Set a nice "`.ico`" icon for the app ([Create one](http://www.xiconeditor.com/) and then [set it using this code](http://stackoverflow.com/questions/17383867/set-icon-image-in-java).)
+* Wrap the JAR in an EXE ([Launch4J](http://launch4j.sourceforge.net))
+* Create an Install Wizard ([Install4J](https://www.ej-technologies.com/products/install4j/overview.html))
+* Set desktop and start menu shortcuts ([VBS scripts](https://gist.github.com/amdelamar/0b0b8984c9c0cfdbb6fabca3e3043c69))
+* Add the application to the Programs List via a Registry entry ([You can use this code](http://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java).)
+* Rename "`javaw.exe`" to "`your-application.exe`" by bundling a JVM runtime with your app ([Launch4J](http://launch4j.sourceforge.net) or [JSmooth](http://jsmooth.sourceforge.net/))
+
+These tweaks to your java application will make it snazzy and feel right at home for your Windows users. Feel free to implement as many as you can to your application. You'll be sure to impress your non-power users AND still deliver the same, awesome, superb code you've been writing all this time.
+
+## **Don't Forget!**
+
+Keep in mind, these changes are for Windows users only and wouldn't work at all on other operating systems, like Mac or Linux. So don't forget to keep a separate package/installer for your other users. Java is ideally, [platform independent](https://en.wikipedia.org/wiki/Cross-platform), but that doesn't mean we can't enhance our applications for each platform.
+
+Also, I may cover each of these tweaks in further detail, in the future. For now its just important to detail what these are and point out how they can be accomplished. Let me know if I missed any or if you have suggestions to add!

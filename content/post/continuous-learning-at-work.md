@@ -21,7 +21,7 @@ I've been doing job interviews as of late and one question that keeps cropping u
 
 I'd have my folks **continuously learn** new skills every year.
 
-Before I dive into my reasoning I want to preface that IBM has an internal program specifically for this. Its called _Think40_. The "think" stemming from IBM's <a href=\"https://en.wikipedia.org/wiki/Think_(IBM)\">famous slogan</a> and "40" marking the target hours per year one should achieve in learning. Whether that be books, articles, courses, videos, or other training. Every hour spent learning counts towards this goal, and in my experience 40 hours is a very easy target to reach (46 min per week), if you account all your time spent researching technical problems at work, or reading articles related to your field, or attending meetings/conferences. But let's dive into the pros/cons.
+Before I dive into my reasoning I want to preface that IBM has an internal program specifically for this. Its called _Think40_. The "think" stemming from IBM's [famous slogan](https://en.wikipedia.org/wiki/Think_(IBM)) and "40" marking the target hours per year one should achieve in learning. Whether that be books, articles, courses, videos, or other training. Every hour spent learning counts towards this goal, and in my experience 40 hours is a very easy target to reach (46 min per week), if you account all your time spent researching technical problems at work, or reading articles related to your field, or attending meetings/conferences. But let's dive into the pros/cons.
 
 
 
@@ -29,13 +29,13 @@ Before I dive into my reasoning I want to preface that IBM has an internal progr
 
 The reason being three fold:
 
-1) Improves their skills. Adding another tool in one's toolbelt is always a good idea. Even if they don't directly use it, the experience will affect their current skills. For Java developers, learning another JVM language like Scala, Kotlin, or Groovy, can help improve your understanding of the Java language and ecosystem. They might have to try a different IDE or a different build tool. And they might also practice deploying on self-hosted VMs or <a href=\"https://www.ramblingware.com/blog/learn-to-code-cloud-native-apps-for-free\">the cloud</a>, all the while learning that new JVM language.
+1) Improves their skills. Adding another tool in one's toolbelt is always a good idea. Even if they don't directly use it, the experience will affect their current skills. For Java developers, learning another JVM language like Scala, Kotlin, or Groovy, can help improve your understanding of the Java language and ecosystem. They might have to try a different IDE or a different build tool. And they might also practice deploying on self-hosted VMs or [the cloud](https://www.ramblingware.com/blog/learn-to-code-cloud-native-apps-for-free), all the while learning that new JVM language.
 
 2) Keeps them on their toes. Continuous learning helps fosters an open mind for new ways to accomplish work. They'll be more receptive to new, strange, or challenging work when it pops up. Practicing new technology stacks for example is a great way to learn how to approach problems from different points of view. For example, If you're familiar with the LAMP/WIMP stack then tryout the MEAN/MERN stack.
 
 3) Buffers sudden changes. I've seen too many coworkers fall behind in skills. They get comfortable and rely on a set of tech skills to pad their resume and cement their position for 10+ years. Unbeknownst to them, project changes or even job changes are inevitable. They'll happen sooner or later; whether it be reassignment to new teams, re-training, re-location, or getting the axe and having to find a new job. When done appropriately, continuous learning buffers these disruptions for employees and the company.
 
-I had an IBM manager tell me before, \"Get comfortable with being uncomfortable\". That advice didn't click for me immediately, but after a few years and many projects later. I finally understand what he meant and have tried to improve myself whenever I felt comfortable with my understanding of a topic.
+I had an IBM manager tell me before, Get comfortable with being uncomfortable. That advice didn't click for me immediately, but after a few years and many projects later. I finally understand what he meant and have tried to improve myself whenever I felt comfortable with my understanding of a topic.
 
 
 

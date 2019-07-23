@@ -53,11 +53,11 @@ Once you see something personal given the spotlight in your search results, its 
 
 ## What I miss about Gmail...
 
-1.  <s>Mobile App</s> _PM added this March 2016!_
-2.  <s>Two-Factor Authentication</s> _PM added has this Dec 2016!_
-3.  <s>Folders</s> _PM added this **last week**!_
-4.  Gchat / Instant Messaging
-5.  Undo send email
+1. <s>Mobile App</s> _PM added this March 2016!_
+2. <s>Two-Factor Authentication</s> _PM added has this Dec 2016!_
+3. <s>Folders</s> _PM added this **last week**!_
+4. Gchat / Instant Messaging
+5. Undo send email
 
 Ok, the "undo button" for accidentally sending an email, is not that important. It was a nice feature though. Simply because as a human, I tend to make mistakes. Like forgetting to attach a file to my email. Clicking "undo" is a life-saver feature for dorks like me.
 
@@ -65,4 +65,4 @@ Gchat (or Hangouts) for instant messaging other Gmail users in my contacts, was 
 
 I'm confident the ProtonMail team will build out each of these missing features eventually. But their core service is ready and **free** for anyone to use. They are still actively building more and keep listening to feedback from the [/r/ProtonMail](https://www.reddit.com/r/ProtonMail/) community to guage what features to include in the next version. But as it stands right now... I'm happy with my switch from Gmail to ProtonMail. Plus, I like my [custom flat theme](https://amdelamar.github.io/pm-theme/) I built for it!  
 
-<small>_Disclaimer: I am not affiliated with ProtonMail, nor was I asked to blog about them._</small>
+_Disclaimer: I am not affiliated with ProtonMail, nor was I asked to blog about them._
