@@ -17,8 +17,8 @@
       <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
-      <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
-In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.</description>
+      <description>I&amp;rsquo;ve been researching Java frameworks lately, trying to find one that&amp;rsquo;s easy to extend and lightweight enough for RESTful APIs.
+In my search I&amp;rsquo;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;rsquo;d compile my findings in one big list.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@ In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums
       <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
-      <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.</description>
+      <description>I&amp;rsquo;ll save the obvious &amp;ldquo;must-have&amp;rdquo; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;rsquo;ve already started building your site, or you&amp;rsquo;re maintaining an old behemoth, then these tips should help tremendously.</description>
     </item>
     
     <item>

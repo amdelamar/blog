@@ -17,8 +17,7 @@
       <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
-      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.
-I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs.</description>
+      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.</description>
     </item>
     
     <item>

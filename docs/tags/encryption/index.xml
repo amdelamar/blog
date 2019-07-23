@@ -17,8 +17,9 @@
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/https-required/</guid>
-      <description>Its 2017, and we&amp;#39;re halfway to encrypting the entire internet.
-Source: https://letsencrypt.org/stats/This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;#39;s Encrypt, is partly responsible because of their free service.</description>
+      <description>Its 2017, and we&amp;rsquo;re halfway to encrypting the entire internet.
+Source: https://letsencrypt.org/stats/
+This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;rsquo;s Encrypt, is partly responsible because of their free service.</description>
     </item>
     
     <item>

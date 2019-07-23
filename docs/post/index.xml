@@ -47,7 +47,7 @@ Here&amp;rsquo;s just a quick recap of what I&amp;rsquo;ve been up to, and what 
       
       <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
       <description>The anti-Google crowd is growing.
-The Two Reasons I Don’t Trust Google With My Data – Medium\nGoogle Cannot Be Stopped - The AtlanticIs It Time to Break Up Google? - The New York TimesBig data, big business, Big Brother? - CNN.</description>
+ The Two Reasons I Don’t Trust Google With My Data – Medium Google Cannot Be Stopped - The Atlantic Is It Time to Break Up Google? - The New York Times Big data, big business, Big Brother?</description>
     </item>
     
     <item>
@@ -56,8 +56,7 @@ The Two Reasons I Don’t Trust Google With My Data – Medium\nGoogle Cannot Be
       <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
-      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.
-I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs.</description>
+      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.</description>
     </item>
     
     <item>
@@ -66,8 +65,8 @@ I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Privat
       <pubDate>Tue, 15 May 2018 14:18:53 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
-      <description>The \&#34;mosaic killer\&#34; browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&#39;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.&amp;nbsp;
-Everyone has their own favorite list, and don&#39;t think your favorite extensions aren&#39;t worthy if they aren&#39;t mentioned.</description>
+      <description>The mosaic killer browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&amp;rsquo;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.
+Everyone has their own favorite list, and don&amp;rsquo;t think your favorite extensions aren&amp;rsquo;t worthy if they aren&amp;rsquo;t mentioned.</description>
     </item>
     
     <item>
@@ -76,8 +75,8 @@ Everyone has their own favorite list, and don&#39;t think your favorite extensio
       <pubDate>Sun, 18 Mar 2018 21:02:05 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
-      <description>I&#39;ve been a user of ProtonMail since 2015. Tomorrow marks my \&#34;3 year anniversary\&#34; so to speak, of when I ditched Gmail and switched to ProtonMail.
-I wrote about this last year, and my reasons for dumping Gmail haven&#39;t changed.</description>
+      <description>I&amp;rsquo;ve been a user of ProtonMail since 2015. Tomorrow marks my 3 year anniversary so to speak, of when I ditched Gmail and switched to ProtonMail.
+I wrote about this last year, and my reasons for dumping Gmail haven&amp;rsquo;t changed.</description>
     </item>
     
     <item>
@@ -86,9 +85,8 @@ I wrote about this last year, and my reasons for dumping Gmail haven&#39;t chang
       <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
-      <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
-
-I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.</description>
+      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post. The reason being two fold:
+ I migrated my blog db from MySQL to Cloudant. The WYSIWYG editor on my dashboard wasn&amp;rsquo;t ready.  Now that I&amp;rsquo;ve got an alpha 1.</description>
     </item>
     
     <item>
@@ -97,8 +95,8 @@ I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard 
       <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
-      <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
-In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.</description>
+      <description>I&amp;rsquo;ve been researching Java frameworks lately, trying to find one that&amp;rsquo;s easy to extend and lightweight enough for RESTful APIs.
+In my search I&amp;rsquo;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;rsquo;d compile my findings in one big list.</description>
     </item>
     
     <item>
@@ -107,7 +105,7 @@ In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums
       <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
-      <description>The term &amp;quot;Cloud Native&amp;quot; sounds simple enough, but I&amp;#39;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;quot;cloud native&amp;quot; in the first place?</description>
+      <description>The term &amp;ldquo;Cloud Native&amp;rdquo; sounds simple enough, but I&amp;rsquo;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;ldquo;cloud native&amp;rdquo; in the first place?</description>
     </item>
     
     <item>
@@ -116,7 +114,7 @@ In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</guid>
-      <description>Continuing from my previous list, I think I&amp;#39;ll make this a series, and post new apps I&amp;#39;m using every few months.
+      <description>Continuing from my previous list, I think I&amp;rsquo;ll make this a series, and post new apps I&amp;rsquo;m using every few months.
 Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
 These apps are becoming daily drivers or at least seeing me use them every week.</description>
     </item>
@@ -137,7 +135,7 @@ These apps are becoming daily drivers or at least seeing me use them every week.
       
       <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
       <description>Web tech is so fricken exciting right now.
-Offline-First Web DevelopmentSingle Page AppsResponsive Web DesignProgressive Web AppsFull Stack JavaScriptDocker ContainerizationMicroservicesServerless FaaS AppsBlockchainNone of these technologies are new in a sense. But it seems to me there&amp;#39;s lots of activity around these topics this year.</description>
+ Offline-First Web Development Single Page Apps Responsive Web Design Progressive Web Apps Full Stack JavaScript Docker Containerization Microservices Serverless FaaS Apps Blockchain  None of these technologies are new in a sense.</description>
     </item>
     
     <item>
@@ -156,8 +154,9 @@ Assumptions lead to missed deadlines, errors, and wasted time. Someone can think
       <pubDate>Thu, 29 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/https-required/</guid>
-      <description>Its 2017, and we&amp;#39;re halfway to encrypting the entire internet.
-Source: https://letsencrypt.org/stats/This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;#39;s Encrypt, is partly responsible because of their free service.</description>
+      <description>Its 2017, and we&amp;rsquo;re halfway to encrypting the entire internet.
+Source: https://letsencrypt.org/stats/
+This is huge. Our internet communications are becoming more encrypted every day using HTTPS, also known as HTTP over TLS/SSL or HTTP Secure. The free Certificate Authority, Let&amp;rsquo;s Encrypt, is partly responsible because of their free service.</description>
     </item>
     
     <item>
@@ -177,7 +176,7 @@ This blog has about 70 images hosted by Imgur.</description>
       
       <guid>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</guid>
       <description>A safe prediction, no?
-Its not very hard to believe that all traditional Full/Mid Tower sized PCs or &amp;quot;desktops&amp;quot; will be replaced by SFF (small form factor) or Mini Tower PCs sooner or later. These SFF computers are the size of a loaf of bread or a shoebox; instead of the cabient sized monsters that people have today.</description>
+Its not very hard to believe that all traditional Full/Mid Tower sized PCs or &amp;ldquo;desktops&amp;rdquo; will be replaced by SFF (small form factor) or Mini Tower PCs sooner or later. These SFF computers are the size of a loaf of bread or a shoebox; instead of the cabient sized monsters that people have today.</description>
     </item>
     
     <item>
@@ -221,7 +220,7 @@ Mainly because of better privacy, but it has the added benefit of being highly s
       
       <guid>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</guid>
       <description>Some video games are good. And some suck.
-Maybe they could&amp;#39;ve been great and a lot of fun to play. Or maybe they already are fun to play, but are just poisoned with bad decisions from developers or publishers. There&amp;#39;s a lot going on and its hard to pinpoint a single area that plagues the gaming industry by itself.</description>
+Maybe they could&amp;rsquo;ve been great and a lot of fun to play. Or maybe they already are fun to play, but are just poisoned with bad decisions from developers or publishers. There&amp;rsquo;s a lot going on and its hard to pinpoint a single area that plagues the gaming industry by itself.</description>
     </item>
     
     <item>
@@ -230,7 +229,7 @@ Maybe they could&amp;#39;ve been great and a lot of fun to play. Or maybe they a
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/every-company-needs-a-web-developer/</guid>
-      <description>Even if you got a website for free, and maintain it yourself, you have to admit...
+      <description>Even if you got a website for free, and maintain it yourself, you have to admit&amp;hellip;
 You could use a web developer.
 Someone to handle all the technical aspects of building, hosting, securing, designing, and maintaining your website for you or your company.</description>
     </item>
@@ -241,9 +240,9 @@ Someone to handle all the technical aspects of building, hosting, securing, desi
       <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
-      <description>People hate online advertisements... Let me repeat that.
+      <description>People hate online advertisements&amp;hellip; Let me repeat that.
 People really HATE online ads.
-There are lots of online ads. And there are some that are... acceptable. Then there are the worst of offenders. The kind that sends people into fits, immediately closing the page, and leaving the website forever.</description>
+There are lots of online ads. And there are some that are&amp;hellip; acceptable. Then there are the worst of offenders. The kind that sends people into fits, immediately closing the page, and leaving the website forever.</description>
     </item>
     
     <item>
@@ -252,7 +251,7 @@ There are lots of online ads. And there are some that are... acceptable. Then th
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
-      <description>There were some big data leaks in 2016 that revealed millions of passwords and credentials online. LinkedIn for example had over 160 million credentials stolen from its database. If you had an account on LinkedIn before 2012, there is a near 100% probability that your email + password have been decoded, or &amp;quot;cracked&amp;quot;, already.</description>
+      <description>There were some big data leaks in 2016 that revealed millions of passwords and credentials online. LinkedIn for example had over 160 million credentials stolen from its database. If you had an account on LinkedIn before 2012, there is a near 100% probability that your email + password have been decoded, or &amp;ldquo;cracked&amp;rdquo;, already.</description>
     </item>
     
     <item>
@@ -261,8 +260,8 @@ There are lots of online ads. And there are some that are... acceptable. Then th
       <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</guid>
-      <description>Its been just about four full years after graduating with a Bachelor&amp;#39;s degree in Computer Science. I graduated in Dec 2012 and started working at a Fortune 500 technology company the following month.
-I&amp;#39;ve learned much in four years of college classes, but I&amp;#39;ve also learnt even more in four years of working afterwards.</description>
+      <description>Its been just about four full years after graduating with a Bachelor&amp;rsquo;s degree in Computer Science. I graduated in Dec 2012 and started working at a Fortune 500 technology company the following month.
+I&amp;rsquo;ve learned much in four years of college classes, but I&amp;rsquo;ve also learnt even more in four years of working afterwards.</description>
     </item>
     
     <item>
@@ -272,8 +271,8 @@ I&amp;#39;ve learned much in four years of college classes, but I&amp;#39;ve als
       
       <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
       <description>Are you developing a Java AWT/Swing application?
-Is your target audience--or entire company--using Windows?
-Well, you&amp;#39;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.</description>
+Is your target audience&amp;ndash;or entire company&amp;ndash;using Windows?
+Well, you&amp;rsquo;re not alone. There are a lot of Java developers who end up writing applications for their Windows coworkers (ahem, like me!). Its strange to be programming in a language meant to be run on all operating systems, yet somehow, gets only used on one OS.</description>
     </item>
     
     <item>
@@ -282,7 +281,7 @@ Well, you&amp;#39;re not alone. There are a lot of Java developers who end up wr
       <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</guid>
-      <description>Back in 2014 I decided to start blogging. (Cue sad trumpet horn.) Well... I tried to.
+      <description>Back in 2014 I decided to start blogging. (Cue sad trumpet horn.) Well&amp;hellip; I tried to.
 Turns out, blogging is like a second job. Always second-shift work, after my day job. Long hours with no OT or health benefits. But hey!</description>
     </item>
     
@@ -292,7 +291,7 @@ Turns out, blogging is like a second job. Always second-shift work, after my day
       <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
-      <description>I&amp;#39;ll save the obvious &amp;quot;must-have&amp;quot; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;#39;ve already started building your site, or you&amp;#39;re maintaining an old behemoth, then these tips should help tremendously.</description>
+      <description>I&amp;rsquo;ll save the obvious &amp;ldquo;must-have&amp;rdquo; features for Java EE webapps, for later. This post will focus on the smaller details of Java EE programming, and what useful methods might save you time and possibly increase site traffic. If you&amp;rsquo;ve already started building your site, or you&amp;rsquo;re maintaining an old behemoth, then these tips should help tremendously.</description>
     </item>
     
     <item>
@@ -301,8 +300,8 @@ Turns out, blogging is like a second job. Always second-shift work, after my day
       <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/internet-security-tips/</guid>
-      <description>Alright, you know why you&amp;#39;re here. (I hope.)
-You&amp;#39;ve read online about the bad things that can happen to your accounts and data. I hope you&amp;#39;ve seen some news about hackers and people losing their data, identity, money, or more. Getting &amp;quot;hacked&amp;quot; is becoming more and more common.</description>
+      <description>Alright, you know why you&amp;rsquo;re here. (I hope.)
+You&amp;rsquo;ve read online about the bad things that can happen to your accounts and data. I hope you&amp;rsquo;ve seen some news about hackers and people losing their data, identity, money, or more. Getting &amp;ldquo;hacked&amp;rdquo; is becoming more and more common.</description>
     </item>
     
     <item>
@@ -312,9 +311,9 @@ You&amp;#39;ve read online about the bad things that can happen to your accounts
       
       <guid>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</guid>
       <description>Count from 1 to 100, and follow these rules:
-- Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
-- Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
-- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5</description>
+- Print &amp;ldquo;Fizz&amp;rdquo; if the number is divisible by 3
+- Print &amp;ldquo;Buzz&amp;rdquo; if the number is divisible by 5
+- Print &amp;ldquo;FizzBuzz&amp;rdquo; if the number is divisible by 3 and 5</description>
     </item>
     
     <item>
@@ -341,8 +340,8 @@ You&amp;#39;ve read online about the bad things that can happen to your accounts
       <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/2nd-update/</guid>
-      <description>Its been quite a while, since I started my website, and now I&amp;#39;m getting back into things. I&amp;#39;ve got lots to share, and will be posting more to my other pages.
-I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix.</description>
+      <description>Its been quite a while, since I started my website, and now I&amp;rsquo;m getting back into things. I&amp;rsquo;ve got lots to share, and will be posting more to my other pages.
+I&amp;rsquo;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix.</description>
     </item>
     
     <item>
@@ -352,7 +351,7 @@ I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookm
       
       <guid>https://amdelamar.com/blog/first/</guid>
       <description>This post marks when I started building my first blog on Wix, a website-generating factory.
-Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;#39;t doing it right... I wasn&amp;#39;t programming... I was cheating.</description>
+Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;rsquo;t doing it right&amp;hellip; I wasn&amp;rsquo;t programming&amp;hellip; I was cheating.</description>
     </item>
     
   </channel>

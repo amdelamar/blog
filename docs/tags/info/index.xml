@@ -27,9 +27,8 @@ Here&amp;rsquo;s just a quick recap of what I&amp;rsquo;ve been up to, and what 
       <pubDate>Sun, 04 Mar 2018 22:12:18 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
-      <description>Maybe you haven&#39;t noticed, but its been a few months since my last blog post. The reason being two fold:
-
-I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard wasn&#39;t ready.Now that I&#39;ve got an alpha 1.</description>
+      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post. The reason being two fold:
+ I migrated my blog db from MySQL to Cloudant. The WYSIWYG editor on my dashboard wasn&amp;rsquo;t ready.  Now that I&amp;rsquo;ve got an alpha 1.</description>
     </item>
     
     <item>
@@ -38,8 +37,8 @@ I migrated my blog db from MySQL to Cloudant.The WYSIWYG editor on my dashboard 
       <pubDate>Tue, 24 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/2nd-update/</guid>
-      <description>Its been quite a while, since I started my website, and now I&amp;#39;m getting back into things. I&amp;#39;ve got lots to share, and will be posting more to my other pages.
-I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix.</description>
+      <description>Its been quite a while, since I started my website, and now I&amp;rsquo;m getting back into things. I&amp;rsquo;ve got lots to share, and will be posting more to my other pages.
+I&amp;rsquo;ve added 2 Projects to my Past Projects page. Senior Project and Bookmarks for Bluemix.</description>
     </item>
     
     <item>
@@ -49,7 +48,7 @@ I&amp;#39;ve added 2 Projects to my Past Projects page. Senior Project and Bookm
       
       <guid>https://amdelamar.com/blog/first/</guid>
       <description>This post marks when I started building my first blog on Wix, a website-generating factory.
-Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;#39;t doing it right... I wasn&amp;#39;t programming... I was cheating.</description>
+Ever since I started my blog on their site, I kept getting a nagging feeling, that I wasn&amp;rsquo;t doing it right&amp;hellip; I wasn&amp;rsquo;t programming&amp;hellip; I was cheating.</description>
     </item>
     
   </channel>

@@ -17,8 +17,7 @@
       <pubDate>Thu, 24 May 2018 14:32:57 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
-      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.
-I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Private) on Softlayer VMs.</description>
+      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.</description>
     </item>
     
     <item>
@@ -27,7 +26,7 @@ I told him that I was working with Kubernetes, Docker, and ICP (IBM Cloud Privat
       <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
-      <description>The term &amp;quot;Cloud Native&amp;quot; sounds simple enough, but I&amp;#39;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;quot;cloud native&amp;quot; in the first place?</description>
+      <description>The term &amp;ldquo;Cloud Native&amp;rdquo; sounds simple enough, but I&amp;rsquo;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;ldquo;cloud native&amp;rdquo; in the first place?</description>
     </item>
     
     <item>

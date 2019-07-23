@@ -26,8 +26,8 @@
       <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
-      <description>I&amp;#39;ve been researching Java frameworks lately, trying to find one that&amp;#39;s easy to extend and lightweight enough for RESTful APIs.
-In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;#39;d compile my findings in one big list.</description>
+      <description>I&amp;rsquo;ve been researching Java frameworks lately, trying to find one that&amp;rsquo;s easy to extend and lightweight enough for RESTful APIs.
+In my search I&amp;rsquo;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;rsquo;d compile my findings in one big list.</description>
     </item>
     
     <item>
@@ -46,9 +46,9 @@ In my search I&amp;#39;ve seen all kinds of names thrown around in recent forums
       
       <guid>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</guid>
       <description>Count from 1 to 100, and follow these rules:
-- Print &amp;quot;Fizz&amp;quot; if the number is divisible by 3
-- Print &amp;quot;Buzz&amp;quot; if the number is divisible by 5
-- Print &amp;quot;FizzBuzz&amp;quot; if the number is divisible by 3 and 5</description>
+- Print &amp;ldquo;Fizz&amp;rdquo; if the number is divisible by 3
+- Print &amp;ldquo;Buzz&amp;rdquo; if the number is divisible by 5
+- Print &amp;ldquo;FizzBuzz&amp;rdquo; if the number is divisible by 3 and 5</description>
     </item>
     
     <item>
