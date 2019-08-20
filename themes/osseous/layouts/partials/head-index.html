@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="{{ .Site.Title }}">
-    {{ if isset .Site.Params "thumbnail" }}<meta property="og:image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
+    {{ if isset .Site.Params "thumbnail" }}<meta property="og:image" content="{{ .Site.Params.thumbnail }}">{{ end }}
     {{ if isset .Site.Params "description" }}<meta property="og:description" content="{{ .Site.Params.description }}">{{ end }}
 
     <!-- Twitter Card data -->
@@ -25,12 +25,12 @@
     {{ if isset .Site.Params "author" }}<meta name="twitter:creator" content="@{{ .Site.Params.twitterUsername }}">{{ end }}
     <meta name="twitter:title" content="{{ .Site.Title }}">
     {{ if isset .Site.Params "description" }}<meta name="twitter:description" content="{{ .Site.Params.description }}">{{ end }}
-    {{ if isset .Site.Params "thumbnail" }}<meta name="twitter:image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
+    {{ if isset .Site.Params "thumbnail" }}<meta name="twitter:image" content="{{ .Site.Params.thumbnail }}">{{ end }}
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ .Site.Title }}">
     {{ if isset .Site.Params "description" }}<meta itemprop="description" content="{{ .Site.Params.description }}">{{ end }}
-    {{ if isset .Site.Params "thumbnail" }}<meta itemprop="image" content="{{ .Site.Params.Thumbnail }}">{{ end }}
+    {{ if isset .Site.Params "thumbnail" }}<meta itemprop="image" content="{{ .Site.Params.thumbnail }}">{{ end }}
 
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
