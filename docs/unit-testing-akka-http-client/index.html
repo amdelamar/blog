@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/unit-testing-akka-http-client/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/unit-testing-akka-http-client/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Unit Testing Akka Http Client">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Unit testing Akka Http server API is well documented, but for some reason testing Akka Http client API is not documented nor straightforward.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/unit-testing-akka-http-client/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Unit Testing Akka Http Client">
+    <meta name="twitter:description" content="Unit testing Akka Http server API is well documented, but for some reason testing Akka Http client API is not documented nor straightforward.">
+    <meta name="twitter:image" content="">
+
+    
+    <meta itemprop="name" content="Unit Testing Akka Http Client">
+    <meta itemprop="description" content="Unit testing Akka Http server API is well documented, but for some reason testing Akka Http client API is not documented nor straightforward.">
+    <meta itemprop="image" content="">
+
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Unit Testing Akka Http Client - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <details class="nav-item">
+    		  <summary>Blog</summary>
+    		  <div class="nav-list padding margin-top border-top border-bottom">
+            <a class="nav-item" href="https://amdelamar.com/blog">All Posts</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/category/">Categories</a>
+            <a class="nav-item" href="https://amdelamar.com/blog/tags/">Tags</a>
+    		  </div>
+    		</details>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+    		<div class="nav-item dropdown">
+    		  <a href="#docs">Blog &#9662;</a>
+    		  <div class="dropdown-body border background-lightgrey text-left">
+            <a href="https://amdelamar.com/blog">All Posts</a>
+            <a href="https://amdelamar.com/blog/category/">Categories</a>
+            <a href="https://amdelamar.com/blog/tags/">Tags</a>
+    		  </div>
+    		</div>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Unit Testing Akka Http Client
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="time to read">6 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>Recently, I&rsquo;ve had the pleasure of building a RESTful API using <a href="https://doc.akka.io/docs/akka-http/current/introduction.html" target="_blank">Akka Http</a>.</p>
+
+<p>It was relatively easy to write unit tests and integration tests to ensure the specification of my REST API was working.
+And for good reason. There are plenty of <a href="http://blog.madhukaraphatak.com/akka-http-testing/" target="_blank">examples</a> <a href="https://dzone.com/articles/mocking-methods-for-testing-akka-http-routes" target="_blank">online</a> of how to achieve this, using <a href="https://doc.akka.io/docs/akka-http/current/routing-dsl/testkit.html" target="_blank">Akka Testkit</a>.</p>
+
+<p>But, a small piece of this service I wrote, needed to send an HTTP requests itself. Something like this:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">()</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#000">(</span><span style="color:#000">request</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpRequest</span><span style="color:#000">)</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#a90d91">response:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]</span> <span style="color:#000">=</span> <span style="color:#3f6e75">Http</span><span style="color:#000">().</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#000">request</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Ok, so how do I unit test this?</p>
+
+<p>Where&rsquo;s the collection of example tests for Akka Http Clients? Seems there isn&rsquo;t any.</p>
+
+<h2 id="can-we-mock-it">Can we mock it?</h2>
+
+<p>Calling <code>Http()</code> returns an object of type <code>HttpExt</code>. I could try and mock that class in my tests.</p>
+
+<p>So first, I need to add <code>HttpExt</code> as a constructor variable to pass in&hellip;</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">(</span><span style="color:#000">http</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpExt</span><span style="color:#000">)</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#000">()</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#a90d91">request</span> <span style="color:#000">=</span> <span style="color:#a90d91">HttpRequest</span><span style="color:#000">(</span><span style="color:#a90d91">uri</span> <span style="color:#000">=</span> <span style="color:#000">&#34;</span><span style="color:#a90d91">http://myservice.com/api/v1/call</span><span style="color:#000">&#34;</span><span style="color:#000">)</span>
+
+    <span style="color:#a90d91">val</span> <span style="color:#000">response</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">http</span><span style="color:#000">.</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#000">request</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Ok that&rsquo;s better.</p>
+
+<p>Now I can mock the class using <a href="https://scalamock.org/" target="_blank">ScalaMock</a>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClientTest</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">FlatSpec</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">Matchers</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">MockFactory</span> <span style="color:#000">{</span>
+
+  <span style="color:#c41a16">&#34;MyClient&#34;</span> <span style="color:#000">should</span> <span style="color:#c41a16">&#34;doSomething and return success&#34;</span> <span style="color:#000">in</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#000">mockHttp</span> <span style="color:#a90d91">=</span> <span style="color:#000">mock</span><span style="color:#000">[</span><span style="color:#a90d91">HttpExt</span><span style="color:#000">]</span>
+
+    <span style="color:#a90d91">val</span> <span style="color:#000">client</span> <span style="color:#a90d91">=</span> <span style="color:#a90d91">new</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">(</span><span style="color:#000">mockHttp</span><span style="color:#000">)</span>
+    <span style="color:#000">client</span><span style="color:#000">.</span><span style="color:#000">doSomething</span><span style="color:#000">()</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Argh. This does not compile.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">[</span>error<span style="color:#000">]</span> /.../HttpClientTest.scala:20:24: constructor HttpExt in class HttpExt cannot be accessed in &lt;<span style="color:#000">$anon</span>: akka.http.scaladsl.HttpExt&gt;
+<span style="color:#000">[</span>error<span style="color:#000">]</span>     var <span style="color:#000">mockHttp</span> <span style="color:#000">=</span> mock<span style="color:#000">[</span>HttpExt<span style="color:#000">]</span>
+<span style="color:#000">[</span>error<span style="color:#000">]</span>                        ^
+<span style="color:#000">[</span>error<span style="color:#000">]</span> one error found
+<span style="color:#000">[</span>error<span style="color:#000">]</span> <span style="color:#000">(</span>Test / compileIncremental<span style="color:#000">)</span> Compilation failed
+<span style="color:#000">[</span>error<span style="color:#000">]</span> Total time: <span style="color:#1c01ce">4</span> s, completed Aug <span style="color:#1c01ce">20</span>, <span style="color:#1c01ce">2019</span>, <span style="color:#1c01ce">12</span>:55:50 PM</code></pre></div>
+<p>Seems the <code>HttpExt</code> class constructor is not accessible from this scope.</p>
+
+<h2 id="can-we-extend-it">Can we extend it?</h2>
+
+<p>Extending <code>HttpExt</code> with my own wrapper class seems logical.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MockHttp</span><span style="color:#000">()</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">HttpExt</span> <span style="color:#000">{</span> <span style="color:#000">}</span></code></pre></div>
+<p>Except that does not compile either. Can&rsquo;t extend it if the constructor is not accessible.</p>
+
+<h2 id="how-do-we-test-this">How do we test this?</h2>
+
+<p>Some <a href="https://stackoverflow.com/questions/34714931/how-to-test-client-side-akka-http" target="_blank">examples</a> online suggest spltting your calling class
+into a trait <code>MyClientTrait</code> with abstract methods that can be implemented by an extending class that provides <code>Http().singleRequest</code> as an override.</p>
+
+<p>Then a unit test will create a mock class that extends the trait <code>MyClientTrait</code> and provide its own implementation.</p>
+
+<p>Something like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">trait</span> <span style="color:#3f6e75">MyClientTrait</span> <span style="color:#000">{</span>
+  <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span>
+<span style="color:#000">}</span>
+
+<span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">(</span><span style="color:#000">http</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpExt</span><span style="color:#000">)</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">MyClientTrait</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#000">()</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#a90d91">request</span> <span style="color:#000">=</span> <span style="color:#a90d91">HttpRequest</span><span style="color:#000">(</span><span style="color:#a90d91">uri</span> <span style="color:#000">=</span> <span style="color:#000">&#34;</span><span style="color:#a90d91">http://myservice.com/api/v1/call</span><span style="color:#000">&#34;</span><span style="color:#000">)</span>
+
+    <span style="color:#a90d91">val</span> <span style="color:#000">response</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">http</span><span style="color:#000">.</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#000">request</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>And in the test:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClientTest</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">FlatSpec</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">Matchers</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">MockFactory</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">class</span> <span style="color:#3f6e75">MockMyClient</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">MyClientTrait</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#000">()</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">{</span>
+      <span style="color:#177500">// do something
+</span><span style="color:#177500"></span>    <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
+
+  <span style="color:#c41a16">&#34;MyClient&#34;</span> <span style="color:#000">should</span> <span style="color:#c41a16">&#34;doSomething and return success&#34;</span> <span style="color:#000">in</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#000">client</span> <span style="color:#a90d91">=</span> <span style="color:#a90d91">new</span> <span style="color:#3f6e75">MockMyClient</span><span style="color:#000">()</span>
+    <span style="color:#000">client</span><span style="color:#000">.</span><span style="color:#000">doSomething</span><span style="color:#000">()</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Oh boy.</p>
+
+<p>Needless to say, that&rsquo;s a lot of boilerplate code just for a simple HTTP request client. I&rsquo;m not actually testing my original class anymore either.
+If I used this solution, maintaining it for future updates is now tedious. It honestly shouldn&rsquo;t be this difficult to write a simple test that checks an <code>HttpRequest</code> and returns an <code>HttpResponse</code>. At this point, I&rsquo;m quite annoyed the Akka TestKit doesn&rsquo;t provide any help here.</p>
+
+<p>What else could I do?</p>
+
+<h2 id="mockfunction-to-the-rescue">MockFunction to the rescue</h2>
+
+<p>Admittedly, I&rsquo;m not very experienced in functional programming. But this is a great opportunity to use higher-order functions to
+solve our problem with the Akka Http client. We can improve our testing with a lot less boilerplate code.</p>
+
+<p>First, I add an implicit function <code>sendHttpRequest</code> to our class constructor, like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">(</span><span style="color:#000">http</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpExt</span><span style="color:#000">)</span>
+              <span style="color:#000">(</span><span style="color:#a90d91">implicit</span> <span style="color:#000">sendHttpRequest</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpRequest</span> <span style="color:#000">=&gt;</span> <span style="color:#3f6e75">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">http</span><span style="color:#000">.</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#a90d91">_</span><span style="color:#000">))</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">def</span> <span style="color:#000">doSomething</span><span style="color:#000">()</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Unit</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">val</span> <span style="color:#a90d91">request</span> <span style="color:#000">=</span> <span style="color:#a90d91">HttpRequest</span><span style="color:#000">(</span><span style="color:#a90d91">uri</span> <span style="color:#000">=</span> <span style="color:#000">&#34;</span><span style="color:#a90d91">http://myservice.com/api/v1/call</span><span style="color:#000">&#34;</span><span style="color:#000">)</span>
+
+    <span style="color:#a90d91">val</span> <span style="color:#000">response</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]</span> <span style="color:#a90d91">=</span> <span style="color:#000">sendHttpRequest</span><span style="color:#000">(</span><span style="color:#000">request</span><span style="color:#000">)</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Now I can tell <code>MyClient</code> to use this function whenever it makes a http call.</p>
+
+<p>You might also notice the default value for this implicit function. If we don&rsquo;t provide a function on creation, then the default is set as <code>http.singleRequest</code>.</p>
+
+<p>Now for the unit test:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">class</span> <span style="color:#3f6e75">MyClientTest</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">FlatSpec</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">Matchers</span>
+  <span style="color:#a90d91">with</span> <span style="color:#3f6e75">MockFactory</span> <span style="color:#000">{</span>
+
+  <span style="color:#c41a16">&#34;MyClient&#34;</span> <span style="color:#000">should</span> <span style="color:#c41a16">&#34;doSomething and return success&#34;</span> <span style="color:#000">in</span> <span style="color:#000">{</span>
+
+    <span style="color:#177500">// create a mock function
+</span><span style="color:#177500"></span>    <span style="color:#a90d91">implicit</span> <span style="color:#a90d91">val</span> <span style="color:#000">mockSendRequest</span> <span style="color:#a90d91">=</span> <span style="color:#000">mockFunction</span><span style="color:#000">[</span><span style="color:#a90d91">HttpRequest</span>, <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">HttpResponse</span><span style="color:#000">]]</span>
+
+    <span style="color:#177500">// set our expectations
+</span><span style="color:#177500"></span>    <span style="color:#000">mockSendRequest</span><span style="color:#000">.</span><span style="color:#000">expects</span><span style="color:#000">(*).</span><span style="color:#000">onCall</span><span style="color:#000">({</span><span style="color:#000">req</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpRequest</span> <span style="color:#000">=&gt;</span>
+      <span style="color:#a90d91">if</span> <span style="color:#000">(</span><span style="color:#000">req</span><span style="color:#000">.</span><span style="color:#000">uri</span><span style="color:#000">.</span><span style="color:#000">toString</span><span style="color:#000">.</span><span style="color:#000">equalsIgnoreCase</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;http://myservice.com/api/v1/call&#34;</span><span style="color:#000">))</span> <span style="color:#000">{</span>
+        <span style="color:#3f6e75">Future</span><span style="color:#000">.</span><span style="color:#000">successful</span><span style="color:#000">(</span><span style="color:#3f6e75">HttpResponse</span><span style="color:#000">(</span><span style="color:#3f6e75">StatusCodes</span><span style="color:#000">.</span><span style="color:#3f6e75">OK</span><span style="color:#000">,</span> <span style="color:#000">entity</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">HttpEntity</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;ok&#34;</span><span style="color:#000">)))</span>
+      <span style="color:#000">}</span> <span style="color:#a90d91">else</span> <span style="color:#000">{</span>
+        <span style="color:#3f6e75">Future</span><span style="color:#000">.</span><span style="color:#000">successful</span><span style="color:#000">(</span><span style="color:#3f6e75">HttpResponse</span><span style="color:#000">(</span><span style="color:#3f6e75">StatusCodes</span><span style="color:#000">.</span><span style="color:#3f6e75">BadRequest</span><span style="color:#000">,</span> <span style="color:#000">entity</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">HttpEntity</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;bad request&#34;</span><span style="color:#000">)))</span>
+      <span style="color:#000">}</span>
+    <span style="color:#000">}).</span><span style="color:#000">once</span>
+
+    <span style="color:#a90d91">val</span> <span style="color:#000">client</span> <span style="color:#a90d91">=</span> <span style="color:#a90d91">new</span> <span style="color:#3f6e75">MyClient</span><span style="color:#000">(</span><span style="color:#3f6e75">Http</span><span style="color:#000">())</span> <span style="color:#177500">// implicitly passed mockSendRequest
+</span><span style="color:#177500"></span>    <span style="color:#000">client</span><span style="color:#000">.</span><span style="color:#000">doSomething</span><span style="color:#000">()</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Much simpler right?</p>
+
+<p>I added 1 line to <code>MyClient</code>, instead of abstracting away in <code>trait</code> and <code>extends</code>, and we avoided writing special test classes that extend specific traits that&rsquo;s
+only used during unit testing itself. All I need is to provide a mocked function into <code>MyClient</code> and set our expectations to be made.</p>
+
+<p><em>Now</em> its a pleasure to write unit tests with an Akka Http client.</p>
+
+<p>If you&rsquo;d like to see this in a working project, check out <a href="https://github.com/amdelamar/akka-http-unit-tests" target="_blank">my GitHub</a>.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="20 Aug 19 12:33 PDT">Published: Aug 20, 2019</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/akka" class="text-secondary">akka</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+
