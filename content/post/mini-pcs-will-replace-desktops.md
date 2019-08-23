@@ -5,8 +5,8 @@ category: "predictions"
 tags: ["sffpc", "hardware", "marketing"]
 draft: false
 date: 2017-05-30T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/dana4-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/dana4-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/dana4-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/dana4-1024.jpg"
 bannerCaption: "DAN A4-SFX. A SFF computer case being backed on Kickstarter. (Photo Credit: DAN Cases)"
 description: "SFF (small form factor) PCs will takeover the midtower PC market, just like how tablets have taken a chunk of the laptop share."
 ---
@@ -25,39 +25,39 @@ Traditional "sit-on-your-desk" PCs, or desktops, have been around for a long tim
 
 Arguably, we have more options and consumer choices than ever. We have tall, short, thin, light, powerful, RGB colored, ultra silent, and many more varieties in between. Seems like we have as many different PC varieties as there are different dog breeds. There is enough room for everyone to find their favorite PC.
 
-![Dell](https://cdn.ramblingware.com/file/ramblingware/2017/pc/midtower-640.jpg)
+![Dell](/images/2017/pc/midtower-640.jpg)
 
 _Mid Tower - A very common size for PCs right now._
 
-![Cooler](https://cdn.ramblingware.com/file/ramblingware/2017/pc/fulltower-650.jpg)
+![Cooler](/images/2017/pc/fulltower-650.jpg)
 
 _Full Tower - Slightly taller than mid and shorter than super._
 
-![Digital](https://cdn.ramblingware.com/file/ramblingware/2017/pc/supertower-849.png)
+![Digital](/images/2017/pc/supertower-849.png)
 
 _Super Tower - Larger than a mini fridge._
 
-![Custom](https://cdn.ramblingware.com/file/ramblingware/2017/pc/deskpc-640.jpg)
+![Custom](/images/2017/pc/deskpc-640.jpg)
 
 _Desk Computer - Literally a computer built into a desk. Brings a whole new meaning to desktop!_
 
-![Thermaltake](https://cdn.ramblingware.com/file/ramblingware/2017/pc/openpc-640.jpg)
+![Thermaltake](/images/2017/pc/openpc-640.jpg)
 
 _Open case - Honestly one of the craziest looking computers out there._
 
-![AIO](https://cdn.ramblingware.com/file/ramblingware/2017/pc/aiopc-640.jpg)
+![AIO](/images/2017/pc/aiopc-640.jpg)
 
 _AIO (all in one) - Where a full computer is packed inside of the monitor._
 
-![Cooler](https://cdn.ramblingware.com/file/ramblingware/2017/pc/cubepc-640.jpg)
+![Cooler](/images/2017/pc/cubepc-640.jpg)
 
 _Cube or Mini Tower - About as small as two shoeboxes side-by-side._
 
-![DAN](https://cdn.ramblingware.com/file/ramblingware/2017/pc/sffpc-640.jpg)
+![DAN](/images/2017/pc/sffpc-640.jpg)
 
 _SFF- About the size of a shoebox or loaf of bread._
 
-![TAKU](https://cdn.ramblingware.com/file/ramblingware/2017/pc/standpc-640.jpg)
+![TAKU](/images/2017/pc/standpc-640.jpg)
 
 _PC Monitor Stand - A new-ish entry in the market. Still impressively small._
 
@@ -72,7 +72,7 @@ That's why I'm betting that for power users, gamers, and the like; Mini PCs will
 
 SFF is relatively niche but its beginning to get noticed by more than the usual. Several brands have started announcing smaller computer cases for PC builders like myself in the last couple years. (Fractal, Cougar, Bitfenix, Lian Li, and more.) And there are more crowd-funded projects than I thought. ([DAN](https://www.dan-cases.com/dana4.php), [Ghost](http://www.louqe.com/ghost.html), [NCase](https://www.ncases.com/), and [TAKU](https://www.kickstarter.com/projects/1308692809/taku-the-monitor-stand-pc-case?ref=ramblingware)) Even [Jeff Atwood blogged](https://blog.codinghorror.com/the-2016-htpc-build/) several times about his HTPC (home theater pc), which is pretty much a SFF PC. But for viewing media, movies, music, and streaming, all packed under your TV or home theater system. SFF is definitely growing in popularity.
 
-![DAN](https://cdn.ramblingware.com/file/ramblingware/2017/pc/dana42-640.jpg)
+![DAN](/images/2017/pc/dana42-640.jpg)
 
 _DAN A4 SFX PC case. (Photo Credit: DAN Cases)_
 

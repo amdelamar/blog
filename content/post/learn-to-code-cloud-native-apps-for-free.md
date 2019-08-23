@@ -5,8 +5,8 @@ category: "web"
 tags: ["cloud", "apps", "docker", "kubernetes"]
 draft: false
 date: 2018-05-24T14:32:57.213Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/cloud-ray-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2018/cloud-ray-1024.jpg"
 bannerCaption: "You can also _look_ at clouds for free too. Which is nice. (Photo Credit: Eberhard Grossgasteiger)"
 description: "Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket."
 ---

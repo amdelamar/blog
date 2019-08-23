@@ -5,8 +5,8 @@ category: "code"
 tags: ["java", "interview"]
 draft: false
 date: 2015-07-03T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/numbers-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2015/numbers-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2015/numbers-640.jpg"
+banner: "https://amdelamar.com/blog/images/2015/numbers-1240.jpg"
 bannerCaption: "Numbers, Numbers, Numbers. (Photo Credit: Unknown)"
 description: "Coding interviews can be challenging and fun to practice beforehand."
 ---

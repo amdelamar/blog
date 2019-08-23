@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["email", "encryption", "privacy", "security"]
 draft: false
 date: 2017-04-03 00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/climbing-to-the-top-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/climbing-to-the-top-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/climbing-to-the-top-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/climbing-to-the-top-1240.jpg"
 bannerCaption: "I feel like some kinda, mountain-climbing, technology hermit. (Photo Credit: Felix Brönnimann)"
 description: "I switched to ProtonMail for better email privacy. I'm satisfied with my choice but its not without some drawbacks."
 ---
@@ -37,7 +37,7 @@ Google considers that users have no “reasonable expectation” of privacy.
 
 Google also tailors your search results, using your Gmail history. [Its scarily convenient](http://www.pcworld.com/article/260600/google_tries_showing_gmail_emails_in_search_results.html). Some people might like it, but it scared the shit out of me the first time I saw it.  Here's an [example](http://searchengineland.com/google-integrates-gmails-new-inbox-feature-search-results-206721), and another:
 
-![A flight to new york](https://cdn.ramblingware.com/file/ramblingware/2017/google-flight-results.jpg)
+![A flight to new york](/images/2017/google-flight-results.jpg)
 
 Notice the right-side bar showing results from Gmail.
 

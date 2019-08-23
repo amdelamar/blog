@@ -5,8 +5,8 @@ category: "favorites"
 tags: ["firefox", "privacy", "security"]
 draft: false
 date: 2018-05-15T14:18:53.169Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/redpanda-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/redpanda-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/redpanda-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2018/redpanda-1024.jpg"
 bannerCaption: "I'm not sure why but Red Pandas have been associated with Firefox instead of actual Foxes. (Photo Credit: Lance Anderson)"
 description: "Must have extensions for Firefox include: uBlock Origin, Privacy Badger, Bitwarden, and HTTPS Everywhere."
 ---

@@ -5,8 +5,8 @@ category: "meta"
 tags: ["info", "couchdb", "db"]
 draft: false
 date: 2018-03-04T22:12:18.950Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/beach-1240.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/beach-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/beach-1240.jpg"
+banner: "https://amdelamar.com/blog/images/2018/beach-1240.jpg"
 bannerCaption: "Like the ocean, my blog and projects are kindof perpetually moving. (Photo Credit: Pexels)"
 description: "After a few months of migrating from MySQL to Cloudant, I'm finally able to write new content again."
 ---

@@ -5,8 +5,8 @@ category: "meta"
 tags: ["info"]
 draft: false
 date: 2014-03-12T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2014/thinking-in-code-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2014/thinking-in-code-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2014/thinking-in-code-640.jpg"
+banner: "https://amdelamar.com/blog/images/2014/thinking-in-code-1240.jpg"
 bannerCaption: "Thinking In Code"
 description: "This post marks when I started building my first blog on Wix, a website-generating factory."
 ---

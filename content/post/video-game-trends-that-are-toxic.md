@@ -5,8 +5,8 @@ category: "gaming"
 tags: ["video-games", "marketing"]
 draft: false
 date: 2017-03-28T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/poison-mushroom-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/poison-mushroom-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/poison-mushroom-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/poison-mushroom-1240.jpg"
 bannerCaption: "Don't touch the poisonous mushrooms. (Photo Credit: Colin Behrens)"
 description: "What's worse? Microtransactions, pre-order bonuses, yearly subscriptions, P2P networking, day-1 DLC, or something else?"
 ---

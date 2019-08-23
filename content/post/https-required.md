@@ -5,7 +5,7 @@ category: "privacy"
 tags: ["https", "encryption", "security"]
 draft: false
 date: 2017-06-29T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/https-chart-1240.png"
+thumbnail: "https://amdelamar.com/blog/images/2017/https-chart-1240.png"
 banner: ""
 bannerCaption: ""
 description: "Websites should default to HTTPS now. Its safe to assume everyone should be using it already or planning to implement it."
@@ -13,7 +13,7 @@ description: "Websites should default to HTTPS now. Its safe to assume everyone 
 
 Its 2017, and we're [halfway](https://www.eff.org/deeplinks/2017/02/were-halfway-encrypting-entire-web) to encrypting the entire internet.
 
-![](https://cdn.ramblingware.com/file/ramblingware/2017/https-chart-1240.png)
+![](/images/2017/https-chart-1240.png)
 
 _Source: [https://letsencrypt.org/stats/](https://letsencrypt.org/stats/)_
 

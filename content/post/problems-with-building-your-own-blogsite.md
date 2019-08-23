@@ -5,8 +5,8 @@ category: "meta"
 tags: ["webdev", "funny"]
 draft: false
 date: 2016-08-11T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2016/journal-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2016/journal-640.jpg"
+banner: "https://amdelamar.com/blog/images/2016/journal-1240.jpg"
 bannerCaption: "Blogs are like Journals. Only they give you more paper cuts. (Photo Credit: Dom J)"
 description: "To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always."
 ---

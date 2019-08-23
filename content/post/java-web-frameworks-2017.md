@@ -5,8 +5,8 @@ category: "code"
 tags: ["java", "java-ee"]
 draft: false
 date: 2017-12-05 00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/construction-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/construction-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/construction-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2017/construction-1024.jpg"
 bannerCaption: "You could compare Java frameworks to architecutre and building construction. (Photo Credit: Mike Birdy)"
 description: "I scavenged the web for any and all Java Frameworks. New or old. Here is what I found."
 ---

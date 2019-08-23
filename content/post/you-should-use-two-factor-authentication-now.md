@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["security", "passwords", "2FA"]
 draft: false
 date: 2017-01-04T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/mobile-thief-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/mobile-thief-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/mobile-thief-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/mobile-thief-1240.jpg"
 bannerCaption: "Your mobile device can be your 2nd set of keys to your digital kingdom. (Photo Credit: Kaique Rocha)"
 description: "Especially if you use a weak password for multiple websites. Enabling 2FA everywhere will help protect your internet identity from the next big leak."
 ---

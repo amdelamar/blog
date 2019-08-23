@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["css", "email", "privacy"]
 draft: false
 date: 2018-03-18T21:02:05.302Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/climbing-to-the-top-1240.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/climbing-to-the-top-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/climbing-to-the-top-1240.jpg"
+banner: "https://amdelamar.com/blog/images/2018/climbing-to-the-top-1240.jpg"
 bannerCaption: "I feel like some kinda, mountain-climbing, technology hermit. (Photo Credit: Felix Brönnimann)"
 description: "3 years with ProtonMail and I've got some more themes to share."
 ---
@@ -25,7 +25,7 @@ I built 3 main themes, Dark, Flat, and GM (like Gmail but not exactly).
 
 Today I'm uploading a background image theme, where the Swiss Mountains are behind the inbox. Its pretty fancy if I might say so myself.  
 
-![](https://cdn.ramblingware.com/file/ramblingware/2018/pm-background.png)
+![](/images/2018/pm-background.png)
 
 ```css
 /* Copy this line into ProtonMail's custom theme box: */

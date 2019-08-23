@@ -5,8 +5,8 @@ category: "code"
 tags: ["docker", "devops"]
 draft: false
 date: 2017-09-22T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/containers-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2017/containers-1024.jpg"
 bannerCaption: "Feel free to jump right in to the container revolution, but be careful! (Photo Credit: Kaique Rocha)"
 description: "Googling for Docker tutorials yields lots of results. Some new. Some old. Here are six things I've gathered so far in 2017."
 ---
@@ -64,7 +64,7 @@ FROM alpine:3.6
 
 Use tags for separating image versions. If you're familiar with Git and branches, tagging docker images is like creating git branches. If you never used tags then the `latest` tag is automaticly used if no tag is given during the build process. Avoid being too generic like `dev, test, alpha, beta`. Instead put versions in tags as needed like `2.0.0, 2.0.0-alpine, patch-2.0.1, test-2.5.4, dev-3.0`, etc. And don't forget to update your README with the available list of tags.
 
-![Docker](https://cdn.ramblingware.com/file/ramblingware/2017/docker/dockertags.png)
+![Docker](/images/2017/docker/dockertags.png)
 
 This also applies to your base image. For example, [Apache Tomcat](https://hub.docker.com/_/tomcat/) has multiple versions still in use. Version 7 through 9\. You can specify `FROM tomcat:8` for version 8.0 but maybe you wanted version 8.5 on Alpine instead. In that case, use `FROM tomcat:8.5-jre8-alpine` instead. You'll avoid inconsistencies when the latest images get updated and accidentally break something. So don't just use `FROM ubuntu`, use `FROM ubuntu:16.04` for consistency.
 

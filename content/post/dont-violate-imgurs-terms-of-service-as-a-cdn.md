@@ -5,8 +5,8 @@ category: "web"
 tags: ["webdev", "cdn"]
 draft: false
 date: 2017-06-12T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/giraffe-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/giraffe-1240.jpg"
 bannerCaption: "Otherwise the Imgur mascot will come find you. (Photo Credit: GregMontani)"
 description: "I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don't make the same mistake I did!"
 ---

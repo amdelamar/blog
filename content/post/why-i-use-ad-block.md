@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["advertising", "ad-block", "security"]
 draft: false
 date: 2017-02-13T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/stop-sign-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/stop-sign-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/stop-sign-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/stop-sign-1240.jpg"
 bannerCaption: "Nature wouldn't be as peaceful looking if it were chock full of ads. (Photo Credit: Pixabay)"
 description: "Online advertising had its chance, but plagued itself with spam, pop-ups, auto-playing videos, unregulated data collection, and even some unintentional  viruses."
 ---
@@ -24,7 +24,7 @@ There are lots of online ads. And there are some that are... acceptable. Then th
 
 Of all the forms of advertisements, I think online advertising is the worst. TV commercials, billboards, magazines, newspapers, mail, and more, do not compare nor compete with the how awful ads on the internet can be. I'm really holding back here too. The [Super Bowl LII](https://en.wikipedia.org/wiki/Super_Bowl_commercials) was this past week, and those [commercials](https://en.wikipedia.org/wiki/Super_Bowl_commercials) come off as extremely desperate and can be quite controversial.
 
-![Ads](https://cdn.ramblingware.com/file/ramblingware/2017/ads.jpg)
+![Ads](/images/2017/ads.jpg)
 
 _Ads, ads, and more ads._
 

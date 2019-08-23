@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["google"]
 draft: false
 date: 2018-06-22T19:33:05.895Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/alt-google-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/alt-google-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/alt-google-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2018/alt-google-1024.jpg"
 bannerCaption: "An illuminated Google sign in New York. (Photo Credit: Arthur Osipyan)"
 description: "An incomplete list of Google product alternatives that respect your privacy and data, or don't track your online activity."
 ---

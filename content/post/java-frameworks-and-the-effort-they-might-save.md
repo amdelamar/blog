@@ -5,7 +5,7 @@ category: "code"
 tags: ["java", "java-ee"]
 draft: false
 date: 2015-05-06T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/effort-framework-graph.png"
+thumbnail: "https://amdelamar.com/blog/images/2015/effort-framework-graph.png"
 banner: ""
 bannerCaption: ""
 description: "J2EE Frameworks are meant to save you time, and lots of boilerplate. But they have sharp learning curves."
@@ -15,7 +15,7 @@ Java is a nice programming language. But Java/J2EE websites can grow to be very 
 
 The below graph is how I feel about the amount of effort required to learn, build, and test, with 2 popular J2EE frameworks. I think it quite humorously sums up the biggest reason why frameworks exist really. (Yes, I threw it together in MS Paint. Yes, I understand it could be much better looking. But I'm a programmer; I'm naturalisticly tuned to find the shortest way to accomplish things.)  
 
-![a](https://cdn.ramblingware.com/file/ramblingware/2015/effort-framework-graph.png)
+![a](/images/2015/effort-framework-graph.png)
 
 Not using a framework, is figuratively killing your web project. You shorten its life span by increasing the difficulty of implementing it. It gets harder and harder to add features, the larger it becomes; until at last, you give up, or hand it off to someone else to work on. That's what I call the "Oh Shit Moment". The project has now become too difficult and absorbing to even add the tiniest web pages or actions.  
 

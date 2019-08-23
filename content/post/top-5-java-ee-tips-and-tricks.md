@@ -5,8 +5,8 @@ category: "advice"
 tags: ["java", "java-ee"]
 draft: false
 date: 2016-06-30T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/macbook-code-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2016/macbook-code-640.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2016/macbook-code-640.jpg"
+banner: "https://amdelamar.com/blog/images/2016/macbook-code-640.jpg"
 bannerCaption: "Keep Calm and Keep Coding those beautiful Java EE websites. (Photo Credit: NegativeSpace)"
 description: "5 ways you can improve your Java EE web applications, with these tips and tricks."
 ---

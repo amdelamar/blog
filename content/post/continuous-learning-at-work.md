@@ -5,8 +5,8 @@ category: "workplace"
 tags: ["office", "interview", "workplace"]
 draft: false
 date: 2018-07-30T15:26:43.554Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/timex-clock-1240.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2018/timex-clock-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2018/timex-clock-1240.jpg"
+banner: "https://amdelamar.com/blog/images/2018/timex-clock-1240.jpg"
 bannerCaption: "Spend a little time each week learning something new and that time will add up quickly. (Photo Credit: Sonja Langford)"
 description: "Take time to teach yourself something new every year, whether its a new language, build tool, IDE, framework, platform, or even soft skills like public speaking."
 ---

@@ -5,8 +5,8 @@ category: "advice"
 tags: ["java", "windows"]
 draft: false
 date: 2016-09-29T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/java-and-windows-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2016/java-and-windows-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2016/java-and-windows-640.jpg"
+banner: "https://amdelamar.com/blog/images/2016/java-and-windows-1240.jpg"
 bannerCaption: "Well, I meant Java *on* Windows, since you don't really *add* them together."
 description: "exe wrappers, install/uninstall, fancy icons, shortcuts with java arguments, windows registry entries, and more options for java apps."
 ---
@@ -25,7 +25,7 @@ You won't be impressing your audience with your Java skills very much if they ha
 
 It would be safe to say, most java desktop applications, typically use the AWT/Swing libraries, and are typically packaged as a Runnable-JAR file or "`.jar`". This is not what many Windows users are used to: "`.exe`" or executable file. Then there is the process name in Task Manager, that shows up as the very unintuitive, "`javaw.exe`". Not to mention there is not installation or uninstalltion that Windows users have grown to expect. They don't rely on a package manager like yum or rpm. And your application wouldn't be listed in the "Program -> Uninstall a program" list. And of course, the default icon for your Java program is the Java coffee cup logo, which honestly gives an old 1990's vibe.
 
-![Default](https://cdn.ramblingware.com/file/ramblingware/2016/jaricon.png)
+![Default](/images/2016/jaricon.png)
 
 ## **How do I tweak my Java app for Windows?**
 

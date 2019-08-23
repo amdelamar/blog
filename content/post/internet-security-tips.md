@@ -5,8 +5,8 @@ category: "privacy"
 tags: ["security", "2FA"]
 draft: false
 date: 2016-06-03T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/security-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2016/security-640.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2016/security-640.jpg"
+banner: "https://amdelamar.com/blog/images/2016/security-640.jpg"
 bannerCaption: "Its not scary and its not difficult. I promise. (Photo Credit: Werner Moser)"
 description: "Lockdown your data and internet activity from prying eyes using these basic rules."
 ---

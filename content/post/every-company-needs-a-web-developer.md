@@ -5,8 +5,8 @@ category: "workplace"
 tags: ["webdev", "marketing"]
 draft: false
 date: 2017-03-06T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/macbook-coffee-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/macbook-coffee-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/macbook-coffee-640.jpg"
+banner: "https://amdelamar.com/blog/images/2017/macbook-coffee-1240.jpg"
 bannerCaption: "Websites are like YellowPages. Which makes web-devs your new best friend. (Photo Credit: Tookapic)"
 description: "You'll also need lots of coffee to pay the developer."
 ---

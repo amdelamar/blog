@@ -5,8 +5,8 @@ category: "software"
 tags: ["cloud", "apps", "docker"]
 draft: false
 date: 2017-11-13T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2017/high-rise-building-1024.jpg"
+banner: "https://amdelamar.com/blog/images/2017/high-rise-building-1024.jpg"
 bannerCaption: "I could probably use Skyscrapers as an analogy for Cloud apps, but so can Traditional Apps. So ehh, screw it. (Photo Credit: kameo0501)"
 description: "Unlike traditional applications, Cloud Native apps are build for... the cloud. What a surprise! So what else defines them besides that?"
 ---

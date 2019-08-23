@@ -5,8 +5,8 @@ category: "meta"
 tags: ["info"]
 draft: false
 date: 2015-02-24T00:00:00.000Z
-thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/thinking-in-code2-640.jpg"
-banner: "https://cdn.ramblingware.com/file/ramblingware/2015/thinking-in-code2-1240.jpg"
+thumbnail: "https://amdelamar.com/blog/images/2015/thinking-in-code2-640.jpg"
+banner: "https://amdelamar.com/blog/images/2015/thinking-in-code2-1240.jpg"
 bannerCaption: "Still thinking in Code"
 description: "Its been quite a while, since I started my website, and now I'm getting back into things."
 ---
