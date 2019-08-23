@@ -16,7 +16,7 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Some Advice on Docker as a Beginner">
-    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg">
+    <meta property="og:image" content="https://amdelamar.com/blog/images/2017/containers-1024.jpg">
     <meta property="og:description" content="Googling for Docker tutorials yields lots of results. Some new. Some old. Here are six things I&#39;ve gathered so far in 2017.">
     <meta property="article:author" content="amdelamar"/>
 
@@ -26,12 +26,12 @@
     <meta name="twitter:creator" content="@">
     <meta name="twitter:title" content="Some Advice on Docker as a Beginner">
     <meta name="twitter:description" content="Googling for Docker tutorials yields lots of results. Some new. Some old. Here are six things I&#39;ve gathered so far in 2017.">
-    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg">
+    <meta name="twitter:image" content="https://amdelamar.com/blog/images/2017/containers-1024.jpg">
 
     
     <meta itemprop="name" content="Some Advice on Docker as a Beginner">
     <meta itemprop="description" content="Googling for Docker tutorials yields lots of results. Some new. Some old. Here are six things I&#39;ve gathered so far in 2017.">
-    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg">
+    <meta itemprop="image" content="https://amdelamar.com/blog/images/2017/containers-1024.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
@@ -142,7 +142,7 @@
 
 <p>Use tags for separating image versions. If you&rsquo;re familiar with Git and branches, tagging docker images is like creating git branches. If you never used tags then the <code>latest</code> tag is automaticly used if no tag is given during the build process. Avoid being too generic like <code>dev, test, alpha, beta</code>. Instead put versions in tags as needed like <code>2.0.0, 2.0.0-alpine, patch-2.0.1, test-2.5.4, dev-3.0</code>, etc. And don&rsquo;t forget to update your README with the available list of tags.</p>
 
-<p><img src="https://cdn.ramblingware.com/file/ramblingware/2017/docker/dockertags.png" alt="Docker" /></p>
+<p><img src="../images/2017/docker/dockertags.png" alt="Docker" /></p>
 
 <p>This also applies to your base image. For example, <a href="https://hub.docker.com/_/tomcat/" target="_blank">Apache Tomcat</a> has multiple versions still in use. Version 7 through 9. You can specify <code>FROM tomcat:8</code> for version 8.0 but maybe you wanted version 8.5 on Alpine instead. In that case, use <code>FROM tomcat:8.5-jre8-alpine</code> instead. You&rsquo;ll avoid inconsistencies when the latest images get updated and accidentally break something. So don&rsquo;t just use <code>FROM ubuntu</code>, use <code>FROM ubuntu:16.04</code> for consistency.</p>
 

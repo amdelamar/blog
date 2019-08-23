@@ -16,7 +16,7 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="VBScript to Eject CD Tray">
-    <meta property="og:image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+    <meta property="og:image" content="https://amdelamar.com/blog/images/2015/eject/message.jpg">
     <meta property="og:description" content="Annoy your coworkers with a randomly ejecting CD tray!">
     <meta property="article:author" content="amdelamar"/>
 
@@ -26,12 +26,12 @@
     <meta name="twitter:creator" content="@">
     <meta name="twitter:title" content="VBScript to Eject CD Tray">
     <meta name="twitter:description" content="Annoy your coworkers with a randomly ejecting CD tray!">
-    <meta name="twitter:image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+    <meta name="twitter:image" content="https://amdelamar.com/blog/images/2015/eject/message.jpg">
 
     
     <meta itemprop="name" content="VBScript to Eject CD Tray">
     <meta itemprop="description" content="Annoy your coworkers with a randomly ejecting CD tray!">
-    <meta itemprop="image" content="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg">
+    <meta itemprop="image" content="https://amdelamar.com/blog/images/2015/eject/message.jpg">
 
     <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
@@ -103,11 +103,11 @@
 
 <p>I&rsquo;ve adapted this prank from another source, and added my own message for extra trolling fun. Its by no means, a secret, to eject a CD/DVD tray programmatically, but a rather infamous one, that gets forgotten, time to time.</p>
 
-<p><img src="https://cdn.ramblingware.com/file/ramblingware/2015/eject/message.jpg" alt="a" /></p>
+<p><img src="../images/2015/eject/message.jpg" alt="a" /></p>
 
 <p>Randomly, every few minutes, this message will appear and ask the user to insert a CD into the disc drive. Below is the code you can copy and paste, into Notepad, and save as a &ldquo;.VBS&rdquo; file, instead of a text file. That way, Windows recognizes it as a runnable script. Once its saved, you can double-click it to run, and stand back and let the fun begin!</p>
 
-<p><img src="https://cdn.ramblingware.com/file/ramblingware/2015/eject/script.png" alt="a" /></p>
+<p><img src="../images/2015/eject/script.png" alt="a" /></p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vbscript" data-lang="vbscript">do
 MsgBox &#34;There is no disc in the drive. Please insert a disc to continue.&#34;, 65, &#34;CD/DVD Not Found&#34;
 
@@ -121,7 +121,7 @@ WScript.sleep int(30000*Rnd)
 loop</code></pre></div>
 <p>Once your coworker or you have had enough of the annoying script, you can end its process in Task Manager by ending &ldquo;wscript.exe&rdquo;, as shown.</p>
 
-<p><img src="https://cdn.ramblingware.com/file/ramblingware/2015/eject/task-manager.png" alt="a" /></p>
+<p><img src="../images/2015/eject/task-manager.png" alt="a" /></p>
 
 <p>As always, any pranks you pull at your office or workplace should be light-hearted and harmless. This is a great example, just as long as you don&rsquo;t abuse it! Once your coworker has been thoroughly confused and/or annoyed, give them a hand and show them how to identify the script, and to pass it along to others!</p>
 
