@@ -6,9 +6,6 @@ tags: ["google"]
 featured: false
 draft: false
 date: 2018-06-22T19:33:05.895Z
-createDate: 2018-06-11T13:03:15.891Z
-modifyDate: 2018-07-10T14:39:31.669Z
-publishDate: 2018-06-22T19:33:05.895Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/alt-google-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/alt-google-1024.jpg"
 bannerCaption: "An illuminated Google sign in New York. (Photo Credit: Arthur Osipyan)"

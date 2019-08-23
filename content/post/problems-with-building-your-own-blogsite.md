@@ -6,9 +6,6 @@ tags: ["webdev", "funny"]
 featured: false
 draft: false
 date: 2016-08-11T00:00:00.000Z
-createDate: 2016-08-11T00:00:00.000Z
-modifyDate: 2017-06-09T13:01:10.000Z
-publishDate: 2016-08-11T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2016/journal-1240.jpg"
 bannerCaption: "Blogs are like Journals. Only they give you more paper cuts. (Photo Credit: Dom J)"

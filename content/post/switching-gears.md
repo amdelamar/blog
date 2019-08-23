@@ -6,9 +6,6 @@ tags: ["info"]
 featured: false
 draft: false
 date: 2019-07-16T19:37:37-07:00
-createDate: 2019-07-16T19:37:37-07:00
-modifyDate: 2019-07-16T19:37:37-07:00
-publishDate: 2019-07-16T19:37:37-07:00
 thumbnail: ""
 banner: ""
 bannerCaption: ""

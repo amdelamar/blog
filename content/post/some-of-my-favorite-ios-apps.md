@@ -6,9 +6,6 @@ tags: ["iOS", "mobile-apps"]
 featured: false
 draft: false
 date: 2017-05-09T00:00:00.000Z
-createDate: 2017-05-11T00:37:03.000Z
-modifyDate: 2017-06-29T17:45:26.000Z
-publishDate: 2017-05-09T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-with-earbuds-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-with-earbuds-1240.jpg"
 bannerCaption: "Still looking for a good visual synthesizer app though. (Photo Credit: FirmBee)"

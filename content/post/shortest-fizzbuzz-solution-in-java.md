@@ -6,9 +6,6 @@ tags: ["java", "interview"]
 featured: false
 draft: false
 date: 2015-07-03T00:00:00.000Z
-createDate: 2015-07-03T00:00:00.000Z
-modifyDate: 2017-06-09T12:57:15.000Z
-publishDate: 2015-07-03T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/numbers-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2015/numbers-1240.jpg"
 bannerCaption: "Numbers, Numbers, Numbers. (Photo Credit: Unknown)"

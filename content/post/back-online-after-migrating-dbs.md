@@ -6,9 +6,6 @@ tags: ["info", "couchdb", "db"]
 featured: false
 draft: false
 date: 2018-03-04T22:12:18.950Z
-createDate: 2018-03-04T21:08:27.651Z
-modifyDate: 2018-03-04T22:12:19.960Z
-publishDate: 2018-03-04T22:12:18.950Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/beach-1240.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/beach-1240.jpg"
 bannerCaption: "Like the ocean, my blog and projects are kindof perpetually moving. (Photo Credit: Pexels)"

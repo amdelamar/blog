@@ -6,9 +6,6 @@ tags: ["java", "java-ee"]
 featured: false
 draft: false
 date: 2016-06-30T00:00:00.000Z
-createDate: 2016-06-30T00:00:00.000Z
-modifyDate: 2017-06-09T13:00:36.000Z
-publishDate: 2016-06-30T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/macbook-code-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2016/macbook-code-640.jpg"
 bannerCaption: "Keep Calm and Keep Coding those beautiful Java EE websites. (Photo Credit: NegativeSpace)"

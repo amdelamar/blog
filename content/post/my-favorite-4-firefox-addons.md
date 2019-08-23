@@ -6,9 +6,6 @@ tags: ["firefox", "privacy", "security"]
 featured: false
 draft: false
 date: 2018-05-15T14:18:53.169Z
-createDate: 2018-05-15T12:41:55.893Z
-modifyDate: 2018-05-15T14:18:59.813Z
-publishDate: 2018-05-15T14:18:53.169Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/redpanda-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/redpanda-1024.jpg"
 bannerCaption: "I'm not sure why but Red Pandas have been associated with Firefox instead of actual Foxes. (Photo Credit: Lance Anderson)"

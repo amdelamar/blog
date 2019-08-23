@@ -6,9 +6,6 @@ tags: ["docker", "devops"]
 featured: false
 draft: false
 date: 2017-09-22T00:00:00.000Z
-createDate: 2017-09-22T14:55:34.000Z
-modifyDate: 2017-10-03T13:47:14.000Z
-publishDate: 2017-09-22T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/containers-1024.jpg"
 bannerCaption: "Feel free to jump right in to the container revolution, but be careful! (Photo Credit: Kaique Rocha)"

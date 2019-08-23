@@ -7,9 +7,6 @@ featured: false
 draft: false
 deleted: false
 date: 2018-05-24T14:32:57.213Z
-createDate: 2018-05-24T13:09:57.868Z
-modifyDate: 2018-05-25T23:41:43.319Z
-publishDate: 2018-05-24T14:32:57.213Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"
 bannerCaption: "You can also _look_ at clouds for free too. Which is nice. (Photo Credit: Eberhard Grossgasteiger)"

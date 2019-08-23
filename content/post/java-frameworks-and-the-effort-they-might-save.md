@@ -6,9 +6,6 @@ tags: ["java", "java-ee"]
 featured: false
 draft: false
 date: 2015-05-06T00:00:00.000Z
-createDate: 2015-05-06T00:00:00.000Z
-modifyDate: 2017-06-09T12:53:04.000Z
-publishDate: 2015-05-06T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/effort-framework-graph.png"
 banner: ""
 bannerCaption: ""

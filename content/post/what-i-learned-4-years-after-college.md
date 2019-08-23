@@ -6,9 +6,6 @@ tags: ["computer-science", "college"]
 featured: false
 draft: false
 date: 2016-11-21T00:00:00.000Z
-createDate: 2016-11-21T00:00:00.000Z
-modifyDate: 2017-06-09T13:05:29.000Z
-publishDate: 2016-11-21T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/stacked-stones-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2016/stacked-stones-1240.jpg"
 bannerCaption: "Stacked stones on a mountain in Italy.  (Photo Credit: Sammy Schellenberg)"

@@ -6,9 +6,6 @@ tags: ["info"]
 featured: false
 draft: false
 date: 2014-03-12T00:00:00.000Z
-createDate: 2014-03-12T00:00:00.000Z
-modifyDate: 2017-06-09T12:46:32.000Z
-publishDate: 2014-03-12T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2014/thinking-in-code-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2014/thinking-in-code-1240.jpg"
 bannerCaption: "Thinking In Code"

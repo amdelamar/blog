@@ -6,9 +6,6 @@ tags: ["css", "email", "privacy"]
 featured: false
 draft: false
 date: 2018-03-18T21:02:05.302Z
-createDate: 2018-03-18T20:38:30.402Z
-modifyDate: 2018-03-18T21:06:32.602Z
-publishDate: 2018-03-18T21:02:05.302Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/climbing-to-the-top-1240.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/climbing-to-the-top-1240.jpg"
 bannerCaption: "I feel like some kinda, mountain-climbing, technology hermit. (Photo Credit: Felix Brönnimann)"

@@ -6,9 +6,6 @@ tags: ["cloud", "apps", "docker"]
 featured: false
 draft: false
 date: 2017-11-13T00:00:00.000Z
-createDate: 2017-11-13T15:27:41.000Z
-modifyDate: 2017-11-13T16:46:46.000Z
-publishDate: 2017-11-13T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg"
 bannerCaption: "I could probably use Skyscrapers as an analogy for Cloud apps, but so can Traditional Apps. So ehh, screw it. (Photo Credit: kameo0501)"

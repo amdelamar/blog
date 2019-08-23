@@ -6,9 +6,6 @@ tags: ["javascript", "webdev"]
 featured: false
 draft: false
 date: 2017-04-26T00:00:00.000Z
-createDate: 2017-04-25T14:49:06.000Z
-modifyDate: 2017-06-09T13:40:29.000Z
-publishDate: 2017-04-26T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/cupcake-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/cupcake-1024.jpg"
 bannerCaption: "Cupcakes are the best. Its big enough to satisfy the craving and small enough to not feel guilty about it. (Photo Credit: Freepik)"

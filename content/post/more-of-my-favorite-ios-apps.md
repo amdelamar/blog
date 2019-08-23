@@ -6,9 +6,6 @@ tags: ["iOS", "mobile-apps"]
 featured: false
 draft: false
 date: 2017-10-23T00:00:00.000Z
-createDate: 2017-10-12T15:06:29.000Z
-modifyDate: 2017-10-23T16:32:44.000Z
-publishDate: 2017-10-23T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-1024.jpg"
 bannerCaption: "Without the home button, you probably can't tell this is an iPhone. Which makes the iPhone 8 look weird. (Photo Credit: StockSnap)"

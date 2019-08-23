@@ -6,9 +6,6 @@ tags: ["video-games", "marketing"]
 featured: false
 draft: false
 date: 2017-03-28T00:00:00.000Z
-createDate: 2017-03-23T13:05:03.000Z
-modifyDate: 2017-06-09T13:13:17.000Z
-publishDate: 2017-03-28T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/poison-mushroom-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/poison-mushroom-1240.jpg"
 bannerCaption: "Don't touch the poisonous mushrooms. (Photo Credit: Colin Behrens)"

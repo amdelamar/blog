@@ -6,9 +6,6 @@ tags: ["security", "passwords", "2FA"]
 featured: false
 draft: false
 date: 2017-01-04T00:00:00.000Z
-createDate: 2017-01-04T00:00:00.000Z
-modifyDate: 2017-06-09T13:07:00.000Z
-publishDate: 2017-01-04T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/mobile-thief-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/mobile-thief-1240.jpg"
 bannerCaption: "Your mobile device can be your 2nd set of keys to your digital kingdom. (Photo Credit: Kaique Rocha)"

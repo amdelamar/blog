@@ -6,9 +6,6 @@ tags: ["java", "java-ee"]
 featured: false
 draft: false
 date: 2017-12-05 00:00:00.000Z
-createDate: 2017-12-05 19:18:20.000Z
-modifyDate: 2017-12-05 21:28:31.000Z
-publishDate: 2017-12-05 00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/construction-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/construction-1024.jpg"
 bannerCaption: "You could compare Java frameworks to architecutre and building construction. (Photo Credit: Mike Birdy)"

@@ -6,9 +6,6 @@ tags: ["java", "windows"]
 featured: false
 draft: false
 date: 2016-09-29T00:00:00.000Z
-createDate: 2016-09-29T00:00:00.000Z
-modifyDate: 2017-06-09T13:02:13.000Z
-publishDate: 2016-09-29T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/java-and-windows-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2016/java-and-windows-1240.jpg"
 bannerCaption: "Well, I meant Java *on* Windows, since you don't really *add* them together."

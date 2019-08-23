@@ -6,9 +6,6 @@ tags: ["sffpc", "hardware", "marketing"]
 featured: false
 draft: false
 date: 2017-05-30T00:00:00.000Z
-createDate: 2017-05-30T19:16:32.000Z
-modifyDate: 2017-09-23T03:02:48.000Z
-publishDate: 2017-05-30T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/dana4-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/dana4-1024.jpg"
 bannerCaption: "DAN A4-SFX. A SFF computer case being backed on Kickstarter. (Photo Credit: DAN Cases)"

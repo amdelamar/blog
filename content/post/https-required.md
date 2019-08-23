@@ -6,9 +6,6 @@ tags: ["https", "encryption", "security"]
 featured: false
 draft: false
 date: 2017-06-29T00:00:00.000Z
-createDate: 2017-06-28T14:37:23.000Z
-modifyDate: 2017-07-01T02:08:43.000Z
-publishDate: 2017-06-29T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/https-chart-1240.png"
 banner: ""
 bannerCaption: ""

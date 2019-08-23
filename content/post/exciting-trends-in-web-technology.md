@@ -6,9 +6,6 @@ tags: ["webdev", "devops", "full-stack"]
 featured: false
 draft: false
 date: 2017-08-10T00:00:00.000Z
-createDate: 2017-08-08T19:26:04.000Z
-modifyDate: 2017-08-11T00:10:44.000Z
-publishDate: 2017-08-10T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/earth-lightbulb-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/earth-lightbulb-1024.jpg"
 bannerCaption: "The next big ideas are already here for internet web applications. (Photo Credit: piro4d)"

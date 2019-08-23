@@ -6,9 +6,6 @@ tags: ["office", "workplace"]
 featured: false
 draft: false
 date: 2017-07-07T00:00:00.000Z
-createDate: 2017-07-07T16:04:06.000Z
-modifyDate: 2017-07-07T19:23:58.000Z
-publishDate: 2017-07-07T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/boss-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/boss-1024.jpg"
 bannerCaption: "A teacher once told me, \"Don't assume. Otherwise you'll make an 'ass' out of 'u' and 'me'.\" (Photo Credit: energepic.com)"

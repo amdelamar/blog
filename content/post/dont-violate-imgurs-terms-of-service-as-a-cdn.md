@@ -6,9 +6,6 @@ tags: ["webdev", "cdn"]
 featured: false
 draft: false
 date: 2017-06-12T00:00:00.000Z
-createDate: 2017-06-12T13:17:39.000Z
-modifyDate: 2017-06-13T14:40:25.000Z
-publishDate: 2017-06-12T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-1240.jpg"
 bannerCaption: "Otherwise the Imgur mascot will come find you. (Photo Credit: GregMontani)"

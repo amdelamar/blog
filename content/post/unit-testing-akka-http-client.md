@@ -6,9 +6,6 @@ tags: ["scala", "akka"]
 featured: false
 draft: false
 date: 2019-08-20T12:33:55-07:00
-createDate: 2019-08-20T12:33:55-07:00
-modifyDate: 2019-08-20T12:33:55-07:00
-publishDate: 2019-08-20T12:33:55-07:00
 thumbnail: ""
 banner: ""
 bannerCaption: ""
