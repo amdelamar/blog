@@ -3,7 +3,6 @@ title: "At the Office, Don't Assume Everything"
 author: "amdelamar"
 category: "workplace"
 tags: ["office", "workplace"]
-featured: false
 draft: false
 date: 2017-07-07T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/boss-1024.jpg"

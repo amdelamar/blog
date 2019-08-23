@@ -3,7 +3,6 @@ title: "More of My Favorite iOS Apps"
 author: "amdelamar"
 category: "favorites"
 tags: ["iOS", "mobile-apps"]
-featured: false
 draft: false
 date: 2017-10-23T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-1024.jpg"

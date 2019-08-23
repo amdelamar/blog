@@ -3,7 +3,6 @@ title: "Every Company needs a Web Developer"
 author: "amdelamar"
 category: "workplace"
 tags: ["webdev", "marketing"]
-featured: false
 draft: false
 date: 2017-03-06T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/macbook-coffee-640.jpg"

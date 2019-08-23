@@ -3,9 +3,7 @@ title: "Learn to Code Cloud-Native Apps for Free"
 author: "amdelamar"
 category: "web"
 tags: ["cloud", "apps", "docker", "kubernetes"]
-featured: false
 draft: false
-deleted: false
 date: 2018-05-24T14:32:57.213Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"
 banner: "https://cdn.ramblingware.com/file/ramblingware/2018/cloud-ray-1024.jpg"

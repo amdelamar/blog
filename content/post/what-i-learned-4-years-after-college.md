@@ -3,7 +3,6 @@ title: "What I learned 4 years after College"
 author: "amdelamar"
 category: "life-lessons"
 tags: ["computer-science", "college"]
-featured: false
 draft: false
 date: 2016-11-21T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/stacked-stones-640.jpg"

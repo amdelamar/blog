@@ -3,7 +3,6 @@ title: "Custom Themes for ProtonMail"
 author: "amdelamar"
 category: "privacy"
 tags: ["css", "email", "privacy"]
-featured: false
 draft: false
 date: 2018-03-18T21:02:05.302Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/climbing-to-the-top-1240.jpg"

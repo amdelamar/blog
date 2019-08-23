@@ -3,7 +3,6 @@ title: "Don't Violate Imgur's Terms of Service by using it as a CDN"
 author: "amdelamar"
 category: "web"
 tags: ["webdev", "cdn"]
-featured: false
 draft: false
 date: 2017-06-12T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/giraffe-640.jpg"

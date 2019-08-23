@@ -3,7 +3,6 @@ title: "Why I use Ad-Block"
 author: "amdelamar"
 category: "privacy"
 tags: ["advertising", "ad-block", "security"]
-featured: false
 draft: false
 date: 2017-02-13T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/stop-sign-640.jpg"

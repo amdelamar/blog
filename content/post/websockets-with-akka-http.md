@@ -3,7 +3,6 @@ title: "Websockets With Akka Http"
 author: "amdelamar"
 category: "code"
 tags: ["scala", "akka"]
-featured: false
 draft: false
 date: 2019-07-17T20:24:18-07:00
 thumbnail: "https://amdelamar.com/blog/images/2019/chatroom-screenshot.png"

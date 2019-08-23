@@ -3,7 +3,6 @@ title: "Shortest FizzBuzz Solution in Java?"
 author: "amdelamar"
 category: "code"
 tags: ["java", "interview"]
-featured: false
 draft: false
 date: 2015-07-03T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2015/numbers-640.jpg"

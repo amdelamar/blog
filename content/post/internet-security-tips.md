@@ -3,7 +3,6 @@ title: "Internet Security Tips"
 author: "amdelamar"
 category: "privacy"
 tags: ["security", "2FA"]
-featured: false
 draft: false
 date: 2016-06-03T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/security-640.jpg"

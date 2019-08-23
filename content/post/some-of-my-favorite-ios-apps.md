@@ -3,7 +3,6 @@ title: "Some of My Favorite iOS Apps"
 author: "amdelamar"
 category: "favorites"
 tags: ["iOS", "mobile-apps"]
-featured: false
 draft: false
 date: 2017-05-09T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/iphone-with-earbuds-640.jpg"

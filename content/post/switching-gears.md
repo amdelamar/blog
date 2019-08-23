@@ -3,7 +3,6 @@ title: "Switching Gears"
 author: "amdelamar"
 category: "meta"
 tags: ["info"]
-featured: false
 draft: false
 date: 2019-07-16T19:37:37-07:00
 thumbnail: ""

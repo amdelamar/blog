@@ -3,7 +3,6 @@ title: "Video Game Trends that are Toxic"
 author: "amdelamar"
 category: "gaming"
 tags: ["video-games", "marketing"]
-featured: false
 draft: false
 date: 2017-03-28T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/poison-mushroom-640.jpg"

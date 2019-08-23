@@ -3,7 +3,6 @@ title: "My Favorite 4 Firefox Add-ons"
 author: "amdelamar"
 category: "favorites"
 tags: ["firefox", "privacy", "security"]
-featured: false
 draft: false
 date: 2018-05-15T14:18:53.169Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/redpanda-1024.jpg"

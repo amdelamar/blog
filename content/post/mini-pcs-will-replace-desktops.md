@@ -3,7 +3,6 @@ title: "Mini PCs Will Replace Desktops"
 author: "amdelamar"
 category: "predictions"
 tags: ["sffpc", "hardware", "marketing"]
-featured: false
 draft: false
 date: 2017-05-30T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/dana4-640.jpg"

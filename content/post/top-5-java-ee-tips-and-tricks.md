@@ -3,7 +3,6 @@ title: "Top 5 Java EE Tips and Tricks"
 author: "amdelamar"
 category: "advice"
 tags: ["java", "java-ee"]
-featured: false
 draft: false
 date: 2016-06-30T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/macbook-code-640.jpg"

@@ -3,7 +3,6 @@ title: "Continuous Learning at Work"
 author: "amdelamar"
 category: "workplace"
 tags: ["office", "interview", "workplace"]
-featured: false
 draft: false
 date: 2018-07-30T15:26:43.554Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/timex-clock-1240.jpg"

@@ -3,7 +3,6 @@ title: "Problems with building your own blogsite"
 author: "amdelamar"
 category: "meta"
 tags: ["webdev", "funny"]
-featured: false
 draft: false
 date: 2016-08-11T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2016/journal-640.jpg"

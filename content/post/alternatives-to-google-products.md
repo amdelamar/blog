@@ -3,7 +3,6 @@ title: "Alternatives to Google Products"
 author: "amdelamar"
 category: "privacy"
 tags: ["google"]
-featured: false
 draft: false
 date: 2018-06-22T19:33:05.895Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2018/alt-google-1024.jpg"

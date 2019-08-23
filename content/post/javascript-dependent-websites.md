@@ -3,7 +3,6 @@ title: "JavaScript Dependent Websites"
 author: "amdelamar"
 category: "observations"
 tags: ["javascript", "webdev"]
-featured: false
 draft: false
 date: 2017-04-26T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/cupcake-640.jpg"

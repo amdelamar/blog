@@ -3,7 +3,6 @@ title: "Unit Testing Akka Http Client"
 author: "amdelamar"
 category: "code"
 tags: ["scala", "akka"]
-featured: false
 draft: false
 date: 2019-08-20T12:33:55-07:00
 thumbnail: ""

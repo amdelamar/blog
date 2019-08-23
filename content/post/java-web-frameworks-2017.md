@@ -3,7 +3,6 @@ title: "Java Web Frameworks 2017"
 author: "amdelamar"
 category: "code"
 tags: ["java", "java-ee"]
-featured: false
 draft: false
 date: 2017-12-05 00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/construction-1024.jpg"

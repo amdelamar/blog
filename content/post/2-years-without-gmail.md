@@ -3,7 +3,6 @@ title: "2 Years Without Gmail"
 author: "amdelamar"
 category: "privacy"
 tags: ["email", "encryption", "privacy", "security"]
-featured: false
 draft: false
 date: 2017-04-03 00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/climbing-to-the-top-640.jpg"

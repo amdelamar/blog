@@ -3,7 +3,6 @@ title: "You should use Two-Factor Authentication now"
 author: "amdelamar"
 category: "privacy"
 tags: ["security", "passwords", "2FA"]
-featured: false
 draft: false
 date: 2017-01-04T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/mobile-thief-640.jpg"

@@ -3,7 +3,6 @@ title: "What are Cloud-Native Applications?"
 author: "amdelamar"
 category: "software"
 tags: ["cloud", "apps", "docker"]
-featured: false
 draft: false
 date: 2017-11-13T00:00:00.000Z
 thumbnail: "https://cdn.ramblingware.com/file/ramblingware/2017/high-rise-building-1024.jpg"
