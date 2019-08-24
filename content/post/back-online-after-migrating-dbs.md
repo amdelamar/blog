@@ -2,7 +2,7 @@
 title: "Back Online After Migrating DBs"
 author: "amdelamar"
 category: "meta"
-tags: ["info", "couchdb", "db"]
+tags: ["couchdb", "db"]
 draft: false
 date: 2018-03-04T22:12:18.950Z
 thumbnail: "https://amdelamar.com/blog/images/2018/beach-1240.jpg"

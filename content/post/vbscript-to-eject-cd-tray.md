@@ -2,7 +2,7 @@
 title: "VBScript to Eject CD Tray"
 author: "amdelamar"
 category: "pranks"
-tags: ["vbscript", "funny"]
+tags: ["vbscript"]
 draft: false
 date: 2015-06-15T00:00:00.000Z
 thumbnail: "https://amdelamar.com/blog/images/2015/eject/message.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "What I learned 4 years after College"
 author: "amdelamar"
-category: "life-lessons"
+category: "workplace"
 tags: ["computer-science", "college"]
 draft: false
 date: 2016-11-21T00:00:00.000Z

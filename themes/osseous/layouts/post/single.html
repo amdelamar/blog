@@ -9,7 +9,7 @@
         {{ if .Draft }}<span title="This is unpublished" class="text-secondary">[Draft]</span>{{end}}
       </h2>
       <p class="margin-none text-secondary">
-        &nbsp;(&nbsp;<span id="read-time" title="time to read">{{ math.Round (div (.Content | countwords) 130.0) }} min read</span>&nbsp;)&nbsp;
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">{{ math.Round (div (.Content | countwords) 130.0) }} min read</span>&nbsp;)&nbsp;
       </p>
       <p>
         {{ .Content | markdownify }}
@@ -18,9 +18,9 @@
       <p id="post-metadata" class="text-secondary">
         {{ if .Draft }}<span id="draft" title="This is unpublished">[Draft]</span>{{end}}<br/>
         <span id="date" title="{{ dateFormat "02 Jan 06 15:04 MST" .Date.Local }}">Published: {{ .Date.Format "Jan 2, 2006" }}</span><br/>
-        <span id="category">Category: <a href="{{ $.Site.BaseURL }}/category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span><br/>
-        <span id="tags">Tags:
-        {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>
+        {{ if and (isset .Params "category") (ne .Params.category "") }}<span id="category">Category: <a href="{{ $.Site.BaseURL }}/category/{{ .Params.category | urlize }}" class="text-secondary">{{ .Params.category }}</a></span><br/>{{ else }}{{ end }}
+        {{ if isset .Params "tags" }}{{ $tagsSize := len .Params.tags }}{{ if gt $tagsSize 0 }}<span id="tags">Tags:
+        {{ range $i, $e := .Params.tags }}{{if $i}}, {{end}}<a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="text-secondary">{{ . }}</a>{{ end }}</span>{{ else }}{{ end }}{{ end }}
       </p>
     </div>
   </div>

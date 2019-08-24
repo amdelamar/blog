@@ -2,7 +2,7 @@
 title: "First!"
 author: "amdelamar"
 category: "meta"
-tags: ["info"]
+tags: []
 draft: false
 date: 2014-03-12T00:00:00.000Z
 thumbnail: "https://amdelamar.com/blog/images/2014/thinking-in-code-640.jpg"

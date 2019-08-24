@@ -2,7 +2,7 @@
 title: "Problems with building your own blogsite"
 author: "amdelamar"
 category: "meta"
-tags: ["webdev", "funny"]
+tags: ["webdev"]
 draft: false
 date: 2016-08-11T00:00:00.000Z
 thumbnail: "https://amdelamar.com/blog/images/2016/journal-640.jpg"

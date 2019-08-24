@@ -2,7 +2,7 @@
 title: "2nd Update"
 author: "amdelamar"
 category: "meta"
-tags: ["info"]
+tags: []
 draft: false
 date: 2015-02-24T00:00:00.000Z
 thumbnail: "https://amdelamar.com/blog/images/2015/thinking-in-code2-640.jpg"
