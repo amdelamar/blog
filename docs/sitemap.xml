@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/info/</loc>
+    <loc>https://amdelamar.com/blog/tags/hugo/</loc>
     <lastmod>2019-07-16T19:37:37-07:00</lastmod>
   </url>
   
@@ -88,12 +88,12 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/category/workplace/</loc>
+    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/workplace/</loc>
+    <loc>https://amdelamar.com/blog/category/workplace/</loc>
     <lastmod>2018-07-30T15:26:43+00:00</lastmod>
   </url>
   
@@ -403,11 +403,6 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/category/life-lessons/</loc>
-    <lastmod>2016-11-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</loc>
     <lastmod>2016-11-21T00:00:00+00:00</lastmod>
   </url>
@@ -425,11 +420,6 @@
   <url>
     <loc>https://amdelamar.com/blog/tags/windows/</loc>
     <lastmod>2016-09-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/funny/</loc>
-    <lastmod>2016-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
