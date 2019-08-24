@@ -19,7 +19,7 @@ If you're interested in taking back your email privacy, I encourage you to give 
 
 The web app for PM is simple and clean. But for some users like myself, we wanted a little bit more customization than initially offered.
 
-Thus, I created the [pm-theme](https://austindelamar.com/pm-theme/) project and have tried a hand at tweaking the colors of the web app. Now PM users can download/copy and override the default colors of their inbox. All for free, and easy to extend. If you're a PM user, you can try out a new theme in seconds!
+Thus, I created the [pm-theme](https://amdelamar.com/pm-theme/) project and have tried a hand at tweaking the colors of the web app. Now PM users can download/copy and override the default colors of their inbox. All for free, and easy to extend. If you're a PM user, you can try out a new theme in seconds!
 
 I built 3 main themes, Dark, Flat, and GM (like Gmail but not exactly).
 
@@ -29,7 +29,7 @@ Today I'm uploading a background image theme, where the Swiss Mountains are behi
 
 ```css
 /* Copy this line into ProtonMail's custom theme box: */
-@import url(https://austindelamar.com/pm-theme/themes/bg-image-theme.min.css);
+@import url(https://amdelamar.com/pm-theme/themes/bg-image-theme.min.css);
 ```
 
 Its actually more difficult than I thought to override the CSS styling and default colors of a website, especially one that continuously updates every week. But its been fun to tweak and try out fun CSS tricks and grow my skills in front-end development as well. Since I mostly program in back-end services for my day job.

@@ -46,7 +46,7 @@ So, even if you already have a website. Or if you are in need of one for your ho
 
 And for those of us who are ready for a challenge; you can **learn** web development **online**, **for free**. The are many sites you can learn how to code from, such as [w3schools](https://www.w3schools.com/), [codeacademy](https://www.codecademy.com/), or [udemy](https://www.udemy.com/courses/development/web-development/). You could learn HTML and CSS to make basic web pages, and host them on a site like [GitHub Pages](https://pages.github.com/).
 
-I wrote my personal site [austindelamar.com](http://austindelamar.com/) in this way. I used a few CSS libraries (w3css, icomoon) and wrote a single page of HTML, and placed it all on [GitHub](https://pages.github.com/). Then linked https://amdelamar.github.io/portfolio/ to http://austindelamar.com/ using a CNAME file. (GitHub has really outdone themselves here. _Bravo_ for such a great service!)
+I wrote my personal site [amdelamar.com](http://amdelamar.com/) in this way. I used a few CSS libraries (w3css, icomoon) and wrote a single page of HTML, and placed it all on [GitHub](https://pages.github.com/). Then linked https://amdelamar.github.io/portfolio/ to http://amdelamar.com/ using a CNAME file. (GitHub has really outdone themselves here. _Bravo_ for such a great service!)
 
 Why not **become your own Web Developer**?
 
