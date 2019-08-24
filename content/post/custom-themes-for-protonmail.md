@@ -13,7 +13,7 @@ description: "3 years with ProtonMail and I've got some more themes to share."
 
 I've been a user of ProtonMail since 2015\. Tomorrow marks my 3 year anniversary so to speak, of when I ditched Gmail and switched to ProtonMail.
 
-I [wrote about this last year](https://www.ramblingware.com/blog/2-years-without-gmail), and my reasons for dumping Gmail haven't changed.
+I [wrote about this last year](/2-years-without-gmail), and my reasons for dumping Gmail haven't changed.
 
 If you're interested in taking back your email privacy, I encourage you to give [ProtonMail](https://protonmail.com/) (PM) a try. Its free to try and has more to offer now than before when I signed up. But today I wanted to highlight the custom themes I've been diligently working on.
 

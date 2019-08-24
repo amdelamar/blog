@@ -55,10 +55,10 @@ I want to expand on their list with some suggestions of my own. And include thin
 - DNS (8.8.8.8) <-- [Quad9](https://quad9.net) (9.9.9.9) or Cloudflare (1.1.1.1)  
 - Google Domains <-- [PorkBun](https://porkbun.com/), Namecheap
 - Google Analytics <-- Matomo (formerly Piwik)  
-- GCP <-- AWS, IBM Cloud, Pivotal, OpenShift, or others mentioned [here](https://www.ramblingware.com/blog/learn-to-code-cloud-native-apps-for-free).  
+- GCP <-- AWS, IBM Cloud, Pivotal, OpenShift, or others mentioned [here](/learn-to-code-cloud-native-apps-for-free).  
 - GKS <-- AWS EKS, IBM Container Service, RedHat OpenShift, Pivotal, Azure, or others mentioned [here](https://kubernetes.io/docs/setup/pick-right-solution/#hosted-solutions).  
 
 My list is terribly incomplete. I also haven't tested most of the apps, social media, calendar, drive, solutions. Because I don't use them in the first place. So take my suggestions with a grain of salt.  
 
-I'm not as anti-Google as some others might be. I still use Google Domains, and plan to stop using Google Maps on my iPhone. But I did migrate [to ProtonMail from Gmail](https://www.ramblingware.com/blog/2-years-without-gmail), and that was my biggest challenge 3 years ago so I got that going for me. Which is nice.
+I'm not as anti-Google as some others might be. I still use Google Domains, and plan to stop using Google Maps on my iPhone. But I did migrate [to ProtonMail from Gmail](/2-years-without-gmail), and that was my biggest challenge 3 years ago so I got that going for me. Which is nice.
 If you're looking for more, checkout the other articles by [restoreprivacy.com](https://restoreprivacy.com/).  

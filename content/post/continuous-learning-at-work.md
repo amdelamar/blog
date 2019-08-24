@@ -25,7 +25,7 @@ Before I dive into my reasoning I want to preface that IBM has an internal progr
 
 The reason being three fold:
 
-1) Improves their skills. Adding another tool in one's toolbelt is always a good idea. Even if they don't directly use it, the experience will affect their current skills. For Java developers, learning another JVM language like Scala, Kotlin, or Groovy, can help improve your understanding of the Java language and ecosystem. They might have to try a different IDE or a different build tool. And they might also practice deploying on self-hosted VMs or [the cloud](https://www.ramblingware.com/blog/learn-to-code-cloud-native-apps-for-free), all the while learning that new JVM language.
+1) Improves their skills. Adding another tool in one's toolbelt is always a good idea. Even if they don't directly use it, the experience will affect their current skills. For Java developers, learning another JVM language like Scala, Kotlin, or Groovy, can help improve your understanding of the Java language and ecosystem. They might have to try a different IDE or a different build tool. And they might also practice deploying on self-hosted VMs or [the cloud](/learn-to-code-cloud-native-apps-for-free), all the while learning that new JVM language.
 
 2) Keeps them on their toes. Continuous learning helps fosters an open mind for new ways to accomplish work. They'll be more receptive to new, strange, or challenging work when it pops up. Practicing new technology stacks for example is a great way to learn how to approach problems from different points of view. For example, If you're familiar with the LAMP/WIMP stack then tryout the MEAN/MERN stack.
 

@@ -11,7 +11,7 @@ bannerCaption: "Without the home button, you probably can't tell this is an iPho
 description: "I'm starting a new series on new iOS apps I've frequently been using."
 ---
 
-Continuing from my [previous list](https://www.ramblingware.com/blog/some-of-my-favorite-ios-apps), I think I'll make this a series, and post new apps I'm using every few months.
+Continuing from my [previous list](/some-of-my-favorite-ios-apps), I think I'll make this a series, and post new apps I'm using every few months.
 
 Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
 

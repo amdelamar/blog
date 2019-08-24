@@ -95,7 +95,7 @@ Gmail... You look so old! Without JavaScript, you get some text and links withou
 
 ![ProtonMail.com](/images/2017/nojs/protonmail.jpg)
 
-This is the inbox page of ProtonMail. It simply fails to load. Its loading gif is pretty eye catching though. But it simply spins forever. This is arguably not a popular website yet, but I wanted to at least compare it to Gmail since [I ditched Gmail 2 years ago](https://www.ramblingware.com/blog/2-years-without-gmail). ProtonMail is still being expanded upon, so I get why it doesn't fail graciously. But adding a `<noscript>` tag is very easy to do! Come on!
+This is the inbox page of ProtonMail. It simply fails to load. Its loading gif is pretty eye catching though. But it simply spins forever. This is arguably not a popular website yet, but I wanted to at least compare it to Gmail since [I ditched Gmail 2 years ago](/2-years-without-gmail). ProtonMail is still being expanded upon, so I get why it doesn't fail graciously. But adding a `<noscript>` tag is very easy to do! Come on!
 
 Upon further inspection, the page does contain a `<noscript>` tag. Its just being covered up by the fancy loading gif.
 
