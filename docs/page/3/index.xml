@@ -1,0 +1,92 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Austin Delamar</title>
+    <link>https://amdelamar.com/blog/</link>
+    <description>This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.</description>
+    <author>amdelamar</author>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <item>
+      <title>2 Years Without Gmail</title>
+      <link>https://amdelamar.com/blog/2-years-without-gmail/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/2-years-without-gmail/</guid>
+      <description>I switched to ProtonMail for better email privacy. I&#39;m satisfied with my choice but its not without some drawbacks.</description>
+    </item>
+    <item>
+      <title>Video Game Trends that are Toxic</title>
+      <link>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</link>
+      <pubDate>Tue, 28 Mar 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/video-game-trends-that-are-toxic/</guid>
+      <description>What&#39;s worse? Microtransactions, pre-order bonuses, yearly subscriptions, P2P networking, day-1 DLC, or something else?</description>
+    </item>
+    <item>
+      <title>Every Company needs a Web Developer</title>
+      <link>https://amdelamar.com/blog/every-company-needs-a-web-developer/</link>
+      <pubDate>Mon, 06 Mar 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/every-company-needs-a-web-developer/</guid>
+      <description>You&#39;ll also need lots of coffee to pay the developer.</description>
+    </item>
+    <item>
+      <title>Why I use Ad-Block</title>
+      <link>https://amdelamar.com/blog/why-i-use-ad-block/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
+      <description>Online advertising had its chance, but plagued itself with spam, pop-ups, auto-playing videos, unregulated data collection, and even some unintentional  viruses.</description>
+    </item>
+    <item>
+      <title>You should use Two-Factor Authentication now</title>
+      <link>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</link>
+      <pubDate>Wed, 04 Jan 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
+      <description>Especially if you use a weak password for multiple websites. Enabling 2FA everywhere will help protect your internet identity from the next big leak.</description>
+    </item>
+    <item>
+      <title>What I learned 4 years after College</title>
+      <link>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</guid>
+      <description>4 years of classes followed by 4 years of work taught me: you never really stop learning.</description>
+    </item>
+    <item>
+      <title>Tips for building Java applications on Windows</title>
+      <link>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
+      <description>exe wrappers, install/uninstall, fancy icons, shortcuts with java arguments, windows registry entries, and more options for java apps.</description>
+    </item>
+    <item>
+      <title>Problems with building your own blogsite</title>
+      <link>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</guid>
+      <description>To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always.</description>
+    </item>
+    <item>
+      <title>Top 5 Java EE Tips and Tricks</title>
+      <link>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</link>
+      <pubDate>Thu, 30 Jun 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
+      <description>5 ways you can improve your Java EE web applications, with these tips and tricks.</description>
+    </item>
+    <item>
+      <title>Internet Security Tips</title>
+      <link>https://amdelamar.com/blog/internet-security-tips/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/internet-security-tips/</guid>
+      <description>Lockdown your data and internet activity from prying eyes using these basic rules.</description>
+    </item>
+    
+  </channel>
+</rss>

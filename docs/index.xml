@@ -1,158 +1,92 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Austin Delamar on Austin Delamar </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Austin Delamar</title>
     <link>https://amdelamar.com/blog/</link>
+    <description>This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.</description>
+    <author>amdelamar</author>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    
-    
-    <updated>Tue, 20 Aug 2019 12:33:55 PDT</updated>
-    
+    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
     <item>
       <title>Unit Testing Akka Http Client</title>
       <link>https://amdelamar.com/blog/unit-testing-akka-http-client/</link>
-      <pubDate>Tue, 20 Aug 2019 12:33:55 PDT</pubDate>
-      
+      <pubDate>Tue, 20 Aug 2019 19:33:55 UTC</pubDate>
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/unit-testing-akka-http-client/</guid>
-      <description>Recently, I&amp;rsquo;ve had the pleasure of building a RESTful API using Akka Http.
-It was relatively easy to write unit tests and integration tests to ensure the specification of my REST API was working. And for good reason. There are plenty of examples online of how to achieve this, using Akka Testkit.</description>
+      <description>Unit testing Akka Http server API is well documented, but for some reason testing Akka Http client API is not documented nor straightforward.</description>
     </item>
-    
     <item>
       <title>Websockets With Akka Http</title>
       <link>https://amdelamar.com/blog/websockets-with-akka-http/</link>
-      <pubDate>Wed, 17 Jul 2019 20:24:18 PDT</pubDate>
-      
+      <pubDate>Thu, 18 Jul 2019 03:24:18 UTC</pubDate>
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/websockets-with-akka-http/</guid>
-      <description>This past weekend I wanted to play around with WebSockets and learn how to setup a server and client using them. Then I though, why not try writing a server in Akka Http? Its a great opportunity for me to learn more about Akka streams, as well as a common protocol for push/pull applications on the web, like a chatroom.</description>
+      <description>I didn&#39;t find a good example of Server Websockets with the latest version of Akka Http, so I made my own chatroom app.</description>
     </item>
-    
     <item>
       <title>Switching Gears</title>
       <link>https://amdelamar.com/blog/switching-gears/</link>
-      <pubDate>Tue, 16 Jul 2019 19:37:37 PDT</pubDate>
-      
+      <pubDate>Wed, 17 Jul 2019 02:37:37 UTC</pubDate>
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/switching-gears/</guid>
-      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post.
-Here&amp;rsquo;s just a quick recap of what I&amp;rsquo;ve been up to, and what to expect from me going forward. Writing a blog has been a learning process for me and I&amp;rsquo;m adapting as I go.</description>
+      <description>Just an update about a few things that changed since my last post a year ago.</description>
     </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://amdelamar.com/blog/about/</link>
-      <pubDate>Sat, 12 Jan 2019 19:43:16 PST</pubDate>
-      
-      <guid>https://amdelamar.com/blog/about/</guid>
-      <description>https://amdelamar.com/#about</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://amdelamar.com/blog/contact/</link>
-      <pubDate>Sat, 12 Jan 2019 19:43:16 PST</pubDate>
-      
-      <guid>https://amdelamar.com/blog/contact/</guid>
-      <description>https://amdelamar.com/#contact</description>
-    </item>
-    
     <item>
       <title>Continuous Learning at Work</title>
       <link>https://amdelamar.com/blog/continuous-learning-at-work/</link>
       <pubDate>Mon, 30 Jul 2018 15:26:43 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/continuous-learning-at-work/</guid>
-      <description>I&amp;rsquo;ve been doing job interviews as of late and one question that keeps cropping up is about managing staff.
- What would you do if you were a technical manager? What would you do to improve your team and/or company?</description>
+      <description>Take time to teach yourself something new every year, whether its a new language, build tool, IDE, framework, platform, or even soft skills like public speaking.</description>
     </item>
-    
     <item>
       <title>Alternatives to Google Products</title>
       <link>https://amdelamar.com/blog/alternatives-to-google-products/</link>
       <pubDate>Fri, 22 Jun 2018 19:33:05 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
-      <description>The anti-Google crowd is growing.
- The Two Reasons I Don’t Trust Google With My Data – Medium Google Cannot Be Stopped - The Atlantic Is It Time to Break Up Google? - The New York Times Big data, big business, Big Brother?</description>
+      <description>An incomplete list of Google product alternatives that respect your privacy and data, or don&#39;t track your online activity.</description>
     </item>
-    
     <item>
       <title>Learn to Code Cloud-Native Apps for Free</title>
       <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
       <pubDate>Thu, 24 May 2018 14:32:57 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
-      <description>I was talking to a coworker the other day and they told me about their project they were working on. It was some legacy Java code on a Websphere cluster. Important work, but he was looking to branch out.</description>
+      <description>Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.</description>
     </item>
-    
     <item>
       <title>My Favorite 4 Firefox Add-ons</title>
       <link>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</link>
       <pubDate>Tue, 15 May 2018 14:18:53 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
-      <description>The mosaic killer browser, Firefox, is my daily driver and has been for a long time. So it should be no surprise that I&amp;rsquo;ve accumulated a list of favorite Firefox Add-ons (or Extensions) over the years.
-Everyone has their own favorite list, and don&amp;rsquo;t think your favorite extensions aren&amp;rsquo;t worthy if they aren&amp;rsquo;t mentioned.</description>
+      <description>Must have extensions for Firefox include: uBlock Origin, Privacy Badger, Bitwarden, and HTTPS Everywhere.</description>
     </item>
-    
     <item>
       <title>Custom Themes for ProtonMail</title>
       <link>https://amdelamar.com/blog/custom-themes-for-protonmail/</link>
       <pubDate>Sun, 18 Mar 2018 21:02:05 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
-      <description>I&amp;rsquo;ve been a user of ProtonMail since 2015. Tomorrow marks my 3 year anniversary so to speak, of when I ditched Gmail and switched to ProtonMail.
-I wrote about this last year, and my reasons for dumping Gmail haven&amp;rsquo;t changed.</description>
+      <description>3 years with ProtonMail and I&#39;ve got some more themes to share.</description>
     </item>
-    
     <item>
       <title>Back Online After Migrating DBs</title>
       <link>https://amdelamar.com/blog/back-online-after-migrating-dbs/</link>
       <pubDate>Sun, 04 Mar 2018 22:12:18 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
-      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post. The reason being two fold:
- I migrated my blog db from MySQL to Cloudant. The WYSIWYG editor on my dashboard wasn&amp;rsquo;t ready.  Now that I&amp;rsquo;ve got an alpha 1.</description>
+      <description>After a few months of migrating from MySQL to Cloudant, I&#39;m finally able to write new content again.</description>
     </item>
-    
     <item>
       <title>Java Web Frameworks 2017</title>
       <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
       <pubDate>Tue, 05 Dec 2017 00:00:00 UTC</pubDate>
-      
+      <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
-      <description>I&amp;rsquo;ve been researching Java frameworks lately, trying to find one that&amp;rsquo;s easy to extend and lightweight enough for RESTful APIs.
-In my search I&amp;rsquo;ve seen all kinds of names thrown around in recent forums and old StackOverflow answers. So I thought I&amp;rsquo;d compile my findings in one big list.</description>
-    </item>
-    
-    <item>
-      <title>What are Cloud-Native Applications?</title>
-      <link>https://amdelamar.com/blog/what-are-cloud-native-applications/</link>
-      <pubDate>Mon, 13 Nov 2017 00:00:00 UTC</pubDate>
-      
-      <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
-      <description>The term &amp;ldquo;Cloud Native&amp;rdquo; sounds simple enough, but I&amp;rsquo;ve been reading more and more posts trying to define what it actually means. Some are confused by it, or think its just marketing jargon for Cloud Foundry. What does it mean for an application to be &amp;ldquo;cloud native&amp;rdquo; in the first place?</description>
-    </item>
-    
-    <item>
-      <title>More of My Favorite iOS Apps</title>
-      <link>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</link>
-      <pubDate>Mon, 23 Oct 2017 00:00:00 UTC</pubDate>
-      
-      <guid>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</guid>
-      <description>Continuing from my previous list, I think I&amp;rsquo;ll make this a series, and post new apps I&amp;rsquo;m using every few months.
-Sorry, its not going to contain Snapchat-like apps, photo-filters, or games. Mostly finance and security apps.
-These apps are becoming daily drivers or at least seeing me use them every week.</description>
-    </item>
-    
-    <item>
-      <title>Some Advice on Docker as a Beginner</title>
-      <link>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</link>
-      <pubDate>Fri, 22 Sep 2017 00:00:00 UTC</pubDate>
-      
-      <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
-      <description>Docker and containers in general are great. Containers are like mini virtual machines that run only the bare essentials of an operating system. And it accomplishes this at a fraction of the resources required than a regular virutal machine. This makes Docker containers ideal for many uses, such as web servers, microservices, and more.</description>
+      <description>I scavenged the web for any and all Java Frameworks. New or old. Here is what I found.</description>
     </item>
     
   </channel>
 </rss>
-

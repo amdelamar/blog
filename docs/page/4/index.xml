@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Austin Delamar</title>
+    <link>https://amdelamar.com/blog/</link>
+    <description>This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.</description>
+    <author>amdelamar</author>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <item>
+      <title>Shortest FizzBuzz Solution in Java?</title>
+      <link>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</link>
+      <pubDate>Fri, 03 Jul 2015 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/shortest-fizzbuzz-solution-in-java/</guid>
+      <description>Coding interviews can be challenging and fun to practice beforehand.</description>
+    </item>
+    <item>
+      <title>VBScript to Eject CD Tray</title>
+      <link>https://amdelamar.com/blog/vbscript-to-eject-cd-tray/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/vbscript-to-eject-cd-tray/</guid>
+      <description>Annoy your coworkers with a randomly ejecting CD tray!</description>
+    </item>
+    <item>
+      <title>Java Frameworks and the Effort they might save or create</title>
+      <link>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</link>
+      <pubDate>Wed, 06 May 2015 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</guid>
+      <description>J2EE Frameworks are meant to save you time, and lots of boilerplate. But they have sharp learning curves.</description>
+    </item>
+    <item>
+      <title>2nd Update</title>
+      <link>https://amdelamar.com/blog/2nd-update/</link>
+      <pubDate>Tue, 24 Feb 2015 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/2nd-update/</guid>
+      <description>Its been quite a while, since I started my website, and now I&#39;m getting back into things.</description>
+    </item>
+    <item>
+      <title>First!</title>
+      <link>https://amdelamar.com/blog/first/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/first/</guid>
+      <description>This post marks when I started building my first blog on Wix, a website-generating factory.</description>
+    </item>
+    
+  </channel>
+</rss>

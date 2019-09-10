@@ -1,0 +1,92 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Austin Delamar</title>
+    <link>https://amdelamar.com/blog/</link>
+    <description>This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.</description>
+    <author>amdelamar</author>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <item>
+      <title>What are Cloud-Native Applications?</title>
+      <link>https://amdelamar.com/blog/what-are-cloud-native-applications/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/what-are-cloud-native-applications/</guid>
+      <description>Unlike traditional applications, Cloud Native apps are build for... the cloud. What a surprise! So what else defines them besides that?</description>
+    </item>
+    <item>
+      <title>More of My Favorite iOS Apps</title>
+      <link>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/more-of-my-favorite-ios-apps/</guid>
+      <description>I&#39;m starting a new series on new iOS apps I&#39;ve frequently been using.</description>
+    </item>
+    <item>
+      <title>Some Advice on Docker as a Beginner</title>
+      <link>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/some-advice-on-docker-as-a-beginner/</guid>
+      <description>Googling for Docker tutorials yields lots of results. Some new. Some old. Here are six things I&#39;ve gathered so far in 2017.</description>
+    </item>
+    <item>
+      <title>Exciting Trends in Web Technology</title>
+      <link>https://amdelamar.com/blog/exciting-trends-in-web-technology/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
+      <description>Offline-first, SPA, PWA, Docker, Blockchain, and more! There are lots of trends growing right now that its getting hard to keep up.</description>
+    </item>
+    <item>
+      <title>At the Office, Don&#39;t Assume Everything</title>
+      <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
+      <description>Lot of workplace problems can be avoided by not assuming things. Communication is vital and when you assume something, it means you&#39;re not talking.</description>
+    </item>
+    <item>
+      <title>HTTPS Required</title>
+      <link>https://amdelamar.com/blog/https-required/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/https-required/</guid>
+      <description>Websites should default to HTTPS now. Its safe to assume everyone should be using it already or planning to implement it.</description>
+    </item>
+    <item>
+      <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</title>
+      <link>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</guid>
+      <description>I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don&#39;t make the same mistake I did!</description>
+    </item>
+    <item>
+      <title>Mini PCs Will Replace Desktops</title>
+      <link>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</guid>
+      <description>SFF (small form factor) PCs will takeover the midtower PC market, just like how tablets have taken a chunk of the laptop share.</description>
+    </item>
+    <item>
+      <title>Some of My Favorite iOS Apps</title>
+      <link>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</link>
+      <pubDate>Tue, 09 May 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</guid>
+      <description>Right now these apps are awesome: Signal, Firefox Focus, bitwarden, Authenticator, OpenVPN, and of course ProtonMail.</description>
+    </item>
+    <item>
+      <title>JavaScript Dependent Websites</title>
+      <link>https://amdelamar.com/blog/javascript-dependent-websites/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/javascript-dependent-websites/</guid>
+      <description>If websites are like cake, then JavaScript would be the candles. But a cake without candles is still a cake. Right?</description>
+    </item>
+    
+  </channel>
+</rss>
