@@ -1,22 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>{{ .Title }} on {{ .Site.Title }} </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>{{ .Title }}</title>
     <link>{{ .Permalink }}</link>
+    {{ with .Site.Params.description }}<description>{{.}}</description>{{end}}
+    {{ with .Site.Params.author }}<author>{{.}}</author>{{end}}
+    <generator>Hugo</generator>
     {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
-    {{ with .Site.Author.name }}<author>{{.}}</author>{{end}}
-    {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
-    <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</updated>
-    {{ range first 15 .Data.Pages }}
-    <item>
+    <lastBuildDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Date.UTC }}</lastBuildDate>
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 10 }}{{ range $paginator.Pages }}<item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
-      {{with .Site.Author.name}}<author>{{.}}</author>{{end}}
+      <pubDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Date.UTC }}</pubDate>
+      {{ with .Site.Params.author }}<author>{{.}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Summary | html }}</description>
+      <description>{{ with .Page.Params.Description }}{{.}}{{else}}{{ .Summary | html }}{{end}}</description>
     </item>
     {{ end }}
   </channel>
 </rss>
-
