@@ -32,6 +32,7 @@
     {{ if isset .Site.Params "description" }}<meta itemprop="description" content="{{ .Site.Params.description }}">{{ end }}
     {{ if isset .Site.Params "thumbnail" }}<meta itemprop="image" content="{{ .Site.Params.thumbnail }}">{{ end }}
 
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/osseous.min.css">
     <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
     <title>{{ .Site.Title }} - Blog</title>
