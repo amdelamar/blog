@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     {{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
     <lastBuildDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Date.UTC }}</lastBuildDate>
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 10 }}{{ range $paginator.Pages }}<item>
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") 10 }}{{ range $paginator.Pages }}<item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ dateFormat "Mon, 02 Jan 2006 15:04:05 MST" .Date.UTC }}</pubDate>

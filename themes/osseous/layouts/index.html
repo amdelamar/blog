@@ -4,7 +4,7 @@
 <article id="home">
   <div class="row section margin-top-large">
     <div class="container">
-      {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
         {{ range $paginator.Pages }}
           {{ .Render "summary"}}
         {{ end }}
