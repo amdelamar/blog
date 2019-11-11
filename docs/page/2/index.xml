@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <item>
+      <title>Java Web Frameworks 2017</title>
+      <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
+      <description>I scavenged the web for any and all Java Frameworks. New or old. Here is what I found.</description>
+    </item>
     <item>
       <title>What are Cloud-Native Applications?</title>
       <link>https://amdelamar.com/blog/what-are-cloud-native-applications/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</guid>
       <description>Right now these apps are awesome: Signal, Firefox Focus, bitwarden, Authenticator, OpenVPN, and of course ProtonMail.</description>
-    </item>
-    <item>
-      <title>JavaScript Dependent Websites</title>
-      <link>https://amdelamar.com/blog/javascript-dependent-websites/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/javascript-dependent-websites/</guid>
-      <description>If websites are like cake, then JavaScript would be the candles. But a cake without candles is still a cake. Right?</description>
     </item>
     
   </channel>

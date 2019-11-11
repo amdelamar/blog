@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <item>
+      <title>Syntax Highlighting in Hugo with Markdown</title>
+      <link>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</link>
+      <pubDate>Sun, 10 Nov 2019 23:14:07 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</guid>
+      <description>A simple explanation about code highlighting in Markdown using Hugo.</description>
+    </item>
     <item>
       <title>Unit Testing Akka Http Client</title>
       <link>https://amdelamar.com/blog/unit-testing-akka-http-client/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
       <description>After a few months of migrating from MySQL to Cloudant, I&#39;m finally able to write new content again.</description>
-    </item>
-    <item>
-      <title>Java Web Frameworks 2017</title>
-      <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
-      <pubDate>Tue, 05 Dec 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/java-web-frameworks-2017/</guid>
-      <description>I scavenged the web for any and all Java Frameworks. New or old. Here is what I found.</description>
     </item>
     
   </channel>

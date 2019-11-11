@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 19:33:55 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <item>
+      <title>JavaScript Dependent Websites</title>
+      <link>https://amdelamar.com/blog/javascript-dependent-websites/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/javascript-dependent-websites/</guid>
+      <description>If websites are like cake, then JavaScript would be the candles. But a cake without candles is still a cake. Right?</description>
+    </item>
     <item>
       <title>2 Years Without Gmail</title>
       <link>https://amdelamar.com/blog/2-years-without-gmail/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
       <description>5 ways you can improve your Java EE web applications, with these tips and tricks.</description>
-    </item>
-    <item>
-      <title>Internet Security Tips</title>
-      <link>https://amdelamar.com/blog/internet-security-tips/</link>
-      <pubDate>Fri, 03 Jun 2016 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/internet-security-tips/</guid>
-      <description>Lockdown your data and internet activity from prying eyes using these basic rules.</description>
     </item>
     
   </channel>

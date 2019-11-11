@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Syntax Highlighting in Hugo with Markdown">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="A simple explanation about code highlighting in Markdown using Hugo.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Syntax Highlighting in Hugo with Markdown">
+    <meta name="twitter:description" content="A simple explanation about code highlighting in Markdown using Hugo.">
+    <meta name="twitter:image" content="">
+
+    
+    <meta itemprop="name" content="Syntax Highlighting in Hugo with Markdown">
+    <meta itemprop="description" content="A simple explanation about code highlighting in Markdown using Hugo.">
+    <meta itemprop="image" content="">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Syntax Highlighting in Hugo with Markdown - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Syntax Highlighting in Hugo with Markdown
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">3 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>If you&rsquo;re like me, you prefer writing <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> instead of HTML for most things. Whether its writing a message on Slack, editing README&rsquo;s on GitHub, posting Q/A&rsquo;s on Stackoverflow, or most any other platform that supports Markdown. Its just plain simple and easy to use.</p>
+
+<p>But if you&rsquo;re also like me, you might have tried but got confused about Markdown in <a href="https://gohugo.io/" target="_blank">Hugo</a>, a static site generator. Specifically, how does one highlight syntax in code blocks?</p>
+
+<p>Here&rsquo;s a nice syntax highlight example:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#177500">/**
+</span><span style="color:#177500"> * Converts a Hex based string to byte[]
+</span><span style="color:#177500"> *
+</span><span style="color:#177500"> * @param hex
+</span><span style="color:#177500"> *            the HEX string
+</span><span style="color:#177500"> * @return byte array
+</span><span style="color:#177500"> */</span>
+<span style="color:#000">protected static byte[] hexStringToBytes</span>(<span style="color:#000">String hex</span>) {
+    <span style="color:#177500">// Adding one byte to get the right conversion
+</span><span style="color:#177500"></span>    <span style="color:#177500">// Values starting with &#34;0&#34; can be converted
+</span><span style="color:#177500"></span>    <span style="color:#000">byte[] bArray </span><span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#000">BigInteger</span>(<span style="color:#c41a16">&#34;10&#34;</span> <span style="color:#000">+</span> <span style="color:#000">hex</span>, <span style="color:#000">16</span>).<span style="color:#836c28">toByteArray</span>();
+    <span style="color:#177500">// Copy all the REAL bytes, not the &#34;first&#34;
+</span><span style="color:#177500"></span>    <span style="color:#000">byte[] ret </span><span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#a90d91">byte</span>[<span style="color:#000">bArray</span>.<span style="color:#836c28">length</span> <span style="color:#000">-</span> <span style="color:#000">1</span>];
+    <span style="color:#a90d91">for</span> (<span style="color:#000">int i </span><span style="color:#000">=</span> <span style="color:#000">0</span>; <span style="color:#000">i</span> <span style="color:#000">&lt;</span> <span style="color:#000">ret</span>.<span style="color:#836c28">length</span>; <span style="color:#000">i</span><span style="color:#000">++</span>) {
+        <span style="color:#000">ret</span>[<span style="color:#000">i</span>] <span style="color:#000">=</span> <span style="color:#000">bArray</span>[<span style="color:#000">i</span> <span style="color:#000">+</span> <span style="color:#000">1</span>];
+    }
+    <span style="color:#a90d91">return</span> <span style="color:#000">ret</span>;
+}</code></pre></div>
+<p>I absolutely want pretty colors in my code, especially in blog posts when I&rsquo;m trying to explain my ideas clearly.</p>
+
+<p>Hugo&rsquo;s official <a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank">Syntax highlighting</a> documentation shows they use golang template syntax to fence code blocks. Starting with <code>{ {&lt; highlight go &gt;}}</code>.</p>
+
+<p>But I&rsquo;m used to triple-backticks <code>```</code>, followed by the language name, like this:</p>
+
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#c41a16">```java
+</span><span style="color:#c41a16"></span><span style="color:#177500">// some code here
+</span><span style="color:#177500"></span><span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Hello World!&#34;</span>)
+<span style="color:#c41a16">```</span></code></pre></div>
+
+<h2 id="so-how-do-you-enable-this-in-hugo">So how do you enable this in Hugo?</h2>
+
+<p>Simply add this to your config.yaml: (or config.toml if you prefer)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">pygmentsCodeFences: <span style="color:#a90d91">true</span></code></pre></div>
+<p>Now you can use syntax highlighting with backticks and language selection!</p>
+
+<p><strong>Pros:</strong></p>
+
+<ol>
+<li>Its Markdown. (Technically <a href="https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks" target="_blank">GitHub flavored Markdown</a>, but still nice.)</li>
+<li>Doesn&rsquo;t require you to learn new formatting. Or have to update old blog posts with new formatting.</li>
+<li><a href="https://atom.io/" target="_blank">Atom.io</a> friendly, So as I&rsquo;m writing new posts, I can see syntax highlighting within Atom.</li>
+</ol>
+
+<p><strong>Cons:</strong></p>
+
+<ol>
+<li>No line numbers.</li>
+<li>Can&rsquo;t highlight specific lines.</li>
+<li>Not enabled by default. (I think it should be!)</li>
+</ol>
+
+<p>However, I find these downsides to be negligible if your writing provides enough context around the code snippets you&rsquo;re talking about. For example, instead of talking about which line number, you could put code comments and/or flag lines with a symbol or letter, then reference that letter in your description.</p>
+
+<p><strong>Note</strong>: You can change the theme of your syntax highlighting too. Simply add this to your config.yaml: (or config.toml)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">pygmentsStyle: xcode</code></pre></div>
+<p>A complete list of themes are here: <a href="https://xyproto.github.io/splash/docs/all.html" target="_blank">https://xyproto.github.io/splash/docs/all.html</a></p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="10 Nov 19 15:14 PST">Published: Nov 10, 2019</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/other" class="text-secondary">other</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/hugo" class="text-secondary">hugo</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+

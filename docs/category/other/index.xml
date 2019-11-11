@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Austin Delamar</title>
-    <link>https://amdelamar.com/blog/tags/hugo/</link>
-    <description>Recent content in hugo on Austin Delamar</description>
+    <title>other on Austin Delamar</title>
+    <link>https://amdelamar.com/blog/category/other/</link>
+    <description>Recent content in other on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Nov 2019 15:14:07 -0800</lastBuildDate>
     
-	<atom:link href="https://amdelamar.com/blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amdelamar.com/blog/category/other/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</guid>
       <description>If you&amp;rsquo;re like me, you prefer writing Markdown instead of HTML for most things. Whether its writing a message on Slack, editing README&amp;rsquo;s on GitHub, posting Q/A&amp;rsquo;s on Stackoverflow, or most any other platform that supports Markdown. Its just plain simple and easy to use.</description>
-    </item>
-    
-    <item>
-      <title>Switching Gears</title>
-      <link>https://amdelamar.com/blog/switching-gears/</link>
-      <pubDate>Tue, 16 Jul 2019 19:37:37 -0700</pubDate>
-      
-      <guid>https://amdelamar.com/blog/switching-gears/</guid>
-      <description>Maybe you haven&amp;rsquo;t noticed, but its been a few months since my last blog post.
-Here&amp;rsquo;s just a quick recap of what I&amp;rsquo;ve been up to, and what to expect from me going forward. Writing a blog has been a learning process for me and I&amp;rsquo;m adapting as I go.</description>
     </item>
     
   </channel>

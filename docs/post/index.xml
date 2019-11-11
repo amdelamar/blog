@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 12:33:55 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 15:14:07 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Syntax Highlighting in Hugo with Markdown</title>
+      <link>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</link>
+      <pubDate>Sun, 10 Nov 2019 15:14:07 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</guid>
+      <description>If you&amp;rsquo;re like me, you prefer writing Markdown instead of HTML for most things. Whether its writing a message on Slack, editing README&amp;rsquo;s on GitHub, posting Q/A&amp;rsquo;s on Stackoverflow, or most any other platform that supports Markdown. Its just plain simple and easy to use.</description>
+    </item>
     
     <item>
       <title>Unit Testing Akka Http Client</title>
