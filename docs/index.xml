@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2019 04:49:35 UTC</lastBuildDate>
     <item>
-      <title>Scala CI/CD with Github Actions and Heroku</title>
-      <link>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</link>
+      <title>Scala CI-CD with Github Actions and Heroku</title>
+      <link>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</link>
       <pubDate>Wed, 20 Nov 2019 04:49:35 UTC</pubDate>
       <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</guid>
+      <guid>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</guid>
       <description>How to continuously run &#39;sbt test&#39; on every PR, and after merging deploy it to Heroku.</description>
     </item>
     <item>

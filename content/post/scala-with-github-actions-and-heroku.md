@@ -1,5 +1,5 @@
 ---
-title: "Scala CI/CD with Github Actions and Heroku"
+title: "Scala CI-CD with Github Actions and Heroku"
 author: "amdelamar"
 category: "code"
 tags: ["scala","akka","github","heroku"]
