@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 04:49:35 UTC</lastBuildDate>
+    <item>
+      <title>Scala CI/CD with Github Actions and Heroku</title>
+      <link>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</link>
+      <pubDate>Wed, 20 Nov 2019 04:49:35 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</guid>
+      <description>How to continuously run &#39;sbt test&#39; on every PR, and after merging deploy it to Heroku.</description>
+    </item>
     <item>
       <title>Syntax Highlighting in Hugo with Markdown</title>
       <link>https://amdelamar.com/blog/syntax-highlighting-in-hugo-with-markdown/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
       <description>3 years with ProtonMail and I&#39;ve got some more themes to share.</description>
-    </item>
-    <item>
-      <title>Back Online After Migrating DBs</title>
-      <link>https://amdelamar.com/blog/back-online-after-migrating-dbs/</link>
-      <pubDate>Sun, 04 Mar 2018 22:12:18 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
-      <description>After a few months of migrating from MySQL to Cloudant, I&#39;m finally able to write new content again.</description>
     </item>
     
   </channel>

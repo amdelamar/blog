@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 04:49:35 UTC</lastBuildDate>
+    <item>
+      <title>Some of My Favorite iOS Apps</title>
+      <link>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</link>
+      <pubDate>Tue, 09 May 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</guid>
+      <description>Right now these apps are awesome: Signal, Firefox Focus, bitwarden, Authenticator, OpenVPN, and of course ProtonMail.</description>
+    </item>
     <item>
       <title>JavaScript Dependent Websites</title>
       <link>https://amdelamar.com/blog/javascript-dependent-websites/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</guid>
       <description>To build or not to build? That is the question. Sometimes building your own blog website can be beneficial. But not always.</description>
-    </item>
-    <item>
-      <title>Top 5 Java EE Tips and Tricks</title>
-      <link>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</link>
-      <pubDate>Thu, 30 Jun 2016 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/top-5-java-ee-tips-and-tricks/</guid>
-      <description>5 ways you can improve your Java EE web applications, with these tips and tricks.</description>
     </item>
     
   </channel>

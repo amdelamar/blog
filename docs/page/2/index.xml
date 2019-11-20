@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 23:14:07 UTC</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2019 04:49:35 UTC</lastBuildDate>
+    <item>
+      <title>Back Online After Migrating DBs</title>
+      <link>https://amdelamar.com/blog/back-online-after-migrating-dbs/</link>
+      <pubDate>Sun, 04 Mar 2018 22:12:18 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/back-online-after-migrating-dbs/</guid>
+      <description>After a few months of migrating from MySQL to Cloudant, I&#39;m finally able to write new content again.</description>
+    </item>
     <item>
       <title>Java Web Frameworks 2017</title>
       <link>https://amdelamar.com/blog/java-web-frameworks-2017/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</guid>
       <description>SFF (small form factor) PCs will takeover the midtower PC market, just like how tablets have taken a chunk of the laptop share.</description>
-    </item>
-    <item>
-      <title>Some of My Favorite iOS Apps</title>
-      <link>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</link>
-      <pubDate>Tue, 09 May 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/some-of-my-favorite-ios-apps/</guid>
-      <description>Right now these apps are awesome: Signal, Firefox Focus, bitwarden, Authenticator, OpenVPN, and of course ProtonMail.</description>
     </item>
     
   </channel>

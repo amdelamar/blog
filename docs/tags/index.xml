@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Nov 2019 15:14:07 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 20:49:35 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>akka</title>
+      <link>https://amdelamar.com/blog/tags/akka/</link>
+      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/akka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://amdelamar.com/blog/tags/github/</link>
+      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heroku</title>
+      <link>https://amdelamar.com/blog/tags/heroku/</link>
+      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scala</title>
+      <link>https://amdelamar.com/blog/tags/scala/</link>
+      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/scala/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
@@ -17,24 +53,6 @@
       <pubDate>Sun, 10 Nov 2019 15:14:07 -0800</pubDate>
       
       <guid>https://amdelamar.com/blog/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>akka</title>
-      <link>https://amdelamar.com/blog/tags/akka/</link>
-      <pubDate>Tue, 20 Aug 2019 12:33:55 -0700</pubDate>
-      
-      <guid>https://amdelamar.com/blog/tags/akka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scala</title>
-      <link>https://amdelamar.com/blog/tags/scala/</link>
-      <pubDate>Tue, 20 Aug 2019 12:33:55 -0700</pubDate>
-      
-      <guid>https://amdelamar.com/blog/tags/scala/</guid>
       <description></description>
     </item>
     

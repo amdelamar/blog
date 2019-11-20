@@ -6,10 +6,19 @@
     <description>Recent content in akka on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2019 12:33:55 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 19 Nov 2019 20:49:35 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/akka/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scala CI/CD with Github Actions and Heroku</title>
+      <link>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</link>
+      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/scala-ci/cd-with-github-actions-and-heroku/</guid>
+      <description>We&amp;rsquo;ll here&amp;rsquo;s a quick guide on how to continuously run sbt test on every pull request, and after merging deploy it to Heroku. And we&amp;rsquo; do this all within the comfort of GitHub, using their automation tool called GitHub Actions.</description>
+    </item>
     
     <item>
       <title>Unit Testing Akka Http Client</title>
