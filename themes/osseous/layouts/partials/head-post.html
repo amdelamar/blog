@@ -16,7 +16,7 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="{{ .Title }}">
-    {{ if isset .Params "thumbnail" }}<meta property="og:image" content="{{ .Params.thumbnail }}">{{ else }}{{ end }}
+    {{ if and (isset .Params "thumbnail") (ne .Params.thumbnail "") }}<meta property="og:image" content="{{ .Params.thumbnail }}">{{ else }}<meta property="og:image" content="{{ .Site.Params.thumbnail }}">{{ end }}
     {{ if isset .Params "description" }}<meta property="og:description" content="{{ .Params.description }}">{{ else }}{{ end }}
     {{ if isset .Params "author" }}<meta property="article:author" content="{{ .Params.Author }}"/>{{ else }}{{ end }}
 
@@ -26,12 +26,12 @@
     {{ if isset .Params "author" }}<meta name="twitter:creator" content="@{{ .Params.twitterUsername }}">{{ else }}{{ end }}
     <meta name="twitter:title" content="{{ .Title }}">
     {{ if isset .Params "description" }}<meta name="twitter:description" content="{{ .Params.description }}">{{ else }}{{ end }}
-    {{ if isset .Params "thumbnail" }}<meta name="twitter:image" content="{{ .Params.thumbnail }}">{{ else }}{{ end }}
+    {{ if and (isset .Params "thumbnail") (ne .Params.thumbnail "") }}<meta name="twitter:image" content="{{ .Params.thumbnail }}">{{ else }}<meta name="twitter:image" content="{{ .Site.Params.thumbnail }}">{{ end }}
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ .Title }}">
     {{ if isset .Params "description" }}<meta itemprop="description" content="{{ .Params.description }}">{{ else }}{{ end }}
-    {{ if isset .Params "thumbnail" }}<meta itemprop="image" content="{{ .Params.thumbnail }}">{{ else }}{{ end }}
+    {{ if and (isset .Params "thumbnail") (ne .Params.thumbnail "") }}<meta itemprop="image" content="{{ .Params.thumbnail }}">{{ else }}<meta itemprop="image" content="{{ .Site.Params.thumbnail }}">{{ end }}
 
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
     <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/osseous.min.css">
