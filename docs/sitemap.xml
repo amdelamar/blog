@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/akka/</loc>
-    <lastmod>2019-11-19T20:49:35-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2019-11-19T20:49:35-08:00</lastmod>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://amdelamar.com/blog/category/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/git/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/github/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/gpg/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/openpgp/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/post/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/ssh/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/</loc>
+    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/akka/</loc>
     <lastmod>2019-11-19T20:49:35-08:00</lastmod>
   </url>
   
@@ -23,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/github/</loc>
-    <lastmod>2019-11-19T20:49:35-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/tags/heroku/</loc>
-    <lastmod>2019-11-19T20:49:35-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/post/</loc>
     <lastmod>2019-11-19T20:49:35-08:00</lastmod>
   </url>
   
@@ -44,11 +74,6 @@
   
   <url>
     <loc>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</loc>
-    <lastmod>2019-11-19T20:49:35-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/</loc>
     <lastmod>2019-11-19T20:49:35-08:00</lastmod>
   </url>
   

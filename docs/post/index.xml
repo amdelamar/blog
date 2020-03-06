@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2019 20:49:35 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 21:09:09 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setting Up Your SSH &amp; GPG Keys</title>
+      <link>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</link>
+      <pubDate>Thu, 05 Mar 2020 21:09:09 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</guid>
+      <description>I was migrating from PC to PC frequently, and kept re-creating my SSH and GPG keys over and over, so I had saved the commands in a little note file on my backup drive. I decided I&amp;rsquo;d just post them here so I can selfishly refer to it, but others can refer to it too.</description>
+    </item>
     
     <item>
       <title>Scala CI-CD with Github Actions and Heroku</title>

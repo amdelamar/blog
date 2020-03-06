@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>github on Austin Delamar</title>
-    <link>https://amdelamar.com/blog/tags/github/</link>
-    <description>Recent content in github on Austin Delamar</description>
+    <title>gpg on Austin Delamar</title>
+    <link>https://amdelamar.com/blog/tags/gpg/</link>
+    <description>Recent content in gpg on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Mar 2020 21:09:09 -0800</lastBuildDate>
     
-	<atom:link href="https://amdelamar.com/blog/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://amdelamar.com/blog/tags/gpg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</guid>
       <description>I was migrating from PC to PC frequently, and kept re-creating my SSH and GPG keys over and over, so I had saved the commands in a little note file on my backup drive. I decided I&amp;rsquo;d just post them here so I can selfishly refer to it, but others can refer to it too.</description>
-    </item>
-    
-    <item>
-      <title>Scala CI-CD with Github Actions and Heroku</title>
-      <link>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</link>
-      <pubDate>Tue, 19 Nov 2019 20:49:35 -0800</pubDate>
-      
-      <guid>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</guid>
-      <description>We&amp;rsquo;ll here&amp;rsquo;s a quick guide on how to continuously run sbt test on every pull request, and after merging deploy it to Heroku. And we&amp;rsquo; do this all within the comfort of GitHub, using their automation tool called GitHub Actions.</description>
     </item>
     
   </channel>

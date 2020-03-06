@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Nov 2019 04:49:35 UTC</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 05:09:09 UTC</lastBuildDate>
+    <item>
+      <title>Setting Up Your SSH &amp; GPG Keys</title>
+      <link>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</link>
+      <pubDate>Fri, 06 Mar 2020 05:09:09 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</guid>
+      <description>Here&#39;s a brief guide to setting up SSH &amp; GPG Keys for git and secure messaging.</description>
+    </item>
     <item>
       <title>Scala CI-CD with Github Actions and Heroku</title>
       <link>https://amdelamar.com/blog/scala-ci-cd-with-github-actions-and-heroku/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
       <description>Must have extensions for Firefox include: uBlock Origin, Privacy Badger, Bitwarden, and HTTPS Everywhere.</description>
-    </item>
-    <item>
-      <title>Custom Themes for ProtonMail</title>
-      <link>https://amdelamar.com/blog/custom-themes-for-protonmail/</link>
-      <pubDate>Sun, 18 Mar 2018 21:02:05 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/custom-themes-for-protonmail/</guid>
-      <description>3 years with ProtonMail and I&#39;ve got some more themes to share.</description>
     </item>
     
   </channel>

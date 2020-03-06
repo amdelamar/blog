@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Setting Up Your SSH &amp; GPG Keys">
+    <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+    <meta property="og:description" content="Here&#39;s a brief guide to setting up SSH &amp; GPG Keys for git and secure messaging.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Setting Up Your SSH &amp; GPG Keys">
+    <meta name="twitter:description" content="Here&#39;s a brief guide to setting up SSH &amp; GPG Keys for git and secure messaging.">
+    <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    
+    <meta itemprop="name" content="Setting Up Your SSH &amp; GPG Keys">
+    <meta itemprop="description" content="Here&#39;s a brief guide to setting up SSH &amp; GPG Keys for git and secure messaging.">
+    <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Setting Up Your SSH &amp; GPG Keys - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Setting Up Your SSH &amp; GPG Keys
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">4 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>I was migrating from PC to PC frequently, and kept re-creating my SSH and GPG
+keys over and over, so I had saved the commands in a little note file on my
+backup drive. I decided I&rsquo;d just post them here so I can selfishly refer to it,
+but others can refer to it too.</p>
+
+<p>Oh, and I assume you&rsquo;re running a terminal on a Unix/Linux/macOS system for this.
+If you&rsquo;re running Windows, I recommend installing git-bash or uninstalling Windows. 😆️</p>
+
+<p>Generate a SSH keypair:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa -b <span style="color:#1c01ce">4096</span> -C <span style="color:#c41a16">&#34;amdelamar@protonmail.com&#34;</span></code></pre></div>
+<p>Generate a GPG (OpenPGP) keypair:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gpg --full-generate-key
+<span style="color:#177500"># or</span>
+$ gpg --default-new-key-algo rsa4096 --gen-key</code></pre></div>
+<h3 id="configure-git">Configure Git</h3>
+
+<p>Now tell git about your keys so you can sign your commits, thus proving they came from you and not someone else.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#177500"># get your key&#39;s fingerprint/keyid</span>
+$ gpg --list-secret-keys --keyid-format LONG
+
+<span style="color:#177500"># put the fingerprint in the next command</span>
+$ git config --global user.signingkey 7D27A05B42E89DAD</code></pre></div>
+<p>To manually sign a commit, use <code>-S</code>:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git commit -S -m <span style="color:#c41a16">&#39;My signed commit!&#39;</span></code></pre></div>
+<p>To automatically sign all commits in all local repositories, use:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global commit.gpgsign true</code></pre></div>
+<h3 id="configure-github">Configure GitHub</h3>
+
+<p>Now tell GitHub about your keys so it can verify every time you git push your work.</p>
+
+<p>Copy the SSH public key:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat ~/.ssh/id_rsa.pub</code></pre></div>
+<p>Then paste into your GitHub Account: <a href="https://github.com/settings/keys" target="_blank">https://github.com/settings/keys</a></p>
+
+<p>Copy the GPG public key:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gpg --armor --export amdelamar@protonmail.com</code></pre></div>
+<p>Then paste into your GitHub Account: <a href="https://github.com/settings/keys" target="_blank">https://github.com/settings/keys</a></p>
+
+<h3 id="optional-upload-pgp-gpg-public-key-to-some-public-keyservers">(Optional) Upload PGP/GPG Public Key to some Public Keyservers</h3>
+
+<p>This allows other people to find your public key and use it to securely contact
+you or send you encrypted files/email. Otherwise they have to get your public
+key by other means, and its just more cumbersome to do it that way.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#177500"># get your key&#39;s fingerprint/keyid</span>
+$ gpg --list-secret-keys --keyid-format LONG
+
+<span style="color:#177500"># put the fingerprint in the next command</span>
+$ gpg --send-keys --keyserver pgp.mit.edu 7D27A05B42E89DAD
+$ gpg --send-keys --keyserver keyserver.ubuntu.com 7D27A05B42E89DAD</code></pre></div>
+<p>There are more public keyservers out there. Google can help you find them.</p>
+
+<h3 id="encrypt-a-file">Encrypt a File</h3>
+
+<p>Here&rsquo;s how to lock a file so only your friend can open it, with their public key.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gpg --encrypt --sign --armor -r jsdelamar@protonmail.com file.txt
+<span style="color:#177500"># outputs file.txt.asc</span></code></pre></div>
+<p>Now you can safely send/email this <code>.asc</code> file to them.</p>
+
+<h3 id="decrypt-a-file">Decrypt a File</h3>
+
+<p>Unlock a <code>.asc</code> file your friend sent to you with your private key.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gpg --decrypt response.txt.asc &gt; response.txt</code></pre></div>
+<p>Now you can read their message.</p>
+
+<h3 id="footnotes">Footnotes</h3>
+
+<p>If you&rsquo;ve ever signed up for <a href="https://keybase.io" target="_blank">Keybase</a> or <a href="https://protonmail.com" target="_blank">ProtonMail</a>, they each generate an
+OpenPGP keypair for you. But you probably shouldn&rsquo;t use these for git signing
+commits or GitHub. Mainly because if you&rsquo;re like me and keep moving computers a
+lot, losing these contact keypairs is more problematic because you shared them
+with people and/or keyservers and you&rsquo;d have to figure out how to revoke them
+and update your friends with your new public key, all-the-while ensuring them
+you&rsquo;re not hacked or something.</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Secure_Shell" target="_blank">SSH</a> = Secure Shell. A protocol for secure network login and communication.</li>
+<li><a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" target="_blank">PGP</a> = Pretty Good Privacy. An encryption program written in 1991. OpenPGP was formalized based on the format of the keys used.</li>
+<li><a href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard" target="_blank">GPG</a> = GNU Privacy Guard. An implementation of OpenPGP.</li>
+<li>Keypair = another name for a public key and corresponding private key set. You
+can share your public key with anyone, but don&rsquo;t ever share your private key.
+Check out the <a href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">Public-Key Cryptography</a> article on Wikipedia.</li>
+<li><a href="https://en.wikipedia.org/wiki/Public_key_fingerprint" target="_blank">Fingerprint</a> = a short identifier of a public key.</li>
+</ul>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="05 Mar 20 21:09 PST">Published: Mar 5, 2020</span><br/>
+        
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/git" class="text-secondary">git</a>, <a href="https://amdelamar.com/blog/tags/github" class="text-secondary">github</a>, <a href="https://amdelamar.com/blog/tags/ssh" class="text-secondary">ssh</a>, <a href="https://amdelamar.com/blog/tags/gpg" class="text-secondary">gpg</a>, <a href="https://amdelamar.com/blog/tags/openpgp" class="text-secondary">openpgp</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+
