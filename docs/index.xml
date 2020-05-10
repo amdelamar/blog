@@ -13,7 +13,7 @@
       <pubDate>Sun, 10 May 2020 20:49:53 UTC</pubDate>
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</guid>
-      <description>Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.</description>
+      <description>Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files in a distributed service.</description>
     </item>
     <item>
       <title>Setting Up Your SSH &amp; GPG Keys</title>

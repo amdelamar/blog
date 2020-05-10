@@ -17,7 +17,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
     <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
-    <meta property="og:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta property="og:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files in a distributed service.">
     <meta property="article:author" content="amdelamar"/>
 
     
@@ -25,12 +25,12 @@
     <meta name="twitter:site" content="https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/">
     <meta name="twitter:creator" content="@">
     <meta name="twitter:title" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
-    <meta name="twitter:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta name="twitter:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files in a distributed service.">
     <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
 
     
     <meta itemprop="name" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
-    <meta itemprop="description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta itemprop="description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files in a distributed service.">
     <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
 
     <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
@@ -98,10 +98,17 @@
         &nbsp;(&nbsp;<span id="read-time" title="avg time to read">10 min read</span>&nbsp;)&nbsp;
       </p>
       <p>
-        <p>So last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.
-Its a Scala app that uses <a href="https://doc.akka.io/docs/akka/current/stream/index.html" target="_blank">Akka Streams</a> to transfer
-large, multi-GB, files from one service to another via download URL and upload URL requests. Its a fairly simple
-service when you look at it from a high-level, but I was seeing an exception thrown that would cause it to crash.</p>
+        <p>Last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.</p>
+
+<p>Its a Scala app that uses <a href="https://doc.akka.io/docs/akka/current/stream/index.html" target="_blank">Akka Streams</a> to transfer
+large, multi-GB, files from one service to another via download and upload requests. A simple service that
+would help you archive a compressed zip that you wanted to keep in a storage bucket to extend its retention date.</p>
+
+<p>Akka Streams can easily handle the job and transfer files that are <em>larger</em> than the memory capacity of the
+container itself. And it also let us scale horizontally to keep up with the constant demand put on the service.
+But there was just one problem.</p>
+
+<p>I kept seeing an exception thrown that would cause some containers to crash:</p>
 
 <pre><code>[ERROR] Outgoing request stream error
 java.lang.IllegalStateException: Substream Source(EntitySource) cannot be materialized more than once
@@ -119,23 +126,23 @@ java.lang.IllegalStateException: Cannot open connection when slot still has an o
     # ...
 </code></pre>
 
-<p>Unfortunately, the stacktrace here doesn&rsquo;t show which line of the service&rsquo;s code is the culprit. So you&rsquo;d have
+<p>Unfortunately, the stacktrace here doesn&rsquo;t show which line of the service&rsquo;s code is the root cause. So I&rsquo;d have
 to check all usages of <code>Source[ByteString, Any]</code> and find any reuses of that object and remove it.</p>
 
-<p><a href="https://stackoverflow.com/q/44950948/7065245" target="_blank">Most</a> encounters with this exception are from Akka Http server-side code
-that doesn&rsquo;t properly unmarshall incoming requests without calling <code>toStrict</code> on them. But my service wasn&rsquo;t having that
-problem. It was during the Akka Http <em>client-side</em> calls where it was failing.</p>
+<p>When you Google this exception, <a href="https://stackoverflow.com/q/44950948/7065245" target="_blank">most</a> encounters other people have
+with this exception are from Akka Http server-side code that doesn&rsquo;t properly unmarshall incoming requests.
+i.e. They didn&rsquo;t call <code>toStrict</code> on request entity. But my service wasn&rsquo;t having that problem.
+It was coming from the Akka Http <em>client-side</em> calls. Somewhere in the code to upload files it was consuming
+the <code>Source</code> stream twice.</p>
 
 <p>&nbsp;</p>
 
 <h3 id="fixing-retries">Fixing Retries</h3>
 
-<p>My first thought, was because of <a href="https://github.com/softwaremill/retry" target="_blank">retries</a>.</p>
+<p>My first thought, was because of the <a href="https://github.com/softwaremill/retry" target="_blank">retry mechanism</a>.</p>
 
-<p>The function that handles the large file transfer stream from one URL to another has a retry mechanism,
-in which if a failure or network disconnect occurred, it would try the transfer again.</p>
-
-<p>The code looks like this:</p>
+<p>If a failure or network disconnect occurred during the file transfer stream, it would try the transfer again.
+The code basically looked like this:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">/**
 </span><span style="color:#177500"> * Transfers a file from the source URL to the destination URL.
 </span><span style="color:#177500"> */</span>
@@ -218,12 +225,12 @@ in which if a failure or network disconnect occurred, it would try the transfer 
 <p>It basically checks the result of the inner function and determines if a retry is needed.
 So since the result is an <code>Either[String, Done]</code> type, it will retry on <code>Left</code> errors and pass-through on <code>Right</code> objects.</p>
 
-<p>This looks ok at a glance&hellip; but its wrong.</p>
+<p>This looks fine at a glance&hellip; but its wrong.</p>
 
 <p>I have a retry around the uploadStream method. So if a failure is encountered during upload, like <code>EntityStreamException</code>,
 <code>TimeoutException</code>, or <code>SocketException</code>, then it would try again. But that means I would be consuming the <code>Source</code> stream
-more than once, and bam! <code>IllegalStateException: Substream Source(EntitySource) cannot be materialized more than once</code> happens.
-So I needed to fix this method to re-download if a failure occurs during upload.</p>
+more than once, and bam! <code>IllegalStateException:</code> <code>Substream Source(EntitySource) cannot be materialized more than once</code> happens.
+So I needed to fix this method to re-download if a failure occurs during upload. Rather than try to re-used the same stream again.</p>
 
 <p>This was easy to fix; I just moved the <code>retryPolicy</code> to wrap the overall function rather than individual requests.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">/**
@@ -253,13 +260,13 @@ So I needed to fix this method to re-download if a failure occurs during upload.
 <p>After a adding a unit-test and a quick code-review by my team, I merged the change and deployed the new service.
 However, to my surprise the exception occurred again&hellip;</p>
 
-<p><strong>WHAT?!</strong> How? I&rsquo;m clearly not consuming the source stream twice anymore.</p>
+<p><strong>WHAT?!</strong> How?</p>
 
-<p>Where the heck is Akka trying to reuse the source stream?</p>
+<p>I&rsquo;m clearly not consuming the source stream twice anymore. Where the heck is this trying to reuse the original source stream?</p>
 
 <ul>
-<li>The Stacktrace is not useful here</li>
-<li>The Exception was intermittent in the service</li>
+<li>The Stacktrace is not useful here since it doesn&rsquo;t have line numbers to my code</li>
+<li>The Exception occurred intermittently in the service, maybe once or twice every 10 minutes</li>
 <li>It didn&rsquo;t occur on any particular inputs, i.e. really large files, certain file types, etc.</li>
 </ul>
 
@@ -267,13 +274,13 @@ However, to my surprise the exception occurred again&hellip;</p>
 
 <h3 id="removing-retries">Removing Retries</h3>
 
-<p>I proceeded to spend the majority of a day tracking down this error. I was tracing requests, comparing logs and metrics
+<p>I proceeded to spend the majority of a day tracking down this error. I was tracing requests logs, comparing files and metrics
 with other instances of the service, hoping to find something. I setup the service on my MacBook and tried to reproduce
 the exception with fake data at first, then used real data afterwards. Eventually, after repeated attempts of transferring
 large files, I got the <code>IllegalStateException</code> to occur.</p>
 
-<p>The easiest way I could reproduce the error was by disconnecting the network connection for 17 seconds. I would start a
-stream transfer and let it begin uploading for a few seconds, then disconnect from the WiFi, wait, then reconnect.</p>
+<p>I was able to reproduce the error was by disconnecting the network connection for 17 seconds. I would start an instance
+at my desk and begin a stream transfer and let it begin uploading for a few seconds, then disconnect from the WiFi, wait, then reconnect.</p>
 
 <p>This caused Akka&rsquo;s <code>request-timeout = 20 s</code> to be tripped, and a second request was attempted. Only, I had previously
 disabled my <code>retryPolicy</code> using <code>retry.Directly(0)</code>, so there shouldn&rsquo;t be a second request after a failure like the WiFi
@@ -288,7 +295,7 @@ mechanism built-in. Its listed in the <a href="https://doc.akka.io/docs/akka-htt
 <span style="color:#177500"># (if the request can be safely retried) before giving up and returning an error.</span>
 <span style="color:#177500"># Set to zero to completely disable request retries.</span>
 max-retries = <span style="color:#1c01ce">5</span></code></pre></div>
-<p>Argh! How did I miss this?</p>
+<p><strong>Ahh!</strong> So I wasn&rsquo;t explicitly retrying, but Akka was. How did I miss this?</p>
 
 <p>After cursing for a bit and getting over the strong impostor syndrome feeling, I flipped it to <code>0</code> retries and tried my test
 again and it threw a different exception:</p>
@@ -310,7 +317,7 @@ connected during high-traffic/load, and it would just disconnect. Most likely fr
 that are unavoidable in distributed systems.</p>
 
 <p>Akka Http will then retry requests in those situations, making life easier for users. However, for my service it was the cause
-of the <code>Source</code> stream to be consumed twice. Akka was just trying to be helpful.</p>
+of the <code>Source</code> stream to be consumed twice. Simply because Akka Http was just trying to be helpful.</p>
 
 <p>&nbsp;</p>
 

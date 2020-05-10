@@ -17,7 +17,8 @@
       <pubDate>Sun, 10 May 2020 13:49:53 -0700</pubDate>
       
       <guid>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</guid>
-      <description>So last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems. Its a Scala app that uses Akka Streams to transfer large, multi-GB, files from one service to another via download URL and upload URL requests.</description>
+      <description>Last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.
+Its a Scala app that uses Akka Streams to transfer large, multi-GB, files from one service to another via download and upload requests.</description>
     </item>
     
     <item>
