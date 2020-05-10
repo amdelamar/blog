@@ -8,13 +8,20 @@ date: 2020-05-10T13:49:53-07:00
 thumbnail: ""
 banner: ""
 bannerCaption: ""
-description: "Decided I'd share how I resolved this error with Akka Http client-side code when streaming large files."
+description: "Decided I'd share how I resolved this error with Akka Http client-side code when streaming large files in a distributed service."
 ---
 
-So last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.
+Last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.
+
 Its a Scala app that uses [Akka Streams](https://doc.akka.io/docs/akka/current/stream/index.html) to transfer
-large, multi-GB, files from one service to another via download URL and upload URL requests. Its a fairly simple
-service when you look at it from a high-level, but I was seeing an exception thrown that would cause it to crash.
+large, multi-GB, files from one service to another via download and upload requests. A simple service that
+would help you archive a compressed zip that you wanted to keep in a storage bucket to extend its retention date.
+
+Akka Streams can easily handle the job and transfer files that are _larger_ than the memory capacity of the
+container itself. And it also let us scale horizontally to keep up with the constant demand put on the service.
+But there was just one problem.
+
+I kept seeing an exception thrown that would cause some containers to crash:
 
 ```
 [ERROR] Outgoing request stream error
@@ -33,23 +40,23 @@ java.lang.IllegalStateException: Cannot open connection when slot still has an o
 	# ...
 ```
 
-Unfortunately, the stacktrace here doesn't show which line of the service's code is the culprit. So you'd have
+Unfortunately, the stacktrace here doesn't show which line of the service's code is the root cause. So I'd have
 to check all usages of `Source[ByteString, Any]` and find any reuses of that object and remove it.
 
-[Most](https://stackoverflow.com/q/44950948/7065245) encounters with this exception are from Akka Http server-side code
-that doesn't properly unmarshall incoming requests without calling `toStrict` on them. But my service wasn't having that
-problem. It was during the Akka Http *client-side* calls where it was failing.
+When you Google this exception, [most](https://stackoverflow.com/q/44950948/7065245) encounters other people have
+with this exception are from Akka Http server-side code that doesn't properly unmarshall incoming requests.
+i.e. They didn't call `toStrict` on request entity. But my service wasn't having that problem.
+It was coming from the Akka Http *client-side* calls. Somewhere in the code to upload files it was consuming
+the `Source` stream twice.
 
 &nbsp;
 
 ### Fixing Retries
 
-My first thought, was because of [retries](https://github.com/softwaremill/retry).
+My first thought, was because of the [retry mechanism](https://github.com/softwaremill/retry).
 
-The function that handles the large file transfer stream from one URL to another has a retry mechanism,
-in which if a failure or network disconnect occurred, it would try the transfer again.
-
-The code looks like this:
+If a failure or network disconnect occurred during the file transfer stream, it would try the transfer again.
+The code basically looked like this:
 
 ```scala
 /**
@@ -136,12 +143,12 @@ Notice the `retryPolicy` with default `retry.Backoff(2, 1.second)` settings.
 It basically checks the result of the inner function and determines if a retry is needed.
 So since the result is an `Either[String, Done]` type, it will retry on `Left` errors and pass-through on `Right` objects.
 
-This looks ok at a glance... but its wrong.
+This looks fine at a glance... but its wrong.
 
 I have a retry around the uploadStream method. So if a failure is encountered during upload, like `EntityStreamException`,
 `TimeoutException`, or `SocketException`, then it would try again. But that means I would be consuming the `Source` stream
-more than once, and bam! `IllegalStateException: Substream Source(EntitySource) cannot be materialized more than once` happens.
-So I needed to fix this method to re-download if a failure occurs during upload.
+more than once, and bam! `IllegalStateException:` `Substream Source(EntitySource) cannot be materialized more than once` happens.
+So I needed to fix this method to re-download if a failure occurs during upload. Rather than try to re-used the same stream again.
 
 This was easy to fix; I just moved the `retryPolicy` to wrap the overall function rather than individual requests.
 
@@ -175,25 +182,25 @@ Ok, that looks better.
 After a adding a unit-test and a quick code-review by my team, I merged the change and deployed the new service.
 However, to my surprise the exception occurred again...
 
-**WHAT?!** How? I'm clearly not consuming the source stream twice anymore.
+**WHAT?!** How?
 
-Where the heck is Akka trying to reuse the source stream?
+I'm clearly not consuming the source stream twice anymore. Where the heck is this trying to reuse the original source stream?
 
-- The Stacktrace is not useful here
-- The Exception was intermittent in the service
+- The Stacktrace is not useful here since it doesn't have line numbers to my code
+- The Exception occurred intermittently in the service, maybe once or twice every 10 minutes
 - It didn't occur on any particular inputs, i.e. really large files, certain file types, etc.
 
 &nbsp;
 
 ### Removing Retries
 
-I proceeded to spend the majority of a day tracking down this error. I was tracing requests, comparing logs and metrics
+I proceeded to spend the majority of a day tracking down this error. I was tracing requests logs, comparing files and metrics
 with other instances of the service, hoping to find something. I setup the service on my MacBook and tried to reproduce
 the exception with fake data at first, then used real data afterwards. Eventually, after repeated attempts of transferring
 large files, I got the `IllegalStateException` to occur.
 
-The easiest way I could reproduce the error was by disconnecting the network connection for 17 seconds. I would start a
-stream transfer and let it begin uploading for a few seconds, then disconnect from the WiFi, wait, then reconnect.
+I was able to reproduce the error was by disconnecting the network connection for 17 seconds. I would start an instance
+at my desk and begin a stream transfer and let it begin uploading for a few seconds, then disconnect from the WiFi, wait, then reconnect.
 
 This caused Akka's `request-timeout = 20 s` to be tripped, and a second request was attempted. Only, I had previously
 disabled my `retryPolicy` using `retry.Directly(0)`, so there shouldn't be a second request after a failure like the WiFi
@@ -212,7 +219,7 @@ The docs clearly state:
 max-retries = 5
 ```
 
-Argh! How did I miss this?
+**Ahh!** So I wasn't explicitly retrying, but Akka was. How did I miss this?
 
 After cursing for a bit and getting over the strong impostor syndrome feeling, I flipped it to `0` retries and tried my test
 again and it threw a different exception:
@@ -238,7 +245,7 @@ connected during high-traffic/load, and it would just disconnect. Most likely fr
 that are unavoidable in distributed systems.
 
 Akka Http will then retry requests in those situations, making life easier for users. However, for my service it was the cause
-of the `Source` stream to be consumed twice. Akka was just trying to be helpful.
+of the `Source` stream to be consumed twice. Simply because Akka Http was just trying to be helpful.
 
 &nbsp;
 
