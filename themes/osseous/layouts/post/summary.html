@@ -2,7 +2,7 @@
   <span class="float-right text-secondary" title="{{ dateFormat "02 Jan 06 15:04 MST" .Date.Local }}">{{ .Date.Format "Jan 2, 2006" }}</span>
   <h4 class="margin-none">
     <a href="{{ .Permalink }}" {{ if .Draft }}class="text-secondary" title="This is unpublished"{{end}}>
-      {{ .Title | truncate 60 }}
+      {{ .Title | truncate 80 }}
       {{ if .Draft }}<span title="This is unpublished" class="text-secondary">[Draft]</span>{{end}}
     </a>
   </h4>

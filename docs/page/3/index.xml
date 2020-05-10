@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 05:09:09 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <item>
+      <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</title>
+      <link>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</link>
+      <pubDate>Mon, 12 Jun 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</guid>
+      <description>I was using Imgur as a CDN (content delivery network) to host all my images for my websites. Don&#39;t make the same mistake I did!</description>
+    </item>
     <item>
       <title>Mini PCs Will Replace Desktops</title>
       <link>https://amdelamar.com/blog/mini-pcs-will-replace-desktops/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</guid>
       <description>4 years of classes followed by 4 years of work taught me: you never really stop learning.</description>
-    </item>
-    <item>
-      <title>Tips for building Java applications on Windows</title>
-      <link>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</link>
-      <pubDate>Thu, 29 Sep 2016 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
-      <description>exe wrappers, install/uninstall, fancy icons, shortcuts with java arguments, windows registry entries, and more options for java apps.</description>
     </item>
     
   </channel>

@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 05:09:09 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <item>
+      <title>Tips for building Java applications on Windows</title>
+      <link>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</link>
+      <pubDate>Thu, 29 Sep 2016 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/tips-for-building-java-applications-on-windows/</guid>
+      <description>exe wrappers, install/uninstall, fancy icons, shortcuts with java arguments, windows registry entries, and more options for java apps.</description>
+    </item>
     <item>
       <title>Problems with building your own blogsite</title>
       <link>https://amdelamar.com/blog/problems-with-building-your-own-blogsite/</link>

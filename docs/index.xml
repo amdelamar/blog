@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Mar 2020 05:09:09 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <item>
+      <title>Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error</title>
+      <link>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</link>
+      <pubDate>Sun, 10 May 2020 20:49:53 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</guid>
+      <description>Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.</description>
+    </item>
     <item>
       <title>Setting Up Your SSH &amp; GPG Keys</title>
       <link>https://amdelamar.com/blog/setting-up-your-ssh-gpg-keys/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
       <description>Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.</description>
-    </item>
-    <item>
-      <title>My Favorite 4 Firefox Add-ons</title>
-      <link>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</link>
-      <pubDate>Tue, 15 May 2018 14:18:53 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</guid>
-      <description>Must have extensions for Firefox include: uBlock Origin, Privacy Badger, Bitwarden, and HTTPS Everywhere.</description>
     </item>
     
   </channel>

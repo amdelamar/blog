@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
+    <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+    <meta property="og:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
+    <meta name="twitter:description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    
+    <meta itemprop="name" content="Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error">
+    <meta itemprop="description" content="Decided I&#39;d share how I resolved this error with Akka Http client-side code when streaming large files.">
+    <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/amdelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/amdelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">10 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>So last week I was mostly heads-down trying to patch a distributed service we use at work that was having problems.
+Its a Scala app that uses <a href="https://doc.akka.io/docs/akka/current/stream/index.html" target="_blank">Akka Streams</a> to transfer
+large, multi-GB, files from one service to another via download URL and upload URL requests. Its a fairly simple
+service when you look at it from a high-level, but I was seeing an exception thrown that would cause it to crash.</p>
+
+<pre><code>[ERROR] Outgoing request stream error
+java.lang.IllegalStateException: Substream Source(EntitySource) cannot be materialized more than once
+    at akka.stream.impl.fusing.SubSource$$anon$13.createMaterializedTwiceException(StreamOfStreams.scala:830)
+    at akka.stream.impl.fusing.SubSource$$anon$13.&lt;init&gt;(StreamOfStreams.scala:801)
+    at akka.stream.impl.fusing.SubSource.createLogic(StreamOfStreams.scala:797)
+    at akka.stream.stage.GraphStage.createLogicAndMaterializedValue(GraphStage.scala:107)
+  # ...
+[ERROR] Slot execution failed. That's probably a bug. Please file a bug at https://github.com/akka/akka-http/issues. Slot is restarted.
+java.lang.IllegalStateException: Cannot open connection when slot still has an open connection
+    at akka.http.impl.engine.client.pool.NewHostConnectionPool$HostConnectionPoolStage$$anon$1$Slot.openConnection(NewHostConnectionPool.scala:389)
+    at akka.http.impl.engine.client.pool.SlotState$UnconnectedState.onNewRequest(SlotState.scala:182)
+    at akka.http.impl.engine.client.pool.SlotState$UnconnectedState.onNewRequest$(SlotState.scala:181)
+    at akka.http.impl.engine.client.pool.SlotState$Unconnected$.onNewRequest(SlotState.scala:192)
+    # ...
+</code></pre>
+
+<p>Unfortunately, the stacktrace here doesn&rsquo;t show which line of the service&rsquo;s code is the culprit. So you&rsquo;d have
+to check all usages of <code>Source[ByteString, Any]</code> and find any reuses of that object and remove it.</p>
+
+<p><a href="https://stackoverflow.com/q/44950948/7065245" target="_blank">Most</a> encounters with this exception are from Akka Http server-side code
+that doesn&rsquo;t properly unmarshall incoming requests without calling <code>toStrict</code> on them. But my service wasn&rsquo;t having that
+problem. It was during the Akka Http <em>client-side</em> calls where it was failing.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="fixing-retries">Fixing Retries</h3>
+
+<p>My first thought, was because of <a href="https://github.com/softwaremill/retry" target="_blank">retries</a>.</p>
+
+<p>The function that handles the large file transfer stream from one URL to another has a retry mechanism,
+in which if a failure or network disconnect occurred, it would try the transfer again.</p>
+
+<p>The code looks like this:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">/**
+</span><span style="color:#177500"> * Transfers a file from the source URL to the destination URL.
+</span><span style="color:#177500"> */</span>
+<span style="color:#a90d91">def</span> <span style="color:#000">transferFileStream1</span><span style="color:#000">(</span><span style="color:#000">downloadUrl</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                       <span style="color:#000">uploadUrl</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                       <span style="color:#000">downloadMethod</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span> <span style="color:#000">=</span> <span style="color:#3f6e75">HttpMethods</span><span style="color:#000">.</span><span style="color:#3f6e75">GET</span><span style="color:#000">,</span>
+                       <span style="color:#000">uploadMethod</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span> <span style="color:#000">=</span> <span style="color:#3f6e75">HttpMethods</span><span style="color:#000">.</span><span style="color:#3f6e75">PUT</span><span style="color:#000">,</span>
+                       <span style="color:#000">retryPolicy</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">retry.Policy</span> <span style="color:#000">=</span> <span style="color:#000">retry</span><span style="color:#000">.</span><span style="color:#3f6e75">Backoff</span><span style="color:#000">(</span><span style="color:#1c01ce">2</span><span style="color:#000">,</span> <span style="color:#1c01ce">1.</span><span style="color:#000">second</span><span style="color:#000">)</span>
+                      <span style="color:#000">)</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">Either</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#a90d91">Done</span><span style="color:#000">]]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+  <span style="color:#177500">// start download stream, and retry on failure
+</span><span style="color:#177500"></span>  <span style="color:#000">retryPolicy</span> <span style="color:#000">{</span> <span style="color:#177500">// &lt;-------------------------------------------- retry!
+</span><span style="color:#177500"></span>    <span style="color:#000">downloadStream</span><span style="color:#000">(</span><span style="color:#000">downloadUrl</span><span style="color:#000">,</span> <span style="color:#000">downloadMethod</span><span style="color:#000">)</span>
+  <span style="color:#000">}.</span><span style="color:#000">flatMap</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#000">error</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#3f6e75">Future</span><span style="color:#000">.</span><span style="color:#000">successful</span><span style="color:#000">(</span><span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#000">error</span><span style="color:#000">))</span>
+
+    <span style="color:#a90d91">case</span> <span style="color:#3f6e75">Right</span><span style="color:#000">((</span><span style="color:#000">contentLength</span><span style="color:#000">,</span> <span style="color:#000">stream</span><span style="color:#000">))</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#177500">// start upload stream, and retry on failure
+</span><span style="color:#177500"></span>      <span style="color:#000">retryPolicy</span> <span style="color:#000">{</span> <span style="color:#177500">// &lt;---------------------------------------- retry!
+</span><span style="color:#177500"></span>        <span style="color:#000">uploadStream</span><span style="color:#000">(</span><span style="color:#000">uploadUrl</span><span style="color:#000">,</span> <span style="color:#000">uploadMethod</span><span style="color:#000">,</span> <span style="color:#000">contentLength</span><span style="color:#000">,</span> <span style="color:#000">stream</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span>
+
+<span style="color:#a90d91">private</span> <span style="color:#a90d91">def</span> <span style="color:#000">downloadStream</span><span style="color:#000">(</span><span style="color:#000">url</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                           <span style="color:#000">method</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span><span style="color:#000">)</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">Either</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#000">(</span><span style="color:#a90d91">Long</span>, <span style="color:#a90d91">Source</span><span style="color:#000">[</span><span style="color:#a90d91">ByteString</span>, <span style="color:#a90d91">Any</span><span style="color:#000">])]]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+  <span style="color:#3f6e75">Http</span><span style="color:#000">().</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#3f6e75">HttpRequest</span><span style="color:#000">(</span>
+    <span style="color:#000">method</span> <span style="color:#a90d91">=</span> <span style="color:#000">method</span><span style="color:#000">,</span>
+    <span style="color:#000">uri</span> <span style="color:#a90d91">=</span> <span style="color:#000">url</span><span style="color:#000">,</span>
+    <span style="color:#000">entity</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">HttpEntity</span><span style="color:#000">.</span><span style="color:#3f6e75">Empty</span>
+  <span style="color:#000">)).</span><span style="color:#000">flatMap</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#000">resp</span><span style="color:#000">@HttpResponse</span><span style="color:#000">(</span><span style="color:#000">code</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">)</span> <span style="color:#a90d91">if</span> <span style="color:#000">!</span><span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">isSuccess</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#000">resp</span><span style="color:#000">.</span><span style="color:#000">entity</span><span style="color:#000">.</span><span style="color:#000">discardBytes</span><span style="color:#000">().</span><span style="color:#000">future</span><span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span> <span style="color:#a90d91">_</span> <span style="color:#a90d91">=&gt;</span>
+        <span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Error during Download. Code: </span><span style="color:#c41a16">${</span><span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">intValue</span><span style="color:#c41a16">}</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+
+    <span style="color:#a90d91">case</span> <span style="color:#000">resp</span><span style="color:#000">@HttpResponse</span><span style="color:#000">(</span><span style="color:#000">code</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">)</span> <span style="color:#a90d91">if</span> <span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">isSuccess</span><span style="color:#000">()</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#177500">// Get the size of the download stream
+</span><span style="color:#177500"></span>      <span style="color:#a90d91">val</span> <span style="color:#000">contentLengthOp</span> <span style="color:#a90d91">=</span> <span style="color:#000">resp</span><span style="color:#000">.</span><span style="color:#000">getHeader</span><span style="color:#000">(</span><span style="color:#c41a16">&#34;Content-Length&#34;</span><span style="color:#000">)</span>
+      <span style="color:#a90d91">val</span> <span style="color:#000">cl</span> <span style="color:#a90d91">=</span> <span style="color:#a90d91">if</span> <span style="color:#000">(</span><span style="color:#000">contentLengthOp</span><span style="color:#000">.</span><span style="color:#000">isPresent</span><span style="color:#000">)</span> <span style="color:#000">{</span>
+        <span style="color:#000">contentLengthOp</span><span style="color:#000">.</span><span style="color:#000">get</span><span style="color:#000">().</span><span style="color:#000">value</span><span style="color:#000">().</span><span style="color:#000">toLong</span>
+      <span style="color:#000">}</span> <span style="color:#a90d91">else</span> <span style="color:#000">{</span>
+        <span style="color:#1c01ce">0L</span>
+      <span style="color:#000">}</span>
+
+      <span style="color:#3f6e75">Future</span><span style="color:#000">.</span><span style="color:#000">successful</span><span style="color:#000">(</span><span style="color:#a90d91">if</span> <span style="color:#000">(</span><span style="color:#000">cl</span> <span style="color:#000">&lt;=</span> <span style="color:#1c01ce">0</span><span style="color:#000">)</span> <span style="color:#000">{</span>
+        <span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Expected download stream Content-Length &gt; 0, but got: </span><span style="color:#c41a16">$cl</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span> <span style="color:#a90d91">else</span> <span style="color:#000">{</span>
+        <span style="color:#3f6e75">Right</span><span style="color:#000">((</span><span style="color:#000">cl</span><span style="color:#000">,</span> <span style="color:#000">resp</span><span style="color:#000">.</span><span style="color:#000">entity</span><span style="color:#000">.</span><span style="color:#000">dataBytes</span><span style="color:#000">))</span>
+      <span style="color:#000">})</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span>
+
+<span style="color:#a90d91">private</span> <span style="color:#a90d91">def</span> <span style="color:#000">uploadStream</span><span style="color:#000">(</span><span style="color:#000">url</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                         <span style="color:#000">method</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span><span style="color:#000">,</span>
+                         <span style="color:#000">contentLength</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Long</span><span style="color:#000">,</span>
+                         <span style="color:#000">stream</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Source</span><span style="color:#000">[</span><span style="color:#a90d91">ByteString</span>, <span style="color:#a90d91">Any</span><span style="color:#000">])</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">Either</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#a90d91">Done</span><span style="color:#000">]]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+  <span style="color:#3f6e75">Http</span><span style="color:#000">().</span><span style="color:#000">singleRequest</span><span style="color:#000">(</span><span style="color:#3f6e75">HttpRequest</span><span style="color:#000">(</span>
+    <span style="color:#000">method</span> <span style="color:#a90d91">=</span> <span style="color:#000">method</span><span style="color:#000">,</span>
+    <span style="color:#000">uri</span> <span style="color:#a90d91">=</span> <span style="color:#000">url</span><span style="color:#000">,</span>
+    <span style="color:#000">entity</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">HttpEntity</span><span style="color:#000">(</span>
+      <span style="color:#000">contentType</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">ContentType</span><span style="color:#000">(</span><span style="color:#3f6e75">MediaTypes</span><span style="color:#000">.</span><span style="color:#000">`application/octet-stream`</span><span style="color:#000">),</span>
+      <span style="color:#000">contentLength</span> <span style="color:#a90d91">=</span> <span style="color:#000">contentLength</span><span style="color:#000">,</span>
+      <span style="color:#000">data</span> <span style="color:#a90d91">=</span> <span style="color:#000">stream</span>
+    <span style="color:#000">)</span>
+  <span style="color:#000">)).</span><span style="color:#000">flatMap</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#000">resp</span><span style="color:#000">@HttpResponse</span><span style="color:#000">(</span><span style="color:#000">code</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">)</span> <span style="color:#a90d91">if</span> <span style="color:#000">!</span><span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">isSuccess</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#000">resp</span><span style="color:#000">.</span><span style="color:#000">entity</span><span style="color:#000">.</span><span style="color:#000">discardBytes</span><span style="color:#000">().</span><span style="color:#000">future</span><span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span> <span style="color:#a90d91">_</span> <span style="color:#a90d91">=&gt;</span>
+        <span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Error during Upload. Code: </span><span style="color:#c41a16">${</span><span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">intValue</span><span style="color:#c41a16">}</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+
+    <span style="color:#a90d91">case</span> <span style="color:#000">resp</span><span style="color:#000">@HttpResponse</span><span style="color:#000">(</span><span style="color:#000">code</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">,</span> <span style="color:#a90d91">_</span><span style="color:#000">)</span> <span style="color:#a90d91">if</span> <span style="color:#000">code</span><span style="color:#000">.</span><span style="color:#000">isSuccess</span><span style="color:#000">()</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#000">resp</span><span style="color:#000">.</span><span style="color:#000">entity</span><span style="color:#000">.</span><span style="color:#000">discardBytes</span><span style="color:#000">().</span><span style="color:#000">future</span><span style="color:#000">.</span><span style="color:#000">map</span> <span style="color:#000">{</span> <span style="color:#a90d91">_</span> <span style="color:#a90d91">=&gt;</span>
+        <span style="color:#3f6e75">Right</span><span style="color:#000">(</span><span style="color:#3f6e75">Done</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Notice the <code>retryPolicy</code> with default <code>retry.Backoff(2, 1.second)</code> settings.</p>
+
+<p>It basically checks the result of the inner function and determines if a retry is needed.
+So since the result is an <code>Either[String, Done]</code> type, it will retry on <code>Left</code> errors and pass-through on <code>Right</code> objects.</p>
+
+<p>This looks ok at a glance&hellip; but its wrong.</p>
+
+<p>I have a retry around the uploadStream method. So if a failure is encountered during upload, like <code>EntityStreamException</code>,
+<code>TimeoutException</code>, or <code>SocketException</code>, then it would try again. But that means I would be consuming the <code>Source</code> stream
+more than once, and bam! <code>IllegalStateException: Substream Source(EntitySource) cannot be materialized more than once</code> happens.
+So I needed to fix this method to re-download if a failure occurs during upload.</p>
+
+<p>This was easy to fix; I just moved the <code>retryPolicy</code> to wrap the overall function rather than individual requests.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#177500">/**
+</span><span style="color:#177500"> * Transfers a file from the source URL to the destination URL.
+</span><span style="color:#177500"> */</span>
+<span style="color:#a90d91">def</span> <span style="color:#000">transferFileStream</span><span style="color:#000">(</span><span style="color:#000">downloadUrl</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                       <span style="color:#000">uploadUrl</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">String</span><span style="color:#000">,</span>
+                       <span style="color:#000">downloadMethod</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span> <span style="color:#000">=</span> <span style="color:#3f6e75">HttpMethods</span><span style="color:#000">.</span><span style="color:#3f6e75">GET</span><span style="color:#000">,</span>
+                       <span style="color:#000">uploadMethod</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">HttpMethod</span> <span style="color:#000">=</span> <span style="color:#3f6e75">HttpMethods</span><span style="color:#000">.</span><span style="color:#3f6e75">PUT</span><span style="color:#000">,</span>
+                       <span style="color:#000">retryPolicy</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">retry.Policy</span> <span style="color:#000">=</span> <span style="color:#000">retry</span><span style="color:#000">.</span><span style="color:#3f6e75">Backoff</span><span style="color:#000">(</span><span style="color:#1c01ce">2</span><span style="color:#000">,</span> <span style="color:#1c01ce">1.</span><span style="color:#000">second</span><span style="color:#000">)</span>
+                      <span style="color:#000">)</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Future</span><span style="color:#000">[</span><span style="color:#a90d91">Either</span><span style="color:#000">[</span><span style="color:#a90d91">String</span>, <span style="color:#a90d91">Done</span><span style="color:#000">]]</span> <span style="color:#a90d91">=</span> <span style="color:#000">{</span>
+  <span style="color:#000">retryPolicy</span> <span style="color:#000">{</span> <span style="color:#177500">// &lt;------------------------------ retry if any part of this function fails
+</span><span style="color:#177500"></span>    <span style="color:#177500">// start download stream
+</span><span style="color:#177500"></span>    <span style="color:#000">downloadStream</span><span style="color:#000">(</span><span style="color:#000">downloadUrl</span><span style="color:#000">,</span> <span style="color:#000">downloadMethod</span><span style="color:#000">)</span>
+      <span style="color:#000">.</span><span style="color:#000">flatMap</span> <span style="color:#000">{</span>
+        <span style="color:#a90d91">case</span> <span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#000">error</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#3f6e75">Future</span><span style="color:#000">.</span><span style="color:#000">successful</span><span style="color:#000">(</span><span style="color:#3f6e75">Left</span><span style="color:#000">(</span><span style="color:#000">error</span><span style="color:#000">))</span>
+
+        <span style="color:#a90d91">case</span> <span style="color:#3f6e75">Right</span><span style="color:#000">((</span><span style="color:#000">contentLength</span><span style="color:#000">,</span> <span style="color:#000">stream</span><span style="color:#000">))</span> <span style="color:#a90d91">=&gt;</span>
+          <span style="color:#177500">// start upload stream
+</span><span style="color:#177500"></span>          <span style="color:#000">uploadStream</span><span style="color:#000">(</span><span style="color:#000">uploadUrl</span><span style="color:#000">,</span> <span style="color:#000">uploadMethod</span><span style="color:#000">,</span> <span style="color:#000">contentLength</span><span style="color:#000">,</span> <span style="color:#000">stream</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>Ok, that looks better.</p>
+
+<p>After a adding a unit-test and a quick code-review by my team, I merged the change and deployed the new service.
+However, to my surprise the exception occurred again&hellip;</p>
+
+<p><strong>WHAT?!</strong> How? I&rsquo;m clearly not consuming the source stream twice anymore.</p>
+
+<p>Where the heck is Akka trying to reuse the source stream?</p>
+
+<ul>
+<li>The Stacktrace is not useful here</li>
+<li>The Exception was intermittent in the service</li>
+<li>It didn&rsquo;t occur on any particular inputs, i.e. really large files, certain file types, etc.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3 id="removing-retries">Removing Retries</h3>
+
+<p>I proceeded to spend the majority of a day tracking down this error. I was tracing requests, comparing logs and metrics
+with other instances of the service, hoping to find something. I setup the service on my MacBook and tried to reproduce
+the exception with fake data at first, then used real data afterwards. Eventually, after repeated attempts of transferring
+large files, I got the <code>IllegalStateException</code> to occur.</p>
+
+<p>The easiest way I could reproduce the error was by disconnecting the network connection for 17 seconds. I would start a
+stream transfer and let it begin uploading for a few seconds, then disconnect from the WiFi, wait, then reconnect.</p>
+
+<p>This caused Akka&rsquo;s <code>request-timeout = 20 s</code> to be tripped, and a second request was attempted. Only, I had previously
+disabled my <code>retryPolicy</code> using <code>retry.Directly(0)</code>, so there shouldn&rsquo;t be a second request after a failure like the WiFi
+getting disconnected, or so I thought.</p>
+
+<p>I missed the fact that Akka Http has its own retry
+mechanism built-in. Its listed in the <a href="https://doc.akka.io/docs/akka-http/current/configuration.html" target="_blank">Akka Http Configuration</a> as
+<code>akka.http.host-connection-pool.max-retries</code>.</p>
+
+<p>The docs clearly state:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#177500"># The maximum number of times failed requests are attempted again,</span>
+<span style="color:#177500"># (if the request can be safely retried) before giving up and returning an error.</span>
+<span style="color:#177500"># Set to zero to completely disable request retries.</span>
+max-retries = <span style="color:#1c01ce">5</span></code></pre></div>
+<p>Argh! How did I miss this?</p>
+
+<p>After cursing for a bit and getting over the strong impostor syndrome feeling, I flipped it to <code>0</code> retries and tried my test
+again and it threw a different exception:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">akka.io.TcpOutgoingConnection<span style="color:#000">$$</span>anon<span style="color:#000">$2</span>: Connect timeout of Some<span style="color:#000">(</span><span style="color:#1c01ce">30</span> seconds<span style="color:#000">)</span> expired
+    at java.base/java.util.concurrent.ForkJoinTask<span style="color:#000">$RunnableExecuteAction</span>.exec<span style="color:#000">(</span>ForkJoinTask.java:1426<span style="color:#000">)</span>
+    at java.base/java.util.concurrent.ForkJoinTask.doExec<span style="color:#000">(</span>ForkJoinTask.java:290<span style="color:#000">)</span>
+    at java.base/java.util.concurrent.ForkJoinPool<span style="color:#000">$WorkQueue</span>.topLevelExec<span style="color:#000">(</span>ForkJoinPool.java:1020<span style="color:#000">)</span>
+    at java.base/java.util.concurrent.ForkJoinPool.scan<span style="color:#000">(</span>ForkJoinPool.java:1656<span style="color:#000">)</span>
+    at java.base/java.util.concurrent.ForkJoinPool.runWorker<span style="color:#000">(</span>ForkJoinPool.java:1594<span style="color:#000">)</span>
+    at java.base/java.util.concurrent.ForkJoinWorkerThread.run<span style="color:#000">(</span>ForkJoinWorkerThread.java:177<span style="color:#000">)</span>
+Caused by: akka.io.TcpOutgoingConnection<span style="color:#000">$$</span>anon<span style="color:#000">$2</span>: Connect timeout of Some<span style="color:#000">(</span><span style="color:#1c01ce">30</span> seconds<span style="color:#000">)</span> expired</code></pre></div>
+<p>This is good! I can work with this.</p>
+
+<p>Now I can re-enable my <code>retryPolicy</code> to recover from this error and try the transfer again.
+Thus, I fixed the transfer service from crashing anymore. Hoorah!</p>
+
+<p>The reason the original exception occurred intermittently, was simply because the download service was having trouble staying
+connected during high-traffic/load, and it would just disconnect. Most likely from common &ldquo;network was lost&rdquo; type of situations
+that are unavoidable in distributed systems.</p>
+
+<p>Akka Http will then retry requests in those situations, making life easier for users. However, for my service it was the cause
+of the <code>Source</code> stream to be consumed twice. Akka was just trying to be helpful.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="thoroughly-check-your-akka-configs">Thoroughly Check your Akka Configs</h3>
+
+<p>Admittedly, I should have read the <a href="https://doc.akka.io/docs/akka-http/current/configuration.html" target="_blank">Akka Http Configuration</a> more carefully.
+There are lots of settings that can make or break your service if used incorrectly. But now this is a mistake I shouldn&rsquo;t
+encounter ever again, and hopefully you won&rsquo;t either.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="10 May 20 13:49 PDT">Published: May 10, 2020</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/akka" class="text-secondary">akka</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+
