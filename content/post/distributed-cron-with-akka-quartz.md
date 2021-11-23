@@ -27,7 +27,7 @@ _(Run tests every weekday at 12:30.)_
 
 The system has been around for a number of years, so the original authors had built a Scala service dependent on an external cron service called Metronome. The only problem was it sucked.
 
-It sucked for our use case because it meant we had to run our own DC/OS cluster in addition to our Scala service. Essentially a separate cloud platform just for one feature of our system. Not only was maintaining this cluster overkill for our feature, but we often had miss-firings from network issues. At the scheduled time, Metronome would run a script in a container. Only, the script was fragile `curl` callback to our Scala service.
+It sucked for our use case because it meant we had to run our own DC/OS cluster in addition to our Scala service. Essentially a separate cloud platform just for one feature of our system. Not only was maintaining this cluster overkill for our feature, but we often had miss-firings from network issues. At the scheduled time, Metronome would run a script in a container. Only, the script was a fragile `curl` callback to our Scala service.
 
 ```bash
 $ curl -X "POST" --connect-timeout 10 \
@@ -37,9 +37,9 @@ $ curl -X "POST" --connect-timeout 10 \
     'https://our_service/callback/<job_id>'
 ```
 
-We had retries configured, but not only would we still would encounter network issues every now and then that prevented a trigger from working, but the retires meant we may also have duplicate triggers. (In case of a timeout, the curl is tried again but the service eventually received both requests!)
+We had retries configured, but not only would we encounter network issues every now and then that prevented a trigger from working, but the retires meant we may also have duplicate triggers. (In case of a timeout, the curl is tried again but the service eventually received both requests!)
 
-Users were rightfully annoyed when their tests weren't run when they'd wake up the next day or their tests were ran two or three times. I wanted to fix that, but I also wanted us to stop maintaining a DC/OS cluster.
+Users were rightfully annoyed when their tests were not run when they'd wake up the next day, or their tests were ran two or three times. I wanted to fix that, but I also wanted us to stop maintaining a DC/OS cluster.
 
 We needed cron-as-a-service.
 
@@ -49,9 +49,9 @@ We needed cron-as-a-service.
 
 The cron the command-line utility itself is great. But there are several reasons why it doesn't fit with our CI system.
 
-First, we're not in need of running unix processes or scripts at trigger time. We want to run a user's tests. This involves sending a message to Kafka that kicks off the job elsewhere. Yes, we could probably write some Python script that publishes to Kafka, but that's more maintenance than we really need.
+First, we are not in need of running unix processes or scripts at trigger time. We want to run a user's tests. This involves sending a message to Kafka that kicks off the job elsewhere. Yes, we could probably write some Python script that publishes to Kafka, but that's more maintenance than we really need.
 
-Second, our system requires a Kafka consumer to read new scheduler events, whenever a user clicks to schedule a new set of tests. This consumer needs to read those events, create/modify the schedule, and write to a Cassandra database. We have a Scala service that already does this for us, so no sense in rewriting it into more Python scripts just to fit on a VM with cron.
+Second, our system requires a Kafka consumer to read new scheduler events, whenever a user clicks to schedule a new set of tests. This consumer needs to read those events, create/modify the schedule, and write to a Cassandra database. We have a Scala service that already does this for us, so no sense in rewriting it into more Python scripts.
 
 Lastly, we need to run thousands to tens of thousands of schedules. I'm not entirely sure a single cron process can handle that many. We'd need to maintain either one super beefy VM or somehow configure and distribute work across several VMs running cron with more scripts. Not something we're exactly excited about maintaining either.
 
@@ -82,7 +82,7 @@ We had two services making HTTP requests to each other. Why not just merge them 
 
 ### Building my own Cron Service
 
-Merging the cron functionality into our Scala service wasn't going to be easy. And anything I built needed to be able to do a few things:
+Merging the cron functionality into our Scala service wasn't going to be easy. Anything I built needed to be able to do a few things:
 
 1. Scale to thousands to tens of thousands of cron schedules.
 1. Add/modify/remove schedules on the fly.
@@ -158,7 +158,7 @@ class CronTriggerReceiverActor extends Actor {
 }
 ```
 
-I left out a few minor details, but the idea here is I'm scheduling cron jobs on the JVM in long-running multi-threaded constructs called actors. I've completely cut out Metronome and the dependency on external scheduling services.
+I left out a few minor details, but the idea here is I'm scheduling cron jobs on the JVM in long-running multi-threaded constructs called actors. I've completely cut out Metronome and the HTTP requests.
 
 We simply have one service to maintain instead of two:
 
@@ -173,7 +173,7 @@ Kafka in ┐
 Cassandra └ Kafka out
 ```
 
-To fast forward a bit, this was the solution I went for.
+To fast forward a bit, this was the solution I went for at work.
 
 I've had this running in production for several months now without issue. I'm very pleased with the results and very happy with out easy it was to implement.
 

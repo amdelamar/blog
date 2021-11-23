@@ -113,15 +113,15 @@ AT &quot;30 12 * * 1-5&quot;
 
 <p>The system has been around for a number of years, so the original authors had built a Scala service dependent on an external cron service called Metronome. The only problem was it sucked.</p>
 
-<p>It sucked for our use case because it meant we had to run our own DC/OS cluster in addition to our Scala service. Essentially a separate cloud platform just for one feature of our system. Not only was maintaining this cluster overkill for our feature, but we often had miss-firings from network issues. At the scheduled time, Metronome would run a script in a container. Only, the script was fragile <code>curl</code> callback to our Scala service.</p>
+<p>It sucked for our use case because it meant we had to run our own DC/OS cluster in addition to our Scala service. Essentially a separate cloud platform just for one feature of our system. Not only was maintaining this cluster overkill for our feature, but we often had miss-firings from network issues. At the scheduled time, Metronome would run a script in a container. Only, the script was a fragile <code>curl</code> callback to our Scala service.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -X <span style="color:#c41a16">&#34;POST&#34;</span> --connect-timeout <span style="color:#1c01ce">10</span> <span style="color:#c41a16">\
 </span><span style="color:#c41a16"></span>    --retry <span style="color:#1c01ce">5</span> <span style="color:#c41a16">\
 </span><span style="color:#c41a16"></span>    --retry-delay <span style="color:#1c01ce">1</span> <span style="color:#c41a16">\
 </span><span style="color:#c41a16"></span>    --retry-max-time <span style="color:#1c01ce">30</span> <span style="color:#c41a16">\
 </span><span style="color:#c41a16"></span>    <span style="color:#c41a16">&#39;https://our_service/callback/&lt;job_id&gt;&#39;</span></code></pre></div>
-<p>We had retries configured, but not only would we still would encounter network issues every now and then that prevented a trigger from working, but the retires meant we may also have duplicate triggers. (In case of a timeout, the curl is tried again but the service eventually received both requests!)</p>
+<p>We had retries configured, but not only would we encounter network issues every now and then that prevented a trigger from working, but the retires meant we may also have duplicate triggers. (In case of a timeout, the curl is tried again but the service eventually received both requests!)</p>
 
-<p>Users were rightfully annoyed when their tests weren&rsquo;t run when they&rsquo;d wake up the next day or their tests were ran two or three times. I wanted to fix that, but I also wanted us to stop maintaining a DC/OS cluster.</p>
+<p>Users were rightfully annoyed when their tests were not run when they&rsquo;d wake up the next day, or their tests were ran two or three times. I wanted to fix that, but I also wanted us to stop maintaining a DC/OS cluster.</p>
 
 <p>We needed cron-as-a-service.</p>
 
@@ -131,9 +131,9 @@ AT &quot;30 12 * * 1-5&quot;
 
 <p>The cron the command-line utility itself is great. But there are several reasons why it doesn&rsquo;t fit with our CI system.</p>
 
-<p>First, we&rsquo;re not in need of running unix processes or scripts at trigger time. We want to run a user&rsquo;s tests. This involves sending a message to Kafka that kicks off the job elsewhere. Yes, we could probably write some Python script that publishes to Kafka, but that&rsquo;s more maintenance than we really need.</p>
+<p>First, we are not in need of running unix processes or scripts at trigger time. We want to run a user&rsquo;s tests. This involves sending a message to Kafka that kicks off the job elsewhere. Yes, we could probably write some Python script that publishes to Kafka, but that&rsquo;s more maintenance than we really need.</p>
 
-<p>Second, our system requires a Kafka consumer to read new scheduler events, whenever a user clicks to schedule a new set of tests. This consumer needs to read those events, create/modify the schedule, and write to a Cassandra database. We have a Scala service that already does this for us, so no sense in rewriting it into more Python scripts just to fit on a VM with cron.</p>
+<p>Second, our system requires a Kafka consumer to read new scheduler events, whenever a user clicks to schedule a new set of tests. This consumer needs to read those events, create/modify the schedule, and write to a Cassandra database. We have a Scala service that already does this for us, so no sense in rewriting it into more Python scripts.</p>
 
 <p>Lastly, we need to run thousands to tens of thousands of schedules. I&rsquo;m not entirely sure a single cron process can handle that many. We&rsquo;d need to maintain either one super beefy VM or somehow configure and distribute work across several VMs running cron with more scripts. Not something we&rsquo;re exactly excited about maintaining either.</p>
 
@@ -163,7 +163,7 @@ Cassandra └ Kafka out
 
 <h3 id="building-my-own-cron-service">Building my own Cron Service</h3>
 
-<p>Merging the cron functionality into our Scala service wasn&rsquo;t going to be easy. And anything I built needed to be able to do a few things:</p>
+<p>Merging the cron functionality into our Scala service wasn&rsquo;t going to be easy. Anything I built needed to be able to do a few things:</p>
 
 <ol>
 <li>Scale to thousands to tens of thousands of cron schedules.</li>
@@ -233,7 +233,7 @@ Cassandra └ Kafka out
 </span><span style="color:#177500"></span>      <span style="color:#177500">// Publish to Kafka, etc.
 </span><span style="color:#177500"></span>  <span style="color:#000">}</span>
 <span style="color:#000">}</span></code></pre></div>
-<p>I left out a few minor details, but the idea here is I&rsquo;m scheduling cron jobs on the JVM in long-running multi-threaded constructs called actors. I&rsquo;ve completely cut out Metronome and the dependency on external scheduling services.</p>
+<p>I left out a few minor details, but the idea here is I&rsquo;m scheduling cron jobs on the JVM in long-running multi-threaded constructs called actors. I&rsquo;ve completely cut out Metronome and the HTTP requests.</p>
 
 <p>We simply have one service to maintain instead of two:</p>
 
@@ -247,7 +247,7 @@ Cassandra └ Kafka out
 Cassandra └ Kafka out
 </code></pre>
 
-<p>To fast forward a bit, this was the solution I went for.</p>
+<p>To fast forward a bit, this was the solution I went for at work.</p>
 
 <p>I&rsquo;ve had this running in production for several months now without issue. I&rsquo;m very pleased with the results and very happy with out easy it was to implement.</p>
 
