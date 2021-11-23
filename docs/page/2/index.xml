@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <item>
+      <title>Learn to Code Cloud-Native Apps for Free</title>
+      <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
+      <pubDate>Thu, 24 May 2018 14:32:57 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
+      <description>Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.</description>
+    </item>
     <item>
       <title>My Favorite 4 Firefox Add-ons</title>
       <link>https://amdelamar.com/blog/my-favorite-4-firefox-add-ons/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
       <description>Lot of workplace problems can be avoided by not assuming things. Communication is vital and when you assume something, it means you&#39;re not talking.</description>
-    </item>
-    <item>
-      <title>HTTPS Required</title>
-      <link>https://amdelamar.com/blog/https-required/</link>
-      <pubDate>Thu, 29 Jun 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/https-required/</guid>
-      <description>Websites should default to HTTPS now. Its safe to assume everyone should be using it already or planning to implement it.</description>
     </item>
     
   </channel>

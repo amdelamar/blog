@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 13:49:53 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Nov 2021 19:20:46 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>akka</title>
       <link>https://amdelamar.com/blog/tags/akka/</link>
-      <pubDate>Sun, 10 May 2020 13:49:53 -0700</pubDate>
+      <pubDate>Mon, 22 Nov 2021 19:20:46 -0800</pubDate>
       
       <guid>https://amdelamar.com/blog/tags/akka/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>cron</title>
+      <link>https://amdelamar.com/blog/tags/cron/</link>
+      <pubDate>Mon, 22 Nov 2021 19:20:46 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/tags/cron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>scala</title>
       <link>https://amdelamar.com/blog/tags/scala/</link>
-      <pubDate>Sun, 10 May 2020 13:49:53 -0700</pubDate>
+      <pubDate>Mon, 22 Nov 2021 19:20:46 -0800</pubDate>
       
       <guid>https://amdelamar.com/blog/tags/scala/</guid>
       <description></description>

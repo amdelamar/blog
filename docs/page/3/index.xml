@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <item>
+      <title>HTTPS Required</title>
+      <link>https://amdelamar.com/blog/https-required/</link>
+      <pubDate>Thu, 29 Jun 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/https-required/</guid>
+      <description>Websites should default to HTTPS now. Its safe to assume everyone should be using it already or planning to implement it.</description>
+    </item>
     <item>
       <title>Don&#39;t Violate Imgur&#39;s Terms of Service by using it as a CDN</title>
       <link>https://amdelamar.com/blog/dont-violate-imgurs-terms-of-service-by-using-it-as-a-cdn/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
       <description>Especially if you use a weak password for multiple websites. Enabling 2FA everywhere will help protect your internet identity from the next big leak.</description>
-    </item>
-    <item>
-      <title>What I learned 4 years after College</title>
-      <link>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</link>
-      <pubDate>Mon, 21 Nov 2016 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</guid>
-      <description>4 years of classes followed by 4 years of work taught me: you never really stop learning.</description>
     </item>
     
   </channel>

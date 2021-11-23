@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Distributed Cron as a Service with Akka and Quartz">
+    <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+    <meta property="og:description" content="A short story of how I used Akka and Quartz to build a simple but reliable, distributed cron service.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Distributed Cron as a Service with Akka and Quartz">
+    <meta name="twitter:description" content="A short story of how I used Akka and Quartz to build a simple but reliable, distributed cron service.">
+    <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    
+    <meta itemprop="name" content="Distributed Cron as a Service with Akka and Quartz">
+    <meta itemprop="description" content="A short story of how I used Akka and Quartz to build a simple but reliable, distributed cron service.">
+    <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Distributed Cron as a Service with Akka and Quartz - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/adelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/adelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Distributed Cron as a Service with Akka and Quartz
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">13 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>At work my team runs a large continuous integration system.</p>
+
+<p>It supports running tests on pull requests, but it also allows scheduling times to run tests against a certain branches as often as users like. A form of regression testing.</p>
+
+<p>In a nutshell, users could configure:</p>
+
+<pre><code>RUN &quot;make tests&quot;
+ON &quot;repository/branch&quot;
+AT &quot;30 12 * * 1-5&quot;
+</code></pre>
+
+<p><em>(Run tests every weekday at 12:30.)</em></p>
+
+<p>The system has been around for a number of years, so the original authors had built a Scala service dependent on an external cron service called Metronome. The only problem was it sucked.</p>
+
+<p>It sucked for our use case because it meant we had to run our own DC/OS cluster in addition to our Scala service. Essentially a separate cloud platform just for one feature of our system. Not only was maintaining this cluster overkill for our feature, but we often had miss-firings from network issues. At the scheduled time, Metronome would run a script in a container. Only, the script was fragile <code>curl</code> callback to our Scala service.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -X <span style="color:#c41a16">&#34;POST&#34;</span> --connect-timeout <span style="color:#1c01ce">10</span> <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>    --retry <span style="color:#1c01ce">5</span> <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>    --retry-delay <span style="color:#1c01ce">1</span> <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>    --retry-max-time <span style="color:#1c01ce">30</span> <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>    <span style="color:#c41a16">&#39;https://our_service/callback/&lt;job_id&gt;&#39;</span></code></pre></div>
+<p>We had retries configured, but not only would we still would encounter network issues every now and then that prevented a trigger from working, but the retires meant we may also have duplicate triggers. (In case of a timeout, the curl is tried again but the service eventually received both requests!)</p>
+
+<p>Users were rightfully annoyed when their tests weren&rsquo;t run when they&rsquo;d wake up the next day or their tests were ran two or three times. I wanted to fix that, but I also wanted us to stop maintaining a DC/OS cluster.</p>
+
+<p>We needed cron-as-a-service.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="why-not-just-cron">Why not just Cron</h3>
+
+<p>The cron the command-line utility itself is great. But there are several reasons why it doesn&rsquo;t fit with our CI system.</p>
+
+<p>First, we&rsquo;re not in need of running unix processes or scripts at trigger time. We want to run a user&rsquo;s tests. This involves sending a message to Kafka that kicks off the job elsewhere. Yes, we could probably write some Python script that publishes to Kafka, but that&rsquo;s more maintenance than we really need.</p>
+
+<p>Second, our system requires a Kafka consumer to read new scheduler events, whenever a user clicks to schedule a new set of tests. This consumer needs to read those events, create/modify the schedule, and write to a Cassandra database. We have a Scala service that already does this for us, so no sense in rewriting it into more Python scripts just to fit on a VM with cron.</p>
+
+<p>Lastly, we need to run thousands to tens of thousands of schedules. I&rsquo;m not entirely sure a single cron process can handle that many. We&rsquo;d need to maintain either one super beefy VM or somehow configure and distribute work across several VMs running cron with more scripts. Not something we&rsquo;re exactly excited about maintaining either.</p>
+
+<p>For these reasons, we need a simple cron-as-a-service. Preferably with a smaller footprint than a DC/OS cluster for Metronome.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="i-o-is-a-problem">I/O is a Problem</h3>
+
+<p>I looked on the web for a self-hosted cron service that would fit our needs but didn&rsquo;t find any. There are plenty of third-party hosted services that you can pay for. Even a few unmaintained open source projects that use different tech stacks that might&rsquo;ve worked for us if we put in the effort to update them.</p>
+
+<p>Ultimately, what prevented me from using any of those options was this itch I had; <strong>I don&rsquo;t want to have to make HTTP calls at all.</strong> You see, the biggest problem was these missed and duplicate triggers from networking issues between two services we hosted.</p>
+
+<pre><code>Kafka in ┐
+  |---------|                              |-----------|
+  | Scala   | --- POST/PUT schedules ----&gt; | Metronome |
+  | service |                              | (DC/OS    |
+  |         | &lt;--------- POST callback --- | Cluster)  |
+  |---------|            on each trigger   |-----------|
+    |     |
+Cassandra └ Kafka out
+</code></pre>
+
+<p>We had two services making HTTP requests to each other. Why not just merge them together? We run and maintain both services already. And if we aren&rsquo;t making HTTP calls to our self then we won&rsquo;t have missed triggers or duplicate firings. As someone once said, &ldquo;The best network request is no network request.&rdquo; So my quest to build a cron service in Scala had started. Not only can we reduce the pain of maintaining a DC/OS cluster or any external cron service, but we can improve the CI system for our users as well with increased reliability.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="building-my-own-cron-service">Building my own Cron Service</h3>
+
+<p>Merging the cron functionality into our Scala service wasn&rsquo;t going to be easy. And anything I built needed to be able to do a few things:</p>
+
+<ol>
+<li>Scale to thousands to tens of thousands of cron schedules.</li>
+<li>Add/modify/remove schedules on the fly.</li>
+<li>Send as few I/O network requests as possible. (0 HTTP requests)</li>
+<li>Log and report failures.</li>
+<li>Automatically restart if the service dies for throws an Exception.</li>
+</ol>
+
+<p>Right away I looked at <a href="http://www.quartz-scheduler.org/" target="_blank">Quartz</a>, a Java library for scheduling tasks. It has a simple method to schedule a task based on a <a href="http://www.quartz-scheduler.org/documentation/quartz-2.3.0/examples/Example3.html" target="_blank">cron expression</a> like <code>30 12 * * 1-5</code>, so its a natural fit. Quartz is open-source, has been around since ~2009. Its production hardened and actively maintained (latest commit at the time of this writing was Sept 8th 2021).</p>
+
+<p>My service is written in Scala, but I can import and use Java code in Scala projects so its not big a problem. I was curious though if someone created a wrapper for Quartz for Scala projects, as those sometimes are friendlier to use because of <code>null</code> checks and returning <code>Option/Either/Try</code> instead of throwing Exceptions. It appears <a href="https://github.com/dchenbecker/Scuartz" target="_blank">someone did make a wrapper</a> and open-source it, but its 12+ years out of date.</p>
+
+<p>Eventually, I stumbled on a slightly different wrapper; <a href="https://github.com/enragedginger/akka-quartz-scheduler" target="_blank">Akka Quartz Scheduler</a>. This Scala library uses Quartz for Akka actor scheduling. <strong>Bingo.</strong> This is exactly what I needed in one convenient package. I failed to mention this up until now, but my Scala service was already built with <a href="https://akka.io/" target="_blank">Akka</a>. I not only just happened to find a project built in <em>the language I needed</em>, but also <em>in the toolkit I use</em>, with the Quartz library underneath. This was going to be a cakewalk.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="akka-actors-with-quartz-triggers">Akka actors with Quartz triggers</h3>
+
+<p>I&rsquo;m not going to go into Akka actor details, but in a nutshell I can write a <code>CronJobSchedulerActor</code> to schedule when to fire triggers, and pipe trigger messages to a another actor <code>CronTriggerReceiverActor</code> to receive and take action on those triggers, such as publishing a message to Kafka to start the CI tests elsewhere down the line.</p>
+
+<p>The code roughly can be:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">import</span> <span style="color:#000">akka.actor.Actor</span>
+<span style="color:#a90d91">import</span> <span style="color:#000">com.typesafe.akka.extension.quartz.QuartzSchedulerExtension</span>
+
+<span style="color:#a90d91">case</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">Cron</span><span style="color:#000">(</span><span style="color:#000">id</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">UUID</span><span style="color:#000">,</span> <span style="color:#000">expression</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">CronExpression</span><span style="color:#000">)</span>
+<span style="color:#a90d91">case</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">CronTrigger</span><span style="color:#000">(</span><span style="color:#000">cron</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Cron</span><span style="color:#000">)</span>
+
+<span style="color:#a90d91">class</span> <span style="color:#3f6e75">CronJobSchedulerActor</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">Actor</span> <span style="color:#000">{</span>
+
+  <span style="color:#177500">// Create our Quartz Scheduler with the Actor system
+</span><span style="color:#177500"></span>  <span style="color:#a90d91">val</span> <span style="color:#000">quartz</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">QuartzSchedulerExtension</span><span style="color:#000">(</span><span style="color:#000">context</span><span style="color:#000">.</span><span style="color:#000">system</span><span style="color:#000">)</span>
+
+  <span style="color:#177500">// Create our Receiver actor
+</span><span style="color:#177500"></span>  <span style="color:#a90d91">val</span> <span style="color:#000">receiverRef</span> <span style="color:#a90d91">=</span> <span style="color:#000">system</span><span style="color:#000">.</span><span style="color:#000">actorOf</span><span style="color:#000">(</span><span style="color:#3f6e75">Props</span><span style="color:#000">(</span><span style="color:#000">classOf</span><span style="color:#000">[</span><span style="color:#a90d91">CronTriggerReceiverActor</span><span style="color:#000">]))</span>
+
+  <span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">receive</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Receive</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#000">c</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Cron</span> <span style="color:#000">=&gt;</span>
+      <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Received a new cron job: </span><span style="color:#c41a16">${</span><span style="color:#000">c</span><span style="color:#c41a16">}</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#177500">// ...
+</span><span style="color:#177500"></span>      <span style="color:#177500">// Write to Cassandra db, etc.
+</span><span style="color:#177500"></span>
+      <span style="color:#a90d91">try</span> <span style="color:#000">{</span>
+        <span style="color:#177500">// Schedule it now
+</span><span style="color:#177500"></span>        <span style="color:#000">quartz</span><span style="color:#000">.</span><span style="color:#000">createJobSchedule</span><span style="color:#000">(</span>
+          <span style="color:#000">name</span> <span style="color:#a90d91">=</span> <span style="color:#c41a16">&#34;Some Schedule ID&#34;</span><span style="color:#000">,</span>
+          <span style="color:#000">receiver</span> <span style="color:#a90d91">=</span> <span style="color:#000">receiverRef</span><span style="color:#000">,</span> <span style="color:#177500">// When it fires, send a message to receiver
+</span><span style="color:#177500"></span>          <span style="color:#000">msg</span> <span style="color:#a90d91">=</span> <span style="color:#3f6e75">CronTrigger</span><span style="color:#000">(</span><span style="color:#000">c</span><span style="color:#000">),</span> <span style="color:#177500">// the message
+</span><span style="color:#177500"></span>          <span style="color:#000">cronExpression</span> <span style="color:#a90d91">=</span> <span style="color:#000">c</span><span style="color:#000">.</span><span style="color:#000">expression</span><span style="color:#000">.</span><span style="color:#000">toString</span>
+        <span style="color:#000">)</span>
+        <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Successfully scheduled new cron job: </span><span style="color:#c41a16">${</span><span style="color:#000">c</span><span style="color:#c41a16">}</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span> <span style="color:#a90d91">catch</span> <span style="color:#000">{</span>
+        <span style="color:#a90d91">case</span> <span style="color:#000">e</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">IllegalArgumentException</span> <span style="color:#000">=&gt;</span>
+          <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Failed to schedule new cron job: </span><span style="color:#c41a16">${</span><span style="color:#000">c</span><span style="color:#c41a16">}</span><span style="color:#c41a16"> due to: </span><span style="color:#c41a16">$e</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#000">}</span>
+  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>And the receiver:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a90d91">import</span> <span style="color:#000">akka.actor.Actor</span>
+
+<span style="color:#a90d91">class</span> <span style="color:#3f6e75">CronTriggerReceiverActor</span> <span style="color:#a90d91">extends</span> <span style="color:#3f6e75">Actor</span> <span style="color:#000">{</span>
+
+  <span style="color:#a90d91">override</span> <span style="color:#a90d91">def</span> <span style="color:#000">receive</span><span style="color:#a90d91">:</span> <span style="color:#a90d91">Receive</span> <span style="color:#000">=</span> <span style="color:#000">{</span>
+    <span style="color:#a90d91">case</span> <span style="color:#3f6e75">CronTrigger</span><span style="color:#000">(</span><span style="color:#000">c</span><span style="color:#000">)</span> <span style="color:#a90d91">=&gt;</span>
+      <span style="color:#000">println</span><span style="color:#000">(</span><span style="color:#c41a16">s&#34;Got a cron trigger! </span><span style="color:#c41a16">${</span><span style="color:#000">c</span><span style="color:#c41a16">}</span><span style="color:#c41a16">&#34;</span><span style="color:#000">)</span>
+      <span style="color:#177500">// ...
+</span><span style="color:#177500"></span>      <span style="color:#177500">// Publish to Kafka, etc.
+</span><span style="color:#177500"></span>  <span style="color:#000">}</span>
+<span style="color:#000">}</span></code></pre></div>
+<p>I left out a few minor details, but the idea here is I&rsquo;m scheduling cron jobs on the JVM in long-running multi-threaded constructs called actors. I&rsquo;ve completely cut out Metronome and the dependency on external scheduling services.</p>
+
+<p>We simply have one service to maintain instead of two:</p>
+
+<pre><code>Kafka in ┐
+  |---------|
+  | Scala   |
+  | service |
+  |         |
+  |---------|
+    |     |
+Cassandra └ Kafka out
+</code></pre>
+
+<p>To fast forward a bit, this was the solution I went for.</p>
+
+<p>I&rsquo;ve had this running in production for several months now without issue. I&rsquo;m very pleased with the results and very happy with out easy it was to implement.</p>
+
+<p>If you&rsquo;d like to see this in action, I wrote a <a href="https://github.com/amdelamar/akka-cron-demo" target="_blank">demo app over here</a> on GitHub.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>There are so many other cool things about this as well that I could write multiple blog posts about, but I&rsquo;ll summarize them quickly. The big one being:</p>
+
+<ul>
+<li>No more HTTP requests are called.</li>
+</ul>
+
+<p>Not only does less I/O mean we eliminated a whole class of errors from ever occurring again, but we increased our trigger latency from time of user&rsquo;s schedule to trigger firing time. We are not waiting for network packets to arrive in order to start our CI tests. We just, start them immediately.</p>
+
+<ul>
+<li>Its more precise than before.</li>
+</ul>
+
+<p>We technically get something that Metronome does not support; seconds. Metronome could schedule down to-the-minute, e.g. <code>30 12 * * 1-5</code> where the first item was minute of the hour 0-59 (e.g. <code>30</code> being the 30 minute mark). But Quartz supports down <em>to-the-second</em>, so we now can give our users more precise options, e.g. <code>15 30 12 * * 1-5</code> for triggering on the 15th second of 12:30. Sweet!</p>
+
+<ul>
+<li>I can now run this as a scalable, distributed, app on a cloud platform.</li>
+</ul>
+
+<p>Akka opens doors for building highly concurrent, distributed, thread-safe applications. I can run this Scala app on multiple JVMs across multiple data centers. If one instance of my service goes down for whatever reason, the cloud platform will spin up a new container, and the triggers can be read from Cassandra db again, be scheduled again, and everything continues on its way. The actors themselves can scale up to millions per GB of RAM if I desire. The actor messages can be persisted across reboots in storage. And Quartz itself can schedule <a href="http://www.quartz-scheduler.org/documentation/quartz-2.3.0/configuration/ConfigThreadPool.html" target="_blank">thousands of jobs in a few threads</a>. These toolkits are much more powerful than a single VM running crontab and making <code>curl</code> callbacks. All the while, with less complexity than running a DC/OS cluster with Metronome.</p>
+
+<p>I&rsquo;m not sure why the original authors didn&rsquo;t use Quartz and Akka before, as both of these libraries were available at its inception. Perhaps they simply didn&rsquo;t know about them. But whatever the case may be, I&rsquo;m glad I got the chance to scratch that itch instead of ignoring it.</p>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="22 Nov 21 19:20 PST">Published: Nov 22, 2021</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/akka" class="text-secondary">akka</a>, <a href="https://amdelamar.com/blog/tags/cron" class="text-secondary">cron</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+

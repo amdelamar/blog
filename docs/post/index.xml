@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Austin Delamar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 13:49:53 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 22 Nov 2021 19:20:46 -0800</lastBuildDate>
     
 	<atom:link href="https://amdelamar.com/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Distributed Cron as a Service with Akka and Quartz</title>
+      <link>https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/</link>
+      <pubDate>Mon, 22 Nov 2021 19:20:46 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/</guid>
+      <description>At work my team runs a large continuous integration system.
+It supports running tests on pull requests, but it also allows scheduling times to run tests against a certain branches as often as users like. A form of regression testing.</description>
+    </item>
     
     <item>
       <title>Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error</title>

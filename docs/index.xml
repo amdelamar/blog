@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 May 2020 20:49:53 UTC</lastBuildDate>
+    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <item>
+      <title>Distributed Cron as a Service with Akka and Quartz</title>
+      <link>https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/</link>
+      <pubDate>Tue, 23 Nov 2021 03:20:46 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/distributed-cron-as-a-service-with-akka-and-quartz/</guid>
+      <description>A short story of how I used Akka and Quartz to build a simple but reliable, distributed cron service.</description>
+    </item>
     <item>
       <title>Fixing Akka Http &#34;Substream Source cannot be materialized more than once&#34; error</title>
       <link>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
       <description>An incomplete list of Google product alternatives that respect your privacy and data, or don&#39;t track your online activity.</description>
-    </item>
-    <item>
-      <title>Learn to Code Cloud-Native Apps for Free</title>
-      <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
-      <pubDate>Thu, 24 May 2018 14:32:57 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</guid>
-      <description>Developers can learn how to build apps using Docker, Kubernetes, Cloud Foundry and more. All without paying anything out of pocket.</description>
     </item>
     
   </channel>
