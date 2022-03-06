@@ -116,7 +116,7 @@ idea .</code></pre></div>
 
 <p><img src="../images/2022/intellij-scala-seed.png" alt="IntelliJ Screenshot" /></p>
 
-<p>Its lightning fast, and doesn&rsquo;t prompt for questions or walk through a &ldquo;new project&rdquo; wizard.</p>
+<p>Its lightning fast, and doesn&rsquo;t prompt for questions or walk through any &ldquo;new project&rdquo; wizard.</p>
 
 <ul>
 <li>Want a different Scala or sbt version? Easy, just edit the version.</li>
@@ -132,13 +132,10 @@ But hey, if you wanted those things, its pretty clear what to do.</p>
 
 <h3 id="why-not-use-sbt-new">Why not use &lsquo;sbt new&rsquo;?</h3>
 
-<p>There&rsquo;s this neat command to generate a new project as well:</p>
+<p>There&rsquo;s also this command to generate a new project:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbt new sbt/scala-seed.g8</code></pre></div>
-<p>It prompts for a project name, creates a folder with that name, and
+<p>It prompts for a project name and creates a folder with that name. Then it
 downloads a template from GitHub for you with a build.sbt file, build.properties file, a main class, and a test class. Neat!</p>
-
-<p>I still need to create my <code>.gitignore</code> manually, because the template
-doesn&rsquo;t provide one. But no big deal.</p>
 
 <p>But wait, it sets up a project with <strong>4 year old versions</strong> of
 scala <code>2.12.8</code> and sbt <code>1.2.7</code>. Huh. that&rsquo;s kindof annoying for a template to
@@ -183,29 +180,29 @@ much to ask?</p>
 
 <p>I guess I should just create my own template right?</p>
 
-<ul>
-<li>No thanks.</li>
-</ul>
+<p>No thanks.</p>
 
-<p>First, I&rsquo;d have to learn the Giter8 (g8) template structure. And honestly, I&rsquo;m
-not really excited to learn a separate tool just to create some files on my
-computer.</p>
+<p>First, I&rsquo;d have to learn the <a href="http://www.foundweekends.org/giter8/template.html" target="_blank">Giter8</a> (g8) template structure.
+And honestly, I&rsquo;m not really excited to learn a separate tool just to create
+a few files on my computer.</p>
 
 <p>Second, I already have to keep my projects updated, but now I&rsquo;d also have
-to keep my g8 templates updated too. That&rsquo;s more work on myself.</p>
+to keep my g8 templates updated too. That&rsquo;s putting more work on myself.</p>
 
-<p>Third, The problem that these g8 templates are trying to solve for me is not
+<p>Finally, The problem that these g8 templates are trying to solve for me is not
 really a problem at all, just a minor inconvenience. Hence, why I have a few
 <code>mkdir</code> and <code>echo</code> commands I use instead.</p>
 
 <p>Alternatively, I could take my commands above and create a shell script or
 sbt plugin that does exactly that, right?</p>
 
-<p>Remember that XKCD comic about a system to <a href="https://xkcd.com/974/" target="_blank">pass salt</a>?</p>
+<p>Well, do remember that XKCD comic about a system to <a href="https://xkcd.com/974/" target="_blank">pass salt</a>?</p>
 
 <p>Go scroll back up to the top, re-read my silly commands I use,
 and tell me that designing, testing, implementing, and publishing,
 a shell script or sbt plugin, will save me time in the long run.</p>
+
+<p>If you use <code>sbt new</code> and like it, that&rsquo;s great. But its not for me.</p>
 
 <p>&nbsp;</p>
 
@@ -224,7 +221,7 @@ a shell script or sbt plugin, will save me time in the long run.</p>
       <p id="post-metadata" class="text-secondary">
         <br/>
         <span id="date" title="05 Mar 22 16:22 PST">Published: Mar 5, 2022</span><br/>
-        
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
         <span id="tags">Tags:
         <a href="https://amdelamar.com/blog/tags/sbt" class="text-secondary">sbt</a>, <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/git" class="text-secondary">git</a></span>
       </p>

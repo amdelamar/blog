@@ -33,7 +33,7 @@ This creates a compile-able Scala project and opens it with IntelliJ IDEA.
 
 ![IntelliJ Screenshot](/images/2022/intellij-scala-seed.png)
 
-Its lightning fast, and doesn't prompt for questions or walk through a "new project" wizard.
+Its lightning fast, and doesn't prompt for questions or walk through any "new project" wizard.
 
 - Want a different Scala or sbt version? Easy, just edit the version.
 - Want `src/java/` folders? Easy, add them to the `mkdir` line.
@@ -47,17 +47,14 @@ But hey, if you wanted those things, its pretty clear what to do.
 
 ### Why not use 'sbt new'?
 
-There's this neat command to generate a new project as well:
+There's also this command to generate a new project:
 
 ```bash
 sbt new sbt/scala-seed.g8
 ```
 
-It prompts for a project name, creates a folder with that name, and
+It prompts for a project name and creates a folder with that name. Then it
 downloads a template from GitHub for you with a build.sbt file, build.properties file, a main class, and a test class. Neat!
-
-I still need to create my `.gitignore` manually, because the template
-doesn't provide one. But no big deal.
 
 But wait, it sets up a project with **4 year old versions** of
 scala `2.12.8` and sbt `1.2.7`. Huh. that's kindof annoying for a template to
@@ -110,27 +107,29 @@ much to ask?
 
 I guess I should just create my own template right?
 
-- No thanks.
+No thanks.
 
-First, I'd have to learn the Giter8 (g8) template structure. And honestly, I'm
-not really excited to learn a separate tool just to create some files on my
-computer.
+First, I'd have to learn the [Giter8](http://www.foundweekends.org/giter8/template.html) (g8) template structure.
+And honestly, I'm not really excited to learn a separate tool just to create
+a few files on my computer.
 
 Second, I already have to keep my projects updated, but now I'd also have
-to keep my g8 templates updated too. That's more work on myself.
+to keep my g8 templates updated too. That's putting more work on myself.
 
-Third, The problem that these g8 templates are trying to solve for me is not
+Finally, The problem that these g8 templates are trying to solve for me is not
 really a problem at all, just a minor inconvenience. Hence, why I have a few
 `mkdir` and `echo` commands I use instead.
 
 Alternatively, I could take my commands above and create a shell script or
 sbt plugin that does exactly that, right?
 
-Remember that XKCD comic about a system to [pass salt](https://xkcd.com/974/)?
+Well, do remember that XKCD comic about a system to [pass salt](https://xkcd.com/974/)?
 
 Go scroll back up to the top, re-read my silly commands I use,
 and tell me that designing, testing, implementing, and publishing,
 a shell script or sbt plugin, will save me time in the long run.
+
+If you use `sbt new` and like it, that's great. But its not for me.
 
 &nbsp;
 
