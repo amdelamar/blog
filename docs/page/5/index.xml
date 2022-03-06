@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Austin Delamar</title>
+    <link>https://amdelamar.com/blog/</link>
+    <description>This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.</description>
+    <author>amdelamar</author>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <item>
+      <title>First!</title>
+      <link>https://amdelamar.com/blog/first/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/first/</guid>
+      <description>This post marks when I started building my first blog on Wix, a website-generating factory.</description>
+    </item>
+    
+  </channel>
+</rss>

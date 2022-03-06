@@ -3,17 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://amdelamar.com/blog/tags/akka/</loc>
-    <lastmod>2021-11-22T19:20:46-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/</loc>
-    <lastmod>2021-11-22T19:20:46-08:00</lastmod>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://amdelamar.com/blog/category/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/git/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/post/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/sbt/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/scala/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/setting-up-a-scala-project-with-sbt/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/</loc>
+    <lastmod>2022-03-05T16:22:50-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://amdelamar.com/blog/tags/akka/</loc>
     <lastmod>2021-11-22T19:20:46-08:00</lastmod>
   </url>
   
@@ -33,28 +63,8 @@
   </url>
   
   <url>
-    <loc>https://amdelamar.com/blog/post/</loc>
-    <lastmod>2021-11-22T19:20:46-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/scala/</loc>
-    <lastmod>2021-11-22T19:20:46-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/</loc>
-    <lastmod>2021-11-22T19:20:46-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://amdelamar.com/blog/fixing-akka-http-substream-source-cannot-be-materialized-more-than-once-error/</loc>
     <lastmod>2020-05-10T13:49:53-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://amdelamar.com/blog/tags/git/</loc>
-    <lastmod>2020-03-05T21:09:09-08:00</lastmod>
   </url>
   
   <url>

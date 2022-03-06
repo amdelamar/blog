@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <item>
+      <title>Alternatives to Google Products</title>
+      <link>https://amdelamar.com/blog/alternatives-to-google-products/</link>
+      <pubDate>Fri, 22 Jun 2018 19:33:05 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/alternatives-to-google-products/</guid>
+      <description>An incomplete list of Google product alternatives that respect your privacy and data, or don&#39;t track your online activity.</description>
+    </item>
     <item>
       <title>Learn to Code Cloud-Native Apps for Free</title>
       <link>https://amdelamar.com/blog/learn-to-code-cloud-native-apps-for-free/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
       <description>Offline-first, SPA, PWA, Docker, Blockchain, and more! There are lots of trends growing right now that its getting hard to keep up.</description>
-    </item>
-    <item>
-      <title>At the Office, Don&#39;t Assume Everything</title>
-      <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
-      <pubDate>Fri, 07 Jul 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
-      <description>Lot of workplace problems can be avoided by not assuming things. Communication is vital and when you assume something, it means you&#39;re not talking.</description>
     </item>
     
   </channel>

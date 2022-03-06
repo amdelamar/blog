@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <item>
+      <title>At the Office, Don&#39;t Assume Everything</title>
+      <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</guid>
+      <description>Lot of workplace problems can be avoided by not assuming things. Communication is vital and when you assume something, it means you&#39;re not talking.</description>
+    </item>
     <item>
       <title>HTTPS Required</title>
       <link>https://amdelamar.com/blog/https-required/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
       <description>Online advertising had its chance, but plagued itself with spam, pop-ups, auto-playing videos, unregulated data collection, and even some unintentional  viruses.</description>
-    </item>
-    <item>
-      <title>You should use Two-Factor Authentication now</title>
-      <link>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</link>
-      <pubDate>Wed, 04 Jan 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
-      <description>Especially if you use a weak password for multiple websites. Enabling 2FA everywhere will help protect your internet identity from the next big leak.</description>
     </item>
     
   </channel>

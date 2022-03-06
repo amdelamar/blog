@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Nov 2021 03:20:46 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <item>
+      <title>You should use Two-Factor Authentication now</title>
+      <link>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</link>
+      <pubDate>Wed, 04 Jan 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</guid>
+      <description>Especially if you use a weak password for multiple websites. Enabling 2FA everywhere will help protect your internet identity from the next big leak.</description>
+    </item>
     <item>
       <title>What I learned 4 years after College</title>
       <link>https://amdelamar.com/blog/what-i-learned-4-years-after-college/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/2nd-update/</guid>
       <description>Its been quite a while, since I started my website, and now I&#39;m getting back into things.</description>
-    </item>
-    <item>
-      <title>First!</title>
-      <link>https://amdelamar.com/blog/first/</link>
-      <pubDate>Wed, 12 Mar 2014 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/first/</guid>
-      <description>This post marks when I started building my first blog on Wix, a website-generating factory.</description>
     </item>
     
   </channel>

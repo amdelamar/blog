@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/setting-up-a-scala-project-with-sbt/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/setting-up-a-scala-project-with-sbt/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Setting Up a Scala Project With Sbt">
+    <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+    <meta property="og:description" content="This is how I set up a new Scala project with sbt.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/setting-up-a-scala-project-with-sbt/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Setting Up a Scala Project With Sbt">
+    <meta name="twitter:description" content="This is how I set up a new Scala project with sbt.">
+    <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    
+    <meta itemprop="name" content="Setting Up a Scala Project With Sbt">
+    <meta itemprop="description" content="This is how I set up a new Scala project with sbt.">
+    <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Setting Up a Scala Project With Sbt - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/adelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/adelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Setting Up a Scala Project With Sbt
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">6 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>How do you start your brand new Scala projects with sbt?</p>
+
+<p>Here&rsquo;s what I do:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir my-project <span style="color:#000">&amp;&amp;</span> <span style="color:#a90d91">cd</span> <span style="color:#000">$_</span>
+git init
+<span style="color:#a90d91">echo</span> <span style="color:#c41a16">&#39;.bsp/
+</span><span style="color:#c41a16">.idea/
+</span><span style="color:#c41a16">target/&#39;</span> &gt; .gitignore
+mkdir -p src/<span style="color:#000">{</span>main,test<span style="color:#000">}</span>/<span style="color:#000">{</span>scala,resources<span style="color:#000">}</span> project
+<span style="color:#a90d91">echo</span> <span style="color:#c41a16">&#39;sbt.version=1.6.2&#39;</span> &gt; ./project/build.properties
+<span style="color:#a90d91">echo</span> <span style="color:#c41a16">&#39;name := &#34;MyProject&#34;
+</span><span style="color:#c41a16">version := &#34;0.1.0&#34;
+</span><span style="color:#c41a16">scalaVersion := &#34;2.13.8&#34;&#39;</span> &gt; build.sbt
+idea .</code></pre></div>
+<p>This creates a compile-able Scala project and opens it with IntelliJ IDEA.</p>
+
+<p><img src="../images/2022/intellij-scala-seed.png" alt="IntelliJ Screenshot" /></p>
+
+<p>Its lightning fast, and doesn&rsquo;t prompt for questions or walk through a &ldquo;new project&rdquo; wizard.</p>
+
+<ul>
+<li>Want a different Scala or sbt version? Easy, just edit the version.</li>
+<li>Want <code>src/java/</code> folders? Easy, add them to the <code>mkdir</code> line.</li>
+<li>Want Vim, Atom, or another editor, instead of IntelliJ? Easy, peazy.</li>
+</ul>
+
+<p>Finally, it does not assume any plugins/dependencies,
+and does not give you boilerplate code either (that you have to delete anyway).
+But hey, if you wanted those things, its pretty clear what to do.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="why-not-use-sbt-new">Why not use &lsquo;sbt new&rsquo;?</h3>
+
+<p>There&rsquo;s this neat command to generate a new project as well:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbt new sbt/scala-seed.g8</code></pre></div>
+<p>It prompts for a project name, creates a folder with that name, and
+downloads a template from GitHub for you with a build.sbt file, build.properties file, a main class, and a test class. Neat!</p>
+
+<p>I still need to create my <code>.gitignore</code> manually, because the template
+doesn&rsquo;t provide one. But no big deal.</p>
+
+<p>But wait, it sets up a project with <strong>4 year old versions</strong> of
+scala <code>2.12.8</code> and sbt <code>1.2.7</code>. Huh. that&rsquo;s kindof annoying for a template to
+be outdated. Why didn&rsquo;t it prompt be for versions to use like it did for the project name to use?</p>
+
+<p>After looking around online, I guess what we actually meant to use was:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbt new scala/scala-seed.g8</code></pre></div>
+<p>Ah ok, so that&rsquo;s the up-to-date template right?</p>
+
+<p>Well this one uses the more recent scala <code>2.13.7</code> and the latest sbt <code>1.6.2</code>.
+So that&rsquo;s better. Only this time
+we have some strange choices made for you in what consists of a &ldquo;new&rdquo; scala
+project. For example the build has to <code>import Dependencies</code> from a different file
+instead of simply putting dependencies in the <code>build.sbt</code> file.
+And there are references to <code>ThisBuild</code> several times, which are not needed
+unless you&rsquo;re doing a multi-project build.</p>
+
+<p>Since these templates are on <a href="https://github.com/scala?q=g8&amp;type=all&amp;language=&amp;sort=" target="_blank">GitHub</a>, theres actually some discussion in <a href="https://github.com/scala/scala-seed.g8/issues/2" target="_blank">issue #2</a>
+from 2016 about simplifing the build. It looks like its been bouncing around
+for years without any movement. We can wait around a few more years for this
+to get cleaned up&hellip; or just try a different template.</p>
+
+<p>How about we try:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sbt new scala/hello-world.g8</code></pre></div>
+<p>This one uses a recent-ish scala <code>2.13.3</code> and the latest sbt <code>1.6.2</code>, so that&rsquo;s
+pretty good. We could update the version to <code>2.13.8</code> as needed if this template
+is nice and clean&hellip; err&hellip; the <a href="https://github.com/scala/hello-world.g8/blob/main/src/main/g8/build.sbt" target="_blank">build.sbt</a>
+contains a wall of comments explaining sbt concepts and instructions. I
+can see the comments being useful for beginners for their first project. But
+this isn&rsquo;t our first project anymore. If I used this as my starting template,
+I would be deleting a lot, each and every time I start a new project in Scala.</p>
+
+<p>I just wanted to start coding a new Scala project. I don&rsquo;t want to have to
+additional setup work to update versions, reorganize dependencies into one file,
+delete boilerplate/hello-world code or comment walls. I&rsquo;d like a command that&rsquo;s
+repeatable and sets up a <em>minimal</em>, clean-slate, project in Scala. Is that so
+much to ask?</p>
+
+<p>&nbsp;</p>
+
+<h3 id="make-your-own-template">Make your own template!</h3>
+
+<p>I guess I should just create my own template right?</p>
+
+<ul>
+<li>No thanks.</li>
+</ul>
+
+<p>First, I&rsquo;d have to learn the Giter8 (g8) template structure. And honestly, I&rsquo;m
+not really excited to learn a separate tool just to create some files on my
+computer.</p>
+
+<p>Second, I already have to keep my projects updated, but now I&rsquo;d also have
+to keep my g8 templates updated too. That&rsquo;s more work on myself.</p>
+
+<p>Third, The problem that these g8 templates are trying to solve for me is not
+really a problem at all, just a minor inconvenience. Hence, why I have a few
+<code>mkdir</code> and <code>echo</code> commands I use instead.</p>
+
+<p>Alternatively, I could take my commands above and create a shell script or
+sbt plugin that does exactly that, right?</p>
+
+<p>Remember that XKCD comic about a system to <a href="https://xkcd.com/974/" target="_blank">pass salt</a>?</p>
+
+<p>Go scroll back up to the top, re-read my silly commands I use,
+and tell me that designing, testing, implementing, and publishing,
+a shell script or sbt plugin, will save me time in the long run.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="links">Links:</h3>
+
+<ul>
+<li>&ldquo;Why doesn&rsquo;t sbt create project files?&rdquo; <a href="https://stackoverflow.com/q/6395070" target="_blank">https://stackoverflow.com/q/6395070</a></li>
+<li>&ldquo;Create Simple Project SBT 0.10.X&rdquo; <a href="https://stackoverflow.com/q/7392474" target="_blank">https://stackoverflow.com/q/7392474</a></li>
+<li>&ldquo;Creating new Scala project using SBT?&rdquo; <a href="https://stackoverflow.com/q/22401739" target="_blank">https://stackoverflow.com/q/22401739</a></li>
+<li>&ldquo;sbtmkdirs&rdquo; <a href="https://alvinalexander.com/sbtmkdirs/" target="_blank">https://alvinalexander.com/sbtmkdirs/</a></li>
+<li>&ldquo;Gradle Scala project on IntelliJ&rdquo; <a href="https://stackoverflow.com/q/49498515" target="_blank">https://stackoverflow.com/q/49498515</a></li>
+</ul>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="05 Mar 22 16:22 PST">Published: Mar 5, 2022</span><br/>
+        
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/sbt" class="text-secondary">sbt</a>, <a href="https://amdelamar.com/blog/tags/scala" class="text-secondary">scala</a>, <a href="https://amdelamar.com/blog/tags/git" class="text-secondary">git</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2019</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+
