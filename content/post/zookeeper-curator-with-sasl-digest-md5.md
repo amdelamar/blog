@@ -289,7 +289,7 @@ public class Application {
         // String pass = System.getenv("ZOOKEEPER_PASSWORD");
 
         // Zookeeper client
-        Configuration.setConfiguration(new ZookeeperSASLConfiguration("super", "1234"));
+        Configuration.setConfiguration(new ZookeeperSASLConfig("super", "1234"));
         CuratorFramework curator = CuratorFrameworkFactory.newClient(
             "127.0.0.1:2181",
             new ExponentialBackoffRetry(1000, 3)
@@ -353,6 +353,12 @@ Failing as expected! Demonstrating our Zookeeper server is rejecting bad credent
 
 &nbsp;
 
+### Summary
+
+In conclusion, I think securing Zookeeper with SASL Digest-MD5 is a more appropriate introductory authentication mechanism than with SASL Kerberos. This blog post could have easily been a few pages of a large book. However, I'm not against using Kerberos, it definitely has its strengths and offers greater security than a username & password. Its just not for beginners.
+
+&nbsp;
+
 ### Links:
 
 - Apache Zookeeper https://zookeeper.apache.org
@@ -360,6 +366,6 @@ Failing as expected! Demonstrating our Zookeeper server is rejecting bad credent
 - Docker Zookeeper https://hub.docker.com/_/zookeeper/
 - O'REILLY Zookeeper: Distributed Process Coordination https://www.oreilly.com/library/view/zookeeper/9781449361297/
 - SASL https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer
-- Kerberos https://en.wikipedia.org/wiki/Kerberos_(protocol)
+- Kerberos [https://en.wikipedia.org/wiki/Kerberos_(protocol)](https://en.wikipedia.org/wiki/Kerberos_(protocol))
 - Digest-MD5 https://en.wikipedia.org/wiki/Digest_access_authentication
 - JAAS https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service

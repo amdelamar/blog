@@ -95,7 +95,7 @@
         
       </h2>
       <p class="margin-none text-secondary">
-        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">13 min read</span>&nbsp;)&nbsp;
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">14 min read</span>&nbsp;)&nbsp;
       </p>
       <p>
         <p>I finished a <a href="https://www.oreilly.com/library/view/zookeeper/9781449361297/" target="_blank">book</a> recently about <a href="https://zookeeper.apache.org" target="_blank">Apache Zookeeper</a>
@@ -331,7 +331,7 @@ default values given, so we don&rsquo;t need to change them here.</p>
 </span><span style="color:#177500"></span>        <span style="color:#177500">// String pass = System.getenv(&#34;ZOOKEEPER_PASSWORD&#34;);
 </span><span style="color:#177500"></span>
         <span style="color:#177500">// Zookeeper client
-</span><span style="color:#177500"></span>        <span style="color:#000">Configuration</span>.<span style="color:#836c28">setConfiguration</span>(<span style="color:#a90d91">new</span> <span style="color:#000">ZookeeperSASLConfiguration</span>(<span style="color:#c41a16">&#34;super&#34;</span>, <span style="color:#c41a16">&#34;1234&#34;</span>));
+</span><span style="color:#177500"></span>        <span style="color:#000">Configuration</span>.<span style="color:#836c28">setConfiguration</span>(<span style="color:#a90d91">new</span> <span style="color:#000">ZookeeperSASLConfig</span>(<span style="color:#c41a16">&#34;super&#34;</span>, <span style="color:#c41a16">&#34;1234&#34;</span>));
         <span style="color:#000">CuratorFramework curator </span><span style="color:#000">=</span> <span style="color:#000">CuratorFrameworkFactory</span>.<span style="color:#836c28">newClient</span>(
             <span style="color:#c41a16">&#34;127.0.0.1:2181&#34;</span>,
             <span style="color:#a90d91">new</span> <span style="color:#000">ExponentialBackoffRetry</span>(<span style="color:#000">1000</span>, <span style="color:#000">3</span>)
@@ -385,6 +385,12 @@ Process finished with <span style="color:#a90d91">exit</span> code <span style="
 
 <p>&nbsp;</p>
 
+<h3 id="summary">Summary</h3>
+
+<p>In conclusion, I think securing Zookeeper with SASL Digest-MD5 is a more appropriate introductory authentication mechanism than with SASL Kerberos. This blog post could have easily been a few pages of a large book. However, I&rsquo;m not against using Kerberos, it definitely has its strengths and offers greater security than a username &amp; password. Its just not for beginners.</p>
+
+<p>&nbsp;</p>
+
 <h3 id="links">Links:</h3>
 
 <ul>
@@ -393,7 +399,7 @@ Process finished with <span style="color:#a90d91">exit</span> code <span style="
 <li>Docker Zookeeper <a href="https://hub.docker.com/_/zookeeper/" target="_blank">https://hub.docker.com/_/zookeeper/</a></li>
 <li>O&rsquo;REILLY Zookeeper: Distributed Process Coordination <a href="https://www.oreilly.com/library/view/zookeeper/9781449361297/" target="_blank">https://www.oreilly.com/library/view/zookeeper/9781449361297/</a></li>
 <li>SASL <a href="https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer" target="_blank">https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer</a></li>
-<li>Kerberos <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol" target="_blank">https://en.wikipedia.org/wiki/Kerberos_(protocol</a>)</li>
+<li>Kerberos <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol)" target="_blank">https://en.wikipedia.org/wiki/Kerberos_(protocol)</a></li>
 <li>Digest-MD5 <a href="https://en.wikipedia.org/wiki/Digest_access_authentication" target="_blank">https://en.wikipedia.org/wiki/Digest_access_authentication</a></li>
 <li>JAAS <a href="https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service" target="_blank">https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service</a></li>
 </ul>
