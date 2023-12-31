@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 23:46:46 UTC</lastBuildDate>
+    <item>
+      <title>Why I use Ad-Block</title>
+      <link>https://amdelamar.com/blog/why-i-use-ad-block/</link>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
+      <description>Online advertising had its chance, but plagued itself with spam, pop-ups, auto-playing videos, unregulated data collection, and even some unintentional  viruses.</description>
+    </item>
     <item>
       <title>You should use Two-Factor Authentication now</title>
       <link>https://amdelamar.com/blog/you-should-use-two-factor-authentication-now/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/java-frameworks-and-the-effort-they-might-save-or-create/</guid>
       <description>J2EE Frameworks are meant to save you time, and lots of boilerplate. But they have sharp learning curves.</description>
-    </item>
-    <item>
-      <title>2nd Update</title>
-      <link>https://amdelamar.com/blog/2nd-update/</link>
-      <pubDate>Tue, 24 Feb 2015 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/2nd-update/</guid>
-      <description>Its been quite a while, since I started my website, and now I&#39;m getting back into things.</description>
     </item>
     
   </channel>

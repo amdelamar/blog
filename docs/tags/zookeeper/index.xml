@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zookeeper on Austin Delamar</title>
+    <link>https://amdelamar.com/blog/tags/zookeeper/</link>
+    <description>Recent content in zookeeper on Austin Delamar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Dec 2023 15:46:46 -0800</lastBuildDate>
+    
+	<atom:link href="https://amdelamar.com/blog/tags/zookeeper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zookeeper Curator with SASL Digest-MD5</title>
+      <link>https://amdelamar.com/blog/zookeeper-curator-with-sasl-digest-md5/</link>
+      <pubDate>Sat, 30 Dec 2023 15:46:46 -0800</pubDate>
+      
+      <guid>https://amdelamar.com/blog/zookeeper-curator-with-sasl-digest-md5/</guid>
+      <description>I finished a book recently about Apache Zookeeper and was playing around with various coordination tasks (Leader Election, Locks, etc) on my own time. I like to get hands-on when learning new technologies, so this book was a decent introduction to Zookeeper.</description>
+    </item>
+    
+  </channel>
+</rss>

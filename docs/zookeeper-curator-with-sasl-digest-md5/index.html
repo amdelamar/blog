@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="amdelamar">
+    <meta name="keywords" content="blog,tech,ramblingware,software,cloud,webdev,java,scala,html,css,javascript,code,programming,privacy,open,source">
+    <meta name="description" content="This is my blog about computers, programming, tech, and things that bother me. I hope it bothers you too.">
+    <meta name="robots" content="all">
+    <link rel="canonical" href="https://amdelamar.com/blog/zookeeper-curator-with-sasl-digest-md5/">
+
+    
+    <meta property="og:url" content="https://amdelamar.com/blog/zookeeper-curator-with-sasl-digest-md5/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Zookeeper Curator with SASL Digest-MD5">
+    <meta property="og:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+    <meta property="og:description" content="How to connect to Zookeeper with Apache Curator with SASL Digest-MD5 enabled.">
+    <meta property="article:author" content="amdelamar"/>
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://amdelamar.com/blog/zookeeper-curator-with-sasl-digest-md5/">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Zookeeper Curator with SASL Digest-MD5">
+    <meta name="twitter:description" content="How to connect to Zookeeper with Apache Curator with SASL Digest-MD5 enabled.">
+    <meta name="twitter:image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    
+    <meta itemprop="name" content="Zookeeper Curator with SASL Digest-MD5">
+    <meta itemprop="description" content="How to connect to Zookeeper with Apache Curator with SASL Digest-MD5 enabled.">
+    <meta itemprop="image" content="https://amdelamar.com/img/social/apple-touch-icon.png">
+
+    <link rel="alternate" type="application/rss+xml" title="Austin Delamar" href="https://amdelamar.com/blog/index.xml" />
+    <link rel="stylesheet" type="text/css" href="https://amdelamar.com/blog/css/osseous.min.css">
+    <link rel="stylesheet" href="https://amdelamar.com/css/style.min.css">
+    <style>
+      pre > code { background: none; }
+    </style>
+    <title>Zookeeper Curator with SASL Digest-MD5 - Austin Delamar</title>
+</head>
+<body>
+
+<input type="checkbox" id="toggleSidebar" style="display: none;">
+<nav id="sidebar" class="border-right shadow-right" aria-label="page navigation">
+    <div class="nav-item-close">
+      <label class="clickable" for="toggleSidebar">
+        <span class="float-right" title="Close Menu" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-list text-center">
+        <a class="nav-item" href="https://amdelamar.com">
+          <img class="round shade margin-right" style="vertical-align: middle" src="https://amdelamar.com/img/adelamar.jpeg" width="24" height="24" title="A picture of me" />
+          Austin Delamar</a>
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+        <a class="nav-item" href="https://amdelamar.com/#contact">Contact</a>
+    </div>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://amdelamar.com">AustinDelamar</a> - 2017-2018</em></p>
+    </div>
+</nav>
+
+<nav id="navbar" aria-label="page navigation">
+    <div id="navbar-body" class="container">
+    <div class="nav-item-logo">
+      <a href="https://amdelamar.com/blog">
+        <img class="round shade margin-right" src="https://amdelamar.com/img/adelamar.jpeg" height="45" alt="Austin Delamar Logo" />
+        <span class="text-medium">Austin Delamar</span>
+      </a>
+    </div>
+    <div class="nav-small-menu">
+      <label class="clickable" for="toggleSidebar">
+        <span class="nav-item" title="Open Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </span>
+      </label>
+    </div>
+    <div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item" href="https://amdelamar.com/blog">Blog</a>
+        <a class="nav-item" href="https://amdelamar.com/#about">About</a>
+    </div>
+    </div>
+</nav>
+
+<article id="post">
+  <div class="row section margin-top-large">
+    <div class="container">
+      <h2>
+        Zookeeper Curator with SASL Digest-MD5
+        
+      </h2>
+      <p class="margin-none text-secondary">
+        &nbsp;(&nbsp;<span id="read-time" title="avg time to read">13 min read</span>&nbsp;)&nbsp;
+      </p>
+      <p>
+        <p>I finished a <a href="https://www.oreilly.com/library/view/zookeeper/9781449361297/" target="_blank">book</a> recently about <a href="https://zookeeper.apache.org" target="_blank">Apache Zookeeper</a>
+and was playing around with various coordination tasks (Leader Election, Locks, etc) on my own time.
+I like to get hands-on when learning new technologies, so this book was a decent introduction to Zookeeper. But I feel there wasn&rsquo;t enough emphaisis around security and authentication.</p>
+
+<p>I was specifically interested in <a href="https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer" target="_blank">SASL</a> with Zookeeper, and thankfully there was two pages in Chapter 10 dedicated to SASL with <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol)" target="_blank">Kerberos</a>. But no other mechanisms were mentioned. There wasn&rsquo;t any guidance on how to setup Kerberos either, just &ldquo;We assume you have Kerberos installed&rdquo;.</p>
+
+<p>For an introduction book, wouldn&rsquo;t it be simpler to explain SASL with <a href="https://en.wikipedia.org/wiki/Digest_access_authentication" target="_blank">Digest-MD5</a>? A simple username and password is much more user-friendly than starting up a Kerberos server.</p>
+
+<p>So after much digging and trial-and-error. I&rsquo;d like to share how I managed to setup Zookeeper with SASL Digest enabled, as well as reject any unauthenticated connections to Zookeeper, and finally, connect to it from a Java application using Apache Curator as the client.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="zookeeper-server-with-sasl-digest">Zookeeper Server with SASL Digest</h3>
+
+<p>The simplest way to get Zookeeper up and running in this modern age is with Docker.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --name<span style="color:#000">=</span>zookeeper --net<span style="color:#000">=</span>host --rm zookeeper</code></pre></div>
+<p>This starts a standalone Zookeeper at <code>localhost:2181</code> with logs streaming to your terminal.
+Its very useful for testing and playing around with the recipes that the book covers.</p>
+
+<p>But we&rsquo;re going to need to create a few config files to enable SASL with Digest-MD5.</p>
+
+<p>First, create a <code>zoo.cfg</code> with:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-conf" data-lang="conf">dataDir=/data
+dataLogDir=/datalog
+clientPort=2181
+tickTime=2000
+initLimit=5
+syncLimit=2
+server.1=localhost:2888:3888
+authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider
+enforce.auth.enabled=true
+enforce.auth.schemes=sasl
+sessionRequireClientSASLAuth=true</code></pre></div>
+<p>The <code>1</code> after <code>authProvider.</code> could be any whole number, like <code>0, 1, 2, ... 100</code>, so long as its unique among other auth providers configured.</p>
+
+<p>The <code>sessionRequireClientSASLAuth</code> is important, as it forces all session connections with the server to require SASL.
+Without this, Zookeeper confusingly still allows clients to connect without providing credentials, even if you&rsquo;ve configured
+an auth provider.</p>
+
+<p>The rest of the configs are explained in Zookeeper&rsquo;s official documentation, but the above configs shown are the minimal set required
+to run Zookeeper in standalone mode with SASL auth enabled.</p>
+
+<p>Next, create a <code>jaas.conf</code> with:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">Server</span> {
+    <span style="color:#000">org</span>.<span style="color:#000">apache</span>.<span style="color:#000">zookeeper</span>.<span style="color:#000">server</span>.<span style="color:#000">auth</span>.<span style="color:#000">DigestLoginModule</span> <span style="color:#000">required</span>
+    <span style="color:#000">user_super</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;1234&#34;</span>;
+};
+</code></pre></div>
+<p>I haven&rsquo;t mentioned <a href="https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service" target="_blank">JAAS</a> yet, but its an authentication interface that was introduced in Java 1.4 that relies on <code>.conf</code> files set via the Java system properties, enabling various kinds of pluggable authentication mechanisms, like Kerberos, Digest, Certificates, and more.</p>
+
+<p>Note: The <code>user_</code> prefix is a must. The actual username is <code>super</code> and the password is <code>1234</code>, as an example. If we wanted to define more than one set of credentials we can add those now along side this one.</p>
+
+<p>Tip: Be careful not to expose this file to unauthorized users.</p>
+
+<p>Finally, start up a new Zookeeper with these files:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run --name<span style="color:#000">=</span>zookeeper --net<span style="color:#000">=</span>host --rm <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>-e <span style="color:#000">JVMFLAGS</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;-Djava.security.auth.login.config=/conf/jaas.conf&#34;</span> <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>-v <span style="color:#a90d91">$(</span><span style="color:#a90d91">pwd</span><span style="color:#a90d91">)</span>/zoo.cfg:/conf/zoo.cfg <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>-v <span style="color:#a90d91">$(</span><span style="color:#a90d91">pwd</span><span style="color:#a90d91">)</span>/jaas.conf:/conf/jaas.conf <span style="color:#c41a16">\
+</span><span style="color:#c41a16"></span>zookeeper</code></pre></div>
+<p>Note: The additional JVM flag for pointing to our <code>jaas.conf</code> is required. We&rsquo;ve given the file to the Docker container, but we didn&rsquo;t tell Java where to find it.</p>
+
+<p>If all goes well, you should see a page full of logging information. I&rsquo;ve copied some of it here:</p>
+
+<pre><code>...
+2023-12-31 00:43:36,021 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@177] - Reading configuration from: /conf/zoo.cfg
+2023-12-31 00:43:36,024 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerConfig@440] - clientPortAddress is 0.0.0.0:2181
+...
+2023-12-31 00:43:36,033 [myid:1] - INFO  [main:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+...
+2023-12-31 00:43:36,058 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -   ______                  _                                          
+2023-12-31 00:43:36,058 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -  |___  /                 | |                                         
+2023-12-31 00:43:36,058 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __   
+2023-12-31 00:43:36,058 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2023-12-31 00:43:36,058 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   &lt;  |  __/ |  __/ | |_) | |  __/ | |    
+2023-12-31 00:43:36,059 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2023-12-31 00:43:36,059 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -                                               | |                     
+2023-12-31 00:43:36,059 [myid:1] - INFO  [main:o.a.z.ZookeeperBanner@42] -  
+...
+2023-12-31 00:43:36,065 [myid:1] - INFO  [main:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = true
+2023-12-31 00:43:36,065 [myid:1] - INFO  [main:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = [sasl]
+...
+2023-12-31 00:43:36,205 [myid:1] - INFO  [main:o.e.j.s.Server@415] - Started @515ms
+...
+</code></pre>
+
+<p>That&rsquo;s it! Two files and a start command and you have yourself a minimal, yet secure, zookeeper server.</p>
+
+<p>If you don&rsquo;t see the [sasl] scheme logged, double-check you&rsquo;re running the docker command in the same directory as the <code>jaas.conf</code> file we created.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="curator-client-with-sasl-digest">Curator Client with SASL Digest</h3>
+
+<p>For our Java client, we&rsquo;ll be using what the book mentioned, <a href="https://curator.apache.org" target="_blank">Apache Curator</a>. Its a nice library for managing the Zookeeper session connections with retries wrapped around commands.
+Depending on your build system, you&rsquo;ll want to import it like so:</p>
+
+<p>Maven:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#000">&lt;dependency&gt;</span>
+    <span style="color:#000">&lt;groupId&gt;</span>org.apache.curator<span style="color:#000">&lt;/groupId&gt;</span>
+    <span style="color:#000">&lt;artifactId&gt;</span>curator-client<span style="color:#000">&lt;/artifactId&gt;</span>
+    <span style="color:#000">&lt;version&gt;</span>5.5.0<span style="color:#000">&lt;/version&gt;</span>
+<span style="color:#000">&lt;/dependency&gt;</span></code></pre></div>
+<p>Gradle:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">dependencies</span> {
+    <span style="color:#000">compile</span> <span style="color:#c41a16">&#39;org.apache.curator:curator-client:5.5.0&#39;</span>
+}
+</code></pre></div>
+<p>SBT:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#000">libraryDependencies</span> <span style="color:#000">++=</span> <span style="color:#3f6e75">Seq</span><span style="color:#000">(</span>
+    <span style="color:#c41a16">&#34;org.apache.curator&#34;</span> <span style="color:#000">%</span> <span style="color:#c41a16">&#34;curator-client&#34;</span> <span style="color:#000">%</span> <span style="color:#c41a16">&#34;5.5.0&#34;</span>
+<span style="color:#000">)</span></code></pre></div>
+<p>Tip: If you&rsquo;re going to experiment with distributed coordination tasks like I did, you&rsquo;ll also be interested in the companion
+libaries <code>curator-recipes</code> and <code>curator-test</code> to get going.</p>
+
+<p>Now that we have our dependency, we can create our <code>Application.java</code> file with:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">framework</span>.<span style="color:#836c28">CuratorFramework</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">framework</span>.<span style="color:#836c28">CuratorFrameworkFactory</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">retry</span>.<span style="color:#836c28">ExponentialBackoffRetry</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">zookeeper</span>.<span style="color:#836c28">CreateMode</span>;
+
+<span style="color:#000">public class </span><span style="color:#000">Application</span> {
+
+    <span style="color:#000">public static void main</span>(<span style="color:#000">String args</span>[]) {
+
+        <span style="color:#177500">// Zookeeper client
+</span><span style="color:#177500"></span>        <span style="color:#000">CuratorFramework curator </span><span style="color:#000">=</span> <span style="color:#000">CuratorFrameworkFactory</span>.<span style="color:#836c28">newClient</span>(
+            <span style="color:#c41a16">&#34;127.0.0.1:2181&#34;</span>,
+            <span style="color:#a90d91">new</span> <span style="color:#000">ExponentialBackoffRetry</span>(<span style="color:#000">1000</span>, <span style="color:#000">3</span>)
+        );
+        <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Connecting to Zookeeper...&#34;</span>);
+        <span style="color:#000">curator</span>.<span style="color:#836c28">start</span>();
+
+        <span style="color:#177500">// Test out our connection
+</span><span style="color:#177500"></span>        <span style="color:#a90d91">try</span> {
+            <span style="color:#000">curator</span>.<span style="color:#836c28">create</span>().<span style="color:#836c28">creatingParentsIfNeeded</span>().<span style="color:#836c28">withMode</span>(<span style="color:#000">CreateMode</span>.<span style="color:#836c28">EPHEMERAL_SEQUENTIAL</span>).<span style="color:#836c28">forPath</span>(<span style="color:#c41a16">&#34;/data/client-&#34;</span>);
+            <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Successfully connected to Zookeeper!&#34;</span>);
+        } <span style="color:#a90d91">catch</span> (<span style="color:#000">Exception e</span>) {
+            <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Failed to connect to Zookeeper.&#34;</span>);
+            <span style="color:#000">System</span>.<span style="color:#836c28">exit</span>(<span style="color:#000">1</span>);
+        }
+    }
+
+}</code></pre></div>
+<p>This works without SASL enabled on both the server and client. But that&rsquo;s not what we want. We need to give our client
+the SASL Digest configuration it needs to connect with <code>super</code> user and a password.</p>
+
+<p>There are two ways to setup your Java application to use SASL via JAAS.</p>
+
+<p>The first way, involves creating a JAAS client <code>.conf</code> file, and specifying its filepath in a specific Java system property at runtime. Just as we did before with Zookeeper and Docker. I find this method to be very clumsy, and disassociates it from the place in our Java code that needs it. It might be nice for packaged code like Zookeeper, but for Applications we might not want that.</p>
+
+<p>The second way, involves creating a custom Java class that extends the <code>Configuration</code> class. Which I find to be more modern, as well as more clear on what its actually for when it sits right next to the code that needs it.</p>
+
+<p>I&rsquo;ll show you both ways in the next sections.</p>
+
+<p>&nbsp;</p>
+
+<h4 id="static-jaas-file">Static JAAS File</h4>
+
+<p>The traditional way to configure client SASL via JAAS.</p>
+
+<p>First create a <code>jaas-client.conf</code> file:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#000">Client</span> {
+    <span style="color:#000">org</span>.<span style="color:#000">apache</span>.<span style="color:#000">zookeeper</span>.<span style="color:#000">server</span>.<span style="color:#000">auth</span>.<span style="color:#000">DigestLoginModule</span> <span style="color:#000">required</span>
+    <span style="color:#000">username</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;super&#34;</span>
+    <span style="color:#000">password</span><span style="color:#000">=</span><span style="color:#c41a16">&#34;1234&#34;</span>;
+};
+</code></pre></div>
+<p>Note: This is different than our ZK <code>jaas.conf</code> we created earlier. The format is not the same!</p>
+
+<p>Tip: Don&rsquo;t git commit this file!</p>
+
+<p>The next time we start our Java application, we need to pass a Java system property of <code>java.security.auth.login.config=jaas-client.conf</code>.
+To be even more clear, we should also specify <code>zookeeper.sasl.client=true</code> and <code>zookeeper.sasl.clientconfig=Client</code> but those are the
+default values given, so we don&rsquo;t need to change them here.</p>
+
+<p>So, if the app was packaged as a runnable JAR we would pass this propery like so:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">java -jar -Djava.security.auth.login.config<span style="color:#000">=</span><span style="color:#c41a16">&#34;jaas-client.conf&#34;</span> myApp.jar</code></pre></div>
+<p>Note: The <code>-D</code> is required since this argument is not a JVM arg, but rather, an app context arg.</p>
+
+<p>And that&rsquo;s it. There are no other Java code changes to make SASL via JAAS to work here. Underneath the hood, the Zookeeper client code inspects the Java system properties for this filepath, loads the file, and uses the JAAS configuration in the SASL connection automatically. Maybe most developers think this is fine, but I personally don&rsquo;t like implicit magic. I prefer clear code I can see with dynamic JAAS configuration.</p>
+
+<p>&nbsp;</p>
+
+<h4 id="dynamic-jaas-config">Dynamic JAAS Config</h4>
+
+<p>A more modern way to configure client SASL via JAAS.</p>
+
+<p>Don&rsquo;t create a <code>jaas-client.conf</code>, as we will instead create a custom config class extending <code>Configuration</code> with:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">zookeeper</span>.<span style="color:#836c28">server</span>.<span style="color:#836c28">auth</span>.<span style="color:#836c28">DigestLoginModule</span>;
+<span style="color:#000">import javax</span>.<span style="color:#836c28">security</span>.<span style="color:#836c28">auth</span>.<span style="color:#836c28">login</span>.<span style="color:#836c28">AppConfigurationEntry</span>;
+<span style="color:#000">import javax</span>.<span style="color:#836c28">security</span>.<span style="color:#836c28">auth</span>.<span style="color:#836c28">login</span>.<span style="color:#836c28">Configuration</span>;
+<span style="color:#000">import java</span>.<span style="color:#836c28">util</span>.<span style="color:#836c28">HashMap</span>;
+<span style="color:#000">import java</span>.<span style="color:#836c28">util</span>.<span style="color:#836c28">Map</span>;
+
+<span style="color:#000">public class ZookeeperSASLConfig extends </span><span style="color:#000">Configuration</span> {
+
+    <span style="color:#000">AppConfigurationEntry entry</span>;
+
+    <span style="color:#000">public ZookeeperSASLConfig</span>(<span style="color:#000">String username</span>,
+                               <span style="color:#000">String password</span>) {
+        <span style="color:#000">Map</span><span style="color:#000">&lt;</span><span style="color:#000">String</span>,<span style="color:#000">String&gt; options </span><span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#000">HashMap</span><span style="color:#000">&lt;&gt;</span>();
+        <span style="color:#000">options</span>.<span style="color:#836c28">put</span>(<span style="color:#c41a16">&#34;username&#34;</span>, <span style="color:#000">username</span>);
+        <span style="color:#000">options</span>.<span style="color:#836c28">put</span>(<span style="color:#c41a16">&#34;password&#34;</span>, <span style="color:#000">password</span>);
+        <span style="color:#a90d91">this</span>.<span style="color:#836c28">entry</span> <span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#000">AppConfigurationEntry</span>(
+            <span style="color:#000">DigestLoginModule</span>.<span style="color:#836c28">class</span>.<span style="color:#836c28">getName</span>(),
+            <span style="color:#000">AppConfigurationEntry</span>.<span style="color:#836c28">LoginModuleControlFlag</span>.<span style="color:#836c28">REQUIRED</span>,
+            <span style="color:#000">options</span>
+        );
+    }
+
+    <span style="color:#000">@Override</span>
+    <span style="color:#000">public AppConfigurationEntry</span>[] <span style="color:#000">getAppConfigurationEntry</span>(<span style="color:#000">String name</span>) {
+        <span style="color:#000">AppConfigurationEntry[] array </span><span style="color:#000">=</span> <span style="color:#a90d91">new</span> <span style="color:#000">AppConfigurationEntry</span>[<span style="color:#000">1</span>];
+        <span style="color:#000">array</span>[<span style="color:#000">0</span>] <span style="color:#000">=</span> <span style="color:#000">entry</span>;
+        <span style="color:#a90d91">return</span> <span style="color:#000">array</span>;
+    }
+}</code></pre></div>
+<p>Then, we simply create an instance of this class and set it as our <code>Configuration</code>.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">framework</span>.<span style="color:#836c28">CuratorFramework</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">framework</span>.<span style="color:#836c28">CuratorFrameworkFactory</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">curator</span>.<span style="color:#836c28">retry</span>.<span style="color:#836c28">ExponentialBackoffRetry</span>;
+<span style="color:#000">import org</span>.<span style="color:#836c28">apache</span>.<span style="color:#836c28">zookeeper</span>.<span style="color:#836c28">CreateMode</span>;
+<span style="color:#000">import javax</span>.<span style="color:#836c28">security</span>.<span style="color:#836c28">auth</span>.<span style="color:#836c28">login</span>.<span style="color:#836c28">Configuration</span>;
+
+<span style="color:#000">public class </span><span style="color:#000">Application</span> {
+
+    <span style="color:#000">public static void main</span>(<span style="color:#000">String args</span>[]) {
+
+        <span style="color:#177500">// String user = System.getenv(&#34;ZOOKEEPER_USERNAME&#34;);
+</span><span style="color:#177500"></span>        <span style="color:#177500">// String pass = System.getenv(&#34;ZOOKEEPER_PASSWORD&#34;);
+</span><span style="color:#177500"></span>
+        <span style="color:#177500">// Zookeeper client
+</span><span style="color:#177500"></span>        <span style="color:#000">Configuration</span>.<span style="color:#836c28">setConfiguration</span>(<span style="color:#a90d91">new</span> <span style="color:#000">ZookeeperSASLConfiguration</span>(<span style="color:#c41a16">&#34;super&#34;</span>, <span style="color:#c41a16">&#34;1234&#34;</span>));
+        <span style="color:#000">CuratorFramework curator </span><span style="color:#000">=</span> <span style="color:#000">CuratorFrameworkFactory</span>.<span style="color:#836c28">newClient</span>(
+            <span style="color:#c41a16">&#34;127.0.0.1:2181&#34;</span>,
+            <span style="color:#a90d91">new</span> <span style="color:#000">ExponentialBackoffRetry</span>(<span style="color:#000">1000</span>, <span style="color:#000">3</span>)
+        );
+        <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Connecting to Zookeeper...&#34;</span>);
+        <span style="color:#000">curator</span>.<span style="color:#836c28">start</span>();
+
+        <span style="color:#177500">// Test out our connection
+</span><span style="color:#177500"></span>        <span style="color:#a90d91">try</span> {
+            <span style="color:#000">curator</span>.<span style="color:#836c28">create</span>().<span style="color:#836c28">creatingParentsIfNeeded</span>().<span style="color:#836c28">withMode</span>(<span style="color:#000">CreateMode</span>.<span style="color:#836c28">EPHEMERAL_SEQUENTIAL</span>).<span style="color:#836c28">forPath</span>(<span style="color:#c41a16">&#34;/data/client-&#34;</span>);
+            <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Successfully connected to Zookeeper!&#34;</span>);
+        } <span style="color:#a90d91">catch</span> (<span style="color:#000">Exception e</span>) {
+            <span style="color:#000">System</span>.<span style="color:#836c28">out</span>.<span style="color:#836c28">println</span>(<span style="color:#c41a16">&#34;Failed to connect to Zookeeper.&#34;</span>);
+            <span style="color:#000">System</span>.<span style="color:#836c28">exit</span>(<span style="color:#000">1</span>);
+        }
+    }
+
+}</code></pre></div>
+<p>Tip: Now its possible to use environment variables for our <code>super</code> username and password, with <code>System.getenv()</code>. This is great
+for multi-environment deployments and cloud-based apps, but it also helps prevent accidentally git committing credentials to your repo.</p>
+
+<p>And that&rsquo;s it for setup.</p>
+
+<p>&nbsp;</p>
+
+<h2 id="running-the-application">Running the Application</h2>
+
+<p>Go ahead and run <code>Application</code> main once you&rsquo;ve finished setting up with either method above.
+You should get this output if all goes well:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Connecting to Zookeeper...
+Successfully connected to Zookeeper!
+
+Process finished with <span style="color:#a90d91">exit</span> code <span style="color:#1c01ce">0</span></code></pre></div>
+<p>Success! We have enabled SASL with Digest-MD5 via JAAS with Zookeeper server and client.</p>
+
+<p>Now if you change the username and/or password on the client side, or change the allowed user/password configured in the server&rsquo;s <code>jaas.conf</code>, and restart Zookeeper, you should see an <code>Authentication failed</code> error when running our Application:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Connecting to Zookeeper...
+<span style="color:#1c01ce">22</span>:05:13.023 <span style="color:#000">[</span>ERROR<span style="color:#000">]</span> org.apache.zookeeper.client.ZooKeeperSaslClient - SASL authentication failed using login context <span style="color:#c41a16">&#39;Client&#39;</span>.
+javax.security.sasl.SaslException: Error in authenticating with a Zookeeper Quorum member: the quorum member<span style="color:#000">&#39;</span>s saslToken is null.
+    at org.apache.zookeeper.client.ZooKeeperSaslClient.createSaslToken<span style="color:#000">(</span>ZooKeeperSaslClient.java:310<span style="color:#000">)</span>
+    at org.apache.zookeeper.client.ZooKeeperSaslClient.respondToServer<span style="color:#000">(</span>ZooKeeperSaslClient.java:270<span style="color:#000">)</span>
+    at org.apache.zookeeper.ClientCnxn<span style="color:#000">$SendThread</span>.readResponse<span style="color:#000">(</span>ClientCnxn.java:928<span style="color:#000">)</span>
+    at org.apache.zookeeper.ClientCnxnSocketNIO.doIO<span style="color:#000">(</span>ClientCnxnSocketNIO.java:98<span style="color:#000">)</span>
+    at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport<span style="color:#000">(</span>ClientCnxnSocketNIO.java:350<span style="color:#000">)</span>
+    at org.apache.zookeeper.ClientCnxn<span style="color:#000">$SendThread</span>.run<span style="color:#000">(</span>ClientCnxn.java:1283<span style="color:#000">)</span>
+<span style="color:#1c01ce">22</span>:05:13.024 <span style="color:#000">[</span>ERROR<span style="color:#000">]</span> org.apache.curator.ConnectionState - Authentication failed
+Failed to connect to Zookeeper.
+
+Process finished with <span style="color:#a90d91">exit</span> code <span style="color:#1c01ce">1</span></code></pre></div>
+<p>Failing as expected! Demonstrating our Zookeeper server is rejecting bad credentials too.</p>
+
+<p>&nbsp;</p>
+
+<h3 id="links">Links:</h3>
+
+<ul>
+<li>Apache Zookeeper <a href="https://zookeeper.apache.org" target="_blank">https://zookeeper.apache.org</a></li>
+<li>Apache Curator <a href="https://curator.apache.org" target="_blank">https://curator.apache.org</a></li>
+<li>Docker Zookeeper <a href="https://hub.docker.com/_/zookeeper/" target="_blank">https://hub.docker.com/_/zookeeper/</a></li>
+<li>O&rsquo;REILLY Zookeeper: Distributed Process Coordination <a href="https://www.oreilly.com/library/view/zookeeper/9781449361297/" target="_blank">https://www.oreilly.com/library/view/zookeeper/9781449361297/</a></li>
+<li>SASL <a href="https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer" target="_blank">https://en.wikipedia.org/wiki/Simple_Authentication_and_Security_Layer</a></li>
+<li>Kerberos <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol" target="_blank">https://en.wikipedia.org/wiki/Kerberos_(protocol</a>)</li>
+<li>Digest-MD5 <a href="https://en.wikipedia.org/wiki/Digest_access_authentication" target="_blank">https://en.wikipedia.org/wiki/Digest_access_authentication</a></li>
+<li>JAAS <a href="https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service" target="_blank">https://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service</a></li>
+</ul>
+
+      </p>
+      <br/>
+      <p id="post-metadata" class="text-secondary">
+        <br/>
+        <span id="date" title="30 Dec 23 15:46 PST">Published: Dec 30, 2023</span><br/>
+        <span id="category">Category: <a href="https://amdelamar.com/blog/category/code" class="text-secondary">code</a></span><br/>
+        <span id="tags">Tags:
+        <a href="https://amdelamar.com/blog/tags/java" class="text-secondary">java</a>, <a href="https://amdelamar.com/blog/tags/zookeeper" class="text-secondary">zookeeper</a>, <a href="https://amdelamar.com/blog/tags/security" class="text-secondary">security</a></span>
+      </p>
+    </div>
+  </div>
+</article>
+<footer class="row section text-center">
+  <p><small><em>&#169; <a href="https://amdelamar.com">AustinDelamar</a> - 2014-2022</em></small></p>
+  <a class="button button-primary float-right margin-right-large" title="Back to top" href="#">Back to Top</a>
+</footer>
+</body>
+</html>
+

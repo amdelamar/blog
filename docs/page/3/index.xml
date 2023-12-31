@@ -6,7 +6,15 @@
     <author>amdelamar</author>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Mar 2022 00:22:50 UTC</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 23:46:46 UTC</lastBuildDate>
+    <item>
+      <title>Exciting Trends in Web Technology</title>
+      <link>https://amdelamar.com/blog/exciting-trends-in-web-technology/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 UTC</pubDate>
+      <author>amdelamar</author>
+      <guid>https://amdelamar.com/blog/exciting-trends-in-web-technology/</guid>
+      <description>Offline-first, SPA, PWA, Docker, Blockchain, and more! There are lots of trends growing right now that its getting hard to keep up.</description>
+    </item>
     <item>
       <title>At the Office, Don&#39;t Assume Everything</title>
       <link>https://amdelamar.com/blog/at-the-office-dont-assume-everything/</link>
@@ -78,14 +86,6 @@
       <author>amdelamar</author>
       <guid>https://amdelamar.com/blog/every-company-needs-a-web-developer/</guid>
       <description>You&#39;ll also need lots of coffee to pay the developer.</description>
-    </item>
-    <item>
-      <title>Why I use Ad-Block</title>
-      <link>https://amdelamar.com/blog/why-i-use-ad-block/</link>
-      <pubDate>Mon, 13 Feb 2017 00:00:00 UTC</pubDate>
-      <author>amdelamar</author>
-      <guid>https://amdelamar.com/blog/why-i-use-ad-block/</guid>
-      <description>Online advertising had its chance, but plagued itself with spam, pop-ups, auto-playing videos, unregulated data collection, and even some unintentional  viruses.</description>
     </item>
     
   </channel>
